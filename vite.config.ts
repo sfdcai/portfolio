@@ -8,6 +8,7 @@ export default defineConfig({
   preview: {
     port: 80,
     host: true,
+    allowedHosts: ['amitbhardwaj.co.uk', 'www.amitbhardwaj.co.uk'],
   },
   build: {
     target: 'es2022',
