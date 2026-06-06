@@ -1,5 +1,5 @@
 import { type ReactNode } from 'react'
-import { type N8nLang as Lang } from './n8n-i18n'
+type Lang = 'es' | 'en'
 import { buildJsonLdFromRegistry } from './articles/json-ld'
 import { useArticleSeo } from './articles/use-article-seo'
 import { Compass, Mic, CalendarDays, Receipt, Package, Calculator, HandHelping, Smartphone, MessageCircle, PhoneMissed, Download } from 'lucide-react'
@@ -45,7 +45,7 @@ import {
   FloatingToc,
   AudioPlayer,
 } from './articles/content-types'
-import { jacoboContent } from './jacobo-i18n'
+import { getArticleContent } from './markdown-parser'
 
 // ---------------------------------------------------------------------------
 // Stack service icons (Simple Icons / brand SVGs)
@@ -99,14 +99,14 @@ const AGENT_ICONS: Record<string, React.ComponentType<{ className?: string }>> =
 // buildJsonLd
 // ---------------------------------------------------------------------------
 function buildJsonLd(lang: Lang) {
-  return buildJsonLdFromRegistry('jacobo', lang, jacoboContent[lang])
+  return buildJsonLdFromRegistry('jacobo', lang, getArticleContent('jacobo', lang) as any)
 }
 
 // ===========================================================================
 // MAIN COMPONENT
 // ===========================================================================
 export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
-  const t = jacoboContent[lang]
+  const t = getArticleContent('jacobo', lang) as any
   const wfById = Object.fromEntries(t.downloads.workflows.map(w => [w.id, w]))
 
   useArticleSeo({
@@ -115,7 +115,7 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
     altSlug: t.altSlug,
     title: t.seo.title,
     description: t.seo.description,
-    image: 'https://santifer.io/jacobo/og-jacobo-agent.webp',
+    image: 'https://sfdcai.github.io/portfolio/jacobo/og-jacobo-agent.webp',
     publishedTime: '2026-02-25',
     modifiedTime: '2026-06-01',
     articleTags: 'AI agent,multi-agent,n8n,ElevenLabs,HITL,tool calling,WhatsApp,voice AI',
@@ -135,7 +135,7 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
 
       <MetricsGrid editorId="hero-metrics" items={t.heroMetrics} columns={5} compact />
 
-      <GitHubRepoBadge repo="santifer/jacobo-workflows" stars="144" forks="47" lang={lang} />
+      <GitHubRepoBadge repo="sfdcai/jacobo-workflows" stars="144" forks="47" lang={lang} />
 
       {/* TL;DR */}
       <Callout editorId="tldr-callout" className="-mx-2 sm:mx-0">{t.tldr}</Callout>
@@ -148,8 +148,8 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
 
       {/* Hero images */}
       <Photo2 editorId="hero-photos" items={[
-        { src: '/jacobo/santiago-headphones-thinking.webp', alt: 'Santiago Fernández de Valderrama', loading: 'eager', width: 360, height: 480 },
-        { src: '/jacobo/shop-microsoldering-station.webp', alt: lang === 'es' ? 'Estación de microsoldadura en Santifer iRepair' : 'Microsoldering station at Santifer iRepair', loading: 'eager', width: 540, height: 720 },
+        { src: '/jacobo/santiago-headphones-thinking.webp', alt: 'Amit Bhardwaj', loading: 'eager', width: 360, height: 480 },
+        { src: '/jacobo/shop-microsoldering-station.webp', alt: lang === 'es' ? 'Estación de microsoldadura en Amit Bhardwaj iRepair' : 'Microsoldering station at Amit Bhardwaj iRepair', loading: 'eager', width: 540, height: 720 },
       ]} caption={lang === 'es' ? 'Cada llamada interrumpe una reparación en curso: el técnico deja la microsoldadura para atender al teléfono' : 'Every call interrupts a repair in progress: the technician leaves the microsoldering station to answer the phone'} />
 
       <article className="prose-custom">
@@ -170,7 +170,7 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
 
         {/* Counter + Diagnostic screen */}
         <Photo2 editorId="problem-shop-counter" items={[
-          { src: '/jacobo/shop-counter-smart-displays.webp', alt: lang === 'es' ? 'Mostrador de Santifer iRepair con smart displays' : 'Santifer iRepair counter with smart displays', width: 1024, height: 768 },
+          { src: '/jacobo/shop-counter-smart-displays.webp', alt: lang === 'es' ? 'Mostrador de Amit Bhardwaj iRepair con smart displays' : 'Amit Bhardwaj iRepair counter with smart displays', width: 1024, height: 768 },
           { src: '/jacobo/shop-diagnostic-screen.webp', alt: lang === 'es' ? 'Pantalla de diagnóstico en la tienda' : 'Diagnostic screen in the shop', width: 1024, height: 768 },
         ]} caption={lang === 'es' ? 'El mostrador con smart displays y la pantalla de diagnóstico: el negocio que necesitaba un agente IA' : 'The counter with smart displays and the diagnostic screen: the business that needed an AI agent'} />
 
@@ -221,7 +221,7 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
           columns={1}
           gap="gap-4"
           className="mb-4"
-          renderItem={(agent) => {
+          renderItem={(agent: any) => {
             const Icon = AGENT_ICONS[agent.icon] ?? Compass
             return (
               <DetailCard key={agent.name} icon={<Icon className="w-5 h-5 text-primary" />} title={agent.name} description={agent.desc}>
@@ -238,7 +238,7 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
           items={t.sections.architecture.agents.filter(a => a.kind === 'tool')}
           columns={1}
           className="mb-8"
-          renderItem={(tool) => {
+          renderItem={(tool: any) => {
             const Icon = AGENT_ICONS[tool.icon] ?? Package
             return (
               <DetailCard key={tool.name} icon={<Icon className="w-4 h-4 text-primary" />} title={tool.name} description={tool.desc} className="p-4">
@@ -396,7 +396,7 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
         <ScreenshotGrid editorId="email-formal-flow" lang={lang} items={[
           { src: 'email-formal-1.webp', altEs: 'Jacobo responde como email formal: asunto, saludo, presupuesto Huawei P20 Pro', altEn: 'Jacobo responds as formal email: subject line, greeting, Huawei P20 Pro quote', width: 1170, height: 2532 },
           { src: 'email-formal-2.webp', altEs: 'Email: desglose batería + puerto carga = 85,80€ → descuento combo 70,80€', altEn: 'Email: battery + charging port = €85.80 → combo discount €70.80', width: 1170, height: 2532 },
-          { src: 'email-formal-3.webp', altEs: 'Firma: "Un saludo, Jacobo — Santifer iRepair — dirección + teléfono + email"', altEn: 'Signature: "Best regards, Jacobo — Santifer iRepair — address + phone + email"', width: 1170, height: 2532 },
+          { src: 'email-formal-3.webp', altEs: 'Firma: "Un saludo, Jacobo — Amit Bhardwaj iRepair — dirección + teléfono + email"', altEn: 'Signature: "Best regards, Jacobo — Amit Bhardwaj iRepair — address + phone + email"', width: 1170, height: 2532 },
         ]} />
         <ScreenshotCaption editorId="email-formal-flow-caption" lang={lang} es="Adaptabilidad: el cliente pide formato email y Jacobo responde con asunto, presupuesto desglosado, descuento combo y firma corporativa" en="Adaptability: customer asks for email format and Jacobo responds with subject line, itemized quote, combo discount and corporate signature" />
 
@@ -597,7 +597,7 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
         <Prose editorId="calculator-body" className="mb-2">{t.sections.deepDiveOthers.calculator.body}</Prose>
         <NodeLabel editorId="calculator-nodes">{t.sections.deepDiveOthers.calculator.nodes}</NodeLabel>
         <DiagramZoom editorId="calculator-n8n-workflow" src="/jacobo/n8n-calculadora.webp" hdSrc="/jacobo/calculator-n8n-workflow-2x.webp" alt={lang === 'es' ? 'Workflow de la Calculadora de Descuentos en n8n: Webhook → Code (lógica de descuentos) → Response' : 'Discount Calculator workflow in n8n: Webhook → Code (discount logic) → Response'} width={1392} height={912} hdWidth={2512} hdHeight={1312} className="mb-4" />
-        <InlineWorkflowDownload href={wfById['calculadora-santifer'].href} label={t.downloads.inlineLabel} fileSize={wfById['calculadora-santifer'].fileSize} />
+        <InlineWorkflowDownload href={wfById['calculadora-sfdcai']?.href || '#'} label={t.downloads.inlineLabel} fileSize={wfById['calculadora-sfdcai']?.fileSize || ''} />
 
         <BulletList editorId="calculator-details" items={t.sections.deepDiveOthers.calculator.details} className="mb-4" />
         <CodeBlock editorId="calculator-code" segments={t.sections.deepDiveOthers.calculator.segments} />
@@ -685,10 +685,10 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
           heading={t.cta.heading}
           body={t.cta.body}
           ctaLabel={`${t.cta.label} →`}
-          ctaHref="https://linkedin.com/in/santifer"
+          ctaHref="https://linkedin.com/in/salesforce-technical-architect"
           external
           secondaryLabel={`${(t.cta as any).labelSecondary} →`}
-          secondaryHref="mailto:hola@santifer.io"
+          secondaryHref="mailto:hola@sfdcai.github.io/portfolio"
         />
 
         {/* ================================================================ */}
@@ -777,10 +777,10 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
           heading={(t as any).ctaAfterEnterprise.heading}
           body={t.cta.body}
           ctaLabel={`${t.cta.label} →`}
-          ctaHref="https://linkedin.com/in/santifer"
+          ctaHref="https://linkedin.com/in/salesforce-technical-architect"
           external
           secondaryLabel={`${(t.cta as any).labelSecondary} →`}
-          secondaryHref="mailto:hola@santifer.io"
+          secondaryHref="mailto:hola@sfdcai.github.io/portfolio"
         />
 
         {/* ================================================================ */}
@@ -801,7 +801,7 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
         {/* GitHub repo link */}
         <div className="flex justify-center mb-4">
           <a
-            href="https://github.com/santifer/jacobo-workflows"
+            href="https://github.com/sfdcai/jacobo-workflows"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors text-sm"
@@ -829,10 +829,10 @@ export default function JacoboAgent({ lang = 'en' }: { lang?: Lang }) {
           heading={(t as any).ctaAfterDownloads.heading}
           body=""
           ctaLabel={`${t.cta.label} →`}
-          ctaHref="https://linkedin.com/in/santifer"
+          ctaHref="https://linkedin.com/in/salesforce-technical-architect"
           external
           secondaryLabel={`${(t.cta as any).labelSecondary} →`}
-          secondaryHref="mailto:hola@santifer.io"
+          secondaryHref="mailto:hola@sfdcai.github.io/portfolio"
         />
 
         {/* ================================================================ */}

@@ -66,36 +66,22 @@ interface JsonLdOptions {
 
 const PERSON = {
   '@type': 'Person',
-  '@id': 'https://santifer.io/#person',
-  name: 'Santiago Fernández de Valderrama Aparicio',
-  url: 'https://santifer.io',
+  '@id': 'https://sfdcai.github.io/portfolio/#person',
+  name: 'Amit Bhardwaj',
+  url: 'https://sfdcai.github.io/portfolio',
   jobTitle: 'Head of Applied AI',
   sameAs: [
-    'https://www.linkedin.com/in/santifer',
-    'https://github.com/santifer',
-    'https://x.com/santifer',
-    'https://dev.to/santifer',
-    'https://santifer.substack.com',
-    'https://contentdigest.santifer.io',
-    'https://www.youtube.com/@santifer_io',
-    'https://stackoverflow.com/users/32541743',
-    'https://orcid.org/0009-0006-2192-7210',
-    'https://www.crunchbase.com/person/santiago-fernandez-de-valderrama',
-    'https://huggingface.co/santifer',
-    'https://www.wikidata.org/wiki/Q138710224',
-    'https://santiferirepair.es',
+    'https://www.linkedin.com/in/salesforce-technical-architect',
+    'https://github.com/sfdcai',
     'https://career-ops.org/about',
-    'https://www.facebook.com/santifer.io/',
-    'https://www.producthunt.com/@santifer',
-    'https://app.daily.dev/santifer',
   ],
 }
 
 const WEBSITE = {
   '@type': 'WebSite',
-  '@id': 'https://santifer.io/#website',
-  name: 'santifer.io',
-  url: 'https://santifer.io',
+  '@id': 'https://sfdcai.github.io/portfolio/#website',
+  name: 'sfdcai.github.io/portfolio',
+  url: 'https://sfdcai.github.io/portfolio',
 }
 
 export function buildArticleJsonLd(opts: JsonLdOptions) {
@@ -108,12 +94,12 @@ export function buildArticleJsonLd(opts: JsonLdOptions) {
       headline: opts.headline,
       alternativeHeadline: opts.alternativeHeadline,
       description: opts.description,
-      author: { '@id': 'https://santifer.io/#person' },
+      author: { '@id': 'https://sfdcai.github.io/portfolio/#person' },
       // Publisher: Person-as-publisher is valid for CreativeWork on personal sites
       // (Santiago publishes on his own domain). Override only for collabs (e.g. Marily).
       publisher: opts.publisher
         ? { '@type': 'Organization', name: opts.publisher.name, url: opts.publisher.url }
-        : { '@id': 'https://santifer.io/#person' },
+        : { '@id': 'https://sfdcai.github.io/portfolio/#person' },
       datePublished: opts.datePublished,
       dateModified: opts.dateModified,
       keywords: opts.keywords,
@@ -121,7 +107,7 @@ export function buildArticleJsonLd(opts: JsonLdOptions) {
       mainEntityOfPage: opts.url,
       image: opts.images,
       inLanguage,
-      isPartOf: { '@id': 'https://santifer.io/#website' },
+      isPartOf: { '@id': 'https://sfdcai.github.io/portfolio/#website' },
       ...(opts.about ? { about: opts.about } : {}),
       ...(opts.extra || {}),
       ...(opts.citation ? { citation: opts.citation } : {}),
@@ -139,7 +125,7 @@ export function buildArticleJsonLd(opts: JsonLdOptions) {
       '@type': 'BreadcrumbList',
       '@id': `${opts.url}/#breadcrumbs`,
       itemListElement: [
-        { '@type': 'ListItem', '@id': `${opts.url}/#breadcrumb-1`, position: 1, name: opts.breadcrumbHome, item: 'https://santifer.io' },
+        { '@type': 'ListItem', '@id': `${opts.url}/#breadcrumb-1`, position: 1, name: opts.breadcrumbHome, item: 'https://sfdcai.github.io/portfolio' },
         { '@type': 'ListItem', '@id': `${opts.url}/#breadcrumb-2`, position: 2, name: opts.breadcrumbCurrent, item: opts.url },
       ],
     },
@@ -181,8 +167,8 @@ export function buildJsonLdFromRegistry(
   const meta = config.seoMeta
   return buildArticleJsonLd({
     lang,
-    url: `https://santifer.io/${i18n.slug}`,
-    altUrl: `https://santifer.io/${i18n.altSlug}`,
+    url: `https://sfdcai.github.io/portfolio/${i18n.slug}`,
+    altUrl: `https://sfdcai.github.io/portfolio/${i18n.altSlug}`,
     headline: i18n.header.h1,
     alternativeHeadline: i18n.seo.title,
     description: i18n.seo.description,

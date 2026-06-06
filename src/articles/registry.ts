@@ -53,11 +53,11 @@ export const articleRegistry: ArticleConfig[] = [
     titles: { es: 'n8n para PMs', en: 'n8n for PMs' },
     seo: {
       es: {
-        title: 'n8n para PMs: Cheat Sheet + Templates IA Gratis | santifer.io',
+        title: 'n8n para PMs: Cheat Sheet + Templates IA Gratis | sfdcai.github.io/portfolio',
         description: 'Cheat sheet de n8n para Product Managers: automatiza sprint reports y clasifica feedback con IA. 2 templates importables gratis. Tutorial paso a paso.',
       },
       en: {
-        title: 'n8n for PMs: Cheat Sheet + Free AI Templates | santifer.io',
+        title: 'n8n for PMs: Cheat Sheet + Free AI Templates | sfdcai.github.io/portfolio',
         description: 'n8n cheat sheet for Product Managers: automate sprint reports and classify feedback with AI. 2 free importable workflow templates. Step-by-step tutorial.',
       },
     },
@@ -88,8 +88,8 @@ export const articleRegistry: ArticleConfig[] = [
     type: 'collab',
     ragReady: true,
     i18nFile: 'src/n8n-i18n.ts',
-    ogImage: 'https://santifer.io/workflows/n8n-ai-feedback-classification-workflow.webp',
-    heroImage: 'https://santifer.io/workflows/n8n-sprint-report-automation-workflow.webp',
+    ogImage: 'https://sfdcai.github.io/portfolio/workflows/n8n-ai-feedback-classification-workflow.webp',
+    heroImage: 'https://sfdcai.github.io/portfolio/workflows/n8n-sprint-report-automation-workflow.webp',
     component: () => import('../N8nForPMs.tsx'),
     seoMeta: {
       datePublished: '2026-02-24',
@@ -97,7 +97,7 @@ export const articleRegistry: ArticleConfig[] = [
       keywords: ['n8n', 'n8n tutorial', 'n8n templates', 'n8n AI', 'n8n workflow', 'n8n automation', 'n8n cheat sheet', 'product manager', 'AI workflow automation', 'sprint report automation', 'feedback classification AI', 'no-code automation', 'n8n for product managers', 'workflow templates free'],
       articleType: 'TechArticle',
       articleTags: 'n8n,product manager,automation,AI,workflow,no-code',
-      images: ['https://santifer.io/workflows/n8n-sprint-report-automation-workflow.webp', 'https://santifer.io/workflows/n8n-ai-feedback-classification-workflow.webp'],
+      images: ['https://sfdcai.github.io/portfolio/workflows/n8n-sprint-report-automation-workflow.webp', 'https://sfdcai.github.io/portfolio/workflows/n8n-ai-feedback-classification-workflow.webp'],
       about: [
         { '@type': 'SoftwareApplication', name: 'n8n', url: 'https://n8n.io', applicationCategory: 'Workflow Automation' },
         { '@type': 'Thing', name: 'Product Management Automation' },
@@ -125,7 +125,7 @@ export const articleRegistry: ArticleConfig[] = [
         contentUrl: 'https://maven.com/p/52fc7d/masterclass-n8n-for-p-ms',
         uploadDate: '2026-03-10',
         duration: 'PT60M',
-        performer: { '@id': 'https://santifer.io/#person' },
+        performer: { '@id': 'https://sfdcai.github.io/portfolio/#person' },
         publisher: { '@type': 'Organization', name: 'AI Product Academy', url: 'https://maven.com/marily-nika' },
       },
       subjectOf: {
@@ -135,7 +135,7 @@ export const articleRegistry: ArticleConfig[] = [
         startDate: '2026-03-10',
         location: { '@type': 'VirtualLocation', url: 'https://maven.com/p/52fc7d/masterclass-n8n-for-p-ms' },
         organizer: { '@type': 'Organization', name: 'AI Product Academy', url: 'https://maven.com/marily-nika', founder: { '@type': 'Person', name: 'Dr. Marily Nika', sameAs: 'https://www.wikidata.org/wiki/Q107463356' } },
-        performer: { '@id': 'https://santifer.io/#person' },
+        performer: { '@id': 'https://sfdcai.github.io/portfolio/#person' },
         eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
         eventStatus: 'https://schema.org/EventScheduled',
       },
@@ -194,8 +194,8 @@ export const articleRegistry: ArticleConfig[] = [
     type: 'case-study',
     ragReady: true,
     i18nFile: 'src/jacobo-i18n.ts',
-    ogImage: 'https://santifer.io/jacobo/og-jacobo-agent.webp',
-    heroImage: 'https://santifer.io/jacobo/santiago-headphones-thinking.webp',
+    ogImage: 'https://sfdcai.github.io/portfolio/jacobo/og-jacobo-agent.webp',
+    heroImage: 'https://sfdcai.github.io/portfolio/jacobo/santiago-headphones-thinking.webp',
     component: () => import('../JacoboAgent.tsx'),
     seoMeta: {
       datePublished: '2026-02-25',
@@ -203,7 +203,7 @@ export const articleRegistry: ArticleConfig[] = [
       keywords: ['multi-agent AI', 'multi agent orchestration', 'AI agent', 'sub-agent architecture', 'tool calling production', 'n8n workflows', 'n8n ai agent', 'ai agent case study', 'customer service AI', 'WhatsApp AI agent', 'ElevenLabs voice agent', 'voice AI', 'HITL', 'human in the loop', 'ia para pymes', 'agente ia whatsapp', 'multi-model orchestration', 'OpenRouter', 'FDE portfolio', 'solutions architect AI', 'AI production manager', 'enterprise AI patterns', 'voice AI platform', 'conversational AI case study', 'agentic workflows'],
       articleType: 'TechArticle',
       articleTags: 'AI agent,multi-agent,n8n,ElevenLabs,HITL,tool calling,WhatsApp,voice AI',
-      images: ['https://santifer.io/jacobo/og-jacobo-agent.webp'],
+      images: ['https://sfdcai.github.io/portfolio/jacobo/og-jacobo-agent.webp'],
       about: [
         { '@type': 'SoftwareApplication', name: 'n8n', url: 'https://n8n.io', applicationCategory: 'Workflow Automation' },
         { '@type': 'SoftwareApplication', name: 'ElevenLabs', url: 'https://elevenlabs.io', applicationCategory: 'Voice AI' },
@@ -275,8 +275,8 @@ export const articleRegistry: ArticleConfig[] = [
     type: 'case-study',
     ragReady: true,
     i18nFile: 'src/business-os-i18n.ts',
-    ogImage: 'https://santifer.io/business-os/og-business-os.webp',
-    heroImage: 'https://santifer.io/business-os/web-landing-hero.webp',
+    ogImage: 'https://sfdcai.github.io/portfolio/business-os/og-business-os.webp',
+    heroImage: 'https://sfdcai.github.io/portfolio/business-os/web-landing-hero.webp',
     component: () => import('../BusinessOS.tsx'),
     seoMeta: {
       datePublished: '2026-02-25',
@@ -284,7 +284,7 @@ export const articleRegistry: ArticleConfig[] = [
       keywords: ['Business OS', 'Airtable ERP', 'Airtable as ERP', 'no-code ERP', 'Airtable automation', 'CRM gamification', 'phone repair', 'inventory management', 'custom ERP case study', 'repair shop management', 'programmatic SEO', 'Airtable CRM', 'single source of truth', 'business operating system', 'multi-base architecture'],
       articleType: 'TechArticle',
       articleTags: 'Business OS,Airtable,n8n,ERP,CRM,automation,phone repair',
-      images: ['https://santifer.io/business-os/og-business-os.webp'],
+      images: ['https://sfdcai.github.io/portfolio/business-os/og-business-os.webp'],
       about: [
         { '@type': 'SoftwareApplication', name: 'Airtable', url: 'https://airtable.com', applicationCategory: 'Database Platform' },
         { '@type': 'SoftwareApplication', name: 'n8n', url: 'https://n8n.io', applicationCategory: 'Workflow Automation' },
@@ -311,11 +311,11 @@ export const articleRegistry: ArticleConfig[] = [
     titles: { es: 'SEO Programático', en: 'Programmatic SEO' },
     seo: {
       es: {
-        title: 'SEO Programático: 4.000+ Páginas desde un ERP | santifer.io',
+        title: 'SEO Programático: 4.000+ Páginas desde un ERP | sfdcai.github.io/portfolio',
         description: 'Case study: cómo generé 4.730 landing pages estáticas con Airtable, DataForSEO y crawl budget optimization. 2M+ impresiones, 19K+ clicks.',
       },
       en: {
-        title: 'Programmatic SEO: 4,000+ Pages from an ERP | santifer.io',
+        title: 'Programmatic SEO: 4,000+ Pages from an ERP | sfdcai.github.io/portfolio',
         description: 'Case study: 4,730 static landing pages from Airtable as headless CMS with DataForSEO crawl budget optimization and Astro SSG. 2M+ impressions, 19K+ clicks.',
       },
     },
@@ -370,8 +370,8 @@ export const articleRegistry: ArticleConfig[] = [
     type: 'case-study',
     ragReady: true,
     i18nFile: 'src/pseo-i18n.ts',
-    ogImage: 'https://santifer.io/pseo/og-programmatic-seo.webp',
-    heroImage: 'https://santifer.io/pseo/ss-repair-page-hero.webp',
+    ogImage: 'https://sfdcai.github.io/portfolio/pseo/og-programmatic-seo.webp',
+    heroImage: 'https://sfdcai.github.io/portfolio/pseo/ss-repair-page-hero.webp',
     component: () => import('../ProgrammaticSeo.tsx'),
     seoMeta: {
       datePublished: '2026-02-25',
@@ -379,7 +379,7 @@ export const articleRegistry: ArticleConfig[] = [
       keywords: ['programmatic SEO', 'Airtable', 'headless CMS', 'Astro', 'DataForSEO', 'crawl budget', 'phone repair', 'static site generation', 'local SEO', 'ERP'],
       articleType: 'TechArticle',
       articleTags: 'programmatic SEO,Airtable,Astro,DataForSEO,crawl budget,phone repair,ERP,local SEO',
-      images: ['https://santifer.io/pseo/og-programmatic-seo.png'],
+      images: ['https://sfdcai.github.io/portfolio/pseo/og-programmatic-seo.png'],
       about: [
         { '@type': 'SoftwareApplication', name: 'Airtable', url: 'https://airtable.com', applicationCategory: 'Database Platform' },
         { '@type': 'SoftwareApplication', name: 'Astro', url: 'https://astro.build', applicationCategory: 'Static Site Generator' },
@@ -449,8 +449,8 @@ export const articleRegistry: ArticleConfig[] = [
     type: 'case-study',
     ragReady: true,
     i18nFile: 'src/chatbot-i18n.ts',
-    ogImage: 'https://santifer.io/chatbot/og-self-healing-chatbot.webp',
-    heroImage: 'https://santifer.io/chatbot/hero-self-healing-chatbot.webp',
+    ogImage: 'https://sfdcai.github.io/portfolio/chatbot/og-self-healing-chatbot.webp',
+    heroImage: 'https://sfdcai.github.io/portfolio/chatbot/hero-self-healing-chatbot.webp',
     component: () => import('../SelfHealingChatbot.tsx'),
     seoMeta: {
       datePublished: '2026-03-11',
@@ -458,7 +458,7 @@ export const articleRegistry: ArticleConfig[] = [
       keywords: ['LLMOps', 'self-healing chatbot', 'agentic RAG', 'jailbreak defense', 'prompt injection', 'LLM evaluation', 'closed loop LLM', 'Langfuse', 'prompt versioning', 'adversarial testing', 'trace-to-eval', 'hybrid search pgvector', 'AI portfolio', 'chatbot evals', 'CI gate LLM', 'voice mode chatbot', 'OpenAI Realtime API', 'speech-to-speech AI', 'agentic observability', 'developer feedback loop', 'AI maintaining AI'],
       articleType: 'TechArticle',
       articleTags: 'LLMOps,self-healing chatbot,agentic RAG,jailbreak defense,Langfuse,evals,closed-loop,prompt injection',
-      images: ['https://santifer.io/chatbot/og-self-healing-chatbot.webp'],
+      images: ['https://sfdcai.github.io/portfolio/chatbot/og-self-healing-chatbot.webp'],
       about: [
         { '@type': 'SoftwareApplication', name: 'Langfuse', url: 'https://langfuse.com', applicationCategory: 'LLM Observability' },
         { '@type': 'SoftwareApplication', name: 'Supabase', url: 'https://supabase.com', applicationCategory: 'Database' },
@@ -527,8 +527,8 @@ export const articleRegistry: ArticleConfig[] = [
     type: 'case-study',
     ragReady: true,
     i18nFile: 'src/career-ops-i18n.ts',
-    ogImage: 'https://santifer.io/career-ops/og-career-ops.webp',
-    heroImage: 'https://santifer.io/career-ops/hero-career-ops.webp',
+    ogImage: 'https://sfdcai.github.io/portfolio/career-ops/og-career-ops.webp',
+    heroImage: 'https://sfdcai.github.io/portfolio/career-ops/hero-career-ops.webp',
     component: () => import('../CareerOps.tsx'),
     seoMeta: {
       datePublished: '2026-03-17',
@@ -536,7 +536,7 @@ export const articleRegistry: ArticleConfig[] = [
       keywords: ['ai job search', 'ai job search tool', 'ai powered job search', 'ai resume builder', 'ai resume', 'multi agent system', 'multi agent orchestration', 'automated job application', 'ATS-optimized resume', 'Claude Code', 'batch processing', 'HITL', 'job search automation', 'career-ops', 'ai auto apply', 'agente ia', 'crear cv con ia', 'automatizacion con ia', 'sistema multiagente', 'busqueda de empleo ia'],
       articleType: 'TechArticle',
       articleTags: 'multi-agent,job search,Claude Code,ATS,batch processing,HITL,automation,Playwright',
-      images: ['https://santifer.io/career-ops/og-career-ops.webp'],
+      images: ['https://sfdcai.github.io/portfolio/career-ops/og-career-ops.webp'],
       about: [
         { '@type': 'SoftwareApplication', name: 'Claude Code', url: 'https://claude.ai', applicationCategory: 'AI Agent' },
         { '@type': 'SoftwareApplication', name: 'Playwright', url: 'https://playwright.dev', applicationCategory: 'Browser Automation' },
@@ -548,13 +548,13 @@ export const articleRegistry: ArticleConfig[] = [
         { '@type': 'NewsArticle', name: 'I built a tool to filter 700 listings for my job search. It got me a position as head of AI. — Business Insider', url: 'https://www.businessinsider.com/how-i-built-tool-filter-job-listings-landed-head-ai-2026-4' },
         { '@type': 'NewsArticle', name: 'Mein KI-Tool scannt 700 Job-Anzeigen — so half es mir, Karriere zu machen — Business Insider Deutschland', url: 'https://www.businessinsider.de/karriere/bewerbung/mein-ki-tool-scannt-700-job-anzeigen-so-half-es-mir-karriere-zu-machen/' },
         { '@type': 'NewsArticle', name: 'Το AI εργαλείο που φέρνει επανάσταση στον τρόπο που ψάχνουμε δουλειά — WIRED Greece', url: 'https://wired.com.gr/article/to-ai-ergaleio-pou-fernei-epanastasi-ston-tropo-pou-psachnoume-douleia/' },
-        { '@type': 'VideoObject', name: 'Building Career-Ops to Automate the Job Hunt — Create OS Lounge with Santifer', url: 'https://www.youtube.com/watch?v=pDkAe5JbREk' },
+        { '@type': 'VideoObject', name: 'Building Career-Ops to Automate the Job Hunt — Create OS Lounge with Amit Bhardwaj', url: 'https://www.youtube.com/watch?v=pDkAe5JbREk' },
         { '@type': 'WebPage', name: 'Anthropic Claude Code Documentation', url: 'https://docs.anthropic.com/en/docs/claude-code' },
         { '@type': 'WebPage', name: 'Playwright Browser Automation Documentation', url: 'https://playwright.dev/docs/intro' },
         { '@type': 'DiscussionForumPosting', name: 'I built an AI job search system with Claude Code — r/ClaudeAI (2600+ upvotes)', url: 'https://www.reddit.com/r/ClaudeAI/comments/1sd2f37/i_built_an_ai_job_search_system_with_claude_code/' },
         { '@type': 'BlogPosting', name: 'Career-Ops : emploi automatisé par IA — Claude Code (HDVMA.fr)', url: 'https://hdvma.fr/career-ops-recherche-emploi-automatisee-claude-code-agents-ia-2026-2/' },
         { '@type': 'BlogPosting', name: 'Comment créer un agent IA ? — Romain Delfosse', url: 'https://www.romaindelfosse.fr/blog/comment-creer-agent-ia/' },
-        { '@type': 'BlogPosting', name: 'santifer/career-ops — Claude Code, Playwright, Chromium (CSDN)', url: 'https://blog.csdn.net/Dontla/article/details/159930707' },
+        { '@type': 'BlogPosting', name: 'sfdcai/career-ops — Claude Code, Playwright, Chromium (CSDN)', url: 'https://blog.csdn.net/Dontla/article/details/159930707' },
         { '@type': 'WebPage', name: 'GitHub Trending Weekly 2026-04-08 — Shareuhack', url: 'https://www.shareuhack.com/en/posts/github-trending-weekly-2026-04-08' },
         { '@type': 'WebPage', name: 'Career-Ops — AI Job Search CLI Tool (EveryDev.ai)', url: 'https://www.everydev.ai/tools/career-ops' },
         { '@type': 'WebPage', name: 'HN Top Links — Popular Stories from Hacker News', url: 'http://hntoplinks.com/week?page=216&sort=upvotes' },
@@ -563,7 +563,7 @@ export const articleRegistry: ArticleConfig[] = [
         { '@type': 'TechArticle', name: 'Anthropic Building Effective Agents (engineering guide)', url: 'https://www.anthropic.com/engineering/building-effective-agents' },
       ],
       mentions: [
-        { '@type': 'SoftwareSourceCode', name: 'career-ops', url: 'https://career-ops.org', codeRepository: 'https://github.com/santifer/career-ops', programmingLanguage: ['TypeScript', 'Go'], license: 'https://opensource.org/licenses/MIT', sameAs: ['https://career-ops.org', 'https://github.com/santifer/career-ops', 'https://www.wikidata.org/wiki/Q139007988'], discussionUrl: 'https://discord.gg/8pRpHETxa4', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock' } },
+        { '@type': 'SoftwareSourceCode', name: 'career-ops', url: 'https://career-ops.org', codeRepository: 'https://github.com/sfdcai/career-ops', programmingLanguage: ['TypeScript', 'Go'], license: 'https://opensource.org/licenses/MIT', sameAs: ['https://career-ops.org', 'https://github.com/sfdcai/career-ops', 'https://www.wikidata.org/wiki/Q139007988'], discussionUrl: 'https://discord.gg/8pRpHETxa4', offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD', availability: 'https://schema.org/InStock' } },
         { '@type': 'SoftwareApplication', name: 'Claude Code', url: 'https://claude.ai' },
         { '@type': 'SoftwareApplication', name: 'Playwright', url: 'https://playwright.dev' },
         { '@type': 'SoftwareApplication', name: 'Puppeteer', url: 'https://pptr.dev' },
@@ -575,52 +575,175 @@ export const articleRegistry: ArticleConfig[] = [
     },
   },
   {
-    id: 'santifer-irepair',
-    slugs: { es: 'santifer-irepair', en: 'santifer-irepair-founder' },
-    titles: { es: 'Santifer iRepair', en: 'Santifer iRepair' },
+    id: 'amitbhardwaj-irepair',
+    slugs: { es: 'amitbhardwaj-irepair', en: 'amitbhardwaj-irepair-founder' },
+    titles: { es: 'Amit Bhardwaj iRepair', en: 'Amit Bhardwaj iRepair' },
     seo: {
       es: {
-        title: 'Santifer iRepair Sevilla | Reparación de Móviles desde 2009',
-        description: 'La tienda de reparación de móviles fundada por Santiago en 2009 sigue abierta en Sevilla. 30.000+ reparaciones. Encuentra la tienda o conoce al fundador.',
+        title: 'Amit Bhardwaj iRepair Sevilla | Reparación de Móviles desde 2009',
+        description: 'La tienda de reparación de móviles fundada por Amit en 2009 sigue abierta en Sevilla. 30.000+ reparaciones. Encuentra la tienda o conoce al fundador.',
       },
       en: {
-        title: 'Santifer iRepair Seville | Phone Repair since 2009',
-        description: 'The phone repair shop founded by Santiago in 2009 is still open in Seville, Spain. 30,000+ repairs. Find the shop or meet the founder.',
+        title: 'Amit Bhardwaj iRepair Seville | Phone Repair since 2009',
+        description: 'The phone repair shop founded by Amit in 2009 is still open in Seville, Spain. 30,000+ repairs. Find the shop or meet the founder.',
       },
     },
     sectionLabels: { es: {}, en: {} },
     type: 'bridge',
-    component: () => import('../SantiferIRepair.tsx'),
-    xDefaultSlug: 'santifer-irepair',
+    component: () => import('../AmitBhardwajIRepair.tsx'),
+    xDefaultSlug: 'amitbhardwaj-irepair',
+  },
+  {
+    id: 'salesforce-sap',
+    slugs: { es: 'salesforce-sap', en: 'salesforce-sap' },
+    titles: { es: 'Salesforce ↔ SAP Integration', en: 'Salesforce ↔ SAP Integration' },
+    seo: {
+      es: { title: 'Integración Salesforce ↔ SAP', description: 'Arquitectura de integración para Salesforce y SAP.' },
+      en: { title: 'Salesforce ↔ SAP Integration | Amit Bhardwaj', description: 'Scalable event-driven integration patterns connecting Salesforce with enterprise SAP systems.' },
+    },
+    sectionLabels: { es: {}, en: {} },
+    type: 'case-study',
+    component: () => import('../SalesforceSapArticle.tsx'),
+    xDefaultSlug: 'salesforce-sap',
+    seoMeta: {
+      datePublished: '2026-06-06',
+      dateModified: '2026-06-06',
+      keywords: ['salesforce sap integration', 'salesforce sap architecture', 'mulesoft integration', 'event-driven architecture'],
+      articleType: 'TechArticle',
+      articleTags: 'Salesforce, SAP, Integration, Architecture',
+      images: ['https://sfdcai.github.io/portfolio/foto-avatar.png'],
+      about: [{ '@type': 'Thing', name: 'Salesforce SAP Integration' }],
+    }
+  },
+  {
+    id: 'ai-agents-arch',
+    slugs: { es: 'ai-agents-arch', en: 'ai-agents-arch' },
+    titles: { es: 'AI Agent Architecture', en: 'AI Agent Architecture' },
+    seo: {
+      es: { title: 'Arquitectura de Agentes IA', description: 'Diseño de sistemas multi-agente usando LLMs.' },
+      en: { title: 'AI Agent Architecture | Amit Bhardwaj', description: 'Conceptual designs and memory system orchestration for multi-agent enterprise setups.' },
+    },
+    sectionLabels: { es: {}, en: {} },
+    type: 'case-study',
+    component: () => import('../AiAgentsArchArticle.tsx'),
+    xDefaultSlug: 'ai-agents-arch',
+    seoMeta: {
+      datePublished: '2026-06-06',
+      dateModified: '2026-06-06',
+      keywords: ['ai agent architecture', 'multi agent systems', 'agent orchestration', 'llm agents'],
+      articleType: 'TechArticle',
+      articleTags: 'AI, Architecture, Multi-Agent, LLM',
+      images: ['https://sfdcai.github.io/portfolio/foto-avatar.png'],
+      about: [{ '@type': 'Thing', name: 'AI Agent Architecture' }],
+    }
+  },
+  {
+    id: 'salesforce-devops',
+    slugs: { es: 'salesforce-devops', en: 'salesforce-devops' },
+    titles: { es: 'Salesforce DevOps Best Practices', en: 'Salesforce DevOps Best Practices' },
+    seo: {
+      es: { title: 'Mejores Prácticas de DevOps en Salesforce', description: 'Automatización y versionado en la entrega de Salesforce.' },
+      en: { title: 'Salesforce DevOps Best Practices | Amit Bhardwaj', description: 'Discover source-driven development, branching models, and deployment automation for Salesforce.' },
+    },
+    sectionLabels: { es: {}, en: {} },
+    type: 'case-study',
+    component: () => import('../SalesforceDevOpsArticle.tsx'),
+    xDefaultSlug: 'salesforce-devops',
+    seoMeta: {
+      datePublished: '2026-06-06',
+      dateModified: '2026-06-06',
+      keywords: ['salesforce devops', 'copado', 'azure devops salesforce', 'salesforce cicd'],
+      articleType: 'TechArticle',
+      articleTags: 'Salesforce, DevOps, CI/CD, Copado',
+      images: ['https://sfdcai.github.io/portfolio/foto-avatar.png'],
+      about: [{ '@type': 'Thing', name: 'Salesforce DevOps' }],
+    }
+  },
+  {
+    id: 'ai-agents-blog',
+    slugs: { es: 'ai-agents-blog', en: 'ai-agents-blog' },
+    titles: { es: 'The Rise of AI Agents in Enterprise Systems', en: 'The Rise of AI Agents in Enterprise Systems' },
+    seo: {
+      es: { title: 'El Auge de los Agentes IA en Empresas', description: 'Cómo los agentes de IA cambian el software empresarial.' },
+      en: { title: 'The Rise of AI Agents in Enterprise Systems | Amit Bhardwaj', description: 'Read about the impact of tool-using models, multi-agent systems, and memory context in enterprise.' },
+    },
+    sectionLabels: { es: {}, en: {} },
+    type: 'case-study',
+    component: () => import('../AiAgentsBlogArticle.tsx'),
+    xDefaultSlug: 'ai-agents-blog',
+    seoMeta: {
+      datePublished: '2026-06-06',
+      dateModified: '2026-06-06',
+      keywords: ['enterprise ai agents', 'ai agents in enterprise', 'agentic workflows', 'tool-using models'],
+      articleType: 'TechArticle',
+      articleTags: 'AI, Enterprise, Automation',
+      images: ['https://sfdcai.github.io/portfolio/foto-avatar.png'],
+      about: [{ '@type': 'Thing', name: 'AI Agents' }],
+    }
+  },
+  {
+    id: 'homelab-network',
+    slugs: { es: 'homelab-network', en: 'homelab-network' },
+    titles: { es: 'Network & Infrastructure Lab', en: 'Network & Infrastructure Lab' },
+    seo: {
+      es: { title: 'Laboratorio de Redes e Infraestructura', description: 'Segmentación de red y firewalls auto-hospedados.' },
+      en: { title: 'Network & Infrastructure Lab | Amit Bhardwaj', description: 'Hands-on network design, VLAN segmentation, and traffic monitoring in home labs.' },
+    },
+    sectionLabels: { es: {}, en: {} },
+    type: 'case-study',
+    component: () => import('../HomelabNetworkArticle.tsx'),
+    xDefaultSlug: 'homelab-network',
+    seoMeta: {
+      datePublished: '2026-06-06',
+      dateModified: '2026-06-06',
+      keywords: ['homelab network', 'openwrt vlan', 'pfsense firewall', 'network segmentation'],
+      articleType: 'TechArticle',
+      articleTags: 'Networking, Homelab, OpenWRT, pfSense',
+      images: ['https://sfdcai.github.io/portfolio/foto-avatar.png'],
+      about: [{ '@type': 'Thing', name: 'Network & Infrastructure Lab' }],
+    }
+  },
+  {
+    id: 'monitoring',
+    slugs: { es: 'monitoring', en: 'monitoring' },
+    titles: { es: 'Unified Monitoring System', en: 'Unified Monitoring System' },
+    seo: {
+      es: { title: 'Sistema de Monitoreo Unificado', description: 'Monitoreo en tiempo real de Proxmox y servidores.' },
+      en: { title: 'Unified Monitoring System | Amit Bhardwaj', description: 'Centralized observability setup combining multiple virtualized infrastructure sources.' },
+    },
+    sectionLabels: { es: {}, en: {} },
+    type: 'case-study',
+    component: () => import('../MonitoringArticle.tsx'),
+    xDefaultSlug: 'monitoring',
+    seoMeta: {
+      datePublished: '2026-06-06',
+      dateModified: '2026-06-06',
+      keywords: ['unified monitoring', 'proxmox netdata', 'homelab observability', 'system health tracking'],
+      articleType: 'TechArticle',
+      articleTags: 'Monitoring, Observability, Proxmox, Netdata',
+      images: ['https://sfdcai.github.io/portfolio/foto-avatar.png'],
+      about: [{ '@type': 'Thing', name: 'Unified Monitoring System' }],
+    }
   },
 ]
 
 // Derived maps for GlobalNav and routing
 export function getAltPaths(): Record<string, string> {
   const map: Record<string, string> = {
-    '/': '/en',
-    '/en': '/',
-    '/sobre-mi': '/about',
-    '/about': '/sobre-mi',
-    '/privacidad': '/privacy',
-    '/privacy': '/privacidad',
+    '/': '/',
   }
   for (const article of articleRegistry) {
-    map[`/${article.slugs.es}`] = `/${article.slugs.en}`
-    map[`/${article.slugs.en}`] = `/${article.slugs.es}`
+    map[`/${article.slugs.en}`] = `/${article.slugs.en}`
   }
   return map
 }
 
 export function getPageTitles(): Record<string, string> {
   const map: Record<string, string> = {
-    '/': 'Portfolio de Santiago',
-    '/en': "Santiago's Portfolio",
-    '/sobre-mi': 'Sobre Mí',
+    '/': "Amit Bhardwaj's Portfolio",
     '/about': 'About',
   }
   for (const article of articleRegistry) {
-    map[`/${article.slugs.es}`] = article.titles.es
     map[`/${article.slugs.en}`] = article.titles.en
   }
   return map
@@ -629,17 +752,11 @@ export function getPageTitles(): Record<string, string> {
 export function getSectionLabels(): Record<string, Record<string, string>> {
   const map: Record<string, Record<string, string>> = {}
   for (const article of articleRegistry) {
-    map[`/${article.slugs.es}`] = article.sectionLabels.es
     map[`/${article.slugs.en}`] = article.sectionLabels.en
   }
   return map
 }
 
-/** All ES slugs (for lang detection: if pathname matches an ES slug → lang is 'es') */
 export function getEsSlugs(): Set<string> {
-  const slugs = new Set<string>(['/', '/privacidad', '/sobre-mi'])
-  for (const article of articleRegistry) {
-    slugs.add(`/${article.slugs.es}`)
-  }
-  return slugs
+  return new Set<string>()
 }

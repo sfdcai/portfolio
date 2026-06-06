@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { type CareerOpsLang as Lang } from './career-ops-i18n'
+type Lang = 'es' | 'en'
 import { buildJsonLdFromRegistry } from './articles/json-ld'
 import { useArticleSeo } from './articles/use-article-seo'
 import {
@@ -26,7 +26,7 @@ import {
   DiagramZoom,
   ToolList,
 } from './articles/content-types'
-import { careerOpsContent } from './career-ops-i18n'
+import { getArticleContent } from './markdown-parser'
 import { PressFeatures } from './PressFeatures'
 
 // ---------------------------------------------------------------------------
@@ -54,14 +54,14 @@ const stackIcons: Record<string, React.ReactNode> = {
 // buildJsonLd
 // ---------------------------------------------------------------------------
 function buildJsonLd(lang: Lang) {
-  return buildJsonLdFromRegistry('career-ops', lang, careerOpsContent[lang])
+  return buildJsonLdFromRegistry('career-ops', lang, getArticleContent('career-ops', lang) as any)
 }
 
 // ===========================================================================
 // MAIN COMPONENT
 // ===========================================================================
 export default function CareerOps({ lang = 'en' }: { lang?: Lang }) {
-  const t = careerOpsContent[lang]
+  const t = getArticleContent('career-ops', lang) as any
 
   useArticleSeo({
     lang,
@@ -390,7 +390,7 @@ export default function CareerOps({ lang = 'en' }: { lang?: Lang }) {
           : 'Career-Ops demonstrates the same competencies as these systems. Each one is a full case study with architecture, metrics, and lessons.'
         }</Prose>
         <div className="grid sm:grid-cols-2 gap-3 mb-8">
-          {Object.values(t.internalLinks).map(link => (
+          {(Object.values(t.internalLinks) as any[]).map((link: any) => (
             <Link key={link.href} to={link.href} className="block p-4 rounded-lg bg-card border border-border hover:border-primary/40 transition-colors">
               <p className="text-sm font-medium text-primary">{link.text}</p>
             </Link>

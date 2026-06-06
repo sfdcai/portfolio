@@ -1,0 +1,410 @@
+PROFILE (Home + About)
+content/profile/about.md
+---
+title: About
+---
+
+# Hi, I’m Amit
+
+I’m a Salesforce Architect focused on designing enterprise-scale systems, integration architectures, and modern AI-enabled platforms.
+
+My work sits at the intersection of:
+
+- Salesforce architecture & platform engineering
+- Enterprise integration (SAP, APIs, event-driven systems)
+- DevOps & release automation
+- AI-assisted engineering and automation
+- Infrastructure engineering and home lab experimentation
+
+I enjoy building systems that are not just functional, but scalable, observable, and future-ready.
+
+---
+
+## What I Do
+
+### Salesforce Architecture
+I design and lead enterprise Salesforce implementations including:
+- Sales & Service Cloud solutions
+- Complex integration architectures
+- Data modelling & governance
+- Security & access design
+- Scalable platform patterns
+
+---
+
+### AI & Automation
+I actively explore how AI can reshape engineering and enterprise systems:
+- LLM-based assistants
+- Agentic workflows
+- Prompt-driven automation
+- AI-assisted software engineering
+- Enterprise AI architecture patterns
+
+---
+
+### Infrastructure & Systems Engineering
+Outside enterprise systems, I run a full home lab:
+- Virtualized infrastructure using Proxmox
+- Network design with OpenWRT & pfSense
+- Observability dashboards using Netdata
+- Self-hosted services and automation
+content/profile/home.md
+---
+title: Home
+---
+
+# Salesforce Architect • AI Builder • Systems Designer
+
+I design enterprise systems, build AI experiments, and run a full-scale home lab to explore real-world infrastructure and automation.
+
+---
+
+## Core Focus Areas
+
+- Salesforce Architecture & Integration
+- AI Engineering & Agentic Systems
+- DevOps & Cloud Automation
+- Infrastructure & Networking
+- SaaS & Platform Design
+
+---
+
+## Featured Work
+
+Explore my projects, architecture designs, and technical experiments that span enterprise systems and personal R&D labs.
+🚀 2. PROJECTS
+content/projects/employee-engagement.md
+---
+title: Employee Engagement Platform
+tags: [SaaS, AI, Architecture]
+---
+
+# Employee Engagement Platform
+
+A conceptual SaaS platform designed to improve employee engagement using gamification, feedback loops, and AI-driven insights.
+
+---
+
+## Overview
+
+The platform focuses on building continuous engagement between employees and organisations through:
+
+- Recognition systems
+- Feedback loops
+- Rewards and gamification
+- Analytics dashboards
+- AI-based sentiment insights
+
+---
+
+## Architecture Highlights
+
+- Multi-tenant SaaS architecture
+- Event-driven engagement tracking
+- Scalable microservice design
+- AI-based engagement scoring
+
+---
+
+## Key Capabilities
+
+- Employee recognition engine
+- Real-time engagement analytics
+- Survey & feedback system
+- Manager dashboards
+- AI-driven insights
+content/projects/ai-product-platform.md
+---
+title: AI Product Information Platform
+tags: [AI, Data, SaaS]
+---
+
+# AI Product Information Platform
+
+A system designed to centralize product data and enhance it using AI-driven enrichment pipelines.
+
+---
+
+## Overview
+
+The platform enables:
+
+- Product aggregation from multiple sources
+- AI-based enrichment
+- Multi-language translation
+- Image enhancement
+- Structured catalog management
+
+---
+
+## Key Features
+
+- Unified product database
+- AI-generated descriptions
+- Automated tagging & categorization
+- Search optimization
+- API-first architecture
+content/projects/homelab.md
+---
+title: Home Lab Infrastructure
+tags: [DevOps, Networking, Cloud]
+---
+
+# Home Lab Infrastructure
+
+A fully self-hosted environment used for learning enterprise infrastructure, networking, and system design.
+
+---
+
+## Stack
+
+- Proxmox virtualization
+- OpenWRT router setup
+- pfSense firewall
+- Home Assistant automation
+- Netdata monitoring
+
+---
+
+## Capabilities
+
+- VM orchestration
+- Containerized workloads
+- Network segmentation
+- Observability dashboards
+- Self-hosted services
+
+---
+
+## Purpose
+
+This environment acts as a personal R&D lab for:
+- Infrastructure engineering
+- Networking experiments
+- AI system testing
+- DevOps workflows
+content/projects/salesforce-integration.md
+---
+title: Enterprise Integration Architecture
+tags: [Salesforce, SAP, Integration]
+---
+
+# Enterprise Integration Architecture
+
+Designed scalable integration patterns between Salesforce and enterprise systems such as SAP and external APIs.
+
+---
+
+## Key Areas
+
+- API-led connectivity
+- Event-driven architecture
+- Middleware integration patterns
+- Data synchronization strategies
+
+---
+
+## Focus
+
+- Reliability
+- Scalability
+- Security
+- Data consistency across systems
+🧪 3. LABS (Home Projects Showcase)
+content/labs/homelab-network.md
+---
+title: Network & Infrastructure Lab
+---
+
+# Network & Infrastructure Lab
+
+A self-built networking and infrastructure environment for hands-on learning.
+
+---
+
+## Components
+
+- OpenWRT router setup
+- VLAN segmentation
+- Firewall rules
+- Traffic monitoring
+
+---
+
+## Learnings
+
+- Network design principles
+- Security segmentation
+- DNS & DHCP management
+- Performance tuning
+content/labs/monitoring.md
+---
+title: Unified Monitoring System
+---
+
+# Unified Monitoring System
+
+A centralized observability setup combining multiple infrastructure sources.
+
+---
+
+## Data Sources
+
+- Proxmox hosts
+- Home Assistant
+- Network devices
+- Linux servers
+
+---
+
+## Goals
+
+- Real-time monitoring
+- System health visibility
+- Resource tracking
+- Alerting & insights
+🧠 4. ARCHITECTURE
+content/architecture/salesforce-sap.md
+---
+title: Salesforce ↔ SAP Integration
+---
+
+# Salesforce ↔ SAP Integration Architecture
+
+A scalable integration pattern connecting Salesforce with SAP systems.
+
+---
+
+## Flow
+
+```mermaid
+graph LR
+Salesforce --> Middleware
+Middleware --> SAP
+SAP --> Middleware
+Middleware --> Salesforce
+Key Principles
+Decoupled architecture
+Event-driven communication
+Error handling & retries
+Data consistency
+
+---
+
+## `content/architecture/ai-agents.md`
+
+```md
+---
+title: AI Agent Architecture
+---
+
+# AI Agent Architecture
+
+A conceptual design for multi-agent systems using LLMs and tool orchestration.
+
+---
+
+## Architecture
+
+```mermaid
+graph LR
+User --> Agent
+Agent --> Tools
+Agent --> Memory
+Tools --> APIs
+Focus Areas
+Tool use
+Memory systems
+Prompt orchestration
+Agent collaboration
+
+---
+
+# 📝 5. BLOG (SEO ENGINE)
+
+## `content/blog/salesforce-devops.md`
+
+```md
+---
+title: Salesforce DevOps Best Practices
+date: 2026-01-01
+tags: [Salesforce, DevOps]
+---
+
+# Salesforce DevOps Best Practices
+
+Modern Salesforce delivery requires strong automation, version control, and CI/CD discipline.
+
+---
+
+## Key Principles
+
+- Source-driven development
+- Automated deployments
+- Environment parity
+- Release governance
+
+---
+
+## CI/CD Strategy
+
+- Git-based branching model
+- Automated validation
+- Deployment pipelines
+- Rollback strategies
+content/blog/ai-agents.md
+---
+title: The Rise of AI Agents in Enterprise Systems
+date: 2026-02-01
+tags: [AI, Architecture]
+---
+
+# AI Agents in Enterprise Systems
+
+AI agents are changing how software systems are designed and operated.
+
+---
+
+## Key Concepts
+
+- Tool-using models
+- Multi-agent systems
+- Memory + context
+- Workflow automation
+
+---
+
+## Enterprise Impact
+
+- Reduced manual workflows
+- Intelligent automation
+- Decision support systems
+🎯 6. GLOBAL PROFILE DATA
+content/profile/skills.md
+---
+title: Skills
+---
+
+# Technical Skills
+
+## Salesforce
+- Apex
+- Lightning Web Components
+- Integration architecture
+- Data modelling
+
+## AI & Automation
+- LLM systems
+- Prompt engineering
+- Agentic workflows
+
+## DevOps
+- Azure DevOps
+- Git workflows
+- CI/CD pipelines
+
+## Infrastructure
+- Proxmox
+- OpenWRT
+- pfSense
+- Linux systems

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import type { ReactNode } from 'react'
-import { type N8nLang as Lang } from './n8n-i18n'
+type Lang = 'es' | 'en'
 import { buildJsonLdFromRegistry } from './articles/json-ld'
 import { useArticleSeo } from './articles/use-article-seo'
 import {
@@ -40,7 +40,7 @@ import {
   ScreenshotGrid,
   ScreenshotCaption,
 } from './articles/content-types'
-import { pseoContent } from './pseo-i18n'
+import { getArticleContent } from './markdown-parser'
 
 /* ------------------------------------------------------------------ */
 /* Icon resolver — maps i18n icon strings to Lucide components         */
@@ -237,11 +237,11 @@ function ReviewCarousel({ alt }: { alt: string }) {
 }
 
 function buildJsonLd(lang: Lang) {
-  return buildJsonLdFromRegistry('programmatic-seo', lang, pseoContent[lang])
+  return buildJsonLdFromRegistry('programmatic-seo', lang, getArticleContent('programmatic-seo', lang) as any)
 }
 
 export default function ProgrammaticSeo({ lang = 'en' }: { lang?: Lang }) {
-  const t = pseoContent[lang]
+  const t = getArticleContent('programmatic-seo', lang) as any
 
   useArticleSeo({
     lang,
@@ -249,7 +249,7 @@ export default function ProgrammaticSeo({ lang = 'en' }: { lang?: Lang }) {
     altSlug: t.altSlug,
     title: t.seo.title,
     description: t.seo.description,
-    image: 'https://santifer.io/pseo/og-programmatic-seo.png',
+    image: 'https://sfdcai.github.io/portfolio/pseo/og-programmatic-seo.png',
     publishedTime: '2026-02-25',
     modifiedTime: '2026-05-10',
     articleTags: 'programmatic SEO,Airtable,Astro,DataForSEO,crawl budget,phone repair,ERP,local SEO',
@@ -319,9 +319,9 @@ export default function ProgrammaticSeo({ lang = 'en' }: { lang?: Lang }) {
         {/* Homepage screenshot */}
         <Photo1
           src="/pseo/ss-homepage.webp"
-          alt={lang === 'es' ? 'Homepage de santiferirepair.es' : 'santiferirepair.es homepage'}
+          alt={lang === 'es' ? 'Homepage de sfdcai.github.io/portfolio' : 'sfdcai.github.io/portfolio homepage'}
           width={1406} height={1345}
-          caption={lang === 'es' ? 'santiferirepair.es: homepage generada con Astro SSG. Buscador de dispositivos, categorías y marcas.' : 'santiferirepair.es: homepage generated with Astro SSG. Device search, categories and brands.'}
+          caption={lang === 'es' ? 'sfdcai.github.io/portfolio: homepage generada con Astro SSG. Buscador de dispositivos, categorías y marcas.' : 'sfdcai.github.io/portfolio: homepage generated with Astro SSG. Device search, categories and brands.'}
         />
 
         {/* Two Strategies */}
@@ -423,7 +423,7 @@ export default function ProgrammaticSeo({ lang = 'en' }: { lang?: Lang }) {
         {/* Category page screenshot */}
         <Photo1
           src="/pseo/ss-category-samsung.webp"
-          alt={lang === 'es' ? 'Página de categoría Samsung en santiferirepair.es' : 'Samsung category page on santiferirepair.es'}
+          alt={lang === 'es' ? 'Página de categoría Samsung en sfdcai.github.io/portfolio' : 'Samsung category page on sfdcai.github.io/portfolio'}
           width={1440} height={900}
           caption={lang === 'es' ? 'Página de categoría generada automáticamente. Cada marca tiene su landing con modelos, precios y reseñas.' : 'Auto-generated category page. Each brand gets its own landing with models, pricing, and reviews.'}
         />
@@ -462,7 +462,7 @@ export default function ProgrammaticSeo({ lang = 'en' }: { lang?: Lang }) {
         {/* Repair page hero screenshot */}
         <Photo1
           src="/pseo/ss-repair-page-hero.webp"
-          alt={lang === 'es' ? 'Hero de una página de reparación en santiferirepair.es' : 'Repair page hero on santiferirepair.es'}
+          alt={lang === 'es' ? 'Hero de una página de reparación en sfdcai.github.io/portfolio' : 'Repair page hero on sfdcai.github.io/portfolio'}
           width={1440} height={900}
           caption={lang === 'es' ? 'Hero de página de reparación: precio dual (original/compatible), CTA de cita, y breadcrumb semántico.' : 'Repair page hero: dual pricing (original/compatible), booking CTA, and semantic breadcrumb.'}
         />
@@ -956,8 +956,8 @@ export default function ProgrammaticSeo({ lang = 'en' }: { lang?: Lang }) {
           alt={lang === 'es' ? 'PageSpeed Insights: Lighthouse 97 en móvil, Accesibilidad 100, SEO 100. Core Web Vitals: Superada' : 'PageSpeed Insights: Lighthouse 97 on mobile, Accessibility 100, SEO 100. Core Web Vitals: Passed'}
           width={2512} height={1312} hdWidth={2512} hdHeight={1312}
           caption={lang === 'es'
-            ? <>Después: Astro + Cloudflare. Lighthouse 97/100 móvil. CWV superada. <a href="https://pagespeed.web.dev/analysis/https-santiferirepair-es/rynn9cjrrs?form_factor=mobile" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Compruébalo tú mismo →</a></>
-            : <>After: Astro + Cloudflare. Lighthouse 97/100 mobile. CWV passed. <a href="https://pagespeed.web.dev/analysis/https-santiferirepair-es/rynn9cjrrs?form_factor=mobile" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Check it yourself →</a></>}
+            ? <>Después: Astro + Cloudflare. Lighthouse 97/100 móvil. CWV superada. <a href="https://pagespeed.web.dev/analysis/https-amitbhardwaj-irepair-es/rynn9cjrrs?form_factor=mobile" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Compruébalo tú mismo →</a></>
+            : <>After: Astro + Cloudflare. Lighthouse 97/100 mobile. CWV passed. <a href="https://pagespeed.web.dev/analysis/https-amitbhardwaj-irepair-es/rynn9cjrrs?form_factor=mobile" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">Check it yourself →</a></>}
         />
 
         <H3 id="migration">{(t.sections as any).migration.migrationSteps.heading}</H3>
@@ -1036,7 +1036,7 @@ export default function ProgrammaticSeo({ lang = 'en' }: { lang?: Lang }) {
           heading={t.cta.heading}
           body={t.cta.body}
           ctaLabel={t.cta.label}
-          ctaHref="mailto:hola@santifer.io?subject=Programmatic SEO"
+          ctaHref="mailto:hola@sfdcai.github.io/portfolio?subject=Programmatic SEO"
         />
 
         {/* FAQ */}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { type N8nLang as Lang } from './n8n-i18n'
+type Lang = 'es' | 'en'
 import { buildJsonLdFromRegistry } from './articles/json-ld'
 import { useArticleSeo } from './articles/use-article-seo'
 import {
@@ -27,7 +27,7 @@ import {
   DiagramZoom,
   ArchitectureDiagram,
 } from './articles/content-types'
-import { chatbotContent } from './chatbot-i18n'
+import { getArticleContent } from './markdown-parser'
 
 // ---------------------------------------------------------------------------
 // Stack icons (inline SVG for each tech)
@@ -92,14 +92,14 @@ const stackIcons: Record<string, React.ReactNode> = {
 // buildJsonLd
 // ---------------------------------------------------------------------------
 function buildJsonLd(lang: Lang) {
-  return buildJsonLdFromRegistry('self-healing-chatbot', lang, chatbotContent[lang])
+  return buildJsonLdFromRegistry('self-healing-chatbot', lang, getArticleContent('self-healing-chatbot', lang) as any)
 }
 
 // ===========================================================================
 // MAIN COMPONENT
 // ===========================================================================
 export default function SelfHealingChatbot({ lang = 'en' }: { lang?: Lang }) {
-  const t = chatbotContent[lang]
+  const t = getArticleContent('self-healing-chatbot', lang) as any
 
   useArticleSeo({
     lang,
@@ -107,7 +107,7 @@ export default function SelfHealingChatbot({ lang = 'en' }: { lang?: Lang }) {
     altSlug: t.altSlug,
     title: t.seo.title,
     description: t.seo.description,
-    image: 'https://santifer.io/chatbot/og-self-healing-chatbot.webp',
+    image: 'https://sfdcai.github.io/portfolio/chatbot/og-self-healing-chatbot.webp',
     publishedTime: '2026-03-11',
     modifiedTime: '2026-05-10',
     articleTags: 'LLMOps,self-healing chatbot,agentic RAG,jailbreak defense,Langfuse,evals,closed-loop,prompt injection',
@@ -513,10 +513,10 @@ export default function SelfHealingChatbot({ lang = 'en' }: { lang?: Lang }) {
           heading={t.cta.heading}
           body={t.cta.body}
           ctaLabel={t.cta.label}
-          ctaHref="https://linkedin.com/in/santifer"
+          ctaHref="https://linkedin.com/in/salesforce-technical-architect"
           external
           secondaryLabel={t.cta.labelSecondary}
-          secondaryHref="mailto:hola@santifer.io"
+          secondaryHref="mailto:hola@sfdcai.github.io/portfolio"
         />
       </article>
 

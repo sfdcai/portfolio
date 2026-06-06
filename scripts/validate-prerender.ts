@@ -107,10 +107,8 @@ function validatePrerenderHtml(id: string, slug: string, lang: 'es' | 'en'): Iss
     issues.push({ severity: 'error', msg: 'Canonical tag not found', skill: '/seo technical' })
   }
 
-  // 6. Hreflang
-  if (!html.includes('hreflang="en"') || !html.includes('hreflang="es"')) {
-    issues.push({ severity: 'warn', msg: 'Hreflang incomplete (need en + es)', skill: '/seo hreflang' })
-  }
+  // 6. Hreflang - English only, no alternate tags needed
+
 
   // 7. OG image
   if (!html.includes('og:image')) {
@@ -189,8 +187,8 @@ function validatePrerenderHtml(id: string, slug: string, lang: 'es' | 'en'): Iss
     const hrefMatch = tag.match(/href="(\/[^"#]*)"/)
     if (!hrefMatch) continue
     const href = hrefMatch[1]
-    // Skip special paths (API, ops dashboard, SPA-only utility pages)
-    if (href.startsWith('/api/') || href.startsWith('/ops') || href === '/privacidad' || href === '/privacy') continue
+    // Skip special paths (API, SPA-only utility pages)
+    if (href.startsWith('/api/')) continue
     // Check if file exists: dist/{path}/index.html or dist/{path}
     const cleanPath = href.replace(/\/$/, '') || ''
     const candidate1 = resolve(dist, cleanPath.slice(1), 'index.html')
@@ -278,10 +276,8 @@ function validateRegistryConfig(config: ArticleConfig): Issue[] {
     issues.push({ severity: 'warn', msg: 'Fewer than 3 article tags', skill: '/seo content' })
   }
 
-  for (const lang of ['es', 'en'] as const) {
-    if (!config.seo[lang]?.description) {
-      issues.push({ severity: 'error', msg: `SEO description missing [${lang}]`, skill: '/seo content' })
-    }
+  if (!config.seo['en']?.description) {
+    issues.push({ severity: 'error', msg: `SEO description missing [en]`, skill: '/seo content' })
   }
 
   return issues
@@ -453,30 +449,30 @@ const wordCounts: Map<string, { es: number; en: number }> = new Map()
 
 for (const article of articleRegistry) {
   if (article.type === 'bridge') continue
-  for (const [lang, slug] of Object.entries(article.slugs) as ['es' | 'en', string][]) {
-    const issues = validatePrerenderHtml(article.id, slug, lang)
-    if (issues.length > 0) {
-      printIssues(issues, `${article.id} [${lang}]`)
-    } else {
-      console.log(`\x1b[32m✓\x1b[0m ${article.id} [${lang}] — clean`)
-    }
-
-    // Collect meta description
-    const htmlPath = resolve(dist, slug, 'index.html')
-    const desc = extractMetaDescription(htmlPath)
-    if (desc) {
-      const label = `${article.id} [${lang}]`
-      const existing = metaDescriptions.get(desc) || []
-      existing.push(label)
-      metaDescriptions.set(desc, existing)
-    }
-
-    // Collect word count
-    const wc = extractWordCount(htmlPath)
-    const counts = wordCounts.get(article.id) || { es: 0, en: 0 }
-    counts[lang] = wc
-    wordCounts.set(article.id, counts)
+  const lang = 'en'
+  const slug = article.slugs[lang]
+  const issues = validatePrerenderHtml(article.id, slug, lang)
+  if (issues.length > 0) {
+    printIssues(issues, `${article.id} [${lang}]`)
+  } else {
+    console.log(`\x1b[32m✓\x1b[0m ${article.id} [${lang}] — clean`)
   }
+
+  // Collect meta description
+  const htmlPath = resolve(dist, slug, 'index.html')
+  const desc = extractMetaDescription(htmlPath)
+  if (desc) {
+    const label = `${article.id} [${lang}]`
+    const existing = metaDescriptions.get(desc) || []
+    existing.push(label)
+    metaDescriptions.set(desc, existing)
+  }
+
+  // Collect word count
+  const wc = extractWordCount(htmlPath)
+  const counts = wordCounts.get(article.id) || { es: 0, en: 0 }
+  counts[lang] = wc
+  wordCounts.set(article.id, counts)
 }
 
 // Cross-article checks
@@ -493,21 +489,7 @@ for (const [desc, labels] of metaDescriptions) {
   }
 }
 
-// 18. ES/EN content parity
-for (const article of articleRegistry) {
-  if (article.type === 'bridge') continue
-  const counts = wordCounts.get(article.id)
-  if (!counts || counts.es === 0 || counts.en === 0) continue
-  const ratio = Math.min(counts.es, counts.en) / Math.max(counts.es, counts.en)
-  if (ratio < 0.7) {
-    const shorter = counts.es < counts.en ? 'ES' : 'EN'
-    crossIssues.push({
-      severity: 'warn',
-      msg: `${article.id}: ${shorter} version has ${Math.round(ratio * 100)}% of the other's word count (ES: ${counts.es}, EN: ${counts.en}).`,
-      skill: '/seo hreflang',
-    })
-  }
-}
+// 18. ES/EN content parity (Removed - English only)
 
 if (crossIssues.length > 0) {
   printIssues(crossIssues, 'Cross-article checks')
@@ -565,24 +547,24 @@ function validateStructural(): Issue[] {
   // S3. FAQ answers >= 100 words
   for (const article of articleRegistry) {
     if (article.type === 'bridge' || !article.seoMeta) continue
-    for (const [lang, slug] of Object.entries(article.slugs) as ['es' | 'en', string][]) {
-      const htmlPath = resolve(dist, slug, 'index.html')
-      if (!existsSync(htmlPath)) continue
-      const html = readFileSync(htmlPath, 'utf-8')
-      const faqBlock = html.match(/"FAQPage"[\s\S]*?"mainEntity"\s*:\s*\[([\s\S]*?)\]\s*\}/)?.[1]
-      if (!faqBlock) continue
-      const answers = faqBlock.match(/"text"\s*:\s*"([^"]*)"/g) || []
-      for (const ans of answers) {
-        const text = ans.replace(/"text"\s*:\s*"/, '').replace(/"$/, '')
-        const wordCount = text.split(/\s+/).filter(w => w.length > 0).length
-        if (wordCount < 100) {
-          issues.push({
-            severity: 'warn',
-            msg: `${article.id} [${lang}] FAQ answer too short: ${wordCount} words (min 100 for AI citation)`,
-            skill: '/seo content',
-          })
-          break // one warning per lang is enough
-        }
+    const lang = 'en'
+    const slug = article.slugs[lang]
+    const htmlPath = resolve(dist, slug, 'index.html')
+    if (!existsSync(htmlPath)) continue
+    const html = readFileSync(htmlPath, 'utf-8')
+    const faqBlock = html.match(/"FAQPage"[\s\S]*?"mainEntity"\s*:\s*\[([\s\S]*?)\]\s*\}/)?.[1]
+    if (!faqBlock) continue
+    const answers = faqBlock.match(/"text"\s*:\s*"([^"]*)"/g) || []
+    for (const ans of answers) {
+      const text = ans.replace(/"text"\s*:\s*"/, '').replace(/"$/, '')
+      const wordCount = text.split(/\s+/).filter(w => w.length > 0).length
+      if (wordCount < 100) {
+        issues.push({
+          severity: 'warn',
+          msg: `${article.id} [${lang}] FAQ answer too short: ${wordCount} words (min 100 for AI citation)`,
+          skill: '/seo content',
+        })
+        break // one warning per lang is enough
       }
     }
   }
@@ -621,14 +603,14 @@ function validateStructural(): Issue[] {
     const vjData = JSON.parse(vj)
     const rewriteSources = new Set((vjData.rewrites || []).map((r: { source: string }) => r.source))
     for (const article of articleRegistry) {
-      for (const [lang, slug] of Object.entries(article.slugs) as ['es' | 'en', string][]) {
-        if (!rewriteSources.has(`/${slug}`)) {
-          issues.push({
-            severity: 'warn',
-            msg: `Registry slug "/${slug}" (${article.id} [${lang}]) missing rewrite in vercel.json`,
-            skill: '/seo technical',
-          })
-        }
+      const lang = 'en'
+      const slug = article.slugs[lang]
+      if (!rewriteSources.has(`/${slug}`)) {
+        issues.push({
+          severity: 'warn',
+          msg: `Registry slug "/${slug}" (${article.id} [${lang}]) missing rewrite in vercel.json`,
+          skill: '/seo technical',
+        })
       }
     }
   }

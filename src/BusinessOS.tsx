@@ -2,7 +2,7 @@ import {
   ChevronRight, Wrench, Package, Globe, Users, ShieldCheck, Bell, BrainCircuit, Sparkles,
   ClipboardList, Contact, Calculator, Cpu, ShoppingBag, Code, MessageSquareHeart, Star, Search, MapPin, Film, Bot,
 } from 'lucide-react'
-import { type N8nLang as Lang } from './n8n-i18n'
+type Lang = 'es' | 'en'
 import { buildJsonLdFromRegistry } from './articles/json-ld'
 import { useArticleSeo } from './articles/use-article-seo'
 
@@ -62,15 +62,15 @@ import {
   H2, H3, Prose, Callout, BulletList, StepList, CardStack, CardGrid, StackGrid,
   Photo1, Photo2, DataTable, Accordion, Timeline, StoryBridge, FloatingToc,
 } from './articles/content-types'
-import { businessOsContent } from './business-os-i18n'
+import { getArticleContent } from './markdown-parser'
 import ArchitectureDiagram from './ArchitectureDiagram'
 
 function buildJsonLd(lang: Lang) {
-  return buildJsonLdFromRegistry('business-os', lang, businessOsContent[lang])
+  return buildJsonLdFromRegistry('business-os', lang, getArticleContent('business-os', lang) as any)
 }
 
 export default function BusinessOS({ lang = 'en' }: { lang?: Lang }) {
-  const t = businessOsContent[lang]
+  const t = getArticleContent('business-os', lang) as any
 
   useArticleSeo({
     lang,
@@ -560,7 +560,7 @@ export default function BusinessOS({ lang = 'en' }: { lang?: Lang }) {
           editorId="before-sketch-founder"
           items={[
             { src: '/business-os/before-notebook-sketch.webp', alt: lang === 'es' ? 'Boceto en libreta' : 'Notebook sketch', width: 800, height: 1067 },
-            { src: '/business-os/before-founder-overwhelmed.webp', alt: lang === 'es' ? 'Santiago en el taller' : 'Santiago in the workshop', width: 600, height: 800 },
+            { src: '/business-os/before-founder-overwhelmed.webp', alt: lang === 'es' ? 'Amit en el taller' : 'Amit in the workshop', width: 600, height: 800 },
           ]}
           caption={lang === 'es' ? 'Primer boceto de integración / De este caos nació un Product Builder' : 'First integration sketch / This chaos built a Product Builder'}
           className="mb-6"

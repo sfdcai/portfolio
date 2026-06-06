@@ -1,11 +1,11 @@
 /* TEAM */
-Builder: Santiago Fernandez de Valderrama Aparicio
+Builder: Amit Bhardwaj de Valderrama Aparicio
 Role: Head of Applied AI · AI Product Manager · Solutions Architect
-Contact: hi@santifer.io
-Site: https://santifer.io
+Contact: hi@sfdcai.github.io/portfolio
+Site: https://sfdcai.github.io/portfolio
 Location: Seville, Spain
-LinkedIn: https://linkedin.com/in/santifer
-GitHub: https://github.com/santifer
+LinkedIn: https://linkedin.com/in/salesforce-technical-architect
+GitHub: https://github.com/sfdcai
 
 /* THANKS */
 AI Pair: Claude Code (Anthropic)

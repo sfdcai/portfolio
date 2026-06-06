@@ -1,6 +1,6 @@
-import { n8nContent, CLASSIFICATION_PROMPT, type N8nLang } from './n8n-i18n'
 import { buildJsonLdFromRegistry } from './articles/json-ld'
 import { useArticleSeo } from './articles/use-article-seo'
+import { getArticleContent } from './markdown-parser'
 import {
   DownloadButton,
   ArticleLayout,
@@ -24,15 +24,38 @@ import {
   FloatingToc,
 } from './articles/content-types'
 
-function buildJsonLd(lang: N8nLang) {
-  const t = n8nContent[lang]
+export const CLASSIFICATION_PROMPT = `You are a product feedback classifier for a SaaS company.
+
+Your task: classify the feedback below into exactly ONE category.
+
+Categories:
+- BUG — The user reports something broken, crashing, erroring, or not
+  working as expected. Look for words like: crash, error, broken, fail,
+  wrong, doesn't work, can't.
+- FEATURE — The user requests new functionality or an improvement to
+  existing features. Look for words like: add, would be nice, wish,
+  could you, suggestion, improve.
+- QUESTION — The user asks how to do something or needs help
+  understanding the product. Look for words like: how do I, where is,
+  can I, is it possible, help.
+
+Rules:
+- If the feedback contains BOTH a bug and a feature request, classify
+  as BUG (broken things take priority).
+- If unclear, classify as QUESTION (safest default — a human will review).
+- Respond with ONLY the category name in caps. No explanation, no punctuation.
+
+Feedback: {{ $json.Feedback }}`
+
+function buildJsonLd(lang: 'es' | 'en') {
+  const t = getArticleContent('n8n-for-pms', lang) as any
   return buildJsonLdFromRegistry('n8n-for-pms', lang, t, {
     headline: t.header.h1 + ' — Cheat Sheet',
   })
 }
 
-export default function N8nForPMs({ lang = 'en' }: { lang?: N8nLang }) {
-  const t = n8nContent[lang]
+export default function N8nForPMs({ lang = 'en' }: { lang?: 'es' | 'en' }) {
+  const t = getArticleContent('n8n-for-pms', lang) as any
 
   useArticleSeo({
     lang,
@@ -40,7 +63,7 @@ export default function N8nForPMs({ lang = 'en' }: { lang?: N8nLang }) {
     altSlug: t.altSlug,
     title: t.seo.title,
     description: t.seo.description,
-    image: 'https://santifer.io/workflows/n8n-ai-feedback-classification-workflow.webp',
+    image: 'https://sfdcai.github.io/portfolio/workflows/n8n-ai-feedback-classification-workflow.webp',
     publishedTime: '2026-02-24',
     modifiedTime: '2026-05-10',
     articleTags: 'n8n,product manager,automation,AI,workflow,no-code',

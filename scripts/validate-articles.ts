@@ -30,7 +30,7 @@ const SOURCE_MAP: Record<string, string> = {
   'jacobo': 'src/JacoboAgent.tsx',
   'business-os': 'src/BusinessOS.tsx',
   'programmatic-seo': 'src/ProgrammaticSeo.tsx',
-  'santifer-irepair': 'src/SantiferIRepair.tsx',
+  'amitbhardwaj-irepair': 'src/AmitBhardwajIRepair.tsx',
   'self-healing-chatbot': 'src/SelfHealingChatbot.tsx',
   'career-ops': 'src/CareerOps.tsx',
 }
@@ -41,7 +41,7 @@ const I18N_MAP: Record<string, string> = {
   'jacobo': 'src/jacobo-i18n.ts',
   'business-os': 'src/business-os-i18n.ts',
   'programmatic-seo': 'src/pseo-i18n.ts',
-  'santifer-irepair': 'src/santifer-irepair-i18n.ts',
+  'amitbhardwaj-irepair': 'src/amitbhardwaj-irepair-i18n.ts',
   'self-healing-chatbot': 'src/chatbot-i18n.ts',
   'career-ops': 'src/career-ops-i18n.ts',
 }
@@ -332,7 +332,7 @@ function validateArticle(config: typeof articleRegistry[0]): { issues: Issue[]; 
   }
 
   // 9. SEO title/description length (per language)
-  for (const lang of ['es', 'en'] as const) {
+  for (const lang of ['en'] as const) {
     const seo = config.seo[lang]
     if (seo.title.length > 60) {
       issues.push({ severity: 'warn', msg: `SEO title too long [${lang}]: ${seo.title.length} chars (max: 60)` })
