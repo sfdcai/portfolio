@@ -35,9 +35,9 @@ export default function AboutPage({ lang = 'en' }: { lang?: 'es' | 'en' }) {
         {/* Header */}
         <header className="flex flex-col sm:flex-row items-center sm:items-start gap-6 mb-10">
           <img
-            src="/foto-avatar-sm.webp"
-            srcSet="/foto-avatar-sm.webp 192w, /foto-avatar.webp 384w"
-            sizes="96px"
+            src="/Gemini_Generated_Image_4eklr94eklr94ekl.png"
+            
+            
             alt="Amit Bhardwaj"
             className="w-24 h-24 rounded-full border-2 border-border shadow-lg"
             width={96}

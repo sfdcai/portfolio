@@ -522,7 +522,7 @@ export const articleRegistry: ArticleConfig[] = [
       keywords: ['salesforce sap integration', 'salesforce sap architecture', 'mulesoft integration', 'event-driven architecture'],
       articleType: 'TechArticle',
       articleTags: 'Salesforce, SAP, Integration, Architecture',
-      images: ['https://amitbhardwaj.co.uk/foto-avatar.png'],
+      images: ['https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png'],
       about: [{ '@type': 'Thing', name: 'Salesforce SAP Integration' }],
     }
   },
@@ -544,7 +544,7 @@ export const articleRegistry: ArticleConfig[] = [
       keywords: ['ai agent architecture', 'multi agent systems', 'agent orchestration', 'llm agents'],
       articleType: 'TechArticle',
       articleTags: 'AI, Architecture, Multi-Agent, LLM',
-      images: ['https://amitbhardwaj.co.uk/foto-avatar.png'],
+      images: ['https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png'],
       about: [{ '@type': 'Thing', name: 'AI Agent Architecture' }],
     }
   },
@@ -566,7 +566,7 @@ export const articleRegistry: ArticleConfig[] = [
       keywords: ['salesforce devops', 'copado', 'azure devops salesforce', 'salesforce cicd'],
       articleType: 'TechArticle',
       articleTags: 'Salesforce, DevOps, CI/CD, Copado',
-      images: ['https://amitbhardwaj.co.uk/foto-avatar.png'],
+      images: ['https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png'],
       about: [{ '@type': 'Thing', name: 'Salesforce DevOps' }],
     }
   },
@@ -588,7 +588,7 @@ export const articleRegistry: ArticleConfig[] = [
       keywords: ['enterprise ai agents', 'ai agents in enterprise', 'agentic workflows', 'tool-using models'],
       articleType: 'TechArticle',
       articleTags: 'AI, Enterprise, Automation',
-      images: ['https://amitbhardwaj.co.uk/foto-avatar.png'],
+      images: ['https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png'],
       about: [{ '@type': 'Thing', name: 'AI Agents' }],
     }
   },
@@ -610,7 +610,7 @@ export const articleRegistry: ArticleConfig[] = [
       keywords: ['homelab network', 'openwrt vlan', 'pfsense firewall', 'network segmentation'],
       articleType: 'TechArticle',
       articleTags: 'Networking, Homelab, OpenWRT, pfSense',
-      images: ['https://amitbhardwaj.co.uk/foto-avatar.png'],
+      images: ['https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png'],
       about: [{ '@type': 'Thing', name: 'Network & Infrastructure Lab' }],
     }
   },
@@ -632,7 +632,7 @@ export const articleRegistry: ArticleConfig[] = [
       keywords: ['unified monitoring', 'proxmox netdata', 'homelab observability', 'system health tracking'],
       articleType: 'TechArticle',
       articleTags: 'Monitoring, Observability, Proxmox, Netdata',
-      images: ['https://amitbhardwaj.co.uk/foto-avatar.png'],
+      images: ['https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png'],
       about: [{ '@type': 'Thing', name: 'Unified Monitoring System' }],
     }
   },

@@ -1479,7 +1479,7 @@ function App() {
                 {/* Inner border */}
                 <div className="absolute inset-2 rounded-full bg-gradient-theme-50 p-[2px]">
                   <div className="w-full h-full rounded-full overflow-hidden">
-                    <img src="/foto-avatar-sm.webp" srcSet="/foto-avatar-sm.webp 192w, /foto-avatar.webp 384w" sizes="(max-width: 768px) 160px, 192px" alt="Amit Bhardwaj" className="w-full h-full object-cover" width={192} height={192} fetchPriority="high" />
+                    <img src="/Gemini_Generated_Image_4eklr94eklr94ekl.png"   alt="Amit Bhardwaj" className="w-full h-full object-cover" width={192} height={192} fetchPriority="high" />
                   </div>
                 </div>
               </div>
@@ -1832,7 +1832,7 @@ function App() {
                             </p>
                             <footer className="flex items-center gap-3">
                               <picture>
-                                <source srcSet={item.testimonial.photo.replace(/\.(png|jpg|jpeg)$/i, '.webp')} type="image/webp" />
+                                <source srcSet={item.testimonial.photo.replace(/\.(png|jpg|jpeg)$/i, '.webp')} type="image/png" />
                                 <img src={item.testimonial.photo} alt={item.testimonial.author} className="w-10 h-10 rounded-full object-cover" width={40} height={40} loading="lazy" decoding="async" />
                               </picture>
                               <div className="flex-1">

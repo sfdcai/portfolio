@@ -150,7 +150,7 @@ const aboutPersonProfile = {
     name: 'Amit Bhardwaj',
     alternateName: ['Amit Bhardwaj'],
     url: 'https://amitbhardwaj.co.uk',
-    image: 'https://amitbhardwaj.co.uk/foto-avatar.png',
+    image: 'https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png',
     email: '',
     jobTitle: ['Salesforce Technical Architect', 'Salesforce Developer', 'Copado DevOps Engineer'],
     knowsAbout: [
@@ -431,14 +431,14 @@ function swapLcpPreload(html: string, isArticle: boolean): string {
   const src = img.match(/\bsrc="([^"]+)"/)?.[1];
   if (!src) return html;
   const srcset = img.match(/\bsrcset="([^"]+)"/)?.[1];
-  const sizes = img.match(/\bsizes="([^"]+)"/)?.[1];
+  const sizes = img.match(/\b]+)"/)?.[1];
   const attrs = [
     `rel="preload"`,
     `as="image"`,
     `href="${src}"`,
-    `type="image/webp"`,
-    srcset ? `imagesrcset="${srcset}"` : '',
-    sizes ? `imagesizes="${sizes}"` : '',
+    `type="image/png"`,
+    srcset ? `` : '',
+    sizes ? `` : '',
     `fetchpriority="high"`,
   ].filter(Boolean).join(' ');
   const newPreload = `<link ${attrs} />`;

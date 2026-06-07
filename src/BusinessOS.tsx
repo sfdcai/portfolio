@@ -28,7 +28,7 @@ function ReelCard({ reelId, caption }: { reelId: string; caption: string }) {
     >
       <div className="flex items-center gap-2 px-3 py-2.5">
         <div className="w-7 h-7 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 p-[1.5px] shrink-0">
-          <img src="/business-os/ig-avatar.jpg" alt="Amit Bhardwaj" width={100} height={100} className="w-full h-full rounded-full object-cover" />
+          <img src="/Gemini_Generated_Image_4eklr94eklr94ekl.png" alt="Amit Bhardwaj" width={100} height={100} className="w-full h-full rounded-full object-cover" />
         </div>
         <p className="text-xs font-semibold text-foreground leading-tight flex-1 min-w-0">Amit Bhardwaj</p>
         <ChevronRight className="w-4 h-4 text-muted-foreground shrink-0" />

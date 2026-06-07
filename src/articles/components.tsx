@@ -105,7 +105,7 @@ export function ArticleHeader({
   authorName = 'Amit Bhardwaj',
   authorUrl,
   authorBio,
-  avatarSrc = '/foto-avatar-sm.webp',
+  avatarSrc = '/Gemini_Generated_Image_4eklr94eklr94ekl.png',
   lang,
 }: ArticleHeaderProps) {
   const resolvedAuthorUrl = authorUrl ?? ('/about')
@@ -194,7 +194,7 @@ export function ArticleFooter({ lang, utmCampaign }: ArticleFooterProps) {
     <footer className="mt-16 pt-8 border-t border-border">
       <div className="flex items-start gap-3 mb-6">
         <img
-          src="/foto-avatar-sm.webp"
+          src="/Gemini_Generated_Image_4eklr94eklr94ekl.png"
           alt="Amit Bhardwaj"
           className="w-12 h-12 rounded-full shrink-0"
           width={48}
