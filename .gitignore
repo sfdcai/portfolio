@@ -55,3 +55,9 @@ chatbot/.playwright-mcp/
 # RAG
 .rag-hashes.json
 scripts/chunks/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+!.env.example

@@ -10,7 +10,8 @@
     "validate-articles": "npx tsx --tsconfig tsconfig.app.json scripts/validate-articles.ts",
     "validate-articles:fix": "npx tsx --tsconfig tsconfig.app.json scripts/validate-articles.ts --fix",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
   },
   "dependencies": {
     "lucide-react": "^0.563.0",
@@ -23,6 +24,7 @@
     "yaml": "^2.9.0"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.40.0",
     "@eslint/js": "^9.39.1",
     "@tailwindcss/vite": "^4.1.18",
     "@types/node": "^24.10.1",
@@ -40,6 +42,7 @@
     "tailwindcss": "^4.1.18",
     "typescript": "~5.9.3",
     "typescript-eslint": "^8.46.4",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "wrangler": "^4.98.0"
   }
 }
