@@ -251,7 +251,7 @@ export default function ProgrammaticSeo({ lang = 'en' }: { lang?: Lang }) {
     description: t.seo.description,
     image: 'https://amitbhardwaj.co.uk/pseo/og-programmatic-seo.png',
     publishedTime: '2026-02-25',
-    modifiedTime: '2026-06-06',
+    modifiedTime: '2026-06-07',
     articleTags: 'programmatic SEO,Airtable,Astro,DataForSEO,crawl budget,phone repair,ERP,local SEO',
     jsonLd: buildJsonLd(lang),
     xDefaultSlug: 'seo-programatico',
@@ -269,7 +269,7 @@ export default function ProgrammaticSeo({ lang = 'en' }: { lang?: Lang }) {
         subtitle={t.header.subtitle}
         date={t.header.date}
         dateISO="2026-02-25"
-        dateModifiedISO="2026-06-06"
+        dateModifiedISO="2026-06-07"
         readingTime={t.readingTime}
       />
 

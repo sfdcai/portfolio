@@ -65,7 +65,7 @@ export default function N8nForPMs({ lang = 'en' }: { lang?: 'es' | 'en' }) {
     description: t.seo.description,
     image: 'https://amitbhardwaj.co.uk/workflows/n8n-ai-feedback-classification-workflow.webp',
     publishedTime: '2026-02-24',
-    modifiedTime: '2026-06-06',
+    modifiedTime: '2026-06-07',
     articleTags: 'n8n,product manager,automation,AI,workflow,no-code',
     jsonLd: buildJsonLd(lang),
     xDefaultSlug: 'n8n-para-pms',
@@ -86,7 +86,7 @@ export default function N8nForPMs({ lang = 'en' }: { lang?: 'es' | 'en' }) {
           subtitle={t.header.subtitle}
           date={t.header.date}
           dateISO="2026-02-24"
-          dateModifiedISO="2026-06-06"
+          dateModifiedISO="2026-06-07"
           readingTime={t.readingTime}
         />
 

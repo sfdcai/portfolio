@@ -431,14 +431,14 @@ function swapLcpPreload(html: string, isArticle: boolean): string {
   const src = img.match(/\bsrc="([^"]+)"/)?.[1];
   if (!src) return html;
   const srcset = img.match(/\bsrcset="([^"]+)"/)?.[1];
-  const sizes = img.match(/\b]+)"/)?.[1];
+  const sizes = img.match(/\bsizes="([^"]+)"/)?.[1];
   const attrs = [
     `rel="preload"`,
     `as="image"`,
     `href="${src}"`,
     `type="image/png"`,
-    srcset ? `` : '',
-    sizes ? `` : '',
+    srcset ? `imagesrcset="${srcset}"` : '',
+    sizes ? `imagesizes="${sizes}"` : '',
     `fetchpriority="high"`,
   ].filter(Boolean).join(' ');
   const newPreload = `<link ${attrs} />`;
