@@ -52,9 +52,9 @@ export function useArticleSeo(opts: ArticleSeoOpts) {
       publishedTime, modifiedTime, articleTags, jsonLd, xDefaultSlug,
     } = opts
 
-    const url = `https://sfdcai.github.io/portfolio/${slug}`
-    const altUrl = `https://sfdcai.github.io/portfolio/${altSlug}`
-    const altLang = lang === 'es' ? 'en' : 'es'
+    const url = `https://amitbhardwaj.co.uk/${slug}`
+    const altUrl = `https://amitbhardwaj.co.uk/${altSlug}`
+    const altLang = 'es'
     const defaultSlug = xDefaultSlug ?? (lang === 'es' ? slug : altSlug)
 
     document.title = title
@@ -69,9 +69,9 @@ export function useArticleSeo(opts: ArticleSeoOpts) {
     upsertMeta('property', 'og:url', url)
     upsertMeta('property', 'og:title', title)
     upsertMeta('property', 'og:description', description)
-    upsertMeta('property', 'og:site_name', 'sfdcai.github.io/portfolio')
-    upsertMeta('property', 'og:locale', lang === 'es' ? 'es_ES' : 'en_US')
-    upsertMeta('property', 'og:locale:alternate', lang === 'es' ? 'en_US' : 'es_ES')
+    upsertMeta('property', 'og:site_name', 'amitbhardwaj.co.uk')
+    upsertMeta('property', 'og:locale', 'en_US')
+    upsertMeta('property', 'og:locale:alternate', 'es_ES')
     upsertMeta('property', 'article:published_time', publishedTime)
     if (modifiedTime) upsertMeta('property', 'article:modified_time', modifiedTime)
     upsertMeta('property', 'article:author', 'https://www.linkedin.com/in/salesforce-technical-architect')
@@ -92,7 +92,7 @@ export function useArticleSeo(opts: ArticleSeoOpts) {
     for (const { hreflang, href } of [
       { hreflang: lang, href: url },
       { hreflang: altLang, href: altUrl },
-      { hreflang: 'x-default', href: `https://sfdcai.github.io/portfolio/${defaultSlug}` },
+      { hreflang: 'x-default', href: `https://amitbhardwaj.co.uk/${defaultSlug}` },
     ]) {
       const link = document.createElement('link')
       link.rel = 'alternate'
@@ -133,7 +133,7 @@ export function useHomeSeo({ lang, title, description }: { lang: string; title: 
     document.querySelector('meta[property="og:description"]')?.setAttribute('content', description)
     document.querySelector('meta[property="og:locale"]')?.setAttribute('content', 'en_US')
 
-    const canonical = 'https://sfdcai.github.io/portfolio/'
+    const canonical = 'https://amitbhardwaj.co.uk/'
     document.querySelector('link[rel="canonical"]')?.setAttribute('href', canonical)
     document.querySelector('meta[property="og:url"]')?.setAttribute('content', canonical)
 

@@ -32,7 +32,7 @@ const SOURCE_MAP: Record<string, string> = {
   'programmatic-seo': 'src/ProgrammaticSeo.tsx',
   'amitbhardwaj-irepair': 'src/AmitBhardwajIRepair.tsx',
   'self-healing-chatbot': 'src/SelfHealingChatbot.tsx',
-  'career-ops': 'src/CareerOps.tsx',
+
 }
 
 /** Map article id → i18n source file (relative to root). Content edits go here. */
@@ -43,7 +43,7 @@ const I18N_MAP: Record<string, string> = {
   'programmatic-seo': 'src/pseo-i18n.ts',
   'amitbhardwaj-irepair': 'src/amitbhardwaj-irepair-i18n.ts',
   'self-healing-chatbot': 'src/chatbot-i18n.ts',
-  'career-ops': 'src/career-ops-i18n.ts',
+
 }
 
 const REGISTRY_PATH = 'src/articles/registry.ts'

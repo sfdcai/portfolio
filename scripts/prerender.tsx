@@ -42,7 +42,7 @@ const i18nMap: Record<string, Record<string, any>> = {
   'business-os': { en: getArticleContent('business-os', 'en') },
   'programmatic-seo': { en: getArticleContent('programmatic-seo', 'en') },
   'self-healing-chatbot': { en: getArticleContent('self-healing-chatbot', 'en') },
-  'career-ops': { en: getArticleContent('career-ops', 'en') },
+
   'salesforce-sap': { en: { header: { h1: 'Salesforce ↔ SAP Integration' }, nav: { breadcrumbHome: 'Home', breadcrumbCurrent: 'Salesforce ↔ SAP' }, faq: { items: [] } } },
   'ai-agents-arch': { en: { header: { h1: 'AI Agent Architecture' }, nav: { breadcrumbHome: 'Home', breadcrumbCurrent: 'AI Agent Architecture' }, faq: { items: [] } } },
   'salesforce-devops': { en: { header: { h1: 'Salesforce DevOps Best Practices' }, nav: { breadcrumbHome: 'Home', breadcrumbCurrent: 'DevOps' }, faq: { items: [] } } },
@@ -127,13 +127,13 @@ let enPage = indexHtml
   .replace(/<title>[^<]*<\/title>/, `<title>${esc(enSeo.title)}</title>`)
   .replace(/<meta name="title" content="[^"]*" \/>/, `<meta name="title" content="${esc(enSeo.title)}" />`)
   .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${esc(enSeo.description)}" />`)
-  .replace(/<link rel="canonical" href="[^"]*" \/>/, '<link rel="canonical" href="https://sfdcai.github.io/portfolio/" />')
-  .replace(/<meta property="og:url" content="[^"]*" \/>/, '<meta property="og:url" content="https://sfdcai.github.io/portfolio/" />')
+  .replace(/<link rel="canonical" href="[^"]*" \/>/, '<link rel="canonical" href="https://amitbhardwaj.co.uk/" />')
+  .replace(/<meta property="og:url" content="[^"]*" \/>/, '<meta property="og:url" content="https://amitbhardwaj.co.uk/" />')
   .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${esc(enSeo.title)}" />`)
   .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${esc(enSeo.description)}" />`)
   .replace(/<meta property="og:locale" content="es_ES" \/>/, '<meta property="og:locale" content="en_US" />')
   .replace(/<meta property="og:locale:alternate" content="en_US" \/>/, '')
-  .replace(/<meta name="twitter:url" content="[^"]*" \/>/, '<meta name="twitter:url" content="https://sfdcai.github.io/portfolio/" />')
+  .replace(/<meta name="twitter:url" content="[^"]*" \/>/, '<meta name="twitter:url" content="https://amitbhardwaj.co.uk/" />')
   .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${esc(enSeo.title)}" />`)
   .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${esc(enSeo.description)}" />`);
 
@@ -143,115 +143,43 @@ let enPage = indexHtml
 
 const aboutPersonProfile = {
   '@type': 'ProfilePage',
-  dateModified: '2026-04-28',
+  dateModified: '2026-06-07',
   mainEntity: {
     '@type': 'Person',
-    '@id': 'https://sfdcai.github.io/portfolio/#person',
+    '@id': 'https://amitbhardwaj.co.uk/#person',
     name: 'Amit Bhardwaj',
     alternateName: ['Amit Bhardwaj'],
-    url: 'https://sfdcai.github.io/portfolio',
-    image: 'https://sfdcai.github.io/portfolio/foto-avatar.png',
-    email: 'hiamitbhardwaj@gmail.com',
-    jobTitle: ['Multi-Agent Systems Builder', 'Applied AI Operator', 'Head of Applied AI', 'AI Product Manager', 'Solutions Architect (No/Low-Code & AI)', 'AI Forward Deployed Engineer'],
+    url: 'https://amitbhardwaj.co.uk',
+    image: 'https://amitbhardwaj.co.uk/foto-avatar.png',
+    email: '',
+    jobTitle: ['Salesforce Technical Architect', 'Salesforce Developer', 'Copado DevOps Engineer'],
     knowsAbout: [
-      { '@type': 'Thing', name: 'Artificial Intelligence', url: 'https://en.wikipedia.org/wiki/Artificial_intelligence' },
-      { '@type': 'Thing', name: 'Machine Learning', url: 'https://en.wikipedia.org/wiki/Machine_learning' },
-      { '@type': 'Thing', name: 'Multi-Agent System', url: 'https://en.wikipedia.org/wiki/Multi-agent_system' },
-      { '@type': 'Thing', name: 'Retrieval-Augmented Generation', url: 'https://en.wikipedia.org/wiki/Retrieval-augmented_generation' },
-      { '@type': 'Thing', name: 'No-code development platform', url: 'https://en.wikipedia.org/wiki/No-code_development_platform' },
-      { '@type': 'Thing', name: 'Prompt Engineering' },
-      { '@type': 'SoftwareApplication', name: 'Airtable', url: 'https://airtable.com' },
-      { '@type': 'SoftwareApplication', name: 'n8n', url: 'https://n8n.io' },
-      { '@type': 'SoftwareApplication', name: 'Claude API', url: 'https://docs.anthropic.com' },
+      { '@type': 'Thing', name: 'Salesforce Architecture' },
+      { '@type': 'Thing', name: 'System Design' },
+      { '@type': 'Thing', name: 'Enterprise Integration' },
+      { '@type': 'Thing', name: 'Copado DevOps' },
+      { '@type': 'Thing', name: 'Apex & LWC' },
     ],
     hasCredential: [
-      { '@type': 'EducationalOccupationalCredential', name: 'Introduction to Model Context Protocol', recognizedBy: { '@type': 'Organization', name: 'Anthropic' }, url: 'https://verify.skilljar.com/c/4pxam3irsioq' },
-      { '@type': 'EducationalOccupationalCredential', name: 'Claude Code in Action', recognizedBy: { '@type': 'Organization', name: 'Anthropic' }, url: 'https://verify.skilljar.com/c/eijx7hwc2x89' },
-      { '@type': 'EducationalOccupationalCredential', name: 'Advanced MCP Topics', recognizedBy: { '@type': 'Organization', name: 'Anthropic' }, url: 'https://verify.skilljar.com/c/eiovmq5qaeyd' },
-      { '@type': 'EducationalOccupationalCredential', name: 'Building with the Claude API', recognizedBy: { '@type': 'Organization', name: 'Anthropic' }, url: 'https://verify.skilljar.com/c/s4bu5znz53vm' },
-      { '@type': 'EducationalOccupationalCredential', name: 'AI Fluency: Framework & Foundations', recognizedBy: { '@type': 'Organization', name: 'Anthropic' }, url: 'https://verify.skilljar.com/c/d6rhfox7ktq6' },
-      { '@type': 'EducationalOccupationalCredential', name: 'Teaching AI Fluency', recognizedBy: { '@type': 'Organization', name: 'Anthropic' }, url: 'https://verify.skilljar.com/c/x3bzuoz99rq5' },
-      { '@type': 'EducationalOccupationalCredential', name: 'AI App Builder Certification', recognizedBy: { '@type': 'Organization', name: 'Airtable' }, url: 'https://verify.skilljar.com/c/gwg7ak9qgf7r' },
-      { '@type': 'EducationalOccupationalCredential', name: 'Airtable Builder Certification', recognizedBy: { '@type': 'Organization', name: 'Airtable' }, url: 'https://verify.skilljar.com/c/id2e4zgqtasv' },
-      { '@type': 'EducationalOccupationalCredential', name: 'Airtable Admin Certification', recognizedBy: { '@type': 'Organization', name: 'Airtable' }, url: 'https://verify.skilljar.com/c/u3r8kgn5wdit' },
-      { '@type': 'EducationalOccupationalCredential', name: 'Make Advanced', recognizedBy: { '@type': 'Organization', name: 'Make Academy' }, url: 'https://www.credly.com/badges/d27b8174-ef20-46bd-9d81-ee05e9c349e8' },
+      { '@type': 'EducationalOccupationalCredential', name: 'Certified Salesforce Architect', recognizedBy: { '@type': 'Organization', name: 'Salesforce' } },
+      { '@type': 'EducationalOccupationalCredential', name: 'Certified Salesforce Developer', recognizedBy: { '@type': 'Organization', name: 'Salesforce' } },
+      { '@type': 'EducationalOccupationalCredential', name: 'Solution Architect Certification', recognizedBy: { '@type': 'Organization', name: 'Salesforce' } },
+      { '@type': 'EducationalOccupationalCredential', name: 'Copado Certified Fundamentals I & II', recognizedBy: { '@type': 'Organization', name: 'Copado' } },
+      { '@type': 'EducationalOccupationalCredential', name: 'Platform Developer II (PD2)', recognizedBy: { '@type': 'Organization', name: 'Salesforce' } }
     ],
     alumniOf: [
-      { '@type': 'EducationalOrganization', name: 'AI Product Academy — AI PM Bootcamp', url: 'https://maven.com/marily-nika/ai-pm-bootcamp', founder: { '@type': 'Person', name: 'Dr. Marily Nika', sameAs: 'https://www.wikidata.org/wiki/Q107463356' } },
-      { '@type': 'EducationalOrganization', name: 'BIGSEO - Master en Inteligencia Artificial' },
-      { '@type': 'EducationalOrganization', name: 'ETSI - Universidad de Sevilla' },
+      { '@type': 'EducationalOrganization', name: 'University Engineering School' }
     ],
-    founder: {
+    worksFor: {
       '@type': 'Organization',
-      name: 'Amit Bhardwaj iRepair',
-      url: 'https://sfdcai.github.io/portfolio',
-      foundingDate: '2009',
+      '@id': 'https://www.genpact.com/#org',
+      name: 'Genpact',
+      url: 'https://www.genpact.com',
     },
     sameAs: [
       'https://www.linkedin.com/in/salesforce-technical-architect',
-      'https://github.com/sfdcai',
-      'https://career-ops.org/about',
     ],
-    subjectOf: [
-      {
-        '@type': 'NewsArticle',
-        '@id': 'https://www.businessinsider.com/how-i-built-tool-filter-job-listings-landed-head-ai-2026-4',
-        headline: 'I built a tool to filter 700 listings for my job search. It got me a position as head of AI.',
-        publisher: { '@type': 'NewsMediaOrganization', name: 'Business Insider', url: 'https://www.businessinsider.com' },
-        author: { '@type': 'Person', name: 'Jordan Hart' },
-        datePublished: '2026-04-28',
-        url: 'https://www.businessinsider.com/how-i-built-tool-filter-job-listings-landed-head-ai-2026-4',
-        mainEntityOfPage: 'https://www.businessinsider.com/how-i-built-tool-filter-job-listings-landed-head-ai-2026-4',
-        inLanguage: 'en',
-      },
-      {
-        '@type': 'NewsArticle',
-        '@id': 'https://www.businessinsider.de/karriere/bewerbung/mein-ki-tool-scannt-700-job-anzeigen-so-half-es-mir-karriere-zu-machen/',
-        headline: 'Mein KI-Tool scannt 700 Job-Anzeigen — so half es mir, Karriere zu machen',
-        publisher: { '@type': 'NewsMediaOrganization', name: 'Business Insider Deutschland', url: 'https://www.businessinsider.de' },
-        datePublished: '2026-04-28',
-        url: 'https://www.businessinsider.de/karriere/bewerbung/mein-ki-tool-scannt-700-job-anzeigen-so-half-es-mir-karriere-zu-machen/',
-        mainEntityOfPage: 'https://www.businessinsider.de/karriere/bewerbung/mein-ki-tool-scannt-700-job-anzeigen-so-half-es-mir-karriere-zu-machen/',
-        inLanguage: 'de',
-        isBasedOn: 'https://www.businessinsider.com/how-i-built-tool-filter-job-listings-landed-head-ai-2026-4',
-      },
-      {
-        '@type': 'NewsArticle',
-        '@id': 'https://www.diariodesevilla.es/vivirensevilla/Salir-compras-solucion-expres-telefono_0_817718799.html',
-        headline: 'Salir de compras: Una solución exprés para el teléfono',
-        publisher: { '@type': 'NewsMediaOrganization', name: 'Diario de Sevilla' },
-        datePublished: '2014-06-19',
-        url: 'https://www.diariodesevilla.es/vivirensevilla/Salir-compras-solucion-expres-telefono_0_817718799.html',
-        mainEntityOfPage: 'https://www.diariodesevilla.es/vivirensevilla/Salir-compras-solucion-expres-telefono_0_817718799.html',
-        inLanguage: 'es',
-      },
-      {
-        '@type': 'NewsArticle',
-        '@id': 'https://wired.com.gr/article/to-ai-ergaleio-pou-fernei-epanastasi-ston-tropo-pou-psachnoume-douleia/',
-        headline: 'Το AI εργαλείο που φέρνει επανάσταση στον τρόπο που ψάχνουμε δουλειά',
-        alternativeHeadline: 'The AI tool revolutionizing the way we search for jobs',
-        publisher: { '@type': 'NewsMediaOrganization', name: 'WIRED Greece', url: 'https://wired.com.gr' },
-        author: { '@type': 'Person', name: 'Niko Efstathiou', jobTitle: 'Editor-in-Chief, WIRED Greece' },
-        datePublished: '2026-04-17',
-        dateModified: '2026-04-27',
-        url: 'https://wired.com.gr/article/to-ai-ergaleio-pou-fernei-epanastasi-ston-tropo-pou-psachnoume-douleia/',
-        mainEntityOfPage: 'https://wired.com.gr/article/to-ai-ergaleio-pou-fernei-epanastasi-ston-tropo-pou-psachnoume-douleia/',
-        inLanguage: 'el',
-      },
-      {
-        '@type': 'VideoObject',
-        name: 'Building Career-Ops to Automate the Job Hunt — Create OS Lounge with Amitfer',
-        description: 'Interview with Amit Bhardwaj (sfdcai) on building Career-Ops, the open-source AI job search system that landed him a Head of Applied AI role.',
-        embedUrl: 'https://www.youtube.com/embed/pDkAe5JbREk',
-        url: 'https://www.youtube.com/watch?v=pDkAe5JbREk',
-        duration: 'PT24M18S',
-        datePublished: '2026-04-15',
-        publisher: { '@type': 'Organization', name: 'Create OS / Narrative Pilot' },
-        interviewer: { '@type': 'Person', name: 'Eric' },
-        inLanguage: 'en',
-      },
-    ],
-    address: { '@type': 'PostalAddress', addressLocality: 'Sevilla', addressCountry: 'ES' },
+    address: { '@type': 'PostalAddress', addressLocality: 'London', addressCountry: 'GB' },
   },
 };
 
@@ -271,7 +199,7 @@ function buildAboutJsonLd(lang: 'es' | 'en', pageUrl: string, faq: readonly { q:
     '@id': `${pageUrl}#profilepage`,
     dateModified: aboutPersonProfile.dateModified,
     inLanguage: lang,
-    mainEntity: { '@id': 'https://sfdcai.github.io/portfolio/#person' },
+    mainEntity: { '@id': 'https://amitbhardwaj.co.uk/#person' },
   };
   return {
     '@context': 'https://schema.org',
@@ -289,7 +217,7 @@ const aboutPages: AboutPageData[] = [];
 for (const lang of ['en'] as const) {
   const t = aboutContent[lang];
   const slug = t.slug;
-  const url = `https://sfdcai.github.io/portfolio/${slug}`;
+  const url = `https://amitbhardwaj.co.uk/${slug}`;
 
   let renderedHtml: string;
   try {
@@ -356,14 +284,14 @@ function buildArticlePage(
 ): string {
   const slug = config.slugs[lang];
   const altSlug = config.slugs[lang === 'es' ? 'en' : 'es'];
-  const url = `https://sfdcai.github.io/portfolio/${slug}`;
-  const altUrl = `https://sfdcai.github.io/portfolio/${altSlug}`;
+  const url = `https://amitbhardwaj.co.uk/${slug}`;
+  const altUrl = `https://amitbhardwaj.co.uk/${altSlug}`;
   const altLang = lang === 'es' ? 'en' : 'es';
   const htmlLang = lang;
   const ogLocale = lang === 'es' ? 'es_ES' : 'en_US';
   const ogLocaleAlt = lang === 'es' ? 'en_US' : 'es_ES';
   const articleSeo = config.seo[lang];
-  const xDefaultHref = `https://sfdcai.github.io/portfolio/${config.xDefaultSlug || config.slugs.es}`;
+  const xDefaultHref = `https://amitbhardwaj.co.uk/${config.xDefaultSlug || config.slugs.es}`;
 
   let renderedHtml: string;
   try {
@@ -392,7 +320,7 @@ function buildArticlePage(
     .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${esc(articleSeo.title)}" />`)
     .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${esc(articleSeo.description)}" />`)
     // OG image — replace with article-specific image if configured
-    .replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${esc(config.ogImage || 'https://sfdcai.github.io/portfolio/og-image.webp')}" />`)
+    .replace(/<meta property="og:image" content="[^"]*" \/>/, `<meta property="og:image" content="${esc(config.ogImage || 'https://amitbhardwaj.co.uk/og-image.webp')}" />`)
     .replace(/<meta property="og:image:alt" content="[^"]*" \/>/, `<meta property="og:image:alt" content="${esc(articleSeo.title)}" />`)
     .replace(/<meta name="twitter:image" content="[^"]*" \/>/, config.ogImage ? `<meta name="twitter:image" content="${esc(config.ogImage)}" />` : '');
 
@@ -415,8 +343,8 @@ function buildArticlePage(
     if (t) {
       const jsonLd = buildArticleJsonLd({
         lang,
-        url: `https://sfdcai.github.io/portfolio/${slug}`,
-        altUrl: `https://sfdcai.github.io/portfolio/${altSlug}`,
+        url: `https://amitbhardwaj.co.uk/${slug}`,
+        altUrl: `https://amitbhardwaj.co.uk/${altSlug}`,
         headline: t.header.h1,
         alternativeHeadline: articleSeo.title,
         description: articleSeo.description,
@@ -543,9 +471,9 @@ async function writePage(html: string, outputPath: string, label: string) {
 const privacyPages: { slug: string; html: string }[] = [];
 
 for (const [lang, slug] of [['en', 'privacy']] as const) {
-  const url = `https://sfdcai.github.io/portfolio/${slug}`;
-  const title = 'Privacy Policy | sfdcai.github.io/portfolio';
-  const description = 'Privacy policy for sfdcai.github.io/portfolio. How website data is collected and used.';
+  const url = `https://amitbhardwaj.co.uk/${slug}`;
+  const title = 'Privacy Policy | amitbhardwaj.co.uk';
+  const description = 'Privacy policy for amitbhardwaj.co.uk. How website data is collected and used.';
 
   let renderedHtml: string;
   try {
@@ -618,7 +546,7 @@ await inlineCriticalCSS();
 const notFoundHtml = indexHtml
   .replace('<div id="root"></div>', `<div id="root"><div style="min-height:80vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 1.5rem"><p style="font-size:6rem;font-weight:bold;color:var(--primary);margin-bottom:1rem;font-family:var(--font-display)">404</p><h1 style="font-size:1.5rem;font-weight:600;color:var(--foreground);margin-bottom:0.5rem">Page not found</h1><p style="color:var(--muted-foreground);margin-bottom:2rem;max-width:28rem">The page you're looking for doesn't exist or has been moved.</p><a href="/" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.5rem;border-radius:0.75rem;background:var(--primary);color:var(--primary-foreground);font-weight:500;text-decoration:none">← Back to home</a></div></div>`)
   .replace(/<meta name="robots" content="[^"]*" \/>/, '<meta name="robots" content="noindex, nofollow" />')
-  .replace(/<title>[^<]*<\/title>/, '<title>404 — Page not found | sfdcai.github.io/portfolio</title>');
+  .replace(/<title>[^<]*<\/title>/, '<title>404 — Page not found | amitbhardwaj.co.uk</title>');
 
 // Add noindex if no robots meta exists
 if (!notFoundHtml.includes('name="robots"')) {

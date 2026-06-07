@@ -1,15 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { MapPin, Mail, ExternalLink, Award, GraduationCap, Briefcase, ChevronRight, Clock, Newspaper, HelpCircle, Users } from 'lucide-react'
+import { MapPin, ExternalLink, Award, GraduationCap, Briefcase, ChevronRight, Clock, HelpCircle, Users } from 'lucide-react'
 import { getAboutContent } from './markdown-parser'
-
-// `rel: 'me'` is the IndieAuth standard for declaring profiles/sites the person controls.
-// Used here for cross-domain entity ownership signals (parsed by Mastodon, Bluesky, KG crawlers).
-const SOCIAL_LINKS: { name: string; url: string; rel?: string }[] = [
-  { name: 'Career-Ops', url: 'https://career-ops.org', rel: 'me noopener noreferrer' },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/salesforce-technical-architect', rel: 'me noopener noreferrer' },
-  { name: 'GitHub', url: 'https://github.com/sfdcai', rel: 'me noopener noreferrer' },
-]
 
 export default function AboutPage({ lang = 'en' }: { lang?: 'es' | 'en' }) {
   const t = getAboutContent(lang) as any
@@ -24,7 +16,7 @@ export default function AboutPage({ lang = 'en' }: { lang?: 'es' | 'en' }) {
 
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
     if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical) }
-    canonical.href = `https://sfdcai.github.io/portfolio/about`
+    canonical.href = `https://amitbhardwaj.co.uk/about`
 
     document.querySelectorAll('link[hreflang]').forEach(el => el.remove())
 
@@ -70,7 +62,7 @@ export default function AboutPage({ lang = 'en' }: { lang?: 'es' | 'en' }) {
         </header>
 
         {/* Manifesto */}
-        <blockquote cite="https://sfdcai.github.io/portfolio/career-ops" className="mb-10 border-l-4 border-primary pl-6 pr-4 py-3 text-xl md:text-2xl italic font-display leading-snug text-foreground/90">
+        <blockquote cite="https://amitbhardwaj.co.uk" className="mb-10 border-l-4 border-primary pl-6 pr-4 py-3 text-xl md:text-2xl italic font-display leading-snug text-foreground/90">
           {t.manifesto}
         </blockquote>
 
@@ -172,29 +164,6 @@ export default function AboutPage({ lang = 'en' }: { lang?: 'es' | 'en' }) {
           </ul>
         </section>
 
-        {/* Press */}
-        <section className="mb-10">
-          <h2 className="font-display text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-            <Newspaper className="w-4 h-4 text-primary" />
-            {t.pressHeading}
-          </h2>
-          {t.press.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border hover:border-primary/30 transition-all group"
-            >
-              <div>
-                <p className="font-medium text-foreground text-sm group-hover:text-primary transition-colors">{item.title}</p>
-                <p className="text-xs text-muted-foreground">{item.publisher} · {item.date}</p>
-              </div>
-              <ExternalLink className="w-3.5 h-3.5 text-muted-foreground shrink-0" />
-            </a>
-          ))}
-        </section>
-
         {/* Community */}
         <section className="mb-10">
           <h2 className="font-display text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
@@ -232,37 +201,6 @@ export default function AboutPage({ lang = 'en' }: { lang?: 'es' | 'en' }) {
                 <p className="font-medium text-foreground text-sm mb-2">{item.q}</p>
                 <p className="text-sm text-muted-foreground leading-relaxed">{item.a}</p>
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Connect */}
-        <section className="mb-10">
-          <h2 className="font-display text-lg font-semibold text-foreground mb-4 flex items-center gap-2">
-            <ExternalLink className="w-4 h-4 text-primary" />
-            {t.connectHeading}
-          </h2>
-
-          <a
-            href={`mailto:${t.email}`}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground text-sm font-medium hover:bg-primary/90 transition-colors mb-4"
-          >
-            <Mail className="w-4 h-4" />
-            {t.email}
-          </a>
-
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-            {SOCIAL_LINKS.map((link) => (
-              <a
-                key={link.name}
-                href={link.url}
-                target="_blank"
-                rel={link.rel ?? 'noopener noreferrer'}
-                className="flex items-center gap-2 px-3 py-2 rounded-lg bg-card border border-border text-sm text-muted-foreground hover:text-foreground hover:border-primary/30 transition-all"
-              >
-                <ExternalLink className="w-3 h-3 text-primary shrink-0" />
-                {link.name}
-              </a>
             ))}
           </div>
         </section>

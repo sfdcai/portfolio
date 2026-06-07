@@ -1047,8 +1047,7 @@ function ScreenshotFigure({ src, alt, summaryEn, lang, width, height, className 
 
 export interface ScreenshotItem {
   src: string
-  altEs: string
-  altEn: string
+  alt: string
   width?: number
   height?: number
 }
@@ -1069,8 +1068,8 @@ export function ScreenshotGrid({ items, lang, basePath = '/jacobo/screenshots', 
             <ScreenshotFigure
               key={n.src}
               src={`${basePath}/${n.src}`}
-              alt={lang === 'es' ? n.altEs : n.altEn}
-              summaryEn={n.altEn}
+              alt={n.alt}
+              summaryEn={n.alt}
               lang={lang}
               width={n.width}
               height={n.height}
@@ -1088,8 +1087,8 @@ export function ScreenshotGrid({ items, lang, basePath = '/jacobo/screenshots', 
           <ScreenshotFigure
             key={n.src}
             src={`${basePath}/${n.src}`}
-            alt={lang === 'es' ? n.altEs : n.altEn}
-            summaryEn={n.altEn}
+            alt={n.alt}
+            summaryEn={n.alt}
             lang={lang}
             width={n.width}
             height={n.height}

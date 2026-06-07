@@ -95,7 +95,7 @@ Object.defineProperty(window, '__amitbhardwaj', {
     observability: 'None',
     render: 'Pre-rendered HTML + client hydration',
     perf: () => { const n = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming; console.table({ TTFB: `${Math.round(n.responseStart - n.requestStart)}ms`, DOMContentLoaded: `${Math.round(n.domContentLoadedEventEnd - n.startTime)}ms`, Load: `${Math.round(n.loadEventEnd - n.startTime)}ms` }); },
-    hire_me: 'hiamitbhardwaj@gmail.com',
+    hire_me: 'https://www.linkedin.com/in/salesforce-technical-architect/',
   }),
   configurable: false,
 })
@@ -105,7 +105,7 @@ function NotFound() {
     let robots = document.querySelector('meta[name="robots"]') as HTMLMetaElement
     if (!robots) { robots = document.createElement('meta'); robots.name = 'robots'; document.head.appendChild(robots) }
     robots.content = 'noindex, nofollow'
-    document.title = '404 — Page not found | sfdcai.github.io/portfolio'
+    document.title = '404 — Page not found | amitbhardwaj.co.uk'
     return () => { robots.content = 'index, follow' }
   }, [])
 

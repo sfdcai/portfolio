@@ -80,5 +80,5 @@ faq:
     a: |
         He is a systems engineering and networking enthusiast, running a full home lab with Proxmox, pfSense, OpenWRT, and Netdata monitoring dashboards.
 connectHeading: Let's Connect
-email: hiamitbhardwaj@gmail.com
+email: ""
 ---

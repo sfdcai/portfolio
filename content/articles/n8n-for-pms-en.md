@@ -4,11 +4,11 @@ slug: n8n-for-pms
 altSlug: n8n-para-pms
 readingTime: 5 min read
 seo:
-  title: "n8n for PMs: Cheat Sheet + Free AI Templates | sfdcai.github.io/portfolio"
+  title: "n8n for PMs: Cheat Sheet + Free AI Templates | amitbhardwaj.co.uk"
   description: |
       n8n cheat sheet for Product Managers: automate sprint reports and classify feedback with AI. 2 free importable workflow templates. Step-by-step tutorial.
 nav:
-  back: sfdcai.github.io/portfolio
+  back: amitbhardwaj.co.uk
   breadcrumbHome: Home
   breadcrumbCurrent: n8n for PMs
 header:

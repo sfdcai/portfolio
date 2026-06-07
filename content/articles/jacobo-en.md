@@ -5,7 +5,7 @@ altSlug: agente-ia-jacobo
 readingTime: 35 min read
 seo:
   title: |
-      Jacobo: Multi-Agent AI with Tool Calling & Voice AI — Production Case Study | sfdcai.github.io/portfolio
+      Jacobo: Multi-Agent AI with Tool Calling & Voice AI — Production Case Study | amitbhardwaj.co.uk
   description: |
       Case study: how an FDE built an omnichannel AI agent with sub-agents, tool calling, HITL, and Voice AI (n8n + ElevenLabs) achieving 90% self-service. Downloadable workflows.
 nav:
@@ -43,9 +43,6 @@ internalLinks:
   pseo:
     text: Programmatic SEO — Case Study
     href: /programmatic-seo
-  careerOps:
-    text: "Career-Ops: AI Job Search Multi-Agent | Case Study"
-    href: /career-ops-system
 sections:
   theProblem:
     heading: The Problem
@@ -788,7 +785,7 @@ sections:
               5. Enlaces planos, sin markdown (Meta rechaza [text](url))
               6. Solo llamar a subagenteCitas TRAS presupuestoModelo
               7. Diagnóstico: 19€, solo se cobra si no acepta la reparación
-              8. Correo: contacto@sfdcai.github.io/portfolio (no info@)
+              8. Correo: contacto@amitbhardwaj.co.uk (no info@)
           annotations:
             - label: Hard rules as production guardrails
               detail: |
@@ -993,7 +990,7 @@ sections:
     filtrarRespuesta:
       heading: FiltrarRespuesta — Deterministic post-processing
       body: |
-          Code node that validates and cleans the AI Agent's response before returning it to the router. Validates that urlSfdcai points to the correct domain (if it doesn't contain "sfdcai.github.io/portfolio" → "NOT AVAILABLE ON WEB YET"). Then applies 3 field-stripping paths based on state:
+          Code node that validates and cleans the AI Agent's response before returning it to the router. Validates that urlSfdcai points to the correct domain (if it doesn't contain "amitbhardwaj.co.uk" → "NOT AVAILABLE ON WEB YET"). Then applies 3 field-stripping paths based on state:
       rules:
         - condition: stock === true
           action: |
@@ -1217,7 +1214,7 @@ downloads:
       subtitle: Central Router
       description: |
           The brain of the WhatsApp channel. Classifies intent, picks the right sub-agent, maintains a 20-message memory window.
-      href: "https://github.com/sfdcai/jacobo-workflows/blob/main/jacobo-chatbot-v2.json"
+      href: "/jacobo/workflows/jacobo-chatbot-v2.json"
       fileSize: ~66 KB
       nodes: 37 nodes
       llm: GPT-4.1
@@ -1227,7 +1224,7 @@ downloads:
       subtitle: Appointment Booking
       description: |
           Turns "tomorrow morning" into a confirmed appointment. Parses natural language time preferences.
-      href: "https://github.com/sfdcai/jacobo-workflows/blob/main/subagente-citas.json"
+      href: "/jacobo/workflows/subagente-citas.json"
       fileSize: ~24 KB
       nodes: 18 nodes
       llm: MiniMax M2.5
@@ -1236,7 +1233,7 @@ downloads:
       name: Presupuesto Modelo
       subtitle: Quote Agent
       description: "Looks up exact model + repair in Airtable, returns real price with stock status."
-      href: "https://github.com/sfdcai/jacobo-workflows/blob/main/presupuesto-modelo.json"
+      href: "/jacobo/workflows/presupuesto-modelo.json"
       fileSize: ~15 KB
       nodes: 11 nodes
       llm: GPT-4.1 mini
@@ -1245,16 +1242,16 @@ downloads:
       name: hacerPedido
       subtitle: Order Creation
       description: Creates repair orders in Airtable when parts are out of stock.
-      href: "https://github.com/sfdcai/jacobo-workflows/blob/main/hacer-pedido.json"
+      href: "/jacobo/workflows/hacer-pedido.json"
       fileSize: ~79 KB
       nodes: 3 nodes
-    - id: calculadora-sfdcai
+    - id: calculadora-reparaciones
       icon: 🧮
       name: CalculadoraSfdcai
       subtitle: Discount Calculator
       description: |
           Pure business logic. Calculates combo discounts when customers bundle multiple repairs.
-      href: "https://github.com/sfdcai/jacobo-workflows/blob/main/calculadora-sfdcai.json"
+      href: "/jacobo/workflows/calculadora-reparaciones.json"
       fileSize: ~2.7 KB
       nodes: 3 nodes
     - id: contactar-agente-humano
@@ -1263,8 +1260,7 @@ downloads:
       subtitle: HITL Handoff
       description: |
           The escape valve. Escalates to human via Slack with a deep-link to the conversation.
-      href: |
-          https://github.com/sfdcai/jacobo-workflows/blob/main/contactar-agente-humano.json
+      href: "/jacobo/workflows/contactar-agente-humano.json"
       fileSize: ~2.3 KB
       nodes: 5 nodes
     - id: enviar-mensaje-wati
@@ -1272,15 +1268,15 @@ downloads:
       name: EnviarMensajeWati
       subtitle: WhatsApp Sender
       description: "Cross-channel bridge: the voice agent sends WhatsApp messages via the WATI API."
-      href: "https://github.com/sfdcai/jacobo-workflows/blob/main/enviar-mensaje-wati.json"
+      href: "/jacobo/workflows/enviar-mensaje-wati.json"
       fileSize: ~2.5 KB
       nodes: 3 nodes
-  githubNote: "All workflows live on GitHub — fork, star, or download directly."
-  githubCta: View repo on GitHub
+  githubNote: "All workflows are available for direct download below."
+  githubCta: Download Workflows
 footer:
-  role: AI Product Manager · Solutions Architect
+  role: Salesforce Architect & Developer
   bio: |
-      Built and sold a 16-year business in 2025. Now applying the same systems thinking to enterprise AI — as an FDE, Solutions Architect, or AI Production Manager.
+      Certified Salesforce Technical Architect & Developer with 14+ years of experience designing enterprise-scale platforms and integrations.
   fellowAt: Teaching Fellow at
   fellowLink: AI Product Academy
   copyright: All rights reserved.

@@ -1,11 +1,9 @@
 /* TEAM */
-Builder: Amit Bhardwaj de Valderrama Aparicio
-Role: Head of Applied AI · AI Product Manager · Solutions Architect
-Contact: hi@sfdcai.github.io/portfolio
-Site: https://sfdcai.github.io/portfolio
-Location: Seville, Spain
-LinkedIn: https://linkedin.com/in/salesforce-technical-architect
-GitHub: https://github.com/sfdcai
+Builder: Amit Bhardwaj
+Role: Salesforce Technical Architect & Systems Designer
+Site: https://amitbhardwaj.co.uk
+Location: London, United Kingdom
+LinkedIn: https://www.linkedin.com/in/salesforce-technical-architect
 
 /* THANKS */
 AI Pair: Claude Code (Anthropic)

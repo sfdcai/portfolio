@@ -7,8 +7,8 @@ Requires: GOOGLE_APPLICATION_CREDENTIALS env var or ~/.config/gsc/credentials.js
 import json, time, urllib.request, urllib.parse, base64, os, sys
 
 CREDS_PATH = os.environ.get("GOOGLE_APPLICATION_CREDENTIALS", os.path.expanduser("~/.config/gsc/credentials.json"))
-SITE_URL = "sc-domain:sfdcai.github.io/portfolio"
-SITEMAP_URL = "https://sfdcai.github.io/portfolio/sitemap.xml"
+SITE_URL = "sc-domain:amitbhardwaj.co.uk"
+SITEMAP_URL = "https://amitbhardwaj.co.uk/sitemap.xml"
 
 try:
     from cryptography.hazmat.primitives import hashes, serialization

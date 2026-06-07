@@ -34,7 +34,7 @@ An interactive, high-fidelity developer portfolio website designed for **Amit Bh
 ### 1. Installation
 
 ```bash
-git clone https://github.com/sfdcai/portfolio.git
+git clone <repository-url>
 cd portfolio
 npm install
 ```

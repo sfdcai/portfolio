@@ -1,11 +1,11 @@
 import { useState, useEffect, useCallback, useMemo, useReducer, useRef } from 'react'
-import { useLocation, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { Mail, ExternalLink, Briefcase, GraduationCap, Award, Code, Globe, Bot, Zap, Database, BadgeCheck, FolderGit2, Github, FileText, GitFork, Star, SkipForward, ChevronRight, List } from 'lucide-react'
+import { Mail, ExternalLink, Briefcase, GraduationCap, Award, Code, Globe, Bot, Zap, Database, BadgeCheck, FolderGit2, FileText, SkipForward, ChevronRight, List } from 'lucide-react'
 import { translations, seo, type Lang } from './i18n'
 import { useHomeSeo } from './articles/use-article-seo'
 import { getTechIcon } from './tech-icons'
-import { PressFeatures } from './PressFeatures'
+
 
 
 function LinkedInLogo({ className = "w-4 h-4" }: { className?: string }) {
@@ -274,12 +274,12 @@ function useTypewriterRotation(roles: readonly string[], { typeSpeed = 80, delet
 }
 
 const HOME_TOC_SECTIONS = [
-  { id: 'experience', es: 'Experiencia', en: 'Experience' },
-  { id: 'projects', es: 'Proyectos', en: 'Projects' },
-  { id: 'speaking', es: 'Compartiendo', en: 'Sharing' },
-  { id: 'education', es: 'Formación', en: 'Education' },
-  { id: 'tech', es: 'Skills & Stack', en: 'Skills & Stack' },
-  { id: 'contact', es: 'Contacto', en: 'Contact' },
+  { id: 'experience', en: 'Experience' },
+  { id: 'projects', en: 'Projects' },
+  { id: 'speaking', en: 'Sharing' },
+  { id: 'education', en: 'Education' },
+  { id: 'tech', en: 'Skills & Stack' },
+  { id: 'contact', en: 'Contact' },
 ] as const
 
 function HomeToc({ lang }: { lang: Lang }) {
@@ -1431,8 +1431,8 @@ function CertLogo({ logo }: { logo: string }) {
 }
 
 function App() {
-  const location = useLocation()
-  const lang: Lang = location.pathname === '/en' ? 'en' : 'es'
+
+  const lang: Lang = 'en'
   const t = translations[lang]
   const hydrated = useHydrated()
   useHeroStyles()
@@ -1500,26 +1500,16 @@ function App() {
               className="text-center md:text-left"
             >
               <p className="text-lg text-muted-foreground mb-2">
-                {lang === 'es' ? 'Hola, soy' : "Hi, I'm"} <Link to={lang === 'es' ? '/sobre-mi' : '/about'} className="text-gradient-theme font-semibold hover:opacity-80 transition-opacity">@sfdcai</Link>,
+                Hi, I'm <Link to="/about" className="text-gradient-theme font-semibold hover:opacity-80 transition-opacity">Amit Bhardwaj</Link>,
               </p>
               <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-4 leading-tight">
                 <span className="text-gradient-theme">{hydrated ? roleText : t.greetingRoles[0]}</span>
-                {hydrated && roleIndex === 3 && roleText.includes('career-ops') && (
-                  <a
-                    href="https://career-ops.org?utm_source=sfdcai.github.io/portfolio&utm_medium=hero&utm_campaign=persona"
-                    target="_blank"
-                    rel="me noopener noreferrer"
-                    aria-label="career-ops official site"
-                    className="inline-flex items-center ml-2 text-primary hover:opacity-80 transition-opacity align-middle"
-                  >
-                    <svg viewBox="0 0 24 24" className="w-6 h-6 md:w-7 md:h-7" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                  </a>
-                )}
+
                 {hydrated && <span className="inline-block w-[3px] h-[0.85em] bg-primary ml-1 rounded-sm translate-y-[2px]" style={{ animation: 'blink 1s step-end infinite' }} />}
                 <br />
                 {t.greeting}
                 <br />
-                {lang === 'es' ? 'con ' : 'with '}<BeamPill>Evals <span className="opacity-60">+</span> LLMOps <span className="opacity-60">+</span> HITL</BeamPill>
+                {'with '}<BeamPill>Evals <span className="opacity-60">+</span> LLMOps <span className="opacity-60">+</span> HITL</BeamPill>
               </h1>
 
               <div className="flex flex-wrap justify-center md:justify-start gap-3">
@@ -1535,28 +1525,11 @@ function App() {
                     {label}
                   </span>
                 ))}
-                <Link
-                  to={lang === 'es' ? '/career-ops' : '/career-ops-system'}
-                  className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 backdrop-blur-sm ${
-                    hydrated && (roleIndex === 2 || roleIndex === 3)
-                      ? 'border border-[#20d6ee] bg-[#20d6ee]/15 text-foreground scale-105'
-                      : 'border border-[#20d6ee]/30 bg-background/80 text-muted-foreground'
-                  }`}
-                >
-                  <Github className="w-3.5 h-3.5" />
-                  <span>career-ops</span>
-                  <Star className="w-3 h-3 text-yellow-500" />
-                  {/* hero-stats:career-ops:stars */}<span className="font-medium">49.3K</span>
-                  <GitFork className="w-3 h-3" />
-                  {/* hero-stats:career-ops:forks */}<span>10.2K</span>
-                </Link>
+
               </div>
 
             </motion.div>
           </div>
-
-          <PressFeatures lang={lang} />
-
         </div>
       </header>
 
@@ -1659,17 +1632,6 @@ function App() {
                 </div>
                 {t.projects.title}
               </h2>
-              <a
-                href={`https://${t.projects.githubLink}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-primary transition-colors"
-              >
-                <svg viewBox="0 0 24 24" className="w-4 h-4" fill="currentColor" aria-hidden="true">
-                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                {t.projects.githubLink.split('/').pop()}
-              </a>
             </div>
           </AnimatedSection>
 
@@ -1950,10 +1912,7 @@ function App() {
                 {t.skills.languages}
               </h3>
               <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span>{t.skills.spanish}</span>
-                  <span className="text-sm text-primary font-medium">{t.skills.native}</span>
-                </div>
+
                 <div className="flex justify-between items-center">
                   <span>{t.skills.english}</span>
                   <span className="text-sm text-muted-foreground">{t.skills.professional}</span>
@@ -2017,19 +1976,12 @@ function App() {
           <AnimatedSection delay={0.1}>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href={`mailto:${t.email}`}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:brightness-110 hover:shadow-lg hover:shadow-primary/25 active:brightness-95 transition-all duration-200"
-              >
-                <Mail className="w-4 h-4" />
-                {t.cta.contact}
-              </a>
-              <a
                 href="https://linkedin.com/in/salesforce-technical-architect/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-border hover:border-primary/50 transition-colors duration-200 hover:bg-primary/5"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:brightness-110 hover:shadow-lg hover:shadow-primary/25 active:brightness-95 transition-all duration-200"
               >
-                <LinkedInLogo className="w-4 h-4 text-[hsl(var(--linkedin))]" />
+                <LinkedInLogo className="w-4 h-4 text-white" />
                 LinkedIn
                 <ExternalLink className="w-3 h-3" aria-hidden="true" />
               </a>
@@ -2038,8 +1990,8 @@ function App() {
           <p className="mt-12 text-xs text-muted-foreground">
             &copy; {new Date().getFullYear()} Amit Bhardwaj
             <span className="mx-2 text-border">|</span>
-            <Link to={lang === 'es' ? '/privacidad' : '/privacy'} className="hover:text-primary transition-colors">
-              {lang === 'es' ? 'Privacidad' : 'Privacy'}
+            <Link to={'/privacy'} className="hover:text-primary transition-colors">
+              {'Privacy'}
             </Link>
           </p>
         </div>

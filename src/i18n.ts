@@ -1,8 +1,4 @@
 export const seo = {
-  es: {
-    title: 'Amit Bhardwaj | Salesforce Architect & Developer',
-    description: 'London-based Certified Salesforce Architect & Developer, Copado DevOps Engineer, and Systems Designer with 14+ years of experience building enterprise-scale systems and integrations.',
-  },
   en: {
     title: 'Amit Bhardwaj | Salesforce Architect & Developer',
     description: 'London-based Certified Salesforce Architect & Developer, Copado DevOps Engineer, and Systems Designer with 14+ years of experience building enterprise-scale systems and integrations.',
@@ -18,7 +14,7 @@ const data = {
     'Cloud Integration Expert',
   ],
   pillLabels: ['Architect', 'Developer'],
-  email: 'hiamitbhardwaj@gmail.com',
+  email: '',
   role: '',
   story: {
     context: '14+ years designing Salesforce architectures',
@@ -179,7 +175,7 @@ const data = {
   },
   projects: {
     title: 'Projects & Experiments',
-    githubLink: 'github.com/hiamitbhardwaj',
+    githubLink: '',
     viewCode: 'View code',
     viewPrototype: 'View prototype',
     agentInfra: {
@@ -360,7 +356,6 @@ const data = {
   skills: {
     title: 'Technical Skills',
     languages: 'Languages',
-    spanish: 'Spanish',
     native: 'Professional',
     english: 'English',
     professional: 'Fluent',
@@ -381,8 +376,7 @@ const data = {
 };
 
 export const translations = {
-  es: data,
   en: data,
 };
 
-export type Lang = 'es' | 'en';
+export type Lang = 'en';

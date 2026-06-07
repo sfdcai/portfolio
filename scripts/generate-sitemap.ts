@@ -60,7 +60,7 @@ function urlBlock(u: SitemapUrl): string {
 // Build URLs
 // ---------------------------------------------------------------------------
 
-const base = 'https://sfdcai.github.io/portfolio'
+const base = 'https://amitbhardwaj.co.uk'
 const urls: SitemapUrl[] = []
 
 // Home (English)

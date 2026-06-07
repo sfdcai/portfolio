@@ -6,34 +6,34 @@ import { useArticleSeo } from './articles/use-article-seo'
 import { ArticleLayout, MetricsGrid, CaseStudyCta } from './articles/components'
 
 export default function AmitBhardwajIRepair({ lang }: { lang: 'es' | 'en' }) {
-  const t = getArticleContent('santifer-irepair', lang) as any
+  const t = getArticleContent('amitbhardwaj-irepair', lang) as any
 
   const jsonLd = useMemo(() => ({
     '@context': 'https://schema.org',
     '@graph': [
-      { '@id': 'https://sfdcai.github.io/portfolio/#person' },
+      { '@id': 'https://amitbhardwaj.co.uk/#person' },
       {
         '@type': 'WebSite',
-        '@id': 'https://sfdcai.github.io/portfolio/#website',
-        url: 'https://sfdcai.github.io/portfolio',
-        name: 'sfdcai.github.io/portfolio',
-        publisher: { '@id': 'https://sfdcai.github.io/portfolio/#person' },
+        '@id': 'https://amitbhardwaj.co.uk/#website',
+        url: 'https://amitbhardwaj.co.uk',
+        name: 'amitbhardwaj.co.uk',
+        publisher: { '@id': 'https://amitbhardwaj.co.uk/#person' },
       },
       {
         '@type': 'BreadcrumbList',
         itemListElement: [
-          { '@type': 'ListItem', position: 1, name: t.nav.breadcrumbHome, item: 'https://sfdcai.github.io/portfolio/' },
-          { '@type': 'ListItem', position: 2, name: t.nav.breadcrumbCurrent, item: `https://sfdcai.github.io/portfolio/${t.slug}` },
+          { '@type': 'ListItem', position: 1, name: t.nav.breadcrumbHome, item: 'https://amitbhardwaj.co.uk/' },
+          { '@type': 'ListItem', position: 2, name: t.nav.breadcrumbCurrent, item: `https://amitbhardwaj.co.uk/${t.slug}` },
         ],
       },
       {
         '@type': 'WebPage',
-        '@id': `https://sfdcai.github.io/portfolio/${t.slug}#webpage`,
-        url: `https://sfdcai.github.io/portfolio/${t.slug}`,
+        '@id': `https://amitbhardwaj.co.uk/${t.slug}#webpage`,
+        url: `https://amitbhardwaj.co.uk/${t.slug}`,
         name: t.seo.title,
         description: t.seo.description,
-        about: { '@id': 'https://sfdcai.github.io/portfolio/#person' },
-        isPartOf: { '@id': 'https://sfdcai.github.io/portfolio/#website' },
+        about: { '@id': 'https://amitbhardwaj.co.uk/#person' },
+        isPartOf: { '@id': 'https://amitbhardwaj.co.uk/#website' },
         inLanguage: ['en'],
       },
     ],
@@ -45,7 +45,7 @@ export default function AmitBhardwajIRepair({ lang }: { lang: 'es' | 'en' }) {
     altSlug: t.altSlug,
     title: t.seo.title,
     description: t.seo.description,
-    image: 'https://sfdcai.github.io/portfolio/business-os/og-business-os.webp',
+    image: 'https://amitbhardwaj.co.uk/business-os/og-business-os.webp',
     publishedTime: '2026-03-08',
     articleTags: 'Amit Bhardwaj iRepair, phone repair, Seville, exit, founder',
     jsonLd,
@@ -94,7 +94,7 @@ export default function AmitBhardwajIRepair({ lang }: { lang: 'es' | 'en' }) {
         <div className="bg-card border border-border rounded-xl overflow-hidden grid grid-rows-[auto_1fr_auto_auto]">
           <div className="flex items-center gap-4 p-6 pb-0">
             <img
-              src="/logo-santifer.webp"
+              src="/logo-amitbhardwaj-irepair.webp"
               alt="Amit Bhardwaj iRepair logo"
               className="w-16 h-16 rounded-full border-2 border-primary/20 shrink-0 object-cover"
               width={64}
@@ -105,7 +105,7 @@ export default function AmitBhardwajIRepair({ lang }: { lang: 'es' | 'en' }) {
           <p className="text-muted-foreground text-sm leading-relaxed px-6 pt-3 whitespace-pre-line">{t.cards.shop.body}</p>
           <div className="px-6 pb-2">
             <a
-              href="https://www.google.com/maps/search/Santifer+iRepair+Sevilla"
+              href="https://www.google.com/maps/search/Amit+Bhardwaj+iRepair+Sevilla"
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="inline-flex items-center justify-center gap-2 w-full px-5 py-2.5 rounded-lg bg-card border border-border text-sm font-medium text-muted-foreground hover:text-foreground hover:border-primary/30 transition-colors"
@@ -116,7 +116,7 @@ export default function AmitBhardwajIRepair({ lang }: { lang: 'es' | 'en' }) {
           </div>
           <div className="px-6 pb-6">
             <a
-              href="https://sfdcai.github.io/portfolio"
+              href="https://amitbhardwaj.co.uk"
               target="_blank"
               rel="noopener noreferrer nofollow"
               className="inline-flex items-center justify-center gap-2 w-full px-5 py-2.5 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors text-sm"

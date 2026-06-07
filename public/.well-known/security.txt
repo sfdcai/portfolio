@@ -1,9 +1,9 @@
-# Security Policy for sfdcai.github.io/portfolio
+# Security Policy for amitbhardwaj.co.uk
 # https://securitytxt.org/ — RFC 9116
 
-Contact: mailto:hi@sfdcai.github.io/portfolio
+Contact: mailto:hi@amitbhardwaj.co.uk
 Preferred-Languages: en, es
-Canonical: https://sfdcai.github.io/portfolio/.well-known/security.txt
+Canonical: https://amitbhardwaj.co.uk/.well-known/security.txt
 Expires: 2027-02-19T00:00:00.000Z
 
 # Security measures implemented:

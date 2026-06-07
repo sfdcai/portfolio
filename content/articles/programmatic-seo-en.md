@@ -4,7 +4,7 @@ slug: programmatic-seo
 altSlug: seo-programatico
 readingTime: 37 min read
 seo:
-  title: "Programmatic SEO: 4,000+ Pages from an ERP | sfdcai.github.io/portfolio"
+  title: "Programmatic SEO: 4,000+ Pages from an ERP | amitbhardwaj.co.uk"
   description: |
       Case study: 4,730 static landing pages from Airtable as headless CMS with DataForSEO crawl budget optimization and Astro SSG. 2M+ impressions, 19K+ clicks.
 nav:
@@ -12,7 +12,7 @@ nav:
   breadcrumbCurrent: Programmatic SEO
 header:
   kicker: Case Study — <a>Amit Bhardwaj iRepair</a>
-  kickerLink: "https://sfdcai.github.io/portfolio"
+  kickerLink: "https://amitbhardwaj.co.uk"
   h1: "Programmatic SEO: 4,700+ Pages from an ERP"
   subtitle: |
       How I generated 4,730 unique landing pages with real production data, a 14-table Airtable CMS, and DataForSEO as the decision engine. 2.26M impressions, 19K+ clicks.
@@ -37,7 +37,7 @@ sections:
   migration:
     heading: The Starting Point
     intro: |
-        The business website had been running on Squarespace for years. No URL control, no canonical tags, no custom redirects. What was coming wasn't just a platform change — it was a triple migration: platform (Squarespace → Astro), domain (sfdcai.me → sfdcai.github.io/portfolio), and hosting (Squarespace → Vercel/Cloudflare). The first step was documenting exactly what needed fixing: a 144-page technical audit, completed as the Final Master's Project for the Big SEO program.
+        The business website had been running on Squarespace for years. No URL control, no canonical tags, no custom redirects. What was coming wasn't just a platform change — it was a triple migration: platform (Squarespace → Astro), domain (amitbhardwaj.co.uk → amitbhardwaj.co.uk), and hosting (Squarespace → Vercel/Cloudflare). The first step was documenting exactly what needed fixing: a 144-page technical audit, completed as the Final Master's Project for the Big SEO program.
     duplicateCallout: |
         Squarespace served the same page at 4 different URLs (www, non-www, trailing slash, .html). Google saw 4 copies of every page.
     audit:
@@ -1308,7 +1308,7 @@ resources:
     - label: "Source code on GitHub (scripts, layouts, routes)"
       url: "https://github.com/sfdcai/amitbhardwaj-irepair"
     - label: Amit Bhardwaj iRepair (the programmatic site)
-      url: "https://sfdcai.github.io/portfolio"
+      url: "https://amitbhardwaj.co.uk"
     - label: "Case Study: The Business OS / ERP behind these pages"
       url: /business-os-for-airtable
     - label: "Astro, the static site framework"

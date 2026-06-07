@@ -98,7 +98,7 @@ export function getArticleContent(id: string, _lang?: 'es' | 'en') {
 
 export function getExperienceItems(_lang?: 'es' | 'en') {
   const items: Record<string, any> = {}
-  const jobs = ['zinkee', 'careerOps', 'amitbhardwaj-irepair', 'lico', 'everis']
+  const jobs = ['amitbhardwaj-irepair']
   for (const job of jobs) {
     try {
       const { frontmatter, body } = parseMarkdown(`home/experience/${job}-en.md`)

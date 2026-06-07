@@ -63,16 +63,16 @@ export default function N8nForPMs({ lang = 'en' }: { lang?: 'es' | 'en' }) {
     altSlug: t.altSlug,
     title: t.seo.title,
     description: t.seo.description,
-    image: 'https://sfdcai.github.io/portfolio/workflows/n8n-ai-feedback-classification-workflow.webp',
+    image: 'https://amitbhardwaj.co.uk/workflows/n8n-ai-feedback-classification-workflow.webp',
     publishedTime: '2026-02-24',
-    modifiedTime: '2026-05-10',
+    modifiedTime: '2026-06-06',
     articleTags: 'n8n,product manager,automation,AI,workflow,no-code',
     jsonLd: buildJsonLd(lang),
     xDefaultSlug: 'n8n-para-pms',
   })
 
   const MASTERCLASS_URL = 'https://maven.com/p/52fc7d/masterclass-n8n-for-p-ms'
-  const BOOTCAMP_URL = 'https://maven.com/marily-nika/ai-pm-bootcamp?utm_source=santifer&utm_medium=cheatsheet&utm_campaign=n8n-for-pms'
+  const BOOTCAMP_URL = 'https://maven.com/marily-nika/ai-pm-bootcamp?utm_source=amitbhardwaj&utm_medium=cheatsheet&utm_campaign=n8n-for-pms'
 
   return (
     <ArticleLayout lang={lang}>
@@ -86,7 +86,7 @@ export default function N8nForPMs({ lang = 'en' }: { lang?: 'es' | 'en' }) {
           subtitle={t.header.subtitle}
           date={t.header.date}
           dateISO="2026-02-24"
-          dateModifiedISO="2026-05-10"
+          dateModifiedISO="2026-06-06"
           readingTime={t.readingTime}
         />
 
@@ -101,9 +101,9 @@ export default function N8nForPMs({ lang = 'en' }: { lang?: 'es' | 'en' }) {
             {t.intro.body}
           </Prose>
           <Prose className="mb-8">
-            {t.intro.punchline.split(lang === 'es' ? 'Era un router de datos muy caro.' : 'I was a very expensive data router.').map((part, i, arr) =>
+            {t.intro.punchline.split('I was a very expensive data router.').map((part, i, arr) =>
               i < arr.length - 1 ? (
-                <span key={i}>{part}<strong className="text-foreground">{lang === 'es' ? 'Era un router de datos muy caro.' : 'I was a very expensive data router.'}</strong></span>
+                <span key={i}>{part}<strong className="text-foreground">{'I was a very expensive data router.'}</strong></span>
               ) : (
                 <span key={i}>{part}</span>
               )
@@ -115,7 +115,7 @@ export default function N8nForPMs({ lang = 'en' }: { lang?: 'es' | 'en' }) {
             <div className="px-5 py-4 rounded-[calc(1rem-1.5px)] bg-card text-sm text-muted-foreground leading-relaxed">
               {t.previewCta.text.split(/<a>|<\/a>/).map((part, i) =>
                 i === 1 ? (
-                  <a key={i} href="https://maven.com/marily-nika/ai-pm-bootcamp?utm_source=santifer&utm_medium=cheatsheet&utm_campaign=n8n-for-pms" target="_blank" rel="noopener noreferrer nofollow" className="text-primary hover:underline font-medium">{part}</a>
+                  <a key={i} href="https://maven.com/marily-nika/ai-pm-bootcamp?utm_source=amitbhardwaj&utm_medium=cheatsheet&utm_campaign=n8n-for-pms" target="_blank" rel="noopener noreferrer nofollow" className="text-primary hover:underline font-medium">{part}</a>
                 ) : (
                   <span key={i}>{part}</span>
                 )
@@ -126,9 +126,7 @@ export default function N8nForPMs({ lang = 'en' }: { lang?: 'es' | 'en' }) {
           {/* Time Sinks Table */}
           <H2 id="time-sinks">{t.timeSinks.heading}</H2>
           <p className="text-sm text-muted-foreground mb-4">
-            {lang === 'es'
-              ? 'Según el Asana Work Index, los PMs dedican el 58% de su tiempo a trabajo operativo.'
-              : 'Per the Asana Work Index, PMs spend 58% of their time on work about work.'}
+            {'Per the Asana Work Index, PMs spend 58% of their time on work about work.'}
           </p>
           <div className="overflow-x-auto -mx-4 sm:mx-0">
             <table className="w-full text-left border-collapse">
@@ -240,9 +238,9 @@ export default function N8nForPMs({ lang = 'en' }: { lang?: 'es' | 'en' }) {
             <p className="text-muted-foreground italic">{t.workflow2.ambiguousExample}</p>
           </InfoCard>
           <Prose>
-            {t.workflow2.ambiguousExplanation1.split(lang === 'es' ? 'clasificar como BUG' : 'classify as BUG').map((part, i, arr) =>
+            {t.workflow2.ambiguousExplanation1.split('classify as BUG').map((part, i, arr) =>
               i < arr.length - 1 ? (
-                <span key={i}>{part}<strong className="text-foreground">{lang === 'es' ? 'clasificar como BUG' : 'classify as BUG'}</strong></span>
+                <span key={i}>{part}<strong className="text-foreground">{'classify as BUG'}</strong></span>
               ) : (
                 <span key={i}>{part}</span>
               )
@@ -302,7 +300,7 @@ export default function N8nForPMs({ lang = 'en' }: { lang?: 'es' | 'en' }) {
                 i === 1 ? (
                   <a
                     key={i}
-                    href="https://maven.com/marily-nika/ai-pm-bootcamp?utm_source=santifer&utm_medium=cheatsheet&utm_campaign=n8n-for-pms"
+                    href="https://maven.com/marily-nika/ai-pm-bootcamp?utm_source=amitbhardwaj&utm_medium=cheatsheet&utm_campaign=n8n-for-pms"
                     target="_blank"
                     rel="noopener noreferrer nofollow"
                     className="text-primary hover:underline font-medium"
@@ -323,12 +321,10 @@ export default function N8nForPMs({ lang = 'en' }: { lang?: 'es' | 'en' }) {
 
           {/* Cross-link: Business OS */}
           <CaseStudyCta
-            heading={lang === 'es' ? '¿Qué automaticé con esas 170 horas?' : 'What did I automate with those 170 hours?'}
-            body={lang === 'es'
-              ? 'Estos workflows son una fracción de un sistema más amplio: 12 bases de Airtable, 50+ automatizaciones y un agente IA que gestiona clientes 24/7. Todo documentado en el case study del Business OS.'
-              : 'These workflows are a fraction of a larger system: 12 Airtable bases, 50+ automations, and an AI agent handling customers 24/7. All documented in the Business OS case study.'}
-            ctaLabel={lang === 'es' ? 'Ver Business OS →' : 'Read Business OS →'}
-            ctaHref={lang === 'es' ? '/business-os-para-airtable' : '/business-os-for-airtable'}
+            heading={'What did I automate with those 170 hours?'}
+            body={'These workflows are a fraction of a larger system: 12 Airtable bases, 50+ automations, and an AI agent handling customers 24/7. All documented in the Business OS case study.'}
+            ctaLabel={'Read Business OS →'}
+            ctaHref={'/business-os-for-airtable'}
           />
 
           {/* FAQ */}

@@ -5,14 +5,14 @@ altSlug: chatbot-que-se-cura-solo
 readingTime: 22 min read
 seo:
   title: |
-      The Self-Healing Chatbot: From Widget to Production LLMOps | sfdcai.github.io/portfolio
+      The Self-Healing Chatbot: From Widget to Production LLMOps | amitbhardwaj.co.uk
   description: |
       Case study: production LLMOps with agentic observability, 6-layer defense, 71 evals, voice mode, and a closed-loop that generates tests from real failures.
 nav:
   breadcrumbHome: Home
   breadcrumbCurrent: The Self-Healing Chatbot
 header:
-  kicker: Case Study — sfdcai.github.io/portfolio (you're using it right now)
+  kicker: Case Study — amitbhardwaj.co.uk (you're using it right now)
   h1: "The Self-Healing Chatbot: From Widget to Production LLMOps"
   subtitle: |
       How a 50-line chat widget evolved into a production LLMOps system with agentic RAG, agentic observability, 6-layer defense, 71 evals, voice mode, and a closed-loop that generates tests from real failures.
@@ -548,7 +548,7 @@ faq:
   items:
     - q: "Is this production-grade or just a demo?"
       a: |
-          Real production. Live on sfdcai.github.io/portfolio since January 2026 with daily organic traffic, full observability via Langfuse, 71 automated evals run on every PR, 6-layer anti-jailbreak defense, agentic RAG on Supabase pgvector, and a CI gate that blocks deploys if any test fails. Not a playground: every conversation is traced, batch-scored with Sonnet overnight, and failures feed the next eval set.
+          Real production. Live on amitbhardwaj.co.uk since January 2026 with daily organic traffic, full observability via Langfuse, 71 automated evals run on every PR, 6-layer anti-jailbreak defense, agentic RAG on Supabase pgvector, and a CI gate that blocks deploys if any test fails. Not a playground: every conversation is traced, batch-scored with Sonnet overnight, and failures feed the next eval set.
     - q: "How much did it cost to build?"
       a: |
           $0 in infrastructure: free tiers from Vercel (edge functions), Supabase (pgvector RAG), and Langfuse Cloud (observability). The only variable cost is LLM APIs: under $0.005 per text conversation and ~$0.25 per voice session (OpenAI Realtime). Built solo using Claude Code, no team and no project budget.

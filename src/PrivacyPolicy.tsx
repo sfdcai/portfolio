@@ -7,7 +7,7 @@ export default function PrivacyPolicy({ lang = 'en' }: { lang?: 'es' | 'en' }) {
   const t = getPrivacyContent(lang) as any
 
   useEffect(() => {
-    document.title = `${t.title} | sfdcai.github.io/portfolio`
+    document.title = `${t.title} | amitbhardwaj.co.uk`
 
     // noindex
     let robots = document.querySelector('meta[name="robots"]') as HTMLMetaElement
@@ -20,7 +20,7 @@ export default function PrivacyPolicy({ lang = 'en' }: { lang?: 'es' | 'en' }) {
 
     // Fix canonical
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement
-    if (canonical) canonical.href = `https://sfdcai.github.io/portfolio/privacy`
+    if (canonical) canonical.href = `https://amitbhardwaj.co.uk/privacy`
 
     // Fix meta description
     let desc = document.querySelector('meta[name="description"]') as HTMLMetaElement

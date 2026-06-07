@@ -5,7 +5,7 @@ altSlug: business-os-para-airtable
 readingTime: 15 min read
 seo:
   title: |
-      How I Built a Custom Business OS for 30,000+ Repairs with Airtable (170h/Month Saved) | sfdcai.github.io/portfolio
+      How I Built a Custom Business OS for 30,000+ Repairs with Airtable (170h/Month Saved) | amitbhardwaj.co.uk
   description: |
       Case study: how I built a Business OS with 12 Airtable bases, 2,100+ fields and 50+ automations that saves 170h/month at a phone repair business with 30,000+ repairs completed.
 nav:
@@ -46,9 +46,6 @@ internalLinks:
   n8n:
     text: n8n for PMs — Article
     href: /n8n-for-pms
-  careerOps:
-    text: "Career-Ops: AI Job Search Multi-Agent | Case Study"
-    href: /career-ops-system
 sections:
   dayInLife:
     heading: A Day in the Life of the System

@@ -32,56 +32,20 @@ interface ProofPoint {
 const PROOF_POINTS: ProofPoint[] = [
   // -- Projects (i18n.ts → projects) --
   {
-    source: 'i18n.ts → projects → AI Solutions Playbook',
-    terms: ['AI Solutions Playbook', 'context switching', 'SESSION_BRIEF'],
+    source: 'i18n.ts → projects → Employee Engagement Platform',
+    terms: ['Employee Engagement Platform', 'SaaS', 'gamification'],
   },
   {
-    source: 'i18n.ts → projects → Content Digest',
-    terms: ['Content Digest'],
+    source: 'i18n.ts → projects → AI Product Information Platform',
+    terms: ['AI Product Information Platform', 'enrichment', 'FastAPI'],
   },
   {
-    source: 'i18n.ts → projects → Life OS',
-    terms: ['Life OS'],
+    source: 'i18n.ts → projects → Home Lab Infrastructure',
+    terms: ['Home Lab Infrastructure', 'Proxmox', 'pfSense', 'Netdata'],
   },
   {
-    source: 'i18n.ts → projects → Career Ops',
-    terms: ['Career Ops'],
-  },
-  {
-    source: 'i18n.ts → projects → Claude Pulse',
-    terms: ['Claude Pulse'],
-  },
-  {
-    source: 'i18n.ts → projects → Claude Eye',
-    terms: ['Claude Eye'],
-  },
-  {
-    source: 'i18n.ts → projects → Claudeable',
-    terms: ['Claudeable'],
-  },
-  {
-    source: 'i18n.ts → projects → ProjectOS Predict',
-    terms: ['ProjectOS Predict'],
-  },
-
-  // -- Claude Code Power User (i18n.ts → claudeCode) --
-  {
-    source: 'i18n.ts → claudeCode',
-    terms: ['multi-agent', 'IPC', 'memory persistence', 'custom', 'skills'],
-  },
-
-  // -- Speaking & Teaching (i18n.ts → speaking) --
-  {
-    source: 'i18n.ts → speaking → AI Fluency Educator',
-    terms: ['AI Fluency Educator', '4D', 'Delegation', 'Discernment'],
-  },
-  {
-    source: 'i18n.ts → speaking → Teaching Fellow',
-    terms: ['Teaching Fellow'],
-  },
-  {
-    source: 'i18n.ts → speaking → Hiperautomatiza',
-    terms: ['Hiperautomatiza'],
+    source: 'i18n.ts → projects → Enterprise Integration Architecture',
+    terms: ['Enterprise Integration Architecture', 'Salesforce', 'SAP', 'event-driven'],
   },
 
   // -- Self-Healing Chatbot (chatbot-i18n.ts) --
@@ -105,17 +69,17 @@ const PROOF_POINTS: ProofPoint[] = [
   // -- Articles published (registry.ts) --
   {
     source: 'articles/registry.ts',
-    terms: ['n8n for Product Managers', 'Jacobo', 'Programmatic'],
+    terms: ['n8n for PMs', 'AI Agent Jacobo', 'Programmatic SEO', 'Self-Healing Chatbot'],
   },
 
-  // -- Key experience points --
+  // -- Key experience points (i18n.ts → experience) --
   {
-    source: 'i18n.ts → experience → Jacobo',
-    terms: ['Jacobo', '90%', 'self-service'],
+    source: 'i18n.ts → experience → Genpact',
+    terms: ['Genpact', 'Solutions Architect', 'release governance', 'Copado'],
   },
   {
-    source: 'i18n.ts → experience → pSEO',
-    terms: ['Programmatic', 'Airtable', 'DataForSEO'],
+    source: 'i18n.ts → experience → HCL Technologies',
+    terms: ['HCL Technologies', 'Program Architect', 'branching models', 'Apex'],
   },
 ]
 

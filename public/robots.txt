@@ -1,6 +1,6 @@
 # Most bots crawl. The best ones read llms.txt → /llms.txt
 #
-# Built by Amit Bhardwaj — hi@sfdcai.github.io/portfolio
+# Built by Amit Bhardwaj — hi@amitbhardwaj.co.uk
 # Stack: React 19 · Claude API · Vercel Edge · 71 evals · 6-layer defense · voice mode
 
 User-agent: *
@@ -27,7 +27,7 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://sfdcai.github.io/portfolio/sitemap.xml
+Sitemap: https://amitbhardwaj.co.uk/sitemap.xml
 
 # IndexNow key (Bing, Yandex, Naver, Seznam)
-# Key file: https://sfdcai.github.io/portfolio/a538d844-6767-41b9-9028-381ee4b8d567.txt
+# Key file: https://amitbhardwaj.co.uk/a538d844-6767-41b9-9028-381ee4b8d567.txt

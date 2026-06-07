@@ -66,26 +66,24 @@ interface JsonLdOptions {
 
 const PERSON = {
   '@type': 'Person',
-  '@id': 'https://sfdcai.github.io/portfolio/#person',
+  '@id': 'https://amitbhardwaj.co.uk/#person',
   name: 'Amit Bhardwaj',
-  url: 'https://sfdcai.github.io/portfolio',
-  jobTitle: 'Head of Applied AI',
+  url: 'https://amitbhardwaj.co.uk',
+  jobTitle: 'Salesforce Architect & Developer',
   sameAs: [
     'https://www.linkedin.com/in/salesforce-technical-architect',
-    'https://github.com/sfdcai',
-    'https://career-ops.org/about',
   ],
 }
 
 const WEBSITE = {
   '@type': 'WebSite',
-  '@id': 'https://sfdcai.github.io/portfolio/#website',
-  name: 'sfdcai.github.io/portfolio',
-  url: 'https://sfdcai.github.io/portfolio',
+  '@id': 'https://amitbhardwaj.co.uk/#website',
+  name: 'amitbhardwaj.co.uk',
+  url: 'https://amitbhardwaj.co.uk',
 }
 
 export function buildArticleJsonLd(opts: JsonLdOptions) {
-  const inLanguage = opts.lang === 'es' ? 'es' : 'en'
+  const inLanguage = 'en'
 
   const graph: Record<string, unknown>[] = [
     {
@@ -94,12 +92,12 @@ export function buildArticleJsonLd(opts: JsonLdOptions) {
       headline: opts.headline,
       alternativeHeadline: opts.alternativeHeadline,
       description: opts.description,
-      author: { '@id': 'https://sfdcai.github.io/portfolio/#person' },
+      author: { '@id': 'https://amitbhardwaj.co.uk/#person' },
       // Publisher: Person-as-publisher is valid for CreativeWork on personal sites
-      // (Santiago publishes on his own domain). Override only for collabs (e.g. Marily).
+      // (Amit Bhardwaj publishes on his own domain). Override only for collabs (e.g. Marily).
       publisher: opts.publisher
         ? { '@type': 'Organization', name: opts.publisher.name, url: opts.publisher.url }
-        : { '@id': 'https://sfdcai.github.io/portfolio/#person' },
+        : { '@id': 'https://amitbhardwaj.co.uk/#person' },
       datePublished: opts.datePublished,
       dateModified: opts.dateModified,
       keywords: opts.keywords,
@@ -107,7 +105,7 @@ export function buildArticleJsonLd(opts: JsonLdOptions) {
       mainEntityOfPage: opts.url,
       image: opts.images,
       inLanguage,
-      isPartOf: { '@id': 'https://sfdcai.github.io/portfolio/#website' },
+      isPartOf: { '@id': 'https://amitbhardwaj.co.uk/#website' },
       ...(opts.about ? { about: opts.about } : {}),
       ...(opts.extra || {}),
       ...(opts.citation ? { citation: opts.citation } : {}),
@@ -125,7 +123,7 @@ export function buildArticleJsonLd(opts: JsonLdOptions) {
       '@type': 'BreadcrumbList',
       '@id': `${opts.url}/#breadcrumbs`,
       itemListElement: [
-        { '@type': 'ListItem', '@id': `${opts.url}/#breadcrumb-1`, position: 1, name: opts.breadcrumbHome, item: 'https://sfdcai.github.io/portfolio' },
+        { '@type': 'ListItem', '@id': `${opts.url}/#breadcrumb-1`, position: 1, name: opts.breadcrumbHome, item: 'https://amitbhardwaj.co.uk' },
         { '@type': 'ListItem', '@id': `${opts.url}/#breadcrumb-2`, position: 2, name: opts.breadcrumbCurrent, item: opts.url },
       ],
     },
@@ -167,8 +165,8 @@ export function buildJsonLdFromRegistry(
   const meta = config.seoMeta
   return buildArticleJsonLd({
     lang,
-    url: `https://sfdcai.github.io/portfolio/${i18n.slug}`,
-    altUrl: `https://sfdcai.github.io/portfolio/${i18n.altSlug}`,
+    url: `https://amitbhardwaj.co.uk/${i18n.slug}`,
+    altUrl: `https://amitbhardwaj.co.uk/${i18n.altSlug}`,
     headline: i18n.header.h1,
     alternativeHeadline: i18n.seo.title,
     description: i18n.seo.description,

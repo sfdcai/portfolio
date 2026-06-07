@@ -12,7 +12,7 @@ greetingRoles:
 pillLabels:
   - Architect
   - Developer
-email: hiamitbhardwaj@gmail.com
+email: ""
 role: ""
 story:
   context: 14+ years designing Salesforce architectures
@@ -130,7 +130,7 @@ techStack:
         - SQL
 projects:
   title: Projects & Experiments
-  githubLink: github.com/hiamitbhardwaj
+  githubLink: ""
   viewCode: View code
   viewPrototype: View prototype
   agentInfra:
@@ -243,7 +243,7 @@ experience:
         - quote: "I collaborated with Amit on several projects, demos, and POCs, and I was always impressed with his strong technical approach and the way he handled customer requirements. Amit has deep Salesforce expertise and has successfully delivered many complex implementations."
           author: Arpit Saharawat
           role: Senior Director Digital Engineering, Infinite Computer Solutions (ex-Infomatrix)
-  sfdcai:
+  salesforce:
     exit: Salesforce Certified
     exitDesc: "Active certifications in the Salesforce ecosystem"
 education:
