@@ -52,29 +52,7 @@ const PROOF_POINTS: ProofPoint[] = [
     terms: ['Enterprise Integration', 'Salesforce', 'SAP', 'decoupled'],
   },
 
-  // -- Self-Healing Chatbot (chatbot-i18n.ts) --
-  {
-    source: 'chatbot-i18n.ts → defense',
-    terms: ['6-layer', 'canary token', 'fingerprint'],
-  },
-  {
-    source: 'chatbot-i18n.ts → evals',
-    terms: ['71', 'CI gate', 'trace-to-eval'],
-  },
-  {
-    source: 'chatbot-i18n.ts → cost',
-    terms: ['$0.005', '$0 infrastructure'],
-  },
-  {
-    source: 'chatbot-i18n.ts → batch eval',
-    terms: ['Sonnet', 'intent', 'quality', 'safety', 'jailbreak', 'Resend'],
-  },
 
-  // -- Articles published (registry.ts) --
-  {
-    source: 'articles/registry.ts',
-    terms: ['n8n for PMs', 'AI Agent Jacobo', 'Programmatic SEO', 'Self-Healing Chatbot'],
-  },
 
   // -- Key experience points (i18n.ts → experience) --
   {

@@ -1,7 +1,7 @@
 export const seo = {
   en: {
     title: 'Amit Bhardwaj | Salesforce Architect & Developer',
-    description: 'London-based Certified Salesforce Architect & Developer, Copado DevOps Engineer, and Systems Designer with 14+ years of experience building enterprise-scale systems and integrations.',
+    description: 'London-based Certified Salesforce Architect & Developer, Copado DevOps Engineer, and Systems Designer with 19+ years of experience building enterprise-scale systems and integrations.',
   },
 };
 
@@ -17,7 +17,7 @@ const data = {
   email: '',
   role: '',
   story: {
-    context: '14+ years designing Salesforce architectures',
+    context: '19+ years in systems engineering & Salesforce architecture',
     reflections: [
       'Code is cheap. Architecture is everything.',
       'Automation should feel seamless.',
@@ -61,7 +61,7 @@ const data = {
     title: 'Professional Summary',
     p1: 'Certified Salesforce Architect & Developer focused on',
     p1Highlight: 'enterprise system design',
-    p1End: 'and large-scale cloud integrations. Over a 14-year career leading programs at Genpact and HCL, I have successfully delivered over 100 projects across Salesforce Sales, Service, and Experience Clouds, integrating them with complex backends like SAP.',
+    p1End: 'and large-scale cloud integrations. Over a 19-year career spanning systems engineering, IT support, and Salesforce architecture, I have successfully delivered over 100 projects across Salesforce Sales, Service, and Experience Clouds, integrating them with complex backends like SAP.',
     p2: 'Specializing in the intersection of',
     p2Highlight: 'Salesforce, DevOps, & Systems Engineering',
     p2End: ', enabling robust, automated delivery pipelines and secure data flows.',

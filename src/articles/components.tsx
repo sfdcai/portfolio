@@ -175,13 +175,13 @@ interface ArticleFooterProps {
 const FOOTER_I18N = {
   es: {
     role: 'Salesforce Architect & Developer',
-    bio: 'Arquitecto y Desarrollador Salesforce certificado con más de 14 años de experiencia en el diseño de plataformas empresariales e integraciones a gran escala.',
+    bio: 'Arquitecto y Desarrollador Salesforce certificado con más de 19 años de experiencia en el diseño de plataformas empresariales e integraciones a gran escala.',
     fellowAt: 'Teaching Fellow en',
     copyright: 'Todos los derechos reservados.',
   },
   en: {
     role: 'Salesforce Architect & Developer',
-    bio: 'Certified Salesforce Technical Architect & Developer with 14+ years of experience designing enterprise-scale platforms and large-scale integrations.',
+    bio: 'Certified Salesforce Technical Architect & Developer with 19+ years of experience designing enterprise-scale platforms and large-scale integrations.',
     fellowAt: 'Teaching Fellow at',
     copyright: 'All rights reserved.',
   },

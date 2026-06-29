@@ -17,41 +17,7 @@ Amit Bhardwaj is a London-based Certified Salesforce Technical Architect and Sys
 
 ---
 
-## Case Studies & Articles
-
-### n8n for PMs
-- **Title:** n8n for PMs: Cheat Sheet + Free AI Templates
-- **Focus:** Automating sprint reports and feedback classification with AI workflows using n8n.
-- **Key Terms:** n8n for PMs, Sprint Reports, Feedback Classification.
-
-### AI Agent Jacobo
-- **Title:** AI Agent Jacobo: Multi-Agent AI with Tool Calling & Voice AI
-- **Focus:** Omnichannel AI agent (WhatsApp + voice) built for retail mobile repairs.
-- **Metrics:** Achieved a ~90% self-service rate.
-
-### Programmatic SEO
-- **Title:** Programmatic SEO: 4,000+ Pages from an ERP
-- **Focus:** Rebuilding a legacy service site as a programmatic Astro site powered by Airtable and DataForSEO.
-
-### Self-Healing Chatbot
-- **Title:** The Self-Healing Chatbot: From Widget to Production LLMOps
-- **Focus:** Dual text + voice chatbot system running Claude Sonnet.
-- **Defense:** 6-layer defense system including canary token, prompt injection patterns, and fingerprint checks.
-- **Evals:** 71 automated evals run on every PR via a CI gate, utilizing trace-to-eval telemetry.
-- **Cost:** Costs average $0.005 per conversation with $0 infrastructure overhead.
-- **Batch Eval:** Langfuse traces scored overnight with Sonnet for intent classification, quality, safety, and jailbreak defense. E-mail triggers run on failures using Resend.
-
-### Business OS for Airtable
-- **Title:** Custom Business OS: Airtable + n8n — 170h/Mo Saved
-- **Focus:** 12 Airtable bases, 2100 fields, and n8n orchestration saving 170h/month at a retail repair business.
-
-### iRepair Founder Story
-- **Title:** Amit Bhardwaj iRepair — Phone Repair since 2009
-- **Focus:** Founding and scaling a retail device repair brand with 30,000+ repairs and custom CRM solutions.
-
----
-
-## Projects & Experiments
+## Projects & Deep Dives
 
 ### VisionVox AI Companion
 - **Type:** Accessibility Voice & Vision Companion
