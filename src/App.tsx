@@ -1653,15 +1653,29 @@ function App() {
                   </div>
 
                   {proj.caseStudyUrl && (
-                    <Link
-                      to={proj.caseStudyUrl}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group/cta mt-auto"
-                    >
-                      <span className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 group-hover/cta:bg-primary/20 group-hover/cta:border-primary/50 transition-all duration-200">
-                        {proj.caseStudyLabel || 'Read Case Study'}
-                      </span>
-                      <ChevronRight className="w-4 h-4 group-hover/cta:translate-x-0.5 transition-transform duration-200" />
-                    </Link>
+                    proj.caseStudyUrl.startsWith('http') ? (
+                      <a
+                        href={proj.caseStudyUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group/cta mt-auto"
+                      >
+                        <span className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 group-hover/cta:bg-primary/20 group-hover/cta:border-primary/50 transition-all duration-200">
+                          {proj.caseStudyLabel || 'Read Case Study'}
+                        </span>
+                        <ChevronRight className="w-4 h-4 group-hover/cta:translate-x-0.5 transition-transform duration-200" />
+                      </a>
+                    ) : (
+                      <Link
+                        to={proj.caseStudyUrl}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group/cta mt-auto"
+                      >
+                        <span className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 group-hover/cta:bg-primary/20 group-hover/cta:border-primary/50 transition-all duration-200">
+                          {proj.caseStudyLabel || 'Read Case Study'}
+                        </span>
+                        <ChevronRight className="w-4 h-4 group-hover/cta:translate-x-0.5 transition-transform duration-200" />
+                      </Link>
+                    )
                   )}
                 </div>
               </AnimatedSection>

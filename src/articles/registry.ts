@@ -519,7 +519,7 @@ export const articleRegistry: ArticleConfig[] = [
     seoMeta: {
       datePublished: '2026-06-06',
       dateModified: '2026-06-06',
-      keywords: ['salesforce sap integration', 'salesforce sap architecture', 'mulesoft integration', 'event-driven architecture'],
+      keywords: ['salesforce sap integration', 'salesforce sap architecture', 'mulesoft integration', 'event-driven architecture', 'enterprise integration patterns', 'platform events', 'salesforce integration best practices', 'decoupled architecture', 'sap erp integration', 'rabbitmq kafka integration', 'circuit breaker pattern'],
       articleType: 'TechArticle',
       articleTags: 'Salesforce, SAP, Integration, Architecture',
       images: ['https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png'],
@@ -541,7 +541,7 @@ export const articleRegistry: ArticleConfig[] = [
     seoMeta: {
       datePublished: '2026-06-06',
       dateModified: '2026-06-06',
-      keywords: ['ai agent architecture', 'multi agent systems', 'agent orchestration', 'llm agents'],
+      keywords: ['ai agent architecture', 'multi agent systems', 'agent orchestration', 'llm agents', 'orchestrator router pattern', 'semantic memory', 'pgvector database', 'tool calling enterprise', 'agentic workflows', 'langfuse observability', 'prompt engineering best practices'],
       articleType: 'TechArticle',
       articleTags: 'AI, Architecture, Multi-Agent, LLM',
       images: ['https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png'],
@@ -563,7 +563,7 @@ export const articleRegistry: ArticleConfig[] = [
     seoMeta: {
       datePublished: '2026-06-06',
       dateModified: '2026-06-06',
-      keywords: ['salesforce devops', 'copado', 'azure devops salesforce', 'salesforce cicd'],
+      keywords: ['salesforce devops', 'copado', 'azure devops salesforce', 'salesforce cicd', 'sfdx source-driven', 'scratch org strategy', 'gitflow branching model', 'salesforce package development', 'automated testing apex', 'environment drift mitigation', 'salesforce cli optimization'],
       articleType: 'TechArticle',
       articleTags: 'Salesforce, DevOps, CI/CD, Copado',
       images: ['https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png'],
@@ -585,7 +585,7 @@ export const articleRegistry: ArticleConfig[] = [
     seoMeta: {
       datePublished: '2026-06-06',
       dateModified: '2026-06-06',
-      keywords: ['enterprise ai agents', 'ai agents in enterprise', 'agentic workflows', 'tool-using models'],
+      keywords: ['enterprise ai agents', 'ai agents in enterprise', 'agentic workflows', 'tool-using models', 'probabilistic automation', 'human in the loop', 'llm security guardrails', 'prompt injections defense', 'agentic design patterns', 'observability in llms', 'claude sonnet agents'],
       articleType: 'TechArticle',
       articleTags: 'AI, Enterprise, Automation',
       images: ['https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png'],
@@ -607,7 +607,7 @@ export const articleRegistry: ArticleConfig[] = [
     seoMeta: {
       datePublished: '2026-06-06',
       dateModified: '2026-06-06',
-      keywords: ['homelab network', 'openwrt vlan', 'pfsense firewall', 'network segmentation'],
+      keywords: ['homelab network', 'openwrt vlan', 'pfsense firewall', 'network segmentation', 'proxmox ve lab', 'opnsense configuration', 'wireguard vpn access', 'cloudflare tunnels guide', 'unbound dns security', 'home lab topology', 'dmz firewall rules'],
       articleType: 'TechArticle',
       articleTags: 'Networking, Homelab, OpenWRT, pfSense',
       images: ['https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png'],
@@ -629,7 +629,7 @@ export const articleRegistry: ArticleConfig[] = [
     seoMeta: {
       datePublished: '2026-06-06',
       dateModified: '2026-06-06',
-      keywords: ['unified monitoring', 'proxmox netdata', 'homelab observability', 'system health tracking'],
+      keywords: ['unified monitoring', 'proxmox netdata', 'homelab observability', 'system health tracking', 'prometheus timeseries database', 'grafana telemetry dashboards', 'home assistant iot logging', 'environmental rack monitoring', 'alertmanager notifications', 'server performance exporter', 'netdata agent config'],
       articleType: 'TechArticle',
       articleTags: 'Monitoring, Observability, Proxmox, Netdata',
       images: ['https://amitbhardwaj.co.uk/Gemini_Generated_Image_4eklr94eklr94ekl.png'],
