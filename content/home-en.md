@@ -130,7 +130,7 @@ techStack:
         - SQL
 projects:
   title: Projects & Experiments
-  githubLink: ""
+  githubLink: "https://github.com/sfdcai"
   viewCode: View code
   viewPrototype: View prototype
   agentInfra:

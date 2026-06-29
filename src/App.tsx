@@ -1632,6 +1632,18 @@ function App() {
                 </div>
                 {t.projects.title}
               </h2>
+              {t.projects.githubLink && (
+                <a
+                  href={t.projects.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-border bg-card hover:bg-primary/5 hover:border-primary/50 text-xs font-semibold transition-all duration-200"
+                >
+                  <FolderGit2 className="w-3.5 h-3.5 text-primary" />
+                  GitHub Profile
+                  <ExternalLink className="w-3 h-3 text-muted-foreground" />
+                </a>
+              )}
             </div>
           </AnimatedSection>
 
