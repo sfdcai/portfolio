@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useMemo, useReducer, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'motion/react'
-import { Mail, ExternalLink, Briefcase, GraduationCap, Award, Code, Globe, Bot, Zap, Database, BadgeCheck, FolderGit2, FileText, SkipForward, ChevronRight, List } from 'lucide-react'
+import { Mail, ExternalLink, Briefcase, GraduationCap, Award, Code, Globe, Bot, Zap, Database, BadgeCheck, FolderGit2, FileText, SkipForward, ChevronRight, List, BookOpen } from 'lucide-react'
 import { translations, seo, type Lang } from './i18n'
 import { useHomeSeo } from './articles/use-article-seo'
 import { getTechIcon } from './tech-icons'
@@ -1807,6 +1807,104 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Publications & Case Studies Directory */}
+      <section id="publications" className="py-16 md:py-24 bg-muted/20" style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 1500px' }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <AnimatedSection>
+            <h2 className="font-display text-2xl font-semibold mb-8 flex items-center gap-3">
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <BookOpen className="w-5 h-5 text-primary" />
+              </div>
+              Engineering Case Studies & Deep Dives
+            </h2>
+            <p className="text-muted-foreground mb-12 max-w-3xl">
+              A comprehensive directory of detailed system designs, automation frameworks, and enterprise architectures implemented across my career.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <AnimatedSection delay={0.1} className="h-full">
+              <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-200 flex flex-col group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 h-full">
+                <span className="text-xs text-primary font-semibold mb-2">Applied AI</span>
+                <h3 className="font-display text-base font-bold group-hover:text-primary transition-colors mb-2">AI Agent Jacobo</h3>
+                <p className="text-xs text-muted-foreground mb-4">
+                  Multi-agent conversational AI (WhatsApp + Voice) built for physical retail mobile repairs with a ~90% self-service resolution rate.
+                </p>
+                <Link to="/ai-agent-jacobo" className="text-xs font-semibold text-primary inline-flex items-center gap-1 mt-auto hover:underline">
+                  Read Case Study <ChevronRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.15} className="h-full">
+              <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-200 flex flex-col group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 h-full">
+                <span className="text-xs text-primary font-semibold mb-2">LLMOps & Security</span>
+                <h3 className="font-display text-base font-bold group-hover:text-primary transition-colors mb-2">The Self-Healing Chatbot</h3>
+                <p className="text-xs text-muted-foreground mb-4">
+                  A dual text + voice chatbot system implementing a 6-layer defense mechanism (canary tokens, injection filters) and 71 automated PR evals.
+                </p>
+                <Link to="/self-healing-chatbot" className="text-xs font-semibold text-primary inline-flex items-center gap-1 mt-auto hover:underline">
+                  Read Case Study <ChevronRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2} className="h-full">
+              <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-200 flex flex-col group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 h-full">
+                <span className="text-xs text-primary font-semibold mb-2">Automation</span>
+                <h3 className="font-display text-base font-bold group-hover:text-primary transition-colors mb-2">n8n for Product Managers</h3>
+                <p className="text-xs text-muted-foreground mb-4">
+                  Free templates and guides to automate sprint reporting, customer feedback sentiment scoring, and cross-platform notification pipelines.
+                </p>
+                <Link to="/n8n-for-pms" className="text-xs font-semibold text-primary inline-flex items-center gap-1 mt-auto hover:underline">
+                  Read Case Study <ChevronRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.25} className="h-full">
+              <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-200 flex flex-col group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 h-full">
+                <span className="text-xs text-primary font-semibold mb-2">Data & Scaling</span>
+                <h3 className="font-display text-base font-bold group-hover:text-primary transition-colors mb-2">Programmatic SEO</h3>
+                <p className="text-xs text-muted-foreground mb-4">
+                  Rebuilding legacy systems to generate 4,000+ optimized pages on a scalable Astro static site powered by Airtable and DataForSEO APIs.
+                </p>
+                <Link to="/programmatic-seo" className="text-xs font-semibold text-primary inline-flex items-center gap-1 mt-auto hover:underline">
+                  Read Case Study <ChevronRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.3} className="h-full">
+              <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-200 flex flex-col group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 h-full">
+                <span className="text-xs text-primary font-semibold mb-2">SaaS & Workflows</span>
+                <h3 className="font-display text-base font-bold group-hover:text-primary transition-colors mb-2">Business OS</h3>
+                <p className="text-xs text-muted-foreground mb-4">
+                  Building and orchestrating 300+ automated Airtable pipelines to manage digital assets, workflows, and team delivery gates.
+                </p>
+                <Link to="/business-os-for-airtable" className="text-xs font-semibold text-primary inline-flex items-center gap-1 mt-auto hover:underline">
+                  Read Case Study <ChevronRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.35} className="h-full">
+              <div className="p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-200 flex flex-col group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5 h-full">
+                <span className="text-xs text-primary font-semibold mb-2">Entrepreneurs</span>
+                <h3 className="font-display text-base font-bold group-hover:text-primary transition-colors mb-2">iRepair Founder Story</h3>
+                <p className="text-xs text-muted-foreground mb-4">
+                  Founding and scaling a retail device repair brand, designing custom CRM solutions, and managing technical support operations.
+                </p>
+                <Link to="/amitbhardwaj-irepair-founder" className="text-xs font-semibold text-primary inline-flex items-center gap-1 mt-auto hover:underline">
+                  Read Case Study <ChevronRight className="w-3 h-3" />
+                </Link>
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
       {/* Education & Certifications */}
       <section id="education" className="py-16 md:py-24" style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 1000px' }}>
         <div className="max-w-5xl mx-auto px-6">

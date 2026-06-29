@@ -2,7 +2,7 @@
 seo:
   title: Amit Bhardwaj | Salesforce Architect & Developer
   description: |
-      London-based Certified Salesforce Architect & Developer, Copado DevOps Engineer, and Systems Designer with 14+ years of experience building enterprise-scale systems and integrations.
+      London-based Certified Salesforce Architect & Developer, Copado DevOps Engineer, and Systems Designer with 19+ years of experience building enterprise-scale systems and integrations.
 greeting: who builds enterprise-scale systems
 greetingRoles:
   - Salesforce Architect
@@ -15,7 +15,7 @@ pillLabels:
 email: ""
 role: ""
 story:
-  context: 14+ years designing Salesforce architectures
+  context: 19+ years in systems engineering & Salesforce architecture
   reflections:
     - Code is cheap. Architecture is everything.
     - Automation should feel seamless.
@@ -24,7 +24,7 @@ story:
     - - What drives me is bridging the gap between business objectives
       - "and solid, future-ready engineering."
   why: |
-      At Genpact and HCL, I led the delivery of over 100 Salesforce projects, integrating CRM platforms with SAP ERPs, orchestrating event-driven architectures, and implementing version-driven Copado DevOps pipelines.
+      From building bare-metal Linux servers and enterprise email systems at age 21, to architecting zero-trust Salesforce portals for regulated financial programs handling millions of consumers — my 19-year journey spans systems engineering, CRM architecture, and AI-native automation.
   seeking:
     - Scale.
     - Complex integration challenges.
@@ -58,10 +58,10 @@ summary:
   p1: Certified Salesforce Architect & Developer focused on
   p1Highlight: enterprise system design
   p1End: |
-      and large-scale cloud integrations. Over a 14-year career leading programs at Genpact and HCL, I have successfully delivered over 100 projects across Salesforce Sales, Service, and Experience Clouds, integrating them with complex backends like SAP.
+      and large-scale cloud integrations. Over a 19-year career spanning systems engineering, CRM architecture, and AI-native automation, I have delivered 100+ projects across Salesforce Sales, Service, Experience, and Financial Services Clouds — integrating them with complex backends like SAP and building secure, zero-trust identity platforms.
   p2: Specializing in the intersection of
-  p2Highlight: Salesforce, DevOps, & Systems Engineering
-  p2End: ", enabling robust, automated delivery pipelines and secure data flows."
+  p2Highlight: Salesforce, DevOps, AI & Security Engineering
+  p2End: ", enabling robust, automated delivery pipelines, secure data flows, and agentic AI workflows."
   cards:
     - title: Architecture Mindset
       desc: Designing secure, decoupled, and high-throughput systems
@@ -180,6 +180,32 @@ projects:
         - Security Scanning
       caseStudyUrl: "https://gitprotect.amitbhardwaj.co.uk"
       caseStudyLabel: "Try Live App"
+    - title: Secure Experience Cloud Portal
+      badge: Salesforce · Security
+      badgeBuilding: ""
+      desc: |
+          Designed a high-security Salesforce Experience Cloud portal for a global luxury automotive manufacturer's regulatory financial redress program. Engineered a custom passwordless login system validating encrypted customer attributes, with rate-limiting, brute-force prevention, and full audit trails — serving millions of public consumers under strict FCA compliance.
+      tech:
+        - Experience Cloud
+        - Apex Identity Engine
+        - LWC
+        - Shield Encryption
+        - WCAG AA
+      caseStudyUrl: "/salesforce-sap"
+      caseStudyLabel: "View Architecture"
+    - title: MCP Enterprise Framework
+      badge: AI · DevTools
+      badgeBuilding: ""
+      desc: |
+          An enterprise framework for deploying Model Context Protocol (MCP) tools, enabling AI coding assistants to securely access local databases, git history, and project schemas — with sandbox isolation preventing access outside designated workspace paths.
+      tech:
+        - Node.js
+        - MCP Protocol
+        - SQLite
+        - Git APIs
+        - Sandbox Isolation
+      caseStudyUrl: "/ai-agents-arch"
+      caseStudyLabel: "View AI Architecture"
     - title: AI Product Information Platform
       badge: AI · Data
       badgeBuilding: ""
@@ -225,13 +251,15 @@ experience:
       period: 2024 - Present
       location: London, United Kingdom
       desc: |
-          Lead and manage Salesforce projects across SaaS, PaaS, and IaaS cloud platforms. Architect integration pipelines between Salesforce and enterprise ERP systems like SAP.
+          Direct the technical strategy, architecture, and governance for enterprise digital transformation programs. Design multi-cloud Salesforce solutions (Sales, Service, Financial Services Cloud, OmniStudio) integrated with enterprise backends like SAP and external API gateways. Lead presales RFP strategies and technical blueprints for competitive bids.
       highlights:
-        - Orchestrated multi-cloud Salesforce integrations with complex client enterprise applications
-        - Managed client requirements gathering, custom technical strategies, and implementation blueprints
-        - Implemented DevOps release governance pipelines using Copado and Azure DevOps
+        - Architected secure Experience Cloud portals with passwordless identity verification for regulated financial redress programs
+        - Designed event-driven integration patterns (Pub/Sub, Hub-and-Spoke) connecting Salesforce with enterprise ERP systems via middleware
+        - Implemented automated CI/CD validation gates (linters, static analysis, unit tests) reducing lead time to production
+        - Contributed to major RFPs by designing high-level blueprints, calculating effort estimations, and formulating technical strategies
+        - Interview and onboard Salesforce developers and architects, strengthening practice capabilities through design reviews
       testimonials:
-        - quote: "Working under Amit’s leadership has been one of the most rewarding experiences of my professional career. He is a visionary Salesforce Architect who combines deep technical expertise with the ability to lead and inspire teams toward excellence."
+        - quote: "Working under Amit's leadership has been one of the most rewarding experiences of my professional career. He is a visionary Salesforce Architect who combines deep technical expertise with the ability to lead and inspire teams toward excellence."
           author: Abhay Sharma
           role: Lead Consultant, Genpact
         - quote: "Amit is an asset to any team he is in. His expertise and knowledge in managing Salesforce is commendable. There hasn't been a time when he did not have a solution to a problem thrown at him."
@@ -239,20 +267,22 @@ experience:
           role: Assistant Vice President, Genpact
     - company: HCL Technologies
       logo: ""
-      role: Salesforce CRM Program Architect
+      role: Developer & Support Engineer
       period: 2019 - 2024
       location: London, United Kingdom
       desc: |
-          Managed program delivery and hands-on architectural design for multi-cloud Salesforce implementations. Bridged business objectives with technical engineering output.
+          A pivotal career milestone where I transitioned into the Salesforce ecosystem. Started as a developer and support engineer providing hands-on Apex development, production troubleshooting, and platform configuration. Progressively gained deep expertise in Salesforce architecture, data modeling, and integration design through intensive real-world project delivery.
       highlights:
-        - Designed robust and scalable platform patterns aligned with enterprise goals
-        - Led release engineering processes, environment strategy, and branching models
-        - Mentored developer teams on Salesforce best practices, Apex design patterns, and LWC
+        - Delivered Apex development, Tier-2/3 production support, and environment stabilization for enterprise Salesforce implementations
+        - Recovered a critical onboarding project from red status by realigning architecture and establishing automated CI/CD pipelines
+        - Led US onsite discovery workshops, designing integration blueprints and managing cross-regional delivery teams of 10+ engineers
+        - Conducted architectural reviews and product evaluations for major digital portal modernization programs
+        - Progressed from developer to trusted technical advisor — this period was foundational for learning the Salesforce platform end-to-end
       testimonials:
         - quote: "As a Salesforce SME, Amit showed meticulous attention to detail and a deep understanding of the Salesforce platform, delivering scalable and efficient solutions. Transitioning seamlessly into leadership roles, he effectively managed teams, driving collaboration and inspiring high performance."
           author: Dushyant Kumar Teotia
           role: Salesforce Program Architect, Huron (ex-HCL)
-        - quote: "Amit is an exceptional Salesforce expert with whom I had the pleasure of working closely at HCL Technologies. His deep technical knowledge, innovative problem-solving, and dedication consistently elevated our team’s performance."
+        - quote: "Amit is an exceptional Salesforce expert with whom I had the pleasure of working closely at HCL Technologies. His deep technical knowledge, innovative problem-solving, and dedication consistently elevated our team's performance."
           author: Himanshu Passi
           role: Principal Technical Architect, OneTrust (ex-HCL)
     - company: Infomatrix
@@ -261,14 +291,42 @@ experience:
       period: 2013 - 2019
       location: London, United Kingdom
       desc: |
-          Led the Salesforce development practice, directing technical design, Apex/LWC components, and API integration architectures.
+          Led the Salesforce development practice, directing technical design, Apex/LWC component architecture, and API integration strategies. Collaborated with sales and digital engineering teams for client demos, POCs, and delivery governance.
       highlights:
-        - Collaborated with sales and digital engineering for client demos and POCs
-        - Managed delivery quality, platform security audits, and data governance design
+        - Directed technical design and delivery quality across multiple Salesforce implementation projects
+        - Managed platform security audits, data governance design, and sharing rule architectures
+        - Collaborated with presales teams to craft demos, POCs, and technical proposals
       testimonials:
         - quote: "I collaborated with Amit on several projects, demos, and POCs, and I was always impressed with his strong technical approach and the way he handled customer requirements. Amit has deep Salesforce expertise and has successfully delivered many complex implementations."
           author: Arpit Saharawat
           role: Senior Director Digital Engineering, Infinite Computer Solutions (ex-Infomatrix)
+    - company: Directi
+      logo: ""
+      role: Linux System Administrator
+      period: 2009 - 2010
+      location: Mumbai, India
+      desc: |
+          Managed, configured, and hardened core Internet and local network infrastructure. Built and maintained Linux server environments (CentOS, RedHat, Debian) with iptables firewalls, ACLs, and strict security hardening.
+      highlights:
+        - Configured and optimized Apache HTTP servers, managing virtual hosts, SSL/TLS certificates, and load balancing
+        - Administered internal and external BIND DNS zones (primary/secondary servers, forward zones, reverse lookups)
+        - Secured and monitored email routing servers using Postfix and Exim with spam filters, blacklists, and SMTP authentication
+        - Managed DHCP services, static IP reservations, and routing tables across corporate networks
+        - Automated log auditing, disk space monitoring, and service restarts via bash and perl scripts — reducing manual intervention by 40%
+        - Maintained 99.9% uptime across critical infrastructure components
+    - company: Spectrum Infogain Services
+      logo: ""
+      role: System Engineer
+      period: 2007 - 2009
+      location: Mumbai, India
+      desc: |
+          First professional role — working at the hardware and operating system layers. Disassembled, diagnosed, and repaired enterprise workstations and server motherboards. Performed clean installations and configurations of Linux and Windows server environments.
+      highlights:
+        - Managed hardware component installations including CPU upgrades, RAM testing, and RAID array configurations
+        - Configured filesystem partitioning (Ext3/NTFS), local storage drives, and backup operations
+        - Setup and terminated Ethernet cables, patched networking racks, and configured basic switches and routers
+        - Monitored network ports, verified ping/traceroute paths, and resolved IP conflict issues
+        - Built foundational skills in computing resources that later enabled hypervisor cluster management and bare-metal troubleshooting
   salesforce:
     exit: Salesforce Certified
     exitDesc: "Active certifications in the Salesforce ecosystem"

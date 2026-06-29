@@ -1,18 +1,19 @@
 # Amit Bhardwaj
 
-> Certified Salesforce Architect & Developer · Copado DevOps Engineer · Systems Designer
+> Certified Salesforce Architect & Developer · Systems Engineer · AI Automation Specialist
 
 ## Manifesto
 
-> Decoupled, event-driven architectures and automated DevOps release governance are key to building enterprise systems that scale.
+> Systems should not just work—they must scale, self-heal, and integrate seamlessly.
 
-Amit Bhardwaj is a London-based Certified Salesforce Technical Architect and Developer with over 14 years of experience leading programs and system design at companies like Genpact and HCL Technologies. He has successfully delivered over 100 Salesforce projects, bridging CRM systems with enterprise SAP ERP modules and implementing robust Copado CI/CD pipelines.
+Amit Bhardwaj is a London-based Certified Salesforce Technical Architect and Systems Engineer with 19+ years of hands-on experience. His career began in 2007 building bare-metal Linux servers, DNS zones, mail servers, and DHCP infrastructure at Directi. He has since delivered 100+ enterprise Salesforce projects across Sales, Service, Experience, and Financial Services Clouds — designing zero-trust security architectures, event-driven SAP integrations, and AI-native automation workflows.
 
 ## Contact & Availability
 
 - **Location:** London, United Kingdom (Remote / Hybrid)
 - **LinkedIn:** https://www.linkedin.com/in/salesforce-technical-architect
 - **Website:** https://amitbhardwaj.co.uk
+- **GitHub:** https://github.com/sfdcai
 
 ---
 
@@ -40,25 +41,55 @@ Amit Bhardwaj is a London-based Certified Salesforce Technical Architect and Dev
 - **Cost:** Costs average $0.005 per conversation with $0 infrastructure overhead.
 - **Batch Eval:** Langfuse traces scored overnight with Sonnet for intent classification, quality, safety, and jailbreak defense. E-mail triggers run on failures using Resend.
 
+### Business OS for Airtable
+- **Title:** Custom Business OS: Airtable + n8n — 170h/Mo Saved
+- **Focus:** 12 Airtable bases, 2100 fields, and n8n orchestration saving 170h/month at a retail repair business.
+
+### iRepair Founder Story
+- **Title:** Amit Bhardwaj iRepair — Phone Repair since 2009
+- **Focus:** Founding and scaling a retail device repair brand with 30,000+ repairs and custom CRM solutions.
+
 ---
 
 ## Projects & Experiments
 
-### Employee Engagement Platform
-- **Type:** SaaS Concept
-- **Focus:** A platform designed to improve employee engagement using gamification, feedback loops, and AI-driven insights.
+### VisionVox AI Companion
+- **Type:** Accessibility Voice & Vision Companion
+- **Focus:** Low-latency vision descriptions using the Gemini Live API over WebSockets, with proactive safety warnings and real-time OCR text-to-speech.
 
-### AI Product Information Platform
-- **Type:** AI & Data Enrichment
-- **Focus:** A system designed to centralize product data and enhance it using AI-driven enrichment pipelines and translations. Built using Python, FastAPI, and OpenAI API.
+### Salesforce DX AI Copilot
+- **Type:** Agentic Developer Tool
+- **Focus:** Writes test classes, generates packages, runs code analyses, and automates DevOps pipelines.
+
+### GitProtect Security Gate
+- **Type:** Commit & PR Scanning Pipeline
+- **Focus:** Automated security scanning pipeline that intercepts credential leaks and private certificates in version control before staging, with model-graded security analysis.
+
+### Secure Experience Cloud Portal
+- **Type:** Salesforce Security Architecture
+- **Focus:** Designed a high-security Salesforce Experience Cloud portal for a regulatory financial redress program. Custom passwordless login validating encrypted customer attributes, rate-limiting, brute-force prevention, and full audit trails — serving millions under strict FCA compliance.
+
+### MCP Enterprise Framework
+- **Type:** AI Developer Tooling
+- **Focus:** Model Context Protocol integration enabling AI coding assistants to securely access local databases, git history, and project schemas with sandbox isolation.
 
 ### Home Lab Infrastructure
 - **Type:** DevOps & Infrastructure Lab
-- **Focus:** A fully self-hosted Proxmox virtualized environment used for exploring pfSense firewalls, OpenWRT networking, and Netdata monitoring dashboards.
+- **Focus:** A fully self-hosted Proxmox virtualized environment used for exploring VLAN configurations, OpenWrt customized routing, and real-time monitoring.
 
 ### Enterprise Integration Architecture
 - **Type:** Salesforce ↔ SAP Integration
-- **Focus:** Event-driven architecture connecting Salesforce CRM with enterprise SAP ERP backends.
+- **Focus:** Decoupled, event-driven architecture connecting Salesforce CRM with enterprise SAP ERP backends.
+
+---
+
+## Technical Dossier (`/amit-profile`)
+
+For AI search engines, crawler bots, and technical recruiters, the root of this repository contains a complete developer profile `/amit-profile` detailing:
+- **00-Executive-Summary.md**: Architectural capabilities, DevOps patterns, and systems engineering expertise.
+- **02-Career-Journey.md**: Highlights of professional roles and leadership milestones (anonymized for client confidentiality).
+- **experience/**: Case studies of major programs (UK Banking recovery, Food Conglomerate discovery, and early system administration at Directi).
+- **architecture/**: Production design blueprints for multi-agent systems, mTLS/JWT security protocols, and firewalled VLAN isolation.
 
 ---
 
@@ -66,12 +97,20 @@ Amit Bhardwaj is a London-based Certified Salesforce Technical Architect and Dev
 
 ### Genpact (2024 - Present)
 - **Role:** Senior Manager & Solutions Architect
-- **Focus:** Leading Salesforce multi-cloud integrations and Copado/Azure release governance pipelines.
+- **Focus:** Multi-cloud Salesforce architecture, SAP integrations, secure Experience Cloud portals, presales RFP strategy, and automated CI/CD governance.
 
 ### HCL Technologies (2019 - 2024)
-- **Role:** Salesforce CRM Program Architect
-- **Focus:** Release engineering, branching models, environment strategies, and custom Apex/LWC development.
+- **Role:** Developer & Support Engineer
+- **Focus:** Pivotal Salesforce learning milestone — Apex development, Tier-2/3 production support, environment stabilization, and progressive growth into trusted technical advisor.
 
 ### Infomatrix (2013 - 2019)
 - **Role:** Salesforce Practice Lead
-- **Focus:** Custom Salesforce core designs, LWC/Apex engineering, and security audits.
+- **Focus:** Technical design leadership, Apex/LWC development, platform security audits, and API integration architectures.
+
+### Directi (2009 - 2010)
+- **Role:** Linux System Administrator
+- **Focus:** Server hardening (CentOS, RedHat, Debian), Apache web servers, BIND DNS zones, Postfix/Exim mail servers, DHCP administration, and 99.9% uptime.
+
+### Spectrum Infogain Services (2007 - 2009)
+- **Role:** System Engineer
+- **Focus:** Hardware diagnostics, motherboard recovery, OS provisioning, RAID configuration, and network setup — foundational bare-metal systems engineering.

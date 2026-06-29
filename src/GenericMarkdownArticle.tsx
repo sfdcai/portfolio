@@ -4,7 +4,7 @@ import { parseMarkdown } from './markdown-parser'
 import { useArticleSeo } from './articles/use-article-seo'
 import { ArticleLayout } from './articles/components'
 import ReactMarkdown from 'react-markdown'
-import { ArrowRight, Terminal, Network, Cpu, Layers } from 'lucide-react'
+import { ArrowRight, Terminal, Network, Cpu, Layers, Database } from 'lucide-react'
 
 // Custom premium SVG for Salesforce <-> SAP Integration
 function SalesforceSapDiagram() {
@@ -102,6 +102,81 @@ function AiAgentDiagram() {
   )
 }
 
+// Custom premium SVG for Monitoring
+function MonitoringDiagram() {
+  return (
+    <div className="my-8 p-6 rounded-2xl bg-card border border-border/80 shadow-xl max-w-3xl mx-auto">
+      <h4 className="text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-6">
+        Telemetry & Observability Pipeline
+      </h4>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+        {/* Left Column: Data Sources */}
+        <div className="flex flex-col gap-3">
+          <div className="flex items-center gap-2.5 p-3 rounded-xl bg-muted/60 border border-border">
+            <Cpu className="w-4 h-4 text-primary shrink-0" />
+            <div className="text-left">
+              <div className="font-semibold text-xs text-foreground">Proxmox Host</div>
+              <div className="text-[9px] text-muted-foreground">Netdata Agent (1s resolution)</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-2.5 p-3 rounded-xl bg-muted/60 border border-border">
+            <Layers className="w-4 h-4 text-accent shrink-0" />
+            <div className="text-left">
+              <div className="font-semibold text-xs text-foreground">VMs & LXC Nodes</div>
+              <div className="text-[9px] text-muted-foreground">Node Exporters (sys metrics)</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-2.5 p-3 rounded-xl bg-muted/60 border border-border">
+            <Terminal className="w-4 h-4 text-muted-foreground shrink-0" />
+            <div className="text-left">
+              <div className="font-semibold text-xs text-foreground">Home Assistant</div>
+              <div className="text-[9px] text-muted-foreground">Smart plugs & thermal sensors</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-2.5 p-3 rounded-xl bg-muted/60 border border-border">
+            <Network className="w-4 h-4 text-muted-foreground shrink-0" />
+            <div className="text-left">
+              <div className="font-semibold text-xs text-foreground">Network Switches</div>
+              <div className="text-[9px] text-muted-foreground">SNMP Exporter metrics</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Center: Collector (Prometheus) */}
+        <div className="flex flex-col items-center justify-center p-5 rounded-2xl bg-primary/5 border border-primary/30 w-full text-center relative shadow-lg shadow-primary/5">
+          <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-[9px] uppercase tracking-wider font-semibold text-primary">
+            Metrics Storage
+          </div>
+          <Database className="w-10 h-10 text-primary mb-3 animate-[pulse_2s_infinite]" />
+          <span className="font-semibold text-sm">Prometheus Server</span>
+          <span className="text-[10px] text-muted-foreground mt-1">TSDB Metrics Ingestion</span>
+        </div>
+
+        {/* Right Column: Visualization & Alerts */}
+        <div className="flex flex-col gap-4">
+          {/* Grafana */}
+          <div className="flex items-center gap-3 p-4 rounded-xl bg-accent/5 border border-accent/20">
+            <Layers className="w-5 h-5 text-accent shrink-0" />
+            <div className="text-left">
+              <div className="font-semibold text-xs text-foreground">Grafana Dashboards</div>
+              <div className="text-[9px] text-muted-foreground">Unified visualization panels</div>
+            </div>
+          </div>
+
+          {/* AlertManager */}
+          <div className="flex items-center gap-3 p-4 rounded-xl bg-destructive/5 border border-destructive/20">
+            <Terminal className="w-5 h-5 text-destructive shrink-0" />
+            <div className="text-left">
+              <div className="font-semibold text-xs text-foreground">AlertManager</div>
+              <div className="text-[9px] text-muted-foreground">Triggers & Notifications</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 interface GenericMarkdownArticleProps {
   filePath: string
   title?: string
@@ -158,6 +233,9 @@ export default function GenericMarkdownArticle({ filePath }: GenericMarkdownArti
         }
         if (codeString.includes('User') && codeString.includes('Agent')) {
           return <AiAgentDiagram />
+        }
+        if (codeString.includes('PM_Host') || codeString.includes('Netdata Agent') || codeString.includes('Prometheus')) {
+          return <MonitoringDiagram />
         }
         return (
           <pre className="p-4 rounded-xl bg-card border border-border overflow-x-auto text-xs font-mono">

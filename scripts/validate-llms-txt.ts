@@ -32,20 +32,24 @@ interface ProofPoint {
 const PROOF_POINTS: ProofPoint[] = [
   // -- Projects (i18n.ts → projects) --
   {
-    source: 'i18n.ts → projects → Employee Engagement Platform',
-    terms: ['Employee Engagement Platform', 'SaaS', 'gamification'],
+    source: 'i18n.ts → projects → VisionVox AI Companion',
+    terms: ['VisionVox', 'Gemini Live API', 'WebSockets'],
   },
   {
-    source: 'i18n.ts → projects → AI Product Information Platform',
-    terms: ['AI Product Information Platform', 'enrichment', 'FastAPI'],
+    source: 'i18n.ts → projects → Salesforce DX AI Copilot',
+    terms: ['Salesforce DX AI Copilot', 'Apex', 'devops'],
+  },
+  {
+    source: 'i18n.ts → projects → GitProtect Security Gate',
+    terms: ['GitProtect', 'security scanning', 'credential leaks'],
   },
   {
     source: 'i18n.ts → projects → Home Lab Infrastructure',
-    terms: ['Home Lab Infrastructure', 'Proxmox', 'pfSense', 'Netdata'],
+    terms: ['Home Lab', 'Proxmox', 'VLAN', 'monitoring'],
   },
   {
     source: 'i18n.ts → projects → Enterprise Integration Architecture',
-    terms: ['Enterprise Integration Architecture', 'Salesforce', 'SAP', 'event-driven'],
+    terms: ['Enterprise Integration', 'Salesforce', 'SAP', 'decoupled'],
   },
 
   // -- Self-Healing Chatbot (chatbot-i18n.ts) --
@@ -75,11 +79,29 @@ const PROOF_POINTS: ProofPoint[] = [
   // -- Key experience points (i18n.ts → experience) --
   {
     source: 'i18n.ts → experience → Genpact',
-    terms: ['Genpact', 'Solutions Architect', 'release governance', 'Copado'],
+    terms: ['Genpact', 'Solutions Architect', 'CI/CD governance'],
   },
   {
     source: 'i18n.ts → experience → HCL Technologies',
-    terms: ['HCL Technologies', 'Program Architect', 'branching models', 'Apex'],
+    terms: ['HCL Technologies', 'Developer', 'Support Engineer', 'Apex'],
+  },
+  {
+    source: 'i18n.ts → experience → Directi',
+    terms: ['Directi', 'Linux System Administrator', 'BIND DNS', 'Postfix'],
+  },
+  {
+    source: 'i18n.ts → experience → Spectrum',
+    terms: ['Spectrum', 'System Engineer', 'Hardware diagnostics'],
+  },
+
+  // -- New projects --
+  {
+    source: 'i18n.ts → projects → Secure Experience Cloud Portal',
+    terms: ['Experience Cloud', 'passwordless', 'FCA'],
+  },
+  {
+    source: 'i18n.ts → projects → MCP Enterprise Framework',
+    terms: ['MCP', 'Model Context Protocol', 'sandbox isolation'],
   },
 ]
 
