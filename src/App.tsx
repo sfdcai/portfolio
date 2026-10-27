@@ -5,6 +5,8 @@ import { Mail, ExternalLink, Briefcase, GraduationCap, Award, Code, Globe, Bot, 
 import { translations, seo, type Lang } from './i18n'
 import { useHomeSeo } from './articles/use-article-seo'
 import { getTechIcon } from './tech-icons'
+import SystemsArchitecture from './SystemsArchitecture'
+import AmitAiChatbot from './AmitAiChatbot'
 
 
 
@@ -276,7 +278,9 @@ function useTypewriterRotation(roles: readonly string[], { typeSpeed = 80, delet
 const HOME_TOC_SECTIONS = [
   { id: 'experience', en: 'Experience' },
   { id: 'projects', en: 'Projects' },
-  { id: 'speaking', en: 'Sharing' },
+  { id: 'architecture', en: 'Systems & SRE' },
+  { id: 'labs', en: 'R&D Labs' },
+  { id: 'blog', en: 'Technical Blog' },
   { id: 'education', en: 'Education' },
   { id: 'tech', en: 'Skills & Stack' },
   { id: 'contact', en: 'Contact' },
@@ -1696,6 +1700,9 @@ function App() {
         </div>
       </section>
 
+      {/* Interactive Systems Architecture & SRE Lab */}
+      <SystemsArchitecture />
+
       {/* R&D Labs Section */}
       <section id="labs" className="py-16 md:py-24 bg-muted/30" style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 1000px' }}>
         <div className="max-w-5xl mx-auto px-6">
@@ -2025,6 +2032,9 @@ function App() {
           </p>
         </div>
       </footer>
+
+      {/* Floating Amit AI Digital Twin Assistant */}
+      <AmitAiChatbot />
 
     </main>
   )
