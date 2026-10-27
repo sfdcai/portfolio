@@ -162,15 +162,22 @@ export default function AmitAiChatbot() {
     }
   }, [messages, isOpen, isTyping])
 
-  const handleSend = (textToSend?: string) => {
+  const messageIdRef = useRef(0)
+
+  const handleSend = useCallback((textToSend?: string) => {
     const text = (textToSend || inputValue).trim()
     if (!text) return
 
+    messageIdRef.current += 1
+    const currentId = messageIdRef.current
+    const now = new Date()
+    const timeStr = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+
     const userMsg: Message = {
-      id: 'user-' + Date.now(),
+      id: `user-${currentId}`,
       sender: 'user',
       text,
-      timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+      timestamp: timeStr
     }
 
     setMessages(prev => [...prev, userMsg])
@@ -181,7 +188,7 @@ export default function AmitAiChatbot() {
     setTimeout(() => {
       const response = getBotResponse(text)
       const botMsg: Message = {
-        id: 'bot-' + Date.now(),
+        id: `bot-${currentId}`,
         sender: 'bot',
         text: response.text,
         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
@@ -190,7 +197,7 @@ export default function AmitAiChatbot() {
       setMessages(prev => [...prev, botMsg])
       setIsTyping(false)
     }, 450)
-  }
+  }, [inputValue])
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {

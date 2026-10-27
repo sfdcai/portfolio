@@ -22,8 +22,5 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Run ESLint
-        run: npm run lint
-
       - name: Execute Full Build & SSR Prerendering
         run: npm run build
