@@ -1,0 +1,5 @@
+# ==============================================================================
+# Cloudflare Pages Client-Side SPA Routing Fallback
+# Ensures deep links (e.g. /articles/..., /about) resolve cleanly
+# ==============================================================================
+/*    /index.html   200
