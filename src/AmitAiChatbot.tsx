@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
 import { X, Send, Bot, Sparkles, ArrowUpRight, ShieldCheck, Server } from 'lucide-react'
 
