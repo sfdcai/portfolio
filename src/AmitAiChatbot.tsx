@@ -783,13 +783,7 @@ What would you like to explore first?`,
   const [inputValue, setInputValue] = useState('')
   const [isTyping, setIsTyping] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
-
-  // Listen for global openChat event (from nav or page buttons)
-  useEffect(() => {
-    const handleOpen = () => setIsOpen(true)
-    window.addEventListener('openChat', handleOpen)
-    return () => window.removeEventListener('openChat', handleOpen)
-  }, [])
+  const handleSendRef = useRef<(textToSend?: string) => Promise<void>>(async () => {})
 
   // Auto-scroll to bottom of messages
   useEffect(() => {
@@ -865,6 +859,25 @@ What would you like to explore first?`,
       setIsTyping(false)
     }, 400)
   }, [inputValue, messages])
+
+  useEffect(() => {
+    handleSendRef.current = handleSend
+  })
+
+  // Listen for global openChat event (from nav, command palette, or contextual bento chips)
+  useEffect(() => {
+    const handleOpen = (e: Event) => {
+      setIsOpen(true)
+      const customEvent = e as CustomEvent<{ query?: string }>
+      if (customEvent.detail?.query) {
+        setTimeout(() => {
+          handleSendRef.current(customEvent.detail.query)
+        }, 120)
+      }
+    }
+    window.addEventListener('openChat', handleOpen as EventListener)
+    return () => window.removeEventListener('openChat', handleOpen as EventListener)
+  }, [])
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {

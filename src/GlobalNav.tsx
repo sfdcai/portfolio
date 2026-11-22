@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { Sun, Moon, House, ChevronRight } from 'lucide-react'
+import { Sun, Moon, House, ChevronRight, Search } from 'lucide-react'
 import { getPageTitles, getSectionLabels } from './articles/registry'
+import CommandPalette from './CommandPalette'
 
 /**
  * GlobalNav — unified navigation across all pages.
@@ -127,14 +128,26 @@ function useTheme() {
   return { isDark, toggleTheme }
 }
 
-function NavControls({ isDark, toggleTheme }: {
-  isDark: boolean; toggleTheme: () => void
+function NavControls({ isDark, toggleTheme, onOpenCommand }: {
+  isDark: boolean; toggleTheme: () => void; onOpenCommand: () => void
 }) {
   return (
     <div className="flex items-center gap-2">
       <button
+        onClick={onOpenCommand}
+        className="flex items-center gap-2 px-3 py-1.5 h-10 rounded-full bg-card/90 backdrop-blur-md border border-border shadow-md hover:border-primary/50 hover:bg-primary/5 transition-all duration-200 text-xs text-muted-foreground group cursor-pointer"
+        aria-label="Search and command palette"
+        title="Quick search (Cmd+K)"
+      >
+        <Search className="w-4 h-4 text-primary group-hover:scale-110 transition-transform" />
+        <span className="hidden sm:inline font-medium text-foreground">Search</span>
+        <kbd className="hidden sm:inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-mono bg-muted text-muted-foreground border border-border/80">
+          ⌘K
+        </kbd>
+      </button>
+      <button
         onClick={toggleTheme}
-        className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center shadow-lg hover:border-primary/50 hover:shadow-primary/20 hover:shadow-xl transition-colors"
+        className="w-10 h-10 rounded-full bg-card border border-border flex items-center justify-center shadow-lg hover:border-primary/50 hover:shadow-primary/20 hover:shadow-xl transition-colors cursor-pointer"
         aria-label="Toggle theme"
       >
         {isDark ? <Sun className="w-5 h-5 text-primary" /> : <Moon className="w-5 h-5 text-primary" />}
@@ -147,6 +160,25 @@ export default function GlobalNav() {
   const { pathname, isHome, pageTitle } = useLang()
   const { isDark, toggleTheme } = useTheme()
   const activeSection = useActiveSection(pathname, !isHome)
+  const [isCommandOpen, setIsCommandOpen] = useState(false)
+
+  // Global keyboard shortcut (Cmd+K / Ctrl+K)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault()
+        setIsCommandOpen(prev => !prev)
+      }
+    }
+    const handleCustomOpen = () => setIsCommandOpen(true)
+
+    window.addEventListener('keydown', handleKeyDown)
+    window.addEventListener('openCommandPalette', handleCustomOpen)
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown)
+      window.removeEventListener('openCommandPalette', handleCustomOpen)
+    }
+  }, [])
 
   const hasBar = !isHome
 
@@ -166,62 +198,71 @@ export default function GlobalNav() {
   const animateBackLink = !isHome && !backLinkShown.current
   if (!isHome) backLinkShown.current = true
 
-  const controls = <NavControls isDark={isDark} toggleTheme={toggleTheme} />
+  const controls = (
+    <NavControls
+      isDark={isDark}
+      toggleTheme={toggleTheme}
+      onOpenCommand={() => setIsCommandOpen(true)}
+    />
+  )
 
   const fade = (duration: string) => ({ animation: `nav-fade-in ${duration} ease-out` })
 
   // Bar visible: controls inside it
   if (hasBar) {
     return (
-      <nav className="sticky top-0 z-50 relative">
-        <div
-          className="absolute inset-0 bg-background/80 backdrop-blur-md border-b border-border"
-          style={animateBar ? fade('0.35s') : undefined}
-        />
-        <div className="relative pt-4 pb-3 px-6 pl-14 xl:pl-6 flex items-center justify-between">
-          {/* Left: back link on inner pages, empty on home */}
-          <div className="min-w-0 flex items-center">
-            {!isHome && (
-              <nav
-                aria-label="Breadcrumb"
-                className="inline-flex items-center gap-1.5 text-sm"
-                style={animateBackLink ? fade('0.4s') : undefined}
-              >
-                <Link
-                  to="/"
-                  className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors shrink-0"
+      <>
+        <nav className="sticky top-0 z-50 relative">
+          <div
+            className="absolute inset-0 bg-background/80 backdrop-blur-md border-b border-border"
+            style={animateBar ? fade('0.35s') : undefined}
+          />
+          <div className="relative pt-4 pb-3 px-6 pl-14 xl:pl-6 flex items-center justify-between">
+            {/* Left: back link on inner pages, empty on home */}
+            <div className="min-w-0 flex items-center">
+              {!isHome && (
+                <nav
+                  aria-label="Breadcrumb"
+                  className="inline-flex items-center gap-1.5 text-sm"
+                  style={animateBackLink ? fade('0.4s') : undefined}
                 >
-                  <House className="w-4 h-4" />
-                  <span className="hidden sm:inline">amitbhardwaj.co.uk</span>
-                </Link>
-                {pageTitle && (
-                  <>
-                    <ChevronRight className="w-3.5 h-3.5 text-muted-foreground/50 shrink-0" />
-                    <button
-                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                      className={`hover:text-foreground transition-colors cursor-pointer truncate ${activeSectionLabel ? 'text-muted-foreground' : 'text-foreground font-medium'}`}
-                    >
-                      {pageTitle}
-                    </button>
-                  </>
-                )}
-                {activeSectionLabel && (
-                  <>
-                    <ChevronRight className="w-3.5 h-3.5 text-muted-foreground/50 shrink-0 hidden sm:block" />
-                    <span className="text-foreground font-medium truncate max-w-[140px] sm:max-w-none hidden sm:inline">
-                      {activeSectionLabel}
-                    </span>
-                  </>
-                )}
-              </nav>
-            )}
+                  <Link
+                    to="/"
+                    className="inline-flex items-center gap-1.5 text-muted-foreground hover:text-foreground transition-colors shrink-0"
+                  >
+                    <House className="w-4 h-4" />
+                    <span className="hidden sm:inline">amitbhardwaj.co.uk</span>
+                  </Link>
+                  {pageTitle && (
+                    <>
+                      <ChevronRight className="w-3.5 h-3.5 text-muted-foreground/50 shrink-0" />
+                      <button
+                        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        className={`hover:text-foreground transition-colors cursor-pointer truncate ${activeSectionLabel ? 'text-muted-foreground' : 'text-foreground font-medium'}`}
+                      >
+                        {pageTitle}
+                      </button>
+                    </>
+                  )}
+                  {activeSectionLabel && (
+                    <>
+                      <ChevronRight className="w-3.5 h-3.5 text-muted-foreground/50 shrink-0 hidden sm:block" />
+                      <span className="text-foreground font-medium truncate max-w-[140px] sm:max-w-none hidden sm:inline">
+                        {activeSectionLabel}
+                      </span>
+                    </>
+                  )}
+                </nav>
+              )}
+            </div>
+            {/* Right: controls */}
+            <div className="flex items-center gap-3 shrink-0">
+              {controls}
+            </div>
           </div>
-          {/* Right: controls */}
-          <div className="flex items-center gap-3 shrink-0">
-            {controls}
-          </div>
-        </div>
-      </nav>
+        </nav>
+        <CommandPalette isOpen={isCommandOpen} onClose={() => setIsCommandOpen(false)} />
+      </>
     )
   }
 
@@ -229,8 +270,11 @@ export default function GlobalNav() {
   if (!hydrated) return null
 
   return (
-    <div className="fixed top-4 right-6 z-50 flex items-center gap-3">
-      {controls}
-    </div>
+    <>
+      <div className="fixed top-4 right-6 z-50 flex items-center gap-3">
+        {controls}
+      </div>
+      <CommandPalette isOpen={isCommandOpen} onClose={() => setIsCommandOpen(false)} />
+    </>
   )
 }

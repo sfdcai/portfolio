@@ -8,6 +8,8 @@ import { getTechIcon } from './tech-icons'
 import SystemsArchitecture from './SystemsArchitecture'
 import LiveArchitectureFlow from './LiveArchitectureFlow'
 import AmitAiChatbot from './AmitAiChatbot'
+import PersonaSwitcher, { type PersonaType } from './PersonaSwitcher'
+import BentoProjects from './BentoProjects'
 
 
 
@@ -1442,6 +1444,7 @@ function App() {
   const hydrated = useHydrated()
   useHeroStyles()
   const { displayText: roleText, roleIndex } = useTypewriterRotation(t.greetingRoles)
+  const [activePersona, setActivePersona] = useState<PersonaType>('all')
 
 
   // SEO: Dynamic meta tags based on language
@@ -1538,6 +1541,11 @@ function App() {
         </div>
       </header>
 
+      {/* Persona Switcher - Curated viewing experience for CTOs, Recruiters & Architects */}
+      <div className="relative z-20 max-w-5xl mx-auto px-6 -mt-4 mb-2">
+        <PersonaSwitcher activePersona={activePersona} onSelectPersona={setActivePersona} />
+      </div>
+
       {/* Summary - Con storytelling integrado */}
       <StorySection t={t} />
 
@@ -1577,10 +1585,28 @@ function App() {
           </AnimatedSection>
 
           <div className="space-y-16">
-            {t.experience.items.map((job: any, idx: number) => (
+            {t.experience.items.map((job: any, idx: number) => {
+              const isGenpact = typeof job.company === 'string' && job.company.toLowerCase().includes('genpact')
+              const isPersonaHighlight = isGenpact && (activePersona === 'cto' || activePersona === 'recruiter')
+              return (
               <AnimatedSection key={idx} delay={0.1 * idx}>
-                <div className="border-l-2 border-primary/30 pl-6 ml-4 relative">
+                <div className={`border-l-2 pl-6 ml-4 relative transition-all duration-300 ${
+                  isPersonaHighlight
+                    ? 'border-primary ring-1 ring-primary/30 p-5 rounded-2xl bg-card/80 shadow-xl shadow-primary/10'
+                    : 'border-primary/30'
+                }`}>
                   <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-background" />
+
+                  {isPersonaHighlight && (
+                    <div className="mb-3">
+                      <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/20 text-primary border border-primary/40 backdrop-blur-md">
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping" />
+                        {activePersona === 'cto'
+                          ? '⭐ Key Governance & Large Squad Leadership Tenure for CTOs (~80 engineers)'
+                          : '⭐ Core Leadership Mandate & UK/Europe Architecture Tenure'}
+                      </span>
+                    </div>
+                  )}
                   
                   <div className="flex flex-wrap items-baseline justify-between gap-2 mb-2">
                     <div>
@@ -1621,85 +1647,14 @@ function App() {
                   )}
                 </div>
               </AnimatedSection>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
 
-      {/* Projects */}
-      <section id="projects" className="py-16 md:py-24" style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 1500px' }}>
-        <div className="max-w-5xl mx-auto px-6">
-          <AnimatedSection>
-            <div className="flex items-center justify-between mb-12">
-              <h2 className="font-display text-2xl font-semibold flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <FolderGit2 className="w-5 h-5 text-primary" />
-                </div>
-                {t.projects.title}
-              </h2>
-              {t.projects.githubLink && (
-                <a
-                  href={t.projects.githubLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-border bg-card hover:bg-primary/5 hover:border-primary/50 text-xs font-semibold transition-all duration-200"
-                >
-                  <FolderGit2 className="w-3.5 h-3.5 text-primary" />
-                  GitHub Profile
-                  <ExternalLink className="w-3 h-3 text-muted-foreground" />
-                </a>
-              )}
-            </div>
-          </AnimatedSection>
-
-          <div className="grid md:grid-cols-2 gap-6">
-            {t.projects.items.map((proj: any, idx: number) => (
-              <AnimatedSection key={idx} delay={0.1 * idx}>
-                <div className="h-full p-6 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-200 flex flex-col group hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
-                  <div className="flex items-start justify-between mb-4">
-                    <h3 className="font-display text-xl font-bold group-hover:text-primary transition-colors">{proj.title}</h3>
-                    <span className="badge px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full">{proj.badge}</span>
-                  </div>
-                  
-                  <p className="text-sm text-muted-foreground mb-6 flex-grow">{proj.desc}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {proj.tech.map((t: string, tIdx: number) => (
-                      <span key={tIdx} className="px-2 py-1 rounded-md text-xs bg-muted text-muted-foreground">{t}</span>
-                    ))}
-                  </div>
-
-                  {proj.caseStudyUrl && (
-                    proj.caseStudyUrl.startsWith('http') ? (
-                      <a
-                        href={proj.caseStudyUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group/cta mt-auto"
-                      >
-                        <span className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 group-hover/cta:bg-primary/20 group-hover/cta:border-primary/50 transition-all duration-200">
-                          {proj.caseStudyLabel || 'Read Case Study'}
-                        </span>
-                        <ChevronRight className="w-4 h-4 group-hover/cta:translate-x-0.5 transition-transform duration-200" />
-                      </a>
-                    ) : (
-                      <Link
-                        to={proj.caseStudyUrl}
-                        className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors group/cta mt-auto"
-                      >
-                        <span className="px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 group-hover/cta:bg-primary/20 group-hover/cta:border-primary/50 transition-all duration-200">
-                          {proj.caseStudyLabel || 'Read Case Study'}
-                        </span>
-                        <ChevronRight className="w-4 h-4 group-hover/cta:translate-x-0.5 transition-transform duration-200" />
-                      </Link>
-                    )
-                  )}
-                </div>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Production Platforms & Architecture Bento */}
+      <BentoProjects activePersona={activePersona} />
 
       {/* Live Working Architecture & Data-Flow Visualizer */}
       <LiveArchitectureFlow />
