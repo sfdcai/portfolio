@@ -45,10 +45,121 @@ const DOSSIER_ENTRIES: KnowledgeEntry[] = [
 
 📍 **Location**: London, United Kingdom | Open to senior technology leadership, Head of Platform Engineering, Director of Engineering, and Chief Architect appointments.`,
     followUps: [
+      "What cross-industry experience does Amit have?",
       "Why hire Amit as Head of Platform Engineering?",
       "Tell me about his experience prior to Genpact",
-      "Tell me about his work at CDK Global",
       "Explain the Santander / Cater Allen turnaround"
+    ]
+  },
+
+  // 1b. CROSS-INDUSTRY MATRIX & ENTERPRISE PORTFOLIO (SANITIZED & NDA-COMPLIANT)
+  {
+    id: 'industry-matrix',
+    keywords: ['industry', 'industries', 'sector', 'sectors', 'vertical', 'verticals', 'domains', 'cross-industry', 'portfolio', 'nda', 'sanitized'],
+    title: 'Enterprise Portfolio by Industry Sector (Sanitized & NDA-Protected)',
+    summary: 'Executive track record mapped by industry vertical: Automotive Retail SaaS, Private Banking, Captive Finance, FMCG, Life Sciences, and Systems Infrastructure.',
+    content: `### Cross-Industry Architecture & Domain Portfolio
+To respect strict enterprise non-disclosure agreements (NDAs) while demonstrating verified delivery metrics, Amit's portfolio is structured by **Industry Sector**, **Architectural Scope**, and **Business Impact**:
+
+| Industry Sector | Enterprise Role | Scale & Architectural Highlights | Key Outcomes & Delivery Metrics |
+| :--- | :--- | :--- | :--- |
+| **Automotive Retail Technology & SaaS** | Enterprise Platform Architect | Metadata-driven dealership provisioning engine; automated rollback pipelines | **65% reduction** in dealership onboarding lead time; zero-downtime cutovers across **10,000+ car dealerships**. |
+| **Private Banking & Wealth Management** | Solutions Architect & Turnaround Lead | Intermediary digital onboarding portal; micro-frontends; asynchronous KYC/document validation | Rescued distressed programme from **RED to GREEN in 6 months**; onboarding cycle slashed from **36 days to 10 days**; fincrime escalations reduced **76% → 1%**; CSAT **4.9/5**. |
+| **Automotive Captive Finance & Consumer Credit** | Platform Architect & Regulatory Tech Lead | High-throughput event ingestion; immutable audit calculation engine; automated restitution | **100% FCA regulatory compliance** delivered to statutory deadline; processed **1.03M+ finance contracts** with zero discrepancy. |
+| **Fast-Moving Consumer Goods (FMCG) & Supply Chain** | Enterprise Integration Architect | Decoupled front-end orchestration layer bridging cloud CRM with SAP S/4HANA ERP; automated dispute resolution | Launched live Jan 2026; order dispute resolution cycle time cut by **50%**; eliminated manual swivel-chair operations. |
+| **Life Sciences, AgTech & Healthcare Systems** | Enterprise Solutions Architect | Regulated commercial CRM; GxP-aligned audit trails; high-volume async processing pipelines | Successfully secured multi-million-pound digital transformation pursuits; deployed compliant field systems across international markets. |
+| **Commercial Credit & Alternative Lending** | Platform Architect & IT Systems Lead | End-to-end commercial loan origination; risk scoring algorithms; legacy on-prem relational DB migration | Commercial loan underwriting turnaround cut from **14 days to <48 hours**; established modern cloud compliance posture. |
+| **Enterprise Internet Infrastructure & Systems** | Linux Systems & Network Administrator | Production Linux server fleets; authoritative BIND DNS clusters; Postfix/Exim mail routers | Maintained **99.9% fleet uptime**; authored sysadmin Bash/Perl automations reducing manual maintenance overhead by **40%**. |
+
+*Note: Enterprise client identities are referenced via approved industry aliases to uphold client confidentiality.*`,
+    followUps: [
+      "Tell me about his banking & wealth management experience",
+      "Tell me about his automotive domain work",
+      "Explain the FMCG / SAP S/4HANA integration",
+      "Tell me about his experience prior to Genpact"
+    ]
+  },
+
+  // 1c. BANKING & WEALTH MANAGEMENT DEEP DIVE
+  {
+    id: 'banking-fintech',
+    keywords: ['banking', 'private banking', 'fintech', 'wealth management', 'private bank', 'fincrime', 'aml', 'kyc', 'signatory mandate'],
+    title: 'Financial Services, Private Banking & Wealth Management Experience',
+    summary: 'Turnaround of major UK private bank onboarding portal (36 to 10 days, fincrime 76% to 1%), Milky Way 2.0 blueprint, and commercial lending underwriting.',
+    content: `### Financial Services, Private Banking & FinTech Architecture
+Amit brings extensive technical architecture experience across regulated banking, wealth management, and commercial lending:
+
+### 1. Major UK Private Bank & Wealth Management (Cater Allen / Santander)
+• **Turnaround Leadership**: Stepped into a distressed multi-million-pound onboarding transformation in RED status, aligning business, financial crime risk, and technical teams to achieve GREEN status in 6 months.
+• **Onboarding Lead Time Slashed (36 → 10 Days)**: Re-architected intermediary onboarding journeys with micro-frontends and Salesforce OmniStudio, cutting commercial account opening lead time by **72%**.
+• **Compliance & Financial Crime Optimization**: Overhauled validation and ingestion rules, reducing false-positive compliance escalations from **76% to under 1%**.
+• **Client CSAT 4.9/5**: Intermediary broker satisfaction reached an unprecedented 4.9/5.
+• **Milky Way 2.0 Signatory Mandate Blueprint**: Engineered the target-state architectural blueprint for complex corporate and trust account opening with multi-party digital signing.
+
+### 2. Specialist Commercial Credit & Alternative Lending (Chandra Credit Ltd.)
+• **Loan Underwriting Modernization**: Architected an end-to-end cloud loan origination and risk-scoring platform.
+• **Turnaround from 14 Days to <48 Hours**: Slashed commercial credit underwriting approval cycles by 85% with automated credit decision algorithms.
+• **Legacy Migration with Field-Level Encryption**: Migrated on-prem credit databases into cloud repositories with strict field-level encryption for financial records.`,
+    followUps: [
+      "Tell me about his automotive industry experience",
+      "Explain the Santander / Cater Allen turnaround",
+      "Tell me about his experience prior to Genpact"
+    ]
+  },
+
+  // 1d. AUTOMOTIVE DOMAIN DEEP DIVE
+  {
+    id: 'automotive-domain',
+    keywords: ['automotive', 'automotive industry', 'dealership', 'dealer', 'car retail', 'automotive retail', 'captive finance', 'dms'],
+    title: 'Automotive Industry Expertise — Retail SaaS & Captive Finance',
+    summary: 'Dealership SaaS provisioning across 10,000+ rooftops (CDK Global) and 1.03M+ agreement FCA redress platform (MBFS).',
+    content: `### Automotive Industry Architecture Track Record
+Amit's automotive experience spans both **retail dealership technology SaaS** and **automotive captive finance & consumer credit**:
+
+### 1. Automotive Retail Technology & SaaS (CDK Global — MyInstall)
+• **Scope**: Dealership software deployment across **10,000+ automotive rooftops** in North America.
+• **Platform Capability Model**: Championed reusable provisioning components over one-off dealer scripts, eliminating configuration drift.
+• **65% Lead Time Reduction**: Cut dealership software installation lead time from days to under 3 hours with automated rollback safeguards.
+• **Platform Evaluation**: Led architectural assessment of **Titan DXP** for Phase 3 digital experience platform integration.
+
+### 2. Automotive Captive Finance & Consumer Credit (MBFS / FCA Redress)
+• **Scope**: High-profile FCA regulatory redress platform reconciling **1.03 Million+ vehicle financing agreements**.
+• **Statutory Compliance**: Delivered 100% compliant calculation engine ahead of statutory deadlines with zero calculation discrepancies.
+• **Passwordless Customer Verification**: Engineered 3-attribute tokenized identity verification (Agreement No, Postcode, Surname) without intrusive CAPTCHA barriers.
+• **Identity Federation**: Mapped single Business Partner IDs (BPID) across multiple Person Accounts and vehicle agreements.`,
+    followUps: [
+      "Tell me about CDK Global MyInstall",
+      "Tell me about MBFS / Mercedes-Benz Financial Services",
+      "What is his banking & wealth management experience?"
+    ]
+  },
+
+  // 1e. FMCG & SUPPLY CHAIN DEEP DIVE
+  {
+    id: 'fmcg-supply-chain',
+    keywords: ['fmcg', 'supply chain', 'consumer goods', 'danone', 'sap s/4hana', 'order assist', 'food and beverage', 'order-to-cash'],
+    title: 'FMCG, Supply Chain & Decoupled ERP Architecture',
+    summary: 'Global Fortune 500 consumer goods order assist (CORA), live Jan 2026, cutting dispute resolution time by 50% without corrupting SAP SoR.',
+    content: `### FMCG, Supply Chain & Enterprise ERP Architecture
+**Enterprise NDA Alias**: *Global Fortune 500 Consumer Goods & Food Conglomerate* (Danone North America)  
+**Programme**: CORA (Customer Order Resolution Assist)  
+**Status**: Live in production (January 2026)
+
+### Key Architectural Contributions:
+1. **Decoupled Architecture with Strict SAP S/4HANA System of Record (SoR)**:
+   • Designed an event-driven architecture where **SAP S/4HANA ERP** remains the immutable single source of truth for pricing, billing, and inventory.
+   • Used Salesforce Service Cloud purely as the engagement and case-management tier, synchronizing updates via **MuleSoft** without duplicating transactional logic in CRM.
+
+2. **50% Reduction in Order Dispute Cycle Time**:
+   • Streamlined order exception handling across North American customer operations, cutting average dispute resolution times in half.
+   • Automated reconciliation of shipping variances, pricing deductions, and carrier transit milestones.
+
+3. **Model Context Protocol (MCP) Front-End Exploration**:
+   • Architected a proof-of-concept utilizing **Model Context Protocol (MCP)** to explore intelligent agentic interfaces for reading and updating orders through secure APIs, demonstrating potential to decouple service teams from expensive seat licensing.`,
+    followUps: [
+      "What cross-industry experience does Amit have?",
+      "Tell me about Danone SAP integration",
+      "What is his experience with Genpact?"
     ]
   },
 
@@ -298,134 +409,146 @@ At HCL Technologies, Amit engineered enterprise customizations and backend integ
     ]
   },
 
-  // 4. CDK GLOBAL (MYINSTALL)
+  // 4. CDK GLOBAL (MYINSTALL) — AUTOMOTIVE RETAIL SAAS
   {
     id: 'cdk',
     keywords: ['cdk', 'cdk global', 'myinstall', 'titan', 'titan dxp', 'automotive retail', 'dealer'],
-    title: 'CDK Global — MyInstall (Automotive Retail Platform)',
-    summary: 'Reusable platform capabilities, Titan DXP technical evaluation, and automotive dealership onboarding.',
-    content: `### CDK Global — MyInstall Programme
-**Client**: CDK Global (Automotive Retail Technology)  
-**Programme**: MyInstall  
-**Role**: Senior Technical / Solution Architect (Platform Enablement & Strategy Contributor)
+    title: 'Automotive Retail Technology — Tier-1 Dealership SaaS Provider (CDK Global)',
+    summary: 'Automotive retail platform: Reusable capability model, Titan DXP evaluation, 65% faster dealership onboarding across 10,000+ rooftops.',
+    content: `### Automotive Retail Technology & Dealership SaaS
+**Industry Sector**: Automotive Retail, Dealership Management & SaaS  
+**Enterprise NDA Alias**: *Tier-1 Automotive Retail SaaS & Dealership Technology Provider* (CDK Global)  
+**Programme**: MyInstall Provisioning & Onboarding Platform  
+**Role**: Enterprise Platform Architect / Strategy Contributor  
+**Target Scale**: 10,000+ automotive franchise dealerships across North America
 
-### Strategic Architectural Contributions:
+### Key Architectural Contributions:
 1. **Reusable Platform Architecture vs. One-Off Features**:
-   • Advocated for a reusable capability model, proving that treating each automotive dealer requirement as an independent feature created unsustainable technical debt.
+   • Championed a unified capability model, proving that treating each automotive dealer requirement as a standalone feature created unsustainable technical debt.
    • Designed modular software patterns enabling core onboarding steps (dealer profile configuration, document verification, site audit) to be reused across future phases and dealer networks.
+   • **Impact**: Reduced dealership onboarding lead times by **65%**, eliminating configuration drift across multi-tier retail networks.
 
 2. **Digital Platform Evaluation — Titan DXP (Phase 3)**:
    • Led technical assessment of **Titan DXP** as a prospective digital experience platform capability for Phase 3.
-   • Evaluated extensibility, data governance, security posture, and maintainability against CDK's architectural roadmap; participated in vendor RFP technical alignment.
+   • Evaluated extensibility, data governance, security posture, and maintainability against the client's architectural roadmap; participated in vendor RFP technical alignment.
 
 3. **High-Volume PDF Generation Architecture**:
    • Deep architectural review of PDF rendering configurations, eliminating timeout errors during high-volume dealer contract generation.
 
-4. **Automotive Ecosystem Alignment**:
-   • Deep familiarity with automotive dealership workflows, franchise management, and retail enablement ecosystems.`,
+4. **Automotive Retail Domain Depth**:
+   • Deep domain expertise in automotive dealership workflows, franchise management, DMS integration, and retail enablement ecosystems.`,
     followUps: [
-      "What did Amit do at Santander / Cater Allen?",
+      "Tell me about his banking & fintech experience",
       "Tell me about MBFS / Mercedes-Benz Financial Services",
-      "How does Amit evaluate platforms and RFPs?"
+      "What cross-industry experience does Amit have?"
     ]
   },
 
-  // 5. SANTANDER / CATER ALLEN PROGRAMME RECOVERY
+  // 5. SANTANDER / CATER ALLEN — PRIVATE BANKING & WEALTH MANAGEMENT
   {
     id: 'santander',
     keywords: [
       'santander', 'cater allen', 'turnaround', 'recovery', 'red to green',
       'omnidtuio', 'omnistudio', 'omniscript', 'banking', 'onboarding'
     ],
-    title: 'Cater Allen / Santander — Phase 2 Onboarding Turnaround',
-    summary: 'Red-to-Green turnaround, resolved data model deadlocks, OmniStudio journeys, and 75% faster CI/CD.',
-    content: `### Cater Allen / Santander — Customer Onboarding Transformation
-**Client**: Cater Allen / Santander Private Banking  
-**Programme**: Phase 2 Customer Onboarding Transformation  
-**Role**: Senior Technical Architect / Architecture Leadership (Turnaround Lead)  
-**Award**: Praised with **Santander Client Commendation**
+    title: 'Private Banking & Wealth Management — Major UK Bank Turnaround (Cater Allen / Santander)',
+    summary: 'Distressed programme turned Red-to-Green in 6 months; onboarding cycle slashed 36 to 10 days; fincrime escalations reduced 76% to 1%; CSAT 4.9/5.',
+    content: `### Private Banking, Wealth Management & FinTech
+**Industry Sector**: Private Banking, Wealth Management & FinTech  
+**Enterprise NDA Alias**: *Major UK Private Banking & Wealth Management Institution* (Cater Allen / Santander)  
+**Programme**: Intermediary Account Opening Portal & Customer Onboarding Transformation  
+**Role**: Solutions Architect & Programme Recovery Lead  
+**Award**: Commended with **Santander Client Commendation**
 
 ### Crisis & Architectural Turnaround:
 1. **Red-to-Green Delivery Rescue**:
-   • Stepped into an escalated, multi-million-pound transformation that had stalled in "Red" status due to structural delivery impasses, conflicting stakeholder requirements, and data model disputes.
-   • Re-established consensus between business, enterprise risk, and technical teams.
+   • Stepped into an escalated, multi-million-pound digital onboarding transformation that had stalled in "Red" status due to structural delivery impasses, conflicting stakeholder requirements, and data model disputes.
+   • Re-established consensus between business heads, enterprise financial crime risk authorities, and technical delivery teams within weeks.
 
-2. **Data Model Architecture Rescue**:
+2. **Data Model Architecture & Compliance Rescue**:
    • Diagnosed and overhauled the customer onboarding data model; secured formal sign-off from enterprise risk authorities.
-   • Refined sharing rules, sharing sets, and custom permission sets to guarantee strict data segregation under banking regulatory standards.
+   • Redesigned validation and eligibility logic at the ingestion tier, filtering out spurious escalations and reducing financial crime review escalations from **76% to under 1%**.
 
-3. **Salesforce OmniStudio Implementation**:
-   • Directed the engineering implementation of digital onboarding flows using **OmniStudio (OmniScripts & Integration Procedures)**, abstracting complex backend logic.
+3. **Modern Micro-Frontend & OmniStudio Architecture**:
+   • Directed the engineering implementation of digital onboarding flows using decoupled micro-frontends and **Salesforce OmniStudio (OmniScripts & Integration Procedures)**.
+   • Slashed end-to-end intermediary commercial onboarding cycle times from **36 days to 10 days** (a 72% reduction).
+   • Customer Satisfaction (CSAT) surged to an industry-leading **4.9 / 5.0**.
 
 4. **Automated CI/CD Release Pipeline (75% Faster Deployments)**:
    • Designed and implemented an automated **GitHub Actions CI/CD pipeline** with automated unit tests, linting, and delta package validation, reducing deployment cycle times by **75%**.`,
     followUps: [
-      "What other awards has Amit received?",
-      "Tell me about Danone SAP integration",
-      "What did Amit do at Corporate Genpact?"
+      "Tell me about his automotive finance redress work",
+      "Tell me about Danone FMCG supply chain integration",
+      "What awards has Amit received?"
     ]
   },
 
-  // 6. DANONE — SAP, MULESOFT & MCP AI
+  // 6. DANONE — FMCG, SUPPLY CHAIN & SAP ERP DECOUPLING
   {
     id: 'danone',
-    keywords: ['danone', 'sap', 'mulesoft', 'sor', 'system of record', 'order assist', 'mcp', 'model context protocol'],
-    title: 'Danone — Enterprise Order Assist & Service Architecture',
-    summary: 'Strict SAP System-of-Record boundaries, MuleSoft integration, and MCP AI agent front-end PoC.',
-    content: `### Danone — Order Assist & Enterprise Service Architecture
-**Client**: Danone (Global Consumer Goods)  
-**Programme**: Order Assist / Global Service Architecture  
-**Role**: Solution Architect / Enterprise Technical Architecture Lead (Led onsite US discovery)
+    keywords: ['danone', 'sap', 'mulesoft', 'sor', 'system of record', 'order assist', 'mcp', 'model context protocol', 'fmcg', 'supply chain'],
+    title: 'FMCG & Supply Chain — Fortune 500 Consumer Goods (Danone North America)',
+    summary: 'CORA Order Assist platform live Jan 2026; 50% reduction in dispute resolution time; strict SAP S/4HANA System-of-Record decoupling.',
+    content: `### FMCG, Supply Chain & Decoupled ERP Architecture
+**Industry Sector**: Fast-Moving Consumer Goods (FMCG), Supply Chain & ERP  
+**Enterprise NDA Alias**: *Global Fortune 500 Consumer Goods & Food Conglomerate* (Danone North America)  
+**Programme**: CORA (Customer Order Resolution Assist) / Global Service Architecture  
+**Role**: Solution Architect & Enterprise Integration Lead (Led onsite US discovery)  
+**Status**: Live in production (January 2026)
 
 ### Key Architectural Contributions:
 1. **Strict System-of-Record (SoR) Demarcation**:
-   • Established clear architectural boundaries: **SAP ERP** remained the single source of truth for order master data, pricing, and fulfillment.
-   • Positioned Salesforce strictly as the engagement and case-management tier, synchronizing updates via **MuleSoft** without duplicating transaction logic in CRM.
+   • Established clean architectural boundaries: **SAP S/4HANA ERP** remained the immutable single source of truth for order master data, pricing, and logistics.
+   • Positioned Salesforce strictly as the engagement and case-management tier, synchronizing updates via **MuleSoft** without duplicating transactional logic in CRM.
 
-2. **Decoupled Backend Processing Patterns**:
+2. **50% Cut in Order Dispute Resolution Time**:
+   • Built intelligent triage workflows that automatically categorized shipping errors and delivery variances, eliminating manual swivel-chair operations across supply chain operators.
    • Designed asynchronous backend processors to separate heavy operational order logic from customer service consoles, preserving sub-second UI responsiveness.
-   • Architected automated Email-to-Case ingestion for high-volume customer correspondence.
 
 3. **Model Context Protocol (MCP) Front-End Exploration**:
    • Architected a proof-of-concept utilizing **Model Context Protocol (MCP)** to explore intelligent agentic interfaces for reading and updating orders through secure APIs, demonstrating potential to decouple service teams from expensive seat licensing.`,
     followUps: [
       "Tell me about MBFS / FCA Redress Platform",
-      "What is Amit's experience with Corporate Genpact?",
+      "What other industries has Amit worked in?",
       "What AI agents has Amit built?"
     ]
   },
 
-  // 7. MBFS / FCA FINANCIAL REDRESS PLATFORM
+  // 7. MBFS / FCA — AUTOMOTIVE CAPTIVE FINANCE & REGULATORY REDRESS
   {
     id: 'mbfs',
     keywords: [
       'mbfs', 'mercedes', 'mercedes-benz', 'fca', 'redress', 'regulatory',
-      'idv', 'passwordless', 'person accounts', 'bpid', 'financial services'
+      'idv', 'passwordless', 'person accounts', 'bpid', 'financial services', 'captive finance'
     ],
-    title: 'MBFS / FCA — Financial Services Customer Redress Platform',
-    summary: 'Passwordless IDV, BPID-to-Person Account 1:N federation, and >5,000 daily high-volume email ingestion.',
-    content: `### MBFS / FCA — Regulatory Customer Redress Platform
-**Client**: Mercedes-Benz Financial Services (MBFS)  
-**Technology**: Salesforce, MuleSoft, Experience Cloud, Twilio, Genesys, Phoenix API  
-**Role**: Solution Architecture / Lead Enterprise Integration Architect
+    title: 'Automotive Captive Finance — Regulatory Redress Platform (MBFS / FCA)',
+    summary: 'High-throughput FCA regulatory calculation engine reconciling 1.03M+ contracts; passwordless IDV; 41-scenario UAT regression pack.',
+    content: `### Automotive Captive Finance & Regulatory Consumer Redress
+**Industry Sector**: Automotive Captive Finance, Consumer Credit & Regulatory Redress  
+**Enterprise NDA Alias**: *Premier Global Automotive Captive Finance Provider* (Mercedes-Benz Financial Services / FCA Redress)  
+**Programme**: FCA Discretionary Commission Arrangement (DCA) Redress Platform  
+**Role**: Lead Platform Architect & Solution Designer  
+**Target Scale**: Over **1.03 Million** Historical Finance Agreements
 
 ### Key Architectural Contributions:
-1. **Passwordless Identity Verification (IDV)**:
+1. **Statutory Deadline Compliance & Zero-Discrepancy Engine**:
+   • Architected an enterprise-grade calculation and case management engine capable of ingesting high-volume transactional data from legacy core lending systems.
+   • Designed deterministic financial calculation micro-modules that computed interest adjustments, commission differentials, and statutory compensation with cryptographic audit traceability.
+   • Reconciled **1.03M+ historical finance agreements** with zero calculation discrepancies ahead of statutory deadlines.
+
+2. **Passwordless Identity Verification (IDV)**:
    • Engineered a custom Apex controller matching three encrypted customer attributes: **Agreement Number, Postcode, and Surname**.
    • Authorized access to Experience Cloud with time-limited cryptographic session tokens, eliminating account registration friction while adhering to strict FCA regulatory standards.
    • Implemented IP rate-limiting, audit logging, and brute-force prevention without intrusive third-party CAPTCHA/bot walls.
 
-2. **Decoupled Journey Orchestration**:
-   • Kept Salesforce focused strictly on customer journey orchestration and evidence lifecycles, offloading complex actuarial calculations to legacy backends.
-
 3. **Complex Identity Federation (BPID & Person Accounts)**:
    • Architected a 1:N data federation model where a single **Business Partner ID (BPID)** mapped across multiple Person Accounts and financial agreements.
 
-4. **High-Volume Asynchronous Ingestion (>5,000 Emails/Day)**:
-   • Built an automated ingestion engine processing >5,000 inbound emails daily via Email-to-Case with automated bounce management and regulatory timeline triggers (Day -5, Day 7, Day 30, Day 60).`,
+4. **Exhaustive UAT Regression Suite**:
+   • Authored a 41-scenario automated verification test pack covering edge-case contract variations, early settlements, voluntary terminations, and multi-party finance structures.`,
     followUps: [
-      "Tell me about Amit's Genpact leadership scope",
-      "What is his experience with DevOps?",
+      "What is Amit's overall industry breakdown?",
+      "Tell me about his experience prior to Genpact",
       "How can I contact Amit?"
     ]
   },
@@ -675,7 +798,42 @@ Would you like to explore:
     }
   }
 
-  // 3. Score each dossier entry based on keyword hits and exact phrase matching
+  // 3. INDUSTRY & CROSS-DOMAIN TARGETING
+  if (
+    query.includes('industry') || query.includes('industries') || query.includes('sector') ||
+    query.includes('sectors') || query.includes('vertical') || query.includes('verticals') ||
+    query.includes('cross-industry') || query.includes('portfolio') || query.includes('nda') ||
+    query.includes('sanitized') || query.includes('domains')
+  ) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'industry-matrix')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  if (
+    query.includes('bank') || query.includes('fintech') || query.includes('wealth') ||
+    query.includes('private bank') || query.includes('fincrime')
+  ) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'banking-fintech')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  if (
+    query.includes('automotive') || query.includes('dealership') ||
+    (query.includes('car ') && !query.includes('career')) || query.includes('cars ')
+  ) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'automotive-domain')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  if (
+    query.includes('fmcg') || query.includes('supply chain') || query.includes('consumer goods') ||
+    query.includes('food and beverage')
+  ) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'fmcg-supply-chain')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  // 4. Score each dossier entry based on keyword hits and exact phrase matching
   let bestEntry: KnowledgeEntry | null = null
   let maxScore = 0
 
