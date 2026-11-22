@@ -655,6 +655,7 @@ export function getPageTitles(): Record<string, string> {
     '/about': 'About',
     '/awards': 'Awards & Honors',
     '/case-studies': 'Enterprise Case Studies',
+    '/portfolio-architecture': 'Portfolio Architecture',
   }
   for (const article of articleRegistry) {
     map[`/${article.slugs.en}`] = article.titles.en

@@ -93,6 +93,12 @@ urls.push({
   lastmod: today,
 })
 
+// Portfolio Architecture & Multi-Engine Edge AI
+urls.push({
+  loc: `${base}/portfolio-architecture`,
+  lastmod: today,
+})
+
 // Articles from registry
 for (const article of articleRegistry) {
   if (article.type === 'bridge') continue

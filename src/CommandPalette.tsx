@@ -213,6 +213,18 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
       },
       keywords: ['homelab', 'proxmox', 'dell', 'linux', 'kernel', 'lxc']
     },
+    {
+      id: 'page-portfolio-arch',
+      title: 'Portfolio Architecture & Multi-Engine Edge AI',
+      subtitle: '[Independent Architecture] Complete technical blueprint of amitbhardwaj.co.uk hosting, SSR, and LLM mesh',
+      category: 'Case Studies',
+      icon: Sparkles,
+      action: () => {
+        navigate('/portfolio-architecture')
+        onClose()
+      },
+      keywords: ['portfolio', 'architecture', 'cloudflare', 'hosting', 'edge', 'ai', 'prerender', 'development']
+    },
 
     // Tools & Labs
     {

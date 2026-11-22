@@ -41,7 +41,7 @@ export default function HeroChatInput() {
           <div className="flex items-center gap-2.5">
             <div className="relative">
               <img
-                src="/amit-avatar.png"
+                src="/amit-avatar.png?v=3"
                 alt="Amit Bhardwaj"
                 className="w-6 h-6 rounded-full object-cover border border-primary/50 shadow-sm"
                 width={24}

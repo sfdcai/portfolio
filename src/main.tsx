@@ -11,6 +11,8 @@ const PrivacyPolicy = lazy(() => import('./PrivacyPolicy'))
 const AboutPage = lazy(() => import('./AboutPage'))
 const AwardsPage = lazy(() => import('./AwardsPage'))
 const CaseStudiesPage = lazy(() => import('./CaseStudiesPage'))
+const PortfolioArchitecturePage = lazy(() => import('./PortfolioArchitecturePage'))
+import CursorHalo from './CursorHalo.tsx'
 
 // Lazy-load article components from registry
 const articleComponents: Record<string, React.LazyExoticComponent<ComponentType<{ lang: 'es' | 'en' }>>> = {}
@@ -91,11 +93,11 @@ console.log('%c I build the details. Let\'s solve something hard → hiamitbhard
 Object.defineProperty(window, '__amitbhardwaj', {
   value: Object.freeze({
     stack: 'React 19 + TypeScript + Vite + Tailwind v4 + Motion',
-    llm: 'None (Static portfolio website)',
-    security: 'Static hosting (GitHub / Cloudflare Pages)',
-    evals: 'None',
-    observability: 'None',
-    render: 'Pre-rendered HTML + client hydration',
+    llm: 'Multi-Engine Serverless Edge AI (Cloudflare Workers AI + Gemini 2.5 Flash + Groq Qwen 2.5 32B fallback mesh)',
+    security: 'Cloudflare Pages Global Edge + Zero-Trust Tunnels + Strict CSP',
+    evals: 'Authoritative RAG Grounding against Master Career Corpus (ADR-002 zero hallucination)',
+    observability: 'Cloudflare Edge Analytics + Prometheus/Loki telemetry',
+    render: 'Pre-rendered HTML (22 pages) + client hydration',
     perf: () => { const n = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming; console.table({ TTFB: `${Math.round(n.responseStart - n.requestStart)}ms`, DOMContentLoaded: `${Math.round(n.domContentLoadedEventEnd - n.startTime)}ms`, Load: `${Math.round(n.loadEventEnd - n.startTime)}ms` }); },
     hire_me: 'https://www.linkedin.com/in/salesforce-technical-architect/',
   }),
@@ -134,6 +136,7 @@ const root = document.getElementById('root')!
 const app = (
   <StrictMode>
     <BrowserRouter>
+      <CursorHalo />
       <ConditionalNav />
       <PageTransition>
         <Suspense fallback={null}>
@@ -143,6 +146,7 @@ const app = (
             <Route path="/privacy" element={<PrivacyPolicy lang="en" />} />
             <Route path="/awards" element={<AwardsPage />} />
             <Route path="/case-studies" element={<CaseStudiesPage />} />
+            <Route path="/portfolio-architecture" element={<PortfolioArchitecturePage />} />
             {articleRegistry.map((article) => {
               const ArticleComponent = articleComponents[article.id]
               return (

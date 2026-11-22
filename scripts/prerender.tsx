@@ -27,6 +27,7 @@ import AboutPage from '../src/AboutPage.tsx';
 import PrivacyPolicy from '../src/PrivacyPolicy.tsx';
 import AwardsPage from '../src/AwardsPage.tsx';
 import CaseStudiesPage from '../src/CaseStudiesPage.tsx';
+import PortfolioArchitecturePage from '../src/PortfolioArchitecturePage.tsx';
 import { getAboutContent, getHomeContent, getArticleContent } from '../src/markdown-parser.ts';
 
 const seo = {
@@ -537,6 +538,12 @@ const customRouteDefs = [
     title: 'Enterprise Architecture Case Studies | Amit Bhardwaj',
     desc: 'In-depth enterprise platform architecture case studies: crisis turnarounds, statutory FCA redress, and decoupled SAP S/4HANA systems designed and operated by Amit Bhardwaj.',
     Component: CaseStudiesPage
+  },
+  {
+    slug: 'portfolio-architecture',
+    title: 'Portfolio Architecture & Multi-Engine Edge AI | Amit Bhardwaj',
+    desc: 'Engineering blueprint of amitbhardwaj.co.uk: Multi-engine serverless edge AI, Cloudflare Pages hosting, static SSR, and zero-cold-start architecture.',
+    Component: PortfolioArchitecturePage
   }
 ];
 

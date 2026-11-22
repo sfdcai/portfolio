@@ -943,7 +943,7 @@ What would you like to explore first?`,
             >
               <div className="relative">
                 <img
-                  src="/amit-avatar.png"
+                  src="/amit-avatar.png?v=3"
                   alt="Amit Bhardwaj"
                   className="w-7 h-7 rounded-full object-cover border border-white/50"
                   onError={(e) => {
@@ -975,7 +975,7 @@ What would you like to explore first?`,
                 <div className="flex items-center gap-3">
                   <div className="relative">
                     <img
-                      src="/amit-avatar.png"
+                      src="/amit-avatar.png?v=3"
                       alt="Amit Bhardwaj"
                       className="w-9 h-9 rounded-full object-cover border-2 border-primary"
                       onError={(e) => {
