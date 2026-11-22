@@ -9,6 +9,8 @@ import { articleRegistry } from './articles/registry'
 const MusicToggle = lazy(() => import('./MusicToggle'))
 const PrivacyPolicy = lazy(() => import('./PrivacyPolicy'))
 const AboutPage = lazy(() => import('./AboutPage'))
+const AwardsPage = lazy(() => import('./AwardsPage'))
+const CaseStudiesPage = lazy(() => import('./CaseStudiesPage'))
 
 // Lazy-load article components from registry
 const articleComponents: Record<string, React.LazyExoticComponent<ComponentType<{ lang: 'es' | 'en' }>>> = {}
@@ -139,6 +141,8 @@ const app = (
             <Route path="/" element={<App />} />
             <Route path="/about" element={<AboutPage lang="en" />} />
             <Route path="/privacy" element={<PrivacyPolicy lang="en" />} />
+            <Route path="/awards" element={<AwardsPage />} />
+            <Route path="/case-studies" element={<CaseStudiesPage />} />
             {articleRegistry.map((article) => {
               const ArticleComponent = articleComponents[article.id]
               return (

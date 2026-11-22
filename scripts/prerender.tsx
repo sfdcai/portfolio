@@ -25,6 +25,8 @@ import { articleRegistry, type ArticleConfig } from '../src/articles/registry.ts
 import { buildArticleJsonLd, buildFaqPage } from '../src/articles/json-ld.ts';
 import AboutPage from '../src/AboutPage.tsx';
 import PrivacyPolicy from '../src/PrivacyPolicy.tsx';
+import AwardsPage from '../src/AwardsPage.tsx';
+import CaseStudiesPage from '../src/CaseStudiesPage.tsx';
 import { getAboutContent, getHomeContent, getArticleContent } from '../src/markdown-parser.ts';
 
 const seo = {
@@ -518,6 +520,67 @@ for (const [lang, slug] of [['en', 'privacy']] as const) {
   privacyPages.push({ slug, html: result });
 }
 
+// ---------------------------------------------------------------------------
+// Custom multi-pages: /awards + /case-studies
+// ---------------------------------------------------------------------------
+const extraCustomPages: { slug: string; html: string }[] = [];
+
+const customRouteDefs = [
+  {
+    slug: 'awards',
+    title: 'Executive Awards, Honors & Recognitions | Amit Bhardwaj',
+    desc: 'Official corporate awards, client commendations, and delivery honors won by Amit Bhardwaj across 8+ years at Genpact and major UK enterprise programs.',
+    Component: AwardsPage
+  },
+  {
+    slug: 'case-studies',
+    title: 'Enterprise Architecture Case Studies | Amit Bhardwaj',
+    desc: 'In-depth enterprise platform architecture case studies: crisis turnarounds, statutory FCA redress, and decoupled SAP S/4HANA systems designed and operated by Amit Bhardwaj.',
+    Component: CaseStudiesPage
+  }
+];
+
+for (const { slug, title, desc, Component } of customRouteDefs) {
+  const url = `https://amitbhardwaj.co.uk/${slug}`;
+  let renderedHtml: string;
+  try {
+    renderedHtml = stripReactSSRTags(renderToString(
+      <StaticRouter location={`/${slug}`}>
+        <GlobalNav />
+        <div>
+          <Suspense fallback={null}>
+            <Routes>
+              <Route path={`/${slug}`} element={<Component />} />
+            </Routes>
+          </Suspense>
+        </div>
+      </StaticRouter>
+    ));
+  } catch (err) {
+    console.error(`[prerender] SSR failed for ${slug}:`, err);
+    renderedHtml = '';
+  }
+
+  let result = indexHtml
+    .replace('<div id="root"></div>', `<div id="root">${renderedHtml}</div>`)
+    .replace('<html lang="es" class="dark">', '<html lang="en" class="dark">')
+    .replace(/<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`)
+    .replace(/<meta name="title" content="[^"]*" \/>/, `<meta name="title" content="${esc(title)}" />`)
+    .replace(/<meta name="description" content="[^"]*" \/>/, `<meta name="description" content="${esc(desc)}" />`)
+    .replace(/<link rel="canonical" href="[^"]*" \/>/, `<link rel="canonical" href="${url}" />`)
+    .replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${url}" />`)
+    .replace(/<meta property="og:title" content="[^"]*" \/>/, `<meta property="og:title" content="${esc(title)}" />`)
+    .replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${esc(desc)}" />`)
+    .replace(/<meta property="og:locale" content="es_ES" \/>/, '<meta property="og:locale" content="en_US" />')
+    .replace(/<meta property="og:locale:alternate" content="en_US" \/>/, '')
+    .replace(/<meta name="twitter:url" content="[^"]*" \/>/, `<meta name="twitter:url" content="${url}" />`)
+    .replace(/<meta name="twitter:title" content="[^"]*" \/>/, `<meta name="twitter:title" content="${esc(title)}" />`)
+    .replace(/<meta name="twitter:description" content="[^"]*" \/>/, `<meta name="twitter:description" content="${esc(desc)}" />`);
+
+  result = result.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, '');
+  extraCustomPages.push({ slug, html: result });
+}
+
 async function inlineCriticalCSS() {
   // Home pages
   await writePage(enPage, indexPath, 'EN: dist/index.html updated');
@@ -529,6 +592,11 @@ async function inlineCriticalCSS() {
 
   // Article pages
   for (const { slug, html } of articlePages) {
+    await writePage(html, resolve(distDir, slug, 'index.html'), `${slug}: dist/${slug}/index.html created`);
+  }
+
+  // Custom multi-pages
+  for (const { slug, html } of extraCustomPages) {
     await writePage(html, resolve(distDir, slug, 'index.html'), `${slug}: dist/${slug}/index.html created`);
   }
 
@@ -588,6 +656,11 @@ for (const { slug, html } of aboutPages) {
 
 // Validate article pages
 for (const { slug, html } of articlePages) {
+  validateHydrationStructure(html, slug);
+}
+
+// Validate custom multi-pages
+for (const { slug, html } of extraCustomPages) {
   validateHydrationStructure(html, slug);
 }
 

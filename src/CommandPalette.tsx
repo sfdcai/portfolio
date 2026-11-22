@@ -17,7 +17,8 @@ import {
   ExternalLink,
   Layers,
   Activity,
-  Briefcase
+  Briefcase,
+  Award
 } from 'lucide-react'
 import type { PersonaType } from './PersonaSwitcher'
 
@@ -99,6 +100,30 @@ export default function CommandPalette({ isOpen, onClose, onSelectPersona }: Com
         onClose()
       },
       keywords: ['contact', 'hire', 'message', 'reach']
+    },
+    {
+      id: 'action-case-studies',
+      title: 'Enterprise Architecture Case Studies',
+      subtitle: 'Explore 6 verified enterprise crisis turnarounds, FCA redress & SAP S/4HANA decoupling',
+      category: 'Actions',
+      icon: Layers,
+      action: () => {
+        navigate('/case-studies')
+        onClose()
+      },
+      keywords: ['cases', 'projects', 'genpact', 'santander', 'danone', 'fca', 'architecture', 'adr']
+    },
+    {
+      id: 'action-awards',
+      title: 'Executive Awards & Recognitions',
+      subtitle: 'Diamond Award, INCISIVE Award, 4x Gold Awards, and client commendations',
+      category: 'Actions',
+      icon: Award,
+      action: () => {
+        navigate('/awards')
+        onClose()
+      },
+      keywords: ['awards', 'honors', 'diamond', 'gold', 'cheers', 'commendation', 'recognition']
     },
     {
       id: 'action-chat',
@@ -201,22 +226,34 @@ export default function CommandPalette({ isOpen, onClose, onSelectPersona }: Com
       category: 'Case Studies',
       icon: Briefcase,
       action: () => {
-        navigate('/salesforce-sap')
+        navigate('/case-studies')
         onClose()
       },
       keywords: ['bank', 'financial', 'redress', 'lead time', 'omnistudio', 'aml', 'kyc']
     },
     {
+      id: 'case-fca',
+      title: 'FCA Statutory Regulatory Redress Engine',
+      subtitle: '1.03M vehicle contracts reconciled with 0 discrepancies & passwordless tokenized IDV',
+      category: 'Case Studies',
+      icon: ShieldCheck,
+      action: () => {
+        navigate('/case-studies')
+        onClose()
+      },
+      keywords: ['fca', 'mbfs', 'redress', 'dca', 'finance', 'automotive', 'regulatory']
+    },
+    {
       id: 'case-sap-decoupling',
-      title: 'Salesforce Enterprise & SAP S/4HANA Decoupling',
-      subtitle: 'Outbox patterns and asynchronous order orchestration protecting Core SoR',
+      title: 'Global FMCG Order Assist & SAP S/4HANA Decoupling',
+      subtitle: 'Transactional outbox pattern and asynchronous order orchestration protecting Core SoR',
       category: 'Case Studies',
       icon: Layers,
       action: () => {
-        navigate('/salesforce-sap')
+        navigate('/case-studies')
         onClose()
       },
-      keywords: ['sap', 's4hana', 'erp', 'mulesoft', 'integration', 'decoupling']
+      keywords: ['sap', 's4hana', 'erp', 'mulesoft', 'integration', 'decoupling', 'danone']
     },
     {
       id: 'case-rescuematic',

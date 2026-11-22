@@ -653,6 +653,8 @@ export function getPageTitles(): Record<string, string> {
   const map: Record<string, string> = {
     '/': "Amit Bhardwaj's Portfolio",
     '/about': 'About',
+    '/awards': 'Awards & Honors',
+    '/case-studies': 'Enterprise Case Studies',
   }
   for (const article of articleRegistry) {
     map[`/${article.slugs.en}`] = article.titles.en

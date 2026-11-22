@@ -5,7 +5,8 @@ import {
   ChevronRight,
   Bot,
   Activity,
-  FolderGit2
+  FolderGit2,
+  Award
 } from 'lucide-react'
 import SpotlightCard from './SpotlightCard'
 import type { PersonaType } from './PersonaSwitcher'
@@ -321,7 +322,7 @@ export default function BentoProjects({ activePersona }: BentoProjectsProps) {
                 Ask AI: Turnaround strategy?
               </button>
               <Link
-                to="/salesforce-sap"
+                to="/case-studies"
                 className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary/80 shrink-0"
               >
                 View Case Study <ChevronRight className="w-3.5 h-3.5" />
@@ -385,7 +386,7 @@ export default function BentoProjects({ activePersona }: BentoProjectsProps) {
                 Ask AI: RegTech architecture?
               </button>
               <Link
-                to="/salesforce-sap"
+                to="/case-studies"
                 className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary/80 shrink-0"
               >
                 View Details <ChevronRight className="w-3.5 h-3.5" />
@@ -569,6 +570,64 @@ export default function BentoProjects({ activePersona }: BentoProjectsProps) {
               >
                 Try Live <ChevronRight className="w-3.5 h-3.5" />
               </a>
+            </div>
+          </SpotlightCard>
+
+          {/* 8. Executive Awards & Honors Showcase Bento Card */}
+          <SpotlightCard
+            className="md:col-span-2 p-6 sm:p-8 flex flex-col justify-between border-amber-500/30 bg-gradient-to-br from-card via-card to-amber-500/5 shadow-lg shadow-amber-500/5"
+          >
+            <div>
+              <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                <span className="badge px-3 py-1 bg-amber-500/10 text-amber-400 text-xs font-semibold rounded-full border border-amber-500/30 flex items-center gap-1.5">
+                  <Award className="w-3.5 h-3.5 text-amber-400" />
+                  Executive Honors & Corporate Recognitions
+                </span>
+                <span className="text-xs font-mono text-muted-foreground">8+ Years at Genpact</span>
+              </div>
+
+              <h3 className="font-display text-2xl font-bold text-foreground mb-2">
+                Diamond Award, Intellectual Agility & Client Commendations
+              </h3>
+
+              <p className="text-sm text-muted-foreground leading-relaxed mb-6">
+                Conferred Genpact's highest individual annual corporate excellence recognition globally (Diamond Award 2018), cross-disciplinary problem-solving honors (INCISIVE Award 2021), quadruple Gold Awards, and client delivery leadership commendations for high-stakes banking program recoveries.
+              </p>
+
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-xl bg-background/80 border border-border/80 text-xs font-mono mb-6">
+                <div className="border-l-2 border-cyan-400 pl-2.5">
+                  <span className="text-cyan-400 font-bold block">Diamond Award</span>
+                  <span className="text-[10px] text-muted-foreground">Highest Global Honor</span>
+                </div>
+                <div className="border-l-2 border-purple-400 pl-2.5">
+                  <span className="text-purple-400 font-bold block">INCISIVE Award</span>
+                  <span className="text-[10px] text-muted-foreground">Intellectual Agility</span>
+                </div>
+                <div className="border-l-2 border-amber-400 pl-2.5">
+                  <span className="text-amber-400 font-bold block">4x Gold Awards</span>
+                  <span className="text-[10px] text-muted-foreground">Annual Delivery</span>
+                </div>
+                <div className="border-l-2 border-emerald-400 pl-2.5">
+                  <span className="text-emerald-400 font-bold block">Spot Cheers</span>
+                  <span className="text-[10px] text-muted-foreground">Bank Recovery</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-border/40 flex flex-wrap items-center justify-between gap-3">
+              <button
+                onClick={() => triggerChat("What corporate awards and honors has Amit won at Genpact and on client engagements?")}
+                className="text-xs text-primary hover:underline flex items-center gap-1.5 cursor-pointer font-medium"
+              >
+                <Bot className="w-3.5 h-3.5" />
+                Ask AI: Awards record & citations?
+              </button>
+              <Link
+                to="/awards"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-amber-500/15 text-amber-400 hover:bg-amber-500/25 border border-amber-500/40 font-semibold text-xs transition-all shadow-sm"
+              >
+                Explore All 8 Honors & Citations <ChevronRight className="w-3.5 h-3.5" />
+              </Link>
             </div>
           </SpotlightCard>
 

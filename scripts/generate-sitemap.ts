@@ -81,6 +81,18 @@ urls.push({
   lastmod: today,
 })
 
+// Awards & Honors
+urls.push({
+  loc: `${base}/awards`,
+  lastmod: today,
+})
+
+// Enterprise Case Studies
+urls.push({
+  loc: `${base}/case-studies`,
+  lastmod: today,
+})
+
 // Articles from registry
 for (const article of articleRegistry) {
   if (article.type === 'bridge') continue
