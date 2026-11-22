@@ -2,87 +2,107 @@
 slug: about
 altSlug: about
 seo:
-  title: About Amit Bhardwaj | Salesforce Architect & Systems Engineer
+  title: About Amit Bhardwaj | Enterprise Platform Architect & Engineering Leader
   description: |
-      Professional background and biography of Amit Bhardwaj — a Certified Salesforce Technical Architect, Systems Engineer, and AI-native automation specialist with 19+ years of experience, based in London, UK.
+      Professional background and verified career history of Amit Bhardwaj — Enterprise Platform Architect, Systems Engineering Leader, and Solutions Architect with 18+ years of experience, including 8 years as Senior Manager at Genpact, based in London, UK.
 heading: Amit Bhardwaj
 manifesto: |
-    Systems should not just work—they must scale, self-heal, and integrate seamlessly.
-subtitle: Certified Salesforce Architect & Developer • Systems Engineer • AI Automation Specialist
+    Systems should not just work—they must scale, self-heal, and integrate seamlessly from first principles.
+subtitle: Enterprise Platform Architect • Head of Platform Engineering • Systems Engineering Leader
 location: "London, United Kingdom"
-lastUpdated: June 2026
+lastUpdated: November 2026
 bio:
   - |
-      I am an Enterprise Platform Architect and Systems Engineer with 19+ years of hands-on technical leadership. My career began in 2007 at the hardware and operating system layers — disassembling server motherboards, provisioning Linux environments, and configuring bare-metal network infrastructure.
+      I am an Enterprise Platform Architect and Systems Engineering Leader with over 18 years of progressive hands-on technical leadership, including approximately eight years as a Senior Manager & Solutions Architect at Genpact in London. My engineering career began in 2007 at the physical hardware, network packet, and operating system layers — diagnosing server motherboards, configuring hardware RAID arrays, and provisioning bare-metal Linux infrastructure.
   - |
-      At Directi, I hardened Linux servers, administered BIND DNS zones, configured Postfix/Exim mail servers, and managed DHCP and routing tables — maintaining 99.9% uptime across critical infrastructure. This deep systems foundation informs every architecture decision I make today.
+      At Directi, I hardened production Linux server fleets (CentOS, RedHat, Debian), administered authoritative BIND DNS clusters, configured high-volume Postfix and Exim mail routing engines with SPF/DKIM, and developed Bash and Perl automation suites that cut routine administrative overhead by 40% while maintaining 99.9% infrastructure uptime. This deep, first-principles systems foundation informs every cloud, distributed system, and enterprise architecture decision I make today.
   - |
-      In the Salesforce ecosystem, I have delivered 100+ enterprise projects across Sales, Service, Experience, and Financial Services Clouds — including secure, FCA-compliant portals with custom passwordless identity verification for regulated financial redress programs handling millions of public consumers.
+      Over eight years at Genpact, I have directed enterprise technology governance across 100+ business initiatives, chaired weekly Architecture Review Boards (EAB) and InfoSec design reviews, and led multi-disciplinary engineering delivery organizations (~80 resources). I have established a proven track record turning distressed, multi-million-pound client programs from Red to Green — such as rescuing a major UK private bank's commercial onboarding portal (slashing cycle time from 36 to 10 days, cutting fincrime review escalations from 76% to under 1%, and elevating CSAT to 4.9/5).
   - |
-      I specialize in zero-trust security architectures, event-driven enterprise integrations (Salesforce ↔ SAP via MuleSoft/Kafka), and AI-native automation — building agentic workflows, RAG engines, and MCP-based developer tools. I run a fully self-hosted home lab with Proxmox, OpenWRT, and pfSense for continuous infrastructure R&D.
+      Across industry verticals, I architected the regulatory calculation and case orchestration platform reconciling over 1.03 million vehicle financing contracts under strict FCA statutory deadlines with zero discrepancy, engineered decoupled SAP S/4HANA ERP integrations for a Fortune 500 food conglomerate (Danone CORA, cutting dispute resolution by 50%), and designed a metadata-driven dealership provisioning platform accelerating retail deployments across 10,000+ automotive rooftops by 65%.
+  - |
+      Beyond corporate enterprise delivery, I build and maintain production software platforms from the ground up: including sfdx-toolkit (a full-stack Internal Developer Platform), Rescuematic (a production IoT appliance microservices platform on AWS EC2 with MQTTS TLS and Cloudflare Pages), VisionVox (a real-time multimodal accessibility engine on the Gemini Live API), and an enterprise-grade bare-metal Proxmox hypervisor cluster running Prometheus, Grafana, and Loki observability.
 seeking: ""
 roles: []
 timelineHeading: Career Journey
 timeline:
-  - period: "2024–Present"
+  - period: "2018–Present"
     role: Senior Manager & Solutions Architect
     company: Genpact
-    desc: Multi-cloud Salesforce architecture, SAP integrations, presales RFP strategy, and CI/CD governance.
-  - period: "2019–2024"
-    role: Developer & Support Engineer
+    desc: Enterprise architecture governance across 100+ portfolio initiatives, leading ~80 engineering delivery resources, chairing EAB/InfoSec boards, and leading Red-to-Green program rescues across Banking, Automotive, and FMCG.
+  - period: "2017–2018"
+    role: Salesforce Architect & IT Systems Lead
+    company: Chandra Credit Ltd.
+    desc: Commercial loan origination platform, dynamic risk scoring algorithms, and legacy relational DB migration with field-level encryption (cutting approval turnaround from 14 days to <48h).
+  - period: "2015–2017"
+    role: Salesforce Architect
+    company: Infomatrix Inc.
+    desc: Technical solution blueprints, pre-sales architecture, ERP & financial integrations via REST/SOAP, and leading/mentoring a team of 10+ engineers and consultants.
+  - period: "2014–2015"
+    role: Salesforce Consultant
+    company: Cirrologix Pvt Ltd
+    desc: Custom Apex/Visualforce solution architecture, multi-tiered sandbox release management, and unit test automation (>85% code coverage).
+  - period: "2013–2014"
+    role: Salesforce Consultant / Technical Engineer
     company: HCL Technologies
-    desc: Pivotal Salesforce learning milestone — Apex development, production support, and progressive growth into architecture.
-  - period: "2013–2019"
-    role: Salesforce Practice Lead
-    company: Infomatrix
-    desc: Technical design leadership, Apex/LWC development, and API integration architectures.
+    desc: High-volume asynchronous Apex, batch processors, and queueables for Life Sciences and Financial Services global accounts; major cutovers and production hypercare.
   - period: "2009–2010"
     role: Linux System Administrator
     company: Directi
-    desc: Server hardening, DNS/mail/DHCP administration, and 99.9% infrastructure uptime.
+    desc: Production Linux fleet hardening (CentOS, RedHat, Debian), authoritative BIND DNS clusters, Postfix/Exim mail routing, and Bash/Perl automation (99.9% uptime).
   - period: "2007–2009"
     role: System Engineer
     company: Spectrum Infogain Services
-    desc: Hardware diagnostics, OS provisioning, network setup — foundational systems engineering.
-projectsHeading: Featured Work
+    desc: Physical hardware diagnostics, motherboard and RAM repair, RAID 0/1/5 storage configurations, and managed switch VLAN routing.
+projectsHeading: Featured Production Platforms & Projects
 projects:
-  - name: Secure Experience Cloud Portal
-    desc: Passwordless login for FCA-compliant regulatory redress serving millions.
+  - name: sfdx-toolkit (Internal Developer Platform)
+    desc: Full-stack TypeScript/React IDP for Salesforce metadata dependency visualization, permission diffing, and automated deployments.
+    href: https://toolkit.amitbhardwaj.co.uk
+  - name: Rescuematic IoT Cloud Platform
+    desc: Production IoT microservices platform running FastAPI, Redis, MQTTS (port 8883), AWS EC2, and Cloudflare Pages edge.
+    href: https://rescuematic.co.uk
+  - name: Major UK Private Bank Onboarding Turnaround
+    desc: Distressed onboarding program turned Red to Green in 6 months; cycle time cut from 36 to 10 days; fincrime dropped 76% to 1%; CSAT 4.9/5.
     href: /salesforce-sap
-  - name: AI Agent Jacobo
-    desc: Multi-agent WhatsApp + Voice AI with ~90% self-service resolution.
-    href: /ai-agent-jacobo
-  - name: The Self-Healing Chatbot
-    desc: LLMOps with 6-layer defense, 71 evals, and closed-loop self-repair.
-    href: /self-healing-chatbot
-  - name: GitProtect Security Gate
-    desc: LLM-powered commit scanning to prevent credential leaks.
-    href: https://gitprotect.amitbhardwaj.co.uk
+  - name: FCA Regulatory Redress Calculation Platform
+    desc: Processed 1.03M+ automotive finance contracts with zero calculation discrepancy and passwordless 3-attribute tokenized IDV.
+    href: /salesforce-sap
   - name: VisionVox AI Companion
-    desc: Real-time voice + vision accessibility app on Gemini Live API.
+    desc: Real-time multimodal voice and vision accessibility companion built on Gemini Live API over WebSockets.
     href: https://visionvox.amitbhardwaj.co.uk
-  - name: Network & Infrastructure Lab
-    desc: VLAN segmentation and firewall rules in self-hosted Proxmox labs.
+  - name: Smart Email Brain & Ingestion Engine
+    desc: Autonomous zero-touch email and calendar ingestion pipeline powered by local Qwen SLM and n8n webhooks.
+    href: /ai-agents-arch
+  - name: Bare-Metal Hypervisor & SRE Stack
+    desc: Self-hosted Dell Precision server running Proxmox VE 9.2 (Linux 7.0 kernel), ZRAM memory compression, Prometheus, Grafana, and Loki.
     href: /homelab-network
-certificationsHeading: Certifications
+certificationsHeading: Professional Certifications & Credentials
 certifications:
-  - org: Salesforce
+  - org: Salesforce Certified Architecture & Design
     items:
-      - Certified Technical Architect
-      - Application Architect
-      - System Architect
-      - Platform Developer II (PD2)
-      - Solution Architect
-  - org: DevOps
+      - Certified Application Architect
+      - Certified System Architect
+      - Certified Data Architecture & Management Designer
+      - Certified Integration Architecture Designer
+      - Certified Development Lifecycle & Deployment Designer
+      - Certified Identity & Access Management Designer
+      - Certified Sharing & Visibility Designer
+  - org: Salesforce Certified Development & Consulting
+    items:
+      - Certified Platform Developer II (PD2)
+      - Certified Platform Developer I (PD1)
+      - Certified Platform App Builder
+      - Certified Administrator
+  - org: DevOps & Platform Engineering
     items:
       - Copado Certified Fundamentals I & II
-educationHeading: Education
+educationHeading: Formal Education
 education:
-  - Bachelor of Engineering (B.E.) — Focus on systems and networks
-  - Master in Artificial Intelligence & SEO
+  - Bachelor of Technology (B.Tech) in Information Technology — Rajasthan Technical University (RTU), India (2003–2007)
 pressHeading: Press & Features
 press: []
-communityHeading: Technical Articles
+communityHeading: Technical Articles & Architecture Blueprints
 community:
   - title: Salesforce DevOps Best Practices
     platform: Blog
@@ -98,12 +118,15 @@ community:
     href: /salesforce-sap
 faqHeading: Frequently Asked Questions
 faq:
-  - q: "Who is Amit?"
+  - q: "Who is Amit Bhardwaj?"
     a: |
-        Amit Bhardwaj is a London-based Certified Salesforce Technical Architect and Systems Engineer with 19+ years of experience. Starting from bare-metal server hardware and Linux systems administration, he now designs secure, scalable cloud platforms, enterprise integrations (Salesforce ↔ SAP), zero-trust identity systems, and implements AI-native automation workflows alongside Copado/Git-based DevOps release pipelines.
-  - q: "What does Amit do outside work?"
+        Amit Bhardwaj is an Enterprise Platform Architect and Systems Engineering Leader with over 18 years of experience, including 8 years as Senior Manager & Solutions Architect at Genpact in London. Starting from bare-metal computer hardware diagnostics and Linux systems administration, he progressed into enterprise software architecture, multi-cloud platforms, zero-trust security, distributed systems, and agentic AI runtimes. He has governed technology roadmaps across 100+ business initiatives and led engineering delivery organizations of ~80 resources.
+  - q: "What are Amit's marquee enterprise accomplishments?"
     a: |
-        He is a systems engineering and networking enthusiast, running a full home lab with Proxmox VE hypervisors, pfSense/OPNsense firewalls, OpenWRT edge routing with AdGuard DNS, and Netdata + Grafana unified monitoring dashboards. He also builds AI projects including VisionVox (accessibility companion), GitProtect (security scanner), and multi-agent conversational AI systems.
+        Amit's track record includes turning around a distressed, multi-million-pound onboarding program for a major UK private bank from RED to GREEN in 6 months (reducing onboarding lead time from 36 to 10 days, cutting fincrime review escalations from 76% to 1%, and achieving a 4.9/5 CSAT), delivering 100% FCA compliance on a regulatory redress platform reconciling over 1.03 million vehicle financing contracts with zero calculation discrepancies, launching the Danone CORA order assist platform live in Jan 2026 (cutting dispute resolution cycle time by 50%), and designing a reusable dealership provisioning engine accelerating retail deployments across 10,000+ car dealerships by 65%.
+  - q: "What does Amit build in applied systems engineering?"
+    a: |
+        Amit is a hands-on builder who maintains production platforms from first principles. He built sfdx-toolkit (an Internal Developer Platform for Salesforce metadata analysis), Rescuematic (a production IoT appliance microservices SaaS with MQTTS TLS and FastAPI on AWS EC2), VisionVox (a real-time multimodal accessibility engine on the Gemini Live API), and Smart Email Brain (an autonomous event ingestion pipeline using local Qwen SLMs and n8n). He operates a high-performance bare-metal Proxmox hypervisor server running Linux 7.0 kernel, ZRAM memory compression, and unified Prometheus, Grafana, and Loki observability.
 connectHeading: Let's Connect
 email: ""
 ---
