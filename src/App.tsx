@@ -9,6 +9,7 @@ import SystemsArchitecture from './SystemsArchitecture'
 import LiveArchitectureFlow from './LiveArchitectureFlow'
 import AmitAiChatbot from './AmitAiChatbot'
 import HeroChatInput from './HeroChatInput'
+import ExecutiveAwardsBanner from './ExecutiveAwardsBanner'
 import BentoProjects from './BentoProjects'
 
 
@@ -1544,6 +1545,9 @@ function App() {
       <div className="relative z-20 max-w-5xl mx-auto px-6 -mt-4 mb-4">
         <HeroChatInput />
       </div>
+
+      {/* Executive Honors & Awards Trust Banner - Above-the-fold social proof */}
+      <ExecutiveAwardsBanner />
 
       {/* Summary - Con storytelling integrado */}
       <StorySection t={t} />

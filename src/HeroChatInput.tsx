@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react'
-import { Bot, Send, Sparkles, ArrowRight } from 'lucide-react'
+import { Send, Sparkles, ArrowRight } from 'lucide-react'
 
 const SUGGESTED_QUESTIONS = [
   { label: '🚀 Independent Ventures vs Genpact', query: 'What is the difference between your enterprise work at Genpact and independent ventures like Rescuematic?' },
@@ -38,10 +38,18 @@ export default function HeroChatInput() {
 
         {/* Live Status Header */}
         <div className="flex flex-wrap items-center justify-between gap-2 px-1 mb-2.5">
-          <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="flex items-center gap-2.5">
+            <div className="relative">
+              <img
+                src="/amit-avatar.png"
+                alt="Amit Bhardwaj"
+                className="w-6 h-6 rounded-full object-cover border border-primary/50 shadow-sm"
+                width={24}
+                height={24}
+              />
+              <span className="absolute -bottom-0.5 -right-0.5 w-2 h-2 rounded-full bg-emerald-500 ring-2 ring-background animate-pulse" />
+            </div>
             <span className="text-xs font-semibold text-foreground flex items-center gap-1.5">
-              <Bot className="w-3.5 h-3.5 text-primary" />
               Amit AI Digital Twin
             </span>
             <span className="text-[11px] text-muted-foreground hidden sm:inline">
