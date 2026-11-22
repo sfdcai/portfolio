@@ -12,6 +12,7 @@ const AboutPage = lazy(() => import('./AboutPage'))
 const AwardsPage = lazy(() => import('./AwardsPage'))
 const CaseStudiesPage = lazy(() => import('./CaseStudiesPage'))
 const PortfolioArchitecturePage = lazy(() => import('./PortfolioArchitecturePage'))
+const AmitAiChatbot = lazy(() => import('./AmitAiChatbot'))
 import CursorHalo from './CursorHalo.tsx'
 
 // Lazy-load article components from registry
@@ -63,7 +64,14 @@ function PageTransition({ children }: { children: ReactNode }) {
 }
 
 function GlobalChat() {
-  return null
+  const [hydrated, setHydrated] = useState(false)
+  useEffect(() => setHydrated(true), [])
+  if (!hydrated) return null
+  return (
+    <Suspense fallback={null}>
+      <AmitAiChatbot />
+    </Suspense>
+  )
 }
 
 function GlobalMusic() {

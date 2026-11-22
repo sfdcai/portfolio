@@ -7,7 +7,6 @@ import { useHomeSeo } from './articles/use-article-seo'
 import { getTechIcon } from './tech-icons'
 import SystemsArchitecture from './SystemsArchitecture'
 import LiveArchitectureFlow from './LiveArchitectureFlow'
-import AmitAiChatbot from './AmitAiChatbot'
 import HeroChatInput from './HeroChatInput'
 import ExecutiveAwardsBanner from './ExecutiveAwardsBanner'
 import KeyMetricsBar from './KeyMetricsBar'
@@ -1999,9 +1998,6 @@ function App() {
           </p>
         </div>
       </footer>
-
-      {/* Floating Amit AI Digital Twin Assistant */}
-      <AmitAiChatbot />
 
     </main>
   )
