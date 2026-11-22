@@ -52,13 +52,12 @@ const DOSSIER_ENTRIES: KnowledgeEntry[] = [
     ]
   },
 
-  // 2. EXPERIENCE PRIOR TO GENPACT (DEEP DIVE 2007 - 2018)
+  // 2. OVERALL JOURNEY PRIOR TO GENPACT (OVERVIEW 2007 - 2018)
   {
     id: 'prior-to-genpact',
     keywords: [
       'prior genpact', 'prior to genpact', 'before genpact', 'pre-genpact', 'before 2018',
-      'early career', 'earlier career', 'previous roles', 'past roles', 'start career',
-      'chandra', 'infomatrix', 'cirrologix', 'hcl', 'directi', 'spectrum'
+      'early career', 'earlier career', 'previous roles', 'past roles', 'start career'
     ],
     title: 'Comprehensive Career Journey Prior to Genpact (2007 – 2018)',
     summary: '11 years across Chandra Credit, Infomatrix, Cirrologix, HCL, Directi, and Spectrum Infogain.',
@@ -99,7 +98,7 @@ Before joining Genpact in 2018, Amit built an 11-year progressive engineering ca
 ---
 
 #### 5. Directi (2009 – 2010) | Linux System Administrator
-• **Infrastructure Hardening & 99.9% Uptime**: Built, secured, and maintained production Linux server fleets (CentOS, RedHat, Debian) and network gateways hosting mission-critical web applications.
+• **Infrastructure Hardening & 99.9% Uptime**: Provisioned, hardened, and maintained production Linux server fleets (CentOS, RedHat, Debian) and network gateways hosting mission-critical web applications.
 • **Core Internet Protocols**:
   - **DNS**: Managed master/slave BIND DNS servers, authoritative forward/reverse lookup zones, and TTL tuning.
   - **Mail Infrastructure**: Administered Postfix and Exim mail routers with SPF, DKIM, anti-relay enforcement, and spam filtering.
@@ -122,6 +121,146 @@ Amit did not learn platform architecture in an abstract vacuum. His career began
       "Tell me about Chandra Credit",
       "Tell me about Infomatrix",
       "What did Amit do at Corporate Genpact?"
+    ]
+  },
+
+  // 2A. DIRECTI DEEP DIVE (ADDRESSES "WAS HE BUILDING SERVERS?")
+  {
+    id: 'directi',
+    keywords: ['directi', 'linux admin', 'sysadmin', 'system administrator', 'postfix', 'exim', 'bind dns', 'apache', 'building servers'],
+    title: 'Directi — Linux Systems Administration & Server Provisioning (2009–2010)',
+    summary: 'Linux server provisioning, OS hardening, Apache, BIND DNS, Postfix/Exim, and 99.9% uptime.',
+    content: `### Directi — Linux System Administrator (2009 – 2010)
+
+At Directi, Amit operated at the **operating system, network software, and infrastructure administration layer**:
+
+#### Was he building physical servers?
+**No, not physical screwdriver hardware assembly** (that physical hardware work was at Spectrum Infogain). At Directi, "building servers" meant **Linux OS provisioning, service configuration, and security hardening**:
+• **Linux Environment Provisioning**: Installed, provisioned, and maintained production server environments running **CentOS, RedHat, and Debian**.
+• **Security & Hardening**: Hardened server configurations using \`iptables\` packet filtering, user access controls (POSIX ACLs), tuning kernel sysctl network parameters, and disabling unnecessary daemons.
+
+#### Core Internet Services Managed:
+• **DNS Administration**: Managed primary and secondary **BIND DNS** servers, authoritative forward zones, and reverse lookups with TTL tuning.
+• **Web Infrastructure**: Configured and optimized **Apache HTTP** web servers, multi-tenant virtual hosts (vhosts), and SSL/TLS certificate chains.
+• **Mail Routing Infrastructure**: Configured, secured, and monitored email routing servers using **Postfix and Exim** with SPF, DKIM, anti-relay rules, and spam filtering.
+• **Networking & IP Allocation**: Administered local DHCP daemons, static IP reservations, and corporate network routing tables.
+
+#### Automation & Operational Impact:
+• **99.9% Production Uptime**: Maintained high availability across critical internet-facing web and DNS infrastructure.
+• **Scripted Automation**: Authored **Bash and Perl automation scripts** for log auditing, disk threshold alerts, and automated daemon self-healing, reducing manual sysadmin workloads by 40%.`,
+    followUps: [
+      "Tell me about Spectrum Infogain (hardware layer)",
+      "How did he transition to Salesforce?",
+      "Tell me about Chandra Credit"
+    ]
+  },
+
+  // 2B. SPECTRUM INFOGAIN DEEP DIVE
+  {
+    id: 'spectrum',
+    keywords: ['spectrum', 'spectrum infogain', 'hardware diagnostics', 'motherboard', 'raid array', 'raid', 'cabling'],
+    title: 'Spectrum Infogain Services — Physical Hardware Engineering (2007–2009)',
+    summary: 'Physical hardware assembly, motherboard diagnostics, RAID arrays, and network cabling.',
+    content: `### Spectrum Infogain Services — System Engineer (2007 – 2009)
+
+This was Amit's first engineering role immediately after graduating with his **Bachelor of Engineering in Electronics & Communications**:
+
+#### Physical Hardware Diagnostics & Assembly:
+• **Hardware Assembly & Diagnostics**: Disassembled, diagnosed, and repaired enterprise workstations and server motherboards, seating CPUs, testing ECC RAM modules, and diagnosing power supply failures.
+• **Storage & RAID Architecture**: Configured hardware RAID array controllers (**RAID 0, 1, 5**) and managed filesystem partitioning (Ext3, NTFS).
+• **OS Deployment**: Performed bare-metal installations, driver configurations, and security patching for Linux and Windows Server environments.
+
+#### Network Infrastructure:
+• **Cabling & Switching**: Terminated Ethernet cables, patched networking racks, and configured managed switches and local routers.
+• **Network Troubleshooting**: Monitored network ports, verified packet routing via ping/traceroute, and resolved IP conflict issues.
+
+💡 **Why this matters**: Working at the physical hardware layer grounded Amit in computing resource limits (CPU cycles, memory buses, drive IOPS), which later informed his hypervisor tuning and high-performance cloud platform engineering.`,
+    followUps: [
+      "Tell me about his work at Directi",
+      "How did he transition to Salesforce?",
+      "Tell me about his degree in Electronics"
+    ]
+  },
+
+  // 2C. CHANDRA CREDIT DEEP DIVE
+  {
+    id: 'chandra',
+    keywords: ['chandra', 'chandra credit', 'underwriting', 'loan origination', 'credit risk', 'kyc'],
+    title: 'Chandra Credit Ltd. — Salesforce Architect & IT Systems Lead (2017–2018)',
+    summary: 'Commercial loan origination, credit risk scoring, relational DB migration, and KYC pipelines.',
+    content: `### Chandra Credit Ltd. — Salesforce Architect & IT Systems Lead (2017 – 2018)
+
+At Chandra Credit, Amit spearheaded enterprise CRM modernization and systems architecture for commercial lending:
+
+• **Loan Origination & Risk Underwriting**: Architected and deployed a custom Salesforce platform modernizing commercial loan origination, credit risk scoring, and automated underwriting approval matrices.
+• **Legacy Database Migration**: Led the end-to-end extraction, transformation, normalization, and migration of legacy on-premises relational databases into Salesforce, enforcing field-level encryption and strict audit tracking.
+• **Compliance & KYC Pipelines**: Engineered automated document verification workflows and KYC validation rules adhering to financial lending compliance regulations.
+• **DevOps & Standards**: Established initial source-driven repository practices, sandbox management protocols, and regression test suites.`,
+    followUps: [
+      "Tell me about his work at Infomatrix",
+      "Tell me about CDK Global MyInstall",
+      "What is his experience with financial services?"
+    ]
+  },
+
+  // 2D. INFOMATRIX DEEP DIVE
+  {
+    id: 'infomatrix',
+    keywords: ['infomatrix', 'erp integration', 'pre-sales architecture', 'mentorship'],
+    title: 'Infomatrix Inc. — Salesforce Architect (2015–2017)',
+    summary: 'ERP/financial integrations, pre-sales solution blueprints, and technical leadership across 10+ devs.',
+    content: `### Infomatrix Inc. — Salesforce Architect (2015 – 2017)
+
+At Infomatrix, Amit served as Senior Salesforce Architect leading client solution designs and developer delivery squads:
+
+• **Pre-Sales Architecture & RFPs**: Led technical discovery, authored architectural blueprints, and built effort estimation models for enterprise client proposals.
+• **ERP & Accounting Integrations**: Architected real-time REST and SOAP API-led integration bridges connecting Salesforce CRM with enterprise ERP, billing, and accounting backends.
+• **Team Leadership & Mentorship**: Guided, mentored, and conducted code reviews for a delivery team of 10+ developers and consultants; instituted Apex design patterns, governor limit best practices, and trigger frameworks.
+• **Security & Data Modeling**: Designed complex role hierarchies, sharing sets, custom object relationships, and granular profile permissions.`,
+    followUps: [
+      "Tell me about his work at Cirrologix",
+      "Tell me about HCL Technologies",
+      "What did Amit do at Corporate Genpact?"
+    ]
+  },
+
+  // 2E. CIRROLOGIX DEEP DIVE
+  {
+    id: 'cirrologix',
+    keywords: ['cirrologix'],
+    title: 'Cirrologix Pvt Ltd — Salesforce Consultant (2014–2015)',
+    summary: 'Custom Apex architectures, business process translation, and sandbox release tracks.',
+    content: `### Cirrologix Pvt Ltd — Salesforce Consultant (2014 – 2015)
+
+At Cirrologix, Amit worked as a client-facing technical consultant delivering customized CRM architectures:
+
+• **Custom Solution Architecture**: Engineered custom Apex triggers, Visualforce pages, batch processors, and automated workflow solutions for commercial enterprise clients.
+• **Business Process Translation**: Conducted technical discovery workshops with business stakeholders, converting complex operational requirements into scalable technical specifications.
+• **Deployment & Release Management**: Standardized deployment tracking across multi-tiered sandbox environments, eliminating metadata dependency deadlocks and optimizing unit test code coverage (>85%).`,
+    followUps: [
+      "Tell me about HCL Technologies",
+      "Tell me about Infomatrix",
+      "Tell me about his experience prior to Genpact"
+    ]
+  },
+
+  // 2F. HCL TECHNOLOGIES DEEP DIVE
+  {
+    id: 'hcl',
+    keywords: ['hcl', 'hcl technologies', 'life sciences'],
+    title: 'HCL Technologies — Salesforce Consultant / Technical Engineer (2013–2014)',
+    summary: 'High-volume async Apex, batch processing, REST/SOAP APIs, and enterprise client cutovers.',
+    content: `### HCL Technologies — Salesforce Consultant / Technical Engineer (2013 – 2014)
+
+At HCL Technologies, Amit engineered enterprise customizations and backend integrations for global clients:
+
+• **Enterprise Core Engineering**: Developed high-volume asynchronous Apex classes, scheduled batch jobs, and queueable interfaces for global accounts across Life Sciences and Financial Services.
+• **Third-Party Integrations**: Built and maintained secure REST/SOAP web service integrations exchanging transactional customer data with external legacy systems.
+• **Production Support & Cutovers**: Participated in major client go-lives, deployment dry-runs, data migrations, and production hypercare.`,
+    followUps: [
+      "How did Amit transition into Salesforce from Linux SysAdmin?",
+      "Tell me about his work at Infomatrix",
+      "Tell me about his experience at Corporate Genpact"
     ]
   },
 
@@ -490,14 +629,43 @@ Would you like to explore:
     }
   }
 
-  // 1. HIGH-PRIORITY INTENT: Prior to Genpact / Early Career / Pre-Genpact
+  // 1. SPECIFIC COMPANY TARGETING FIRST (Precise answers for individual companies)
+  if (query.includes('directi')) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'directi')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  if (query.includes('spectrum')) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'spectrum')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  if (query.includes('chandra')) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'chandra')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  if (query.includes('infomatrix')) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'infomatrix')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  if (query.includes('cirrologix')) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'cirrologix')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  if (query.includes('hcl')) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'hcl')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  // 2. OVERALL PRIOR-TO-GENPACT JOURNEY (Only when asking generally about career before Genpact)
   const isPriorToGenpact = (
     (query.includes('prior') || query.includes('before') || query.includes('pre-') || query.includes('early') || query.includes('start') || query.includes('background') || query.includes('history')) &&
     query.includes('genpact')
   ) || query.includes('before genpact') || query.includes('prior genpact') || query.includes('prior to genpact') ||
-     query.includes('before 2018') || query.includes('early career') || query.includes('earlier career') ||
-     query.includes('chandra') || query.includes('infomatrix') || query.includes('cirrologix') ||
-     query.includes('directi') || query.includes('spectrum infogain') || query.includes('sysadmin') || query.includes('system admin')
+     query.includes('before 2018') || query.includes('early career') || query.includes('earlier career')
 
   if (isPriorToGenpact) {
     const priorEntry = DOSSIER_ENTRIES.find(e => e.id === 'prior-to-genpact')!
@@ -507,7 +675,7 @@ Would you like to explore:
     }
   }
 
-  // 2. Score each dossier entry based on keyword hits and exact phrase matching
+  // 3. Score each dossier entry based on keyword hits and exact phrase matching
   let bestEntry: KnowledgeEntry | null = null
   let maxScore = 0
 
@@ -850,7 +1018,7 @@ How can I assist your review or recruitment evaluation today?`,
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  placeholder="Ask about CDK, Santander, prior experience, platform leadership..."
+                  placeholder="Ask about Directi, CDK, Santander, prior experience, platform leadership..."
                   className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground/70 focus:outline-hidden"
                 />
                 <button
