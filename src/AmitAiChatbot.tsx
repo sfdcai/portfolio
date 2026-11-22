@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { X, Send, Bot, Sparkles, ArrowUpRight, ShieldCheck, Server, BookOpen, ExternalLink } from 'lucide-react'
+import { X, Send, Bot, Sparkles, ArrowUpRight, ShieldCheck, Server, ExternalLink } from 'lucide-react'
 import ReactMarkdown from 'react-markdown'
 
 interface Message {
@@ -12,8 +12,8 @@ interface Message {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// COMPREHENSIVE DOSSIER KNOWLEDGE BASE
-// Derived directly from /opt/homelab-docs/career/master_career_and_platform_engineering_dossier.md
+// COMPREHENSIVE PRIVATE DOSSIER KNOWLEDGE BASE
+// Derived directly from Amit Bhardwaj's verified professional archives
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface KnowledgeEntry {
@@ -46,13 +46,86 @@ const DOSSIER_ENTRIES: KnowledgeEntry[] = [
 📍 **Location**: London, United Kingdom | Open to senior technology leadership, Head of Platform Engineering, Director of Engineering, and Chief Architect appointments.`,
     followUps: [
       "Why hire Amit as Head of Platform Engineering?",
+      "Tell me about his experience prior to Genpact",
       "Tell me about his work at CDK Global",
-      "Explain the Santander / Cater Allen turnaround",
-      "What did he do at MBFS / FCA?"
+      "Explain the Santander / Cater Allen turnaround"
     ]
   },
 
-  // 2. TARGET ROLE: HEAD OF PLATFORM ENGINEERING / CLOUD PLATFORMS
+  // 2. EXPERIENCE PRIOR TO GENPACT (DEEP DIVE 2007 - 2018)
+  {
+    id: 'prior-to-genpact',
+    keywords: [
+      'prior genpact', 'prior to genpact', 'before genpact', 'pre-genpact', 'before 2018',
+      'early career', 'earlier career', 'previous roles', 'past roles', 'start career',
+      'chandra', 'infomatrix', 'cirrologix', 'hcl', 'directi', 'spectrum'
+    ],
+    title: 'Comprehensive Career Journey Prior to Genpact (2007 – 2018)',
+    summary: '11 years across Chandra Credit, Infomatrix, Cirrologix, HCL, Directi, and Spectrum Infogain.',
+    content: `### Amit Bhardwaj — Career Journey Prior to Genpact (2007 – 2018)
+
+Before joining Genpact in 2018, Amit built an 11-year progressive engineering career across financial credit systems, IT consulting, enterprise CRM delivery, and foundational Linux/networking infrastructure:
+
+---
+
+#### 1. Chandra Credit Ltd. (2017 – 2018) | Salesforce Architect & IT Systems Lead
+• **Underwriting & Credit Modernization**: Architected and deployed an end-to-end Salesforce platform modernizing commercial loan origination, credit risk scoring, and underwriting workflows.
+• **Legacy Data Migration**: Led the extraction, transformation, normalization, and migration of legacy on-premises relational databases into Salesforce, enforcing field-level encryption and strict audit tracking.
+• **Regulatory Governance**: Engineered compliance validation rules and KYC document pipelines aligned with financial lending regulations.
+• **DevOps & Standards**: Established initial source-driven repository practices, sandbox management protocols, and regression test suites.
+
+---
+
+#### 2. Infomatrix Inc. (2015 – 2017) | Salesforce Architect
+• **Enterprise Architecture & Pre-Sales**: Led technical solution design, pre-sales architectural blueprints, and effort estimations for enterprise client RFPs.
+• **ERP & Financial Integrations**: Architected real-time REST and SOAP API-led integration bridges connecting Salesforce CRM with enterprise ERP, billing, and accounting systems.
+• **Engineering Leadership & Mentorship**: Led, mentored, and conducted code reviews for a team of 10+ developers and consultants; enforced Apex design patterns, governor limit best practices, and trigger frameworks.
+• **Security & Data Modeling**: Designed complex role hierarchies, sharing sets, custom object relationships, and granular profile permissions.
+
+---
+
+#### 3. Cirrologix Pvt Ltd (2014 – 2015) | Salesforce Consultant
+• **Custom Solution Architecture**: Engineered custom Apex triggers, Visualforce pages, batch processors, and automated workflow solutions for commercial enterprise clients.
+• **Business Process Translation**: Conducted technical discovery workshops with business stakeholders, converting complex operational requirements into scalable technical specifications.
+• **Deployment & Release Management**: Standardized deployment tracking across multi-tiered sandbox environments, eliminating metadata dependency deadlocks and optimizing unit test code coverage (>85%).
+
+---
+
+#### 4. HCL Technologies (2013 – 2014) | Salesforce Consultant / Technical Engineer
+• **Enterprise Core Engineering**: Developed high-volume asynchronous Apex classes, scheduled batch jobs, and queueable interfaces for global accounts across Life Sciences and Financial Services.
+• **Third-Party Integrations**: Built and maintained secure REST/SOAP web service integrations exchanging transactional customer data with external legacy systems.
+• **Production Support & Cutover**: Participated in major client go-lives, deployment dry-runs, data migrations, and production hypercare.
+
+---
+
+#### 5. Directi (2009 – 2010) | Linux System Administrator
+• **Infrastructure Hardening & 99.9% Uptime**: Built, secured, and maintained production Linux server fleets (CentOS, RedHat, Debian) and network gateways hosting mission-critical web applications.
+• **Core Internet Protocols**:
+  - **DNS**: Managed master/slave BIND DNS servers, authoritative forward/reverse lookup zones, and TTL tuning.
+  - **Mail Infrastructure**: Administered Postfix and Exim mail routers with SPF, DKIM, anti-relay enforcement, and spam filtering.
+  - **Web Servers**: Configured Apache HTTP virtual hosts, SSL/TLS certificate chains, and load balancing.
+• **Systems Automation**: Authored Bash and Perl automation scripts for automated log auditing, disk threshold alerts, and automated daemon recovery, reducing manual sysadmin workload by 40%.
+
+---
+
+#### 6. Spectrum Infogain Services (2007 – 2009) | System Engineer
+• **Physical Hardware Diagnostics**: Diagnosed, disassembled, and repaired enterprise workstations, motherboards, RAM modules, and power supplies.
+• **Operating Systems & Storage**: Installed and patched Linux and Windows Server environments, configured filesystem partitioning (Ext3, NTFS), and configured hardware RAID arrays (RAID 0, 1, 5).
+• **Networking Layer**: Terminated Ethernet cabling, configured managed switches, established VLANs, resolved IP conflicts, and routed local corporate subnets.
+
+---
+
+### 💡 Why Amit's Prior Experience Matters to Engineering Leaders:
+Amit did not learn platform architecture in an abstract vacuum. His career began at the **physical hardware, network packet, and Linux kernel layers** before mastering enterprise software development and CRM architecture. This rare first-principles foundation enables him to diagnose deep performance bottlenecks, design resilient decoupled architectures, and lead full-stack platform engineering teams with authentic technical authority.`,
+    followUps: [
+      "Tell me about his work at Directi",
+      "Tell me about Chandra Credit",
+      "Tell me about Infomatrix",
+      "What did Amit do at Corporate Genpact?"
+    ]
+  },
+
+  // 3. TARGET ROLE: HEAD OF PLATFORM ENGINEERING / CLOUD PLATFORMS
   {
     id: 'platform-leadership',
     keywords: [
@@ -82,11 +155,11 @@ const DOSSIER_ENTRIES: KnowledgeEntry[] = [
       "Tell me about CDK Global MyInstall",
       "Explore the sfdx-toolkit platform",
       "How does Amit handle team governance?",
-      "What certifications does Amit hold?"
+      "Tell me about his experience prior to Genpact"
     ]
   },
 
-  // 3. CDK GLOBAL (MYINSTALL)
+  // 4. CDK GLOBAL (MYINSTALL)
   {
     id: 'cdk',
     keywords: ['cdk', 'cdk global', 'myinstall', 'titan', 'titan dxp', 'automotive retail', 'dealer'],
@@ -118,7 +191,7 @@ const DOSSIER_ENTRIES: KnowledgeEntry[] = [
     ]
   },
 
-  // 4. SANTANDER / CATER ALLEN PROGRAMME RECOVERY
+  // 5. SANTANDER / CATER ALLEN PROGRAMME RECOVERY
   {
     id: 'santander',
     keywords: [
@@ -154,7 +227,7 @@ const DOSSIER_ENTRIES: KnowledgeEntry[] = [
     ]
   },
 
-  // 5. DANONE — SAP, MULESOFT & MCP AI
+  // 6. DANONE — SAP, MULESOFT & MCP AI
   {
     id: 'danone',
     keywords: ['danone', 'sap', 'mulesoft', 'sor', 'system of record', 'order assist', 'mcp', 'model context protocol'],
@@ -183,7 +256,7 @@ const DOSSIER_ENTRIES: KnowledgeEntry[] = [
     ]
   },
 
-  // 6. MBFS / FCA FINANCIAL REDRESS PLATFORM
+  // 7. MBFS / FCA FINANCIAL REDRESS PLATFORM
   {
     id: 'mbfs',
     keywords: [
@@ -218,7 +291,7 @@ const DOSSIER_ENTRIES: KnowledgeEntry[] = [
     ]
   },
 
-  // 7. CORPORATE GENPACT & ENTERPRISE GOVERNANCE
+  // 8. CORPORATE GENPACT & ENTERPRISE GOVERNANCE
   {
     id: 'genpact',
     keywords: [
@@ -249,46 +322,8 @@ Governed integration patterns and API contracts across a complex enterprise stac
 • Mentored technical leads, established architecture review communities, and instituted formal Architectural Decision Records (ADRs).`,
     followUps: [
       "What awards has Amit received at Genpact?",
-      "What did he do before Genpact?",
+      "Tell me about his experience prior to Genpact",
       "Tell me about his RFP wins"
-    ]
-  },
-
-  // 8. COMPLETE CAREER TIMELINE (2007 - PRESENT)
-  {
-    id: 'career-history',
-    keywords: [
-      'career', 'history', 'experience', 'jobs', 'companies', 'chandra credit',
-      'infomatrix', 'cirrologix', 'hcl', 'directi', 'spectrum infogain', 'timeline', 'years'
-    ],
-    title: 'Complete Chronological Career History (2007 – Present)',
-    summary: '18+ years progressive technical journey from Linux SysAdmin to Enterprise Platform Leader.',
-    content: `### Amit Bhardwaj — Full Chronological Career Timeline:
-
-1. **Genpact** | *Senior Manager & Solutions Architect* (2018 – Present, ~8 yrs)
-   • Enterprise platform transformations, EA governance (100+ projects, ~80 engineers), and client advisory across CDK, Santander, MBFS, Danone, and Bayer.
-
-2. **Chandra Credit Ltd.** | *Salesforce Architect & IT Systems Lead* (2017 – 2018)
-   • CRM implementation, automated underwriting workflows, and legacy database migration.
-
-3. **Infomatrix Inc.** | *Salesforce Architect* (2015 – 2017)
-   • Technical solution design, pre-sales architecture, ERP integrations, and consultant mentorship.
-
-4. **Cirrologix Pvt Ltd** | *Salesforce Consultant* (2014 – 2015)
-   • Apex blueprints, metadata deployments, integration workflows, and technical discovery.
-
-5. **HCL Technologies** | *Salesforce Consultant / Technical Engineer* (2013 – 2014)
-   • Apex development, batch processing, Visualforce, and REST/SOAP integrations in life sciences and financial services.
-
-6. **Directi** | *System Administrator* (2009 – 2010)
-   • Hardened Linux servers (CentOS, RedHat, Debian), BIND DNS, Apache, Postfix mail routing, and Bash/Perl automation with 99.9% uptime.
-
-7. **Spectrum Infogain Services** | *System Engineer* (2007 – 2009)
-   • Hardware diagnostics, motherboard assembly, RAID array storage, and local network switch routing.`,
-    followUps: [
-      "Tell me about his education and degrees",
-      "What certifications does he hold?",
-      "What awards has he won?"
     ]
   },
 
@@ -351,7 +386,7 @@ Governed integration patterns and API contracts across a complex enterprise stac
     followUps: [
       "Tell me about Cater Allen / Santander turnaround",
       "Why hire Amit as Head of Platform Engineering?",
-      "Explore his production projects"
+      "Tell me about his experience prior to Genpact"
     ]
   },
 
@@ -407,7 +442,6 @@ Governed integration patterns and API contracts across a complex enterprise stac
 • **Email**: [amit_bhardwaj@live.com](mailto:amit_bhardwaj@live.com)  
 • **LinkedIn**: [linkedin.com/in/salesforce-technical-architect](https://www.linkedin.com/in/salesforce-technical-architect/)  
 • **Personal Website**: [amitbhardwaj.co.uk](https://amitbhardwaj.co.uk)  
-• **Live Master Dossier**: [cv.amitbhardwaj.co.uk](https://cv.amitbhardwaj.co.uk/career/master_career_and_platform_engineering_dossier) *(Single Source of Truth, Auth: \`amit\` / \`Apple@123\`)*  
 • **GitHub**: [github.com/sfdcai](https://github.com/sfdcai)  
 • **Trailblazer**: [trailblazer.me/id/hiamitbhardwaj](https://trailblazer.me/id/hiamitbhardwaj)  
 • **Location**: London, United Kingdom (Full UK right to work / British citizen)  
@@ -415,17 +449,17 @@ Governed integration patterns and API contracts across a complex enterprise stac
 • **Availability**: Open to leadership interviews, executive consultations, and fractional architecture advisory.`,
     followUps: [
       "Why hire Amit as Head of Platform Engineering?",
-      "What is his experience with Genpact?",
-      "Explore his production projects"
+      "Tell me about his experience prior to Genpact",
+      "What is his experience with Genpact?"
     ]
   }
 ]
 
 const DEFAULT_SUGGESTIONS = [
+  "Tell me about his experience prior to Genpact",
   "Why hire Amit as Head of Platform Engineering?",
   "Tell me about CDK Global MyInstall",
-  "Explain the Santander / Cater Allen turnaround",
-  "What is Amit's experience with Corporate Genpact?"
+  "Explain the Santander / Cater Allen turnaround"
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -444,9 +478,10 @@ function findBestResponse(rawQuery: string): { text: string; chips?: string[] } 
   ]
   if (offTopicTriggers.some(t => query.includes(t))) {
     return {
-      text: `I am Amit Bhardwaj's specialized **Digital Twin AI**, designed specifically to provide comprehensive, verified information about Amit's **18+ years in Enterprise Platform Architecture, Platform Engineering, Cloud Infrastructure, and Technical Leadership**.
+      text: `I am Amit Bhardwaj's specialized **Digital Twin AI**, designed specifically to answer inquiries regarding Amit's **18+ years in Enterprise Platform Architecture, Platform Engineering, Cloud Infrastructure, and Technical Leadership**.
 
 Would you like to explore:
+• His deep **11-year career prior to Genpact** (Chandra Credit, Infomatrix, Cirrologix, HCL, Directi, Spectrum Infogain)
 • His platform engineering leadership at **CDK Global** or **Cox Automotive alignment**
 • His crisis recovery at **Santander / Cater Allen** (Red-to-Green turnaround)
 • His enterprise governance at **Corporate Genpact** (~80 engineers, 100+ projects)
@@ -455,7 +490,24 @@ Would you like to explore:
     }
   }
 
-  // Score each dossier entry based on keyword hits and exact phrase matching
+  // 1. HIGH-PRIORITY INTENT: Prior to Genpact / Early Career / Pre-Genpact
+  const isPriorToGenpact = (
+    (query.includes('prior') || query.includes('before') || query.includes('pre-') || query.includes('early') || query.includes('start') || query.includes('background') || query.includes('history')) &&
+    query.includes('genpact')
+  ) || query.includes('before genpact') || query.includes('prior genpact') || query.includes('prior to genpact') ||
+     query.includes('before 2018') || query.includes('early career') || query.includes('earlier career') ||
+     query.includes('chandra') || query.includes('infomatrix') || query.includes('cirrologix') ||
+     query.includes('directi') || query.includes('spectrum infogain') || query.includes('sysadmin') || query.includes('system admin')
+
+  if (isPriorToGenpact) {
+    const priorEntry = DOSSIER_ENTRIES.find(e => e.id === 'prior-to-genpact')!
+    return {
+      text: priorEntry.content,
+      chips: priorEntry.followUps
+    }
+  }
+
+  // 2. Score each dossier entry based on keyword hits and exact phrase matching
   let bestEntry: KnowledgeEntry | null = null
   let maxScore = 0
 
@@ -505,9 +557,9 @@ Amit has spent over 8 years as **Senior Manager** at Genpact, leading architectu
 • **Crisis Turnaround**: Proven ability to deploy into distressed, high-friction client accounts (e.g., Santander Cater Allen Phase 2, Bayer) to resolve data impasses and restore delivery trust.
 • **Mentorship**: Mentored tech leads and instituted Architectural Decision Records (ADRs) to guarantee consistency across teams.`,
       chips: [
+        "Tell me about his experience prior to Genpact",
         "Tell me about CDK Global MyInstall",
-        "Explain the Santander / Cater Allen turnaround",
-        "What awards has Amit received?"
+        "Explain the Santander / Cater Allen turnaround"
       ]
     }
   }
@@ -523,9 +575,10 @@ Amit has spent over 8 years as **Senior Manager** at Genpact, leading architectu
   // Default Fallback: Rich Executive Overview with actionable navigation
   return {
     text: `### Amit Bhardwaj — Digital Twin Assistant
-I have direct, full access to **Amit's Master Career & Platform Engineering Dossier** (his authoritative single source of truth).
+I have direct, full access to **Amit's verified career history and architecture track record**.
 
 Here are key areas I can answer in complete detail for recruiters and engineering leaders:
+• **[Experience Prior to Genpact (2007–2018)](#)**: 11-year foundation across Chandra Credit, Infomatrix, Cirrologix, HCL, Directi (Linux SysAdmin), and Spectrum Infogain (Systems Engineering).
 • **[CDK Global (MyInstall)](#)**: Reusable platform capability model, Titan DXP technical evaluation, automotive retail.
 • **[Santander / Cater Allen](#)**: Mission-critical Phase 2 digital onboarding turnaround from "Red" to "Green", OmniStudio journeys, and 75% faster CI/CD.
 • **[MBFS / FCA](#)**: Regulatory customer redress platform, passwordless IDV architecture, Person Account federation, and >5k daily email ingestion.
@@ -550,7 +603,7 @@ export default function AmitAiChatbot() {
       sender: 'bot',
       text: `👋 **Welcome! I am Amit Bhardwaj's Digital Twin AI.**
 
-I refer directly to Amit's **Master Career & Platform Engineering Dossier** — covering his 18+ years across **Platform Engineering, Enterprise Architecture, Genpact Leadership (~80 engineers, 100+ projects), CDK Global, Santander, Danone, MBFS, and live production systems**.
+I am grounded in Amit's **verified professional history** — covering his 18+ years across **Platform Engineering, Enterprise Architecture, Genpact Leadership (~80 engineers, 100+ projects), his deep 11-year journey prior to Genpact (Chandra Credit, Infomatrix, Cirrologix, HCL, Directi, Spectrum), CDK Global, Santander, Danone, MBFS, and live production systems**.
 
 How can I assist your review or recruitment evaluation today?`,
       timestamp: 'Just now',
@@ -597,7 +650,7 @@ How can I assist your review or recruitment evaluation today?`,
     if (!textToSend) setInputValue('')
     setIsTyping(true)
 
-    // Realistic human/agent cadence (350ms - 500ms)
+    // Realistic cadence (350ms - 500ms)
     setTimeout(() => {
       const response = findBestResponse(text)
       const botMsg: Message = {
@@ -678,24 +731,15 @@ How can I assist your review or recruitment evaluation today?`,
                   <div className="flex items-center gap-1.5">
                     <h3 className="font-semibold text-sm text-foreground">Amit's Digital Twin</h3>
                     <span className="px-1.5 py-0.5 text-[10px] uppercase font-bold tracking-wider rounded bg-primary/20 text-primary border border-primary/30">
-                      Master Dossier
+                      AI Verified
                     </span>
                   </div>
                   <p className="text-xs text-muted-foreground flex items-center gap-1">
-                    <ShieldCheck className="w-3 h-3 text-emerald-500 inline" /> Verified 18+ yr Career & Architecture Facts
+                    <ShieldCheck className="w-3 h-3 text-emerald-500 inline" /> Grounded in Verified Professional History
                   </p>
                 </div>
               </div>
               <div className="flex items-center gap-1">
-                <a
-                  href="https://cv.amitbhardwaj.co.uk/career/master_career_and_platform_engineering_dossier"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/80 transition-colors"
-                  title="View Living Master Dossier (Wiki)"
-                >
-                  <BookOpen className="w-4 h-4" />
-                </a>
                 <button
                   onClick={() => setIsOpen(false)}
                   className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/80 transition-colors cursor-pointer"
@@ -747,6 +791,11 @@ How can I assist your review or recruitment evaluation today?`,
                                 {children}
                               </h3>
                             ),
+                            h4: ({ children }) => (
+                              <h4 className="font-semibold text-foreground text-xs mt-2.5 mb-1 text-primary">
+                                {children}
+                              </h4>
+                            ),
                             p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
                             ul: ({ children }) => <ul className="list-disc pl-4 space-y-1 mb-2">{children}</ul>,
                             ol: ({ children }) => <ol className="list-decimal pl-4 space-y-1 mb-2">{children}</ol>,
@@ -787,7 +836,7 @@ How can I assist your review or recruitment evaluation today?`,
                   <div className="w-2 h-2 rounded-full bg-primary animate-bounce [animation-delay:-0.3s]" />
                   <div className="w-2 h-2 rounded-full bg-primary animate-bounce [animation-delay:-0.15s]" />
                   <div className="w-2 h-2 rounded-full bg-primary animate-bounce" />
-                  <span className="text-[11px] text-muted-foreground ml-1">Consulting Master Dossier...</span>
+                  <span className="text-[11px] text-muted-foreground ml-1">Consulting career archives...</span>
                 </div>
               )}
               <div ref={messagesEndRef} />
@@ -801,7 +850,7 @@ How can I assist your review or recruitment evaluation today?`,
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   onKeyDown={handleKeyDown}
-                  placeholder="Ask about CDK, Santander, Genpact, platform engineering..."
+                  placeholder="Ask about CDK, Santander, prior experience, platform leadership..."
                   className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground/70 focus:outline-hidden"
                 />
                 <button
@@ -815,14 +864,9 @@ How can I assist your review or recruitment evaluation today?`,
               </div>
               <div className="flex items-center justify-between text-[10px] text-muted-foreground/70 mt-1.5 px-1">
                 <span>Direct inquiry assistant for Amit Bhardwaj</span>
-                <a
-                  href="https://cv.amitbhardwaj.co.uk/career/master_career_and_platform_engineering_dossier"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 hover:text-primary transition-colors"
-                >
-                  <Server className="w-2.5 h-2.5 text-primary" /> Master Dossier Verified
-                </a>
+                <span className="flex items-center gap-1 text-muted-foreground/80">
+                  <Server className="w-2.5 h-2.5 text-primary" /> Private Verified Architecture Base
+                </span>
               </div>
             </div>
           </motion.div>
