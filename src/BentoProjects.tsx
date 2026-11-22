@@ -82,7 +82,7 @@ export default function BentoProjects() {
                 : 'text-muted-foreground hover:text-foreground hover:bg-muted/40'
             }`}
           >
-            All Work (8)
+            All Work (9)
           </button>
           <button
             onClick={() => setFilter('independent')}
@@ -93,7 +93,7 @@ export default function BentoProjects() {
             }`}
           >
             <Rocket className="w-3.5 h-3.5" />
-            Independent Ventures & OSS (5)
+            Independent Ventures & OSS (6)
           </button>
           <button
             onClick={() => setFilter('enterprise')}
@@ -124,7 +124,7 @@ export default function BentoProjects() {
                 </p>
               </div>
               <span className="text-[11px] font-mono font-medium px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 self-start sm:self-auto shrink-0">
-                5 Production Systems
+                6 Production Systems & AI Platforms
               </span>
             </div>
 
@@ -476,6 +476,68 @@ export default function BentoProjects() {
                     className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary/80 shrink-0"
                   >
                     Try Live <ChevronRight className="w-3.5 h-3.5" />
+                  </a>
+                </div>
+              </SpotlightCard>
+
+              {/* 6. Portfolio Edge AI Digital Twin (Wide: 2 cols) */}
+              <SpotlightCard className="md:col-span-2 p-6 flex flex-col justify-between">
+                <div>
+                  <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
+                    <span className="px-2.5 py-0.5 bg-cyan-500/10 text-cyan-400 text-xs font-semibold rounded-full border border-cyan-500/20 flex items-center gap-1.5">
+                      <Sparkles className="w-3 h-3 text-cyan-400" />
+                      Independent Venture · Serverless Edge Architecture
+                    </span>
+                    <span className="text-xs font-mono text-emerald-400">Zero Cloud Cold-Start · TTFT &lt; 450ms</span>
+                  </div>
+
+                  <h3 className="font-display text-2xl font-bold group-hover:text-primary transition-colors mb-2">
+                    Portfolio Edge AI Digital Twin & High-Performance Architecture
+                  </h3>
+
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                    The very production application you are experiencing right now. Engineered as an edge-native portfolio with React 19, 22-page pre-rendered static SSR, and an automated multi-engine AI streaming backend (Cloudflare Workers AI, Google Gemini 2.5 Flash, and Groq Qwen 2.5 32B fallback).
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-3.5 rounded-xl bg-background/80 border border-border font-mono text-xs mb-4">
+                    <div>
+                      <span className="text-[10px] text-muted-foreground uppercase block">Hosting & CDN</span>
+                      <span className="text-foreground font-bold">Cloudflare Pages Edge</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-muted-foreground uppercase block">AI Fallback Mesh</span>
+                      <span className="text-cyan-400 font-bold">Workers AI + Gemini + Groq</span>
+                    </div>
+                    <div>
+                      <span className="text-[10px] text-muted-foreground uppercase block">Grounding Mode</span>
+                      <span className="text-emerald-400 font-bold">Strict RAG · 0 Hallucination</span>
+                    </div>
+                  </div>
+
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {['React 19', 'Cloudflare Pages', 'Workers AI', 'Gemini 2.5 Flash', 'Groq', 'RAG Vector Grounding', 'TailwindCSS'].map((t) => (
+                      <span key={t} className="px-2.5 py-1 rounded text-xs bg-muted text-muted-foreground">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-3 border-t border-border/40 flex items-center justify-between gap-2">
+                  <button
+                    onClick={() => triggerChat('How was this portfolio website and its multi-engine AI digital twin built?')}
+                    className="text-xs text-primary hover:underline flex items-center gap-1.5 cursor-pointer"
+                  >
+                    <Bot className="w-3.5 h-3.5" />
+                    Ask AI: How does this portfolio work?
+                  </button>
+                  <a
+                    href="https://github.com/sfdcai/portfolio"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-xs font-semibold text-primary hover:text-primary/80"
+                  >
+                    View GitHub Repo <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 </div>
               </SpotlightCard>

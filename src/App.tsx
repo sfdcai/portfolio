@@ -10,6 +10,8 @@ import LiveArchitectureFlow from './LiveArchitectureFlow'
 import AmitAiChatbot from './AmitAiChatbot'
 import HeroChatInput from './HeroChatInput'
 import ExecutiveAwardsBanner from './ExecutiveAwardsBanner'
+import KeyMetricsBar from './KeyMetricsBar'
+import ArchitectureShowcase from './ArchitectureShowcase'
 import BentoProjects from './BentoProjects'
 
 
@@ -1549,8 +1551,14 @@ function App() {
       {/* Executive Honors & Awards Trust Banner - Above-the-fold social proof */}
       <ExecutiveAwardsBanner />
 
+      {/* Key Architecture Metrics Bar - Hard numbers & scale */}
+      <KeyMetricsBar />
+
       {/* Summary - Con storytelling integrado */}
       <StorySection t={t} />
+
+      {/* Production Architecture Diagrams & Topologies Showcase */}
+      <ArchitectureShowcase />
 
       {/* Experience - Con preámbulo de competencias */}
       <section id="experience" className="py-16 md:py-24 bg-muted/30" style={{ contentVisibility: 'auto', containIntrinsicSize: 'auto 2000px' }}>
