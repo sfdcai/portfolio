@@ -12,8 +12,8 @@ interface Message {
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// COMPREHENSIVE PRIVATE DOSSIER KNOWLEDGE BASE (SANITIZED EXECUTIVE EDITION)
-// Strict Enterprise NDA Compliant — References clients by industry aliases
+// CONVERSATIONAL KNOWLEDGE BASE & NATURAL DIALOGUE ENGINE
+// Strict Enterprise NDA Compliant — Contextual, natural, and human-toned
 // ─────────────────────────────────────────────────────────────────────────────
 
 interface KnowledgeEntry {
@@ -29,54 +29,53 @@ const DOSSIER_ENTRIES: KnowledgeEntry[] = [
   // 1. EXECUTIVE PROFILE & POSITIONING
   {
     id: 'profile',
-    keywords: ['about', 'who is', 'overview', 'summary', 'profile', 'bio', 'background', 'amit'],
+    keywords: ['about', 'who is', 'overview', 'summary', 'profile', 'bio', 'background', 'amit', 'tell me about him'],
     title: 'Executive Biography & Professional Positioning',
     summary: 'Enterprise Platform & Engineering Leader with 18+ years of experience and 8 years as Senior Manager at Genpact.',
-    content: `**Amit Bhardwaj** is an **Enterprise Platform Architect and Systems Engineering Leader** with over 18 years of progressive technical experience, including approximately eight years as a **Senior Manager & Solutions Architect** at **Genpact** in London.
+    content: `Amit Bhardwaj is an **Enterprise Platform Architect and Systems Engineering Leader** based in London with over 18 years of progressive technical experience, including approximately 8 years as a **Senior Manager & Solutions Architect** at **Genpact**.
 
-### Professional Positioning
-**Enterprise Platform & Engineering Leader | Enterprise Architect | Cloud & Integration Architecture | Technology Governance & Strategy**
+What truly sets Amit apart is his rare **"metal-to-cloud" foundation**: he began his career at the physical hardware and Linux systems level before mastering enterprise cloud platforms, large-scale systems integration (Salesforce, SAP S/4HANA, AWS), and technology governance across global delivery organizations of up to **~80 engineers**.
 
-### Core Capabilities:
-• **Strategic Enterprise Governance**: Directing technology strategy, chairing Architecture Review Boards (EAB) & InfoSec design reviews, governing 100+ portfolio initiatives, and guiding engineering delivery organizations of ~80 resources.
-• **First-Principles Systems Engineering**: Hands-on architecture and execution across AWS EC2 cloud infrastructure, zero-trust edge networking (Cloudflare Tunnels), custom Internal Developer Platforms ([sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk)), bare-metal Linux hypervisors (Proxmox VE / Linux 7.0 kernel), and agentic AI runtimes (MCP, local quantized SLMs).
-• **Enterprise Integrations**: Decoupled multi-platform integration bridging Salesforce, SAP S/4HANA ERP, MuleSoft, AWS, and bespoke event streams while enforcing strict System-of-Record (SoR) boundaries.
-• **Crisis Recovery**: Proven track record of turning distressed, multi-million-pound programs from Red to Green (Major UK Private Bank onboarding turnaround, high-stakes global Life Sciences deployments).
+### Key Highlights of His Career:
+• **Strategic Governance & Scale**: Chairs Architecture Review Boards (EAB) and InfoSec design reviews, governing 100+ business initiatives across multi-disciplinary engineering squads.
+• **High-Stakes Crisis Turnarounds**: Proven track record stepping into distressed enterprise programs in RED status and steering them to GREEN (such as turning around commercial onboarding at a major UK private bank in 6 months).
+• **Decoupled Architecture & Integrations**: Decouples complex multi-cloud ecosystems bridging Salesforce, SAP S/4HANA ERP, MuleSoft, and AWS while strictly protecting the System-of-Record (SoR).
+• **First-Principles Systems Engineering**: Active builder who designs and operates production platforms—including [sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk) (Internal Developer Platform), [Rescuematic](https://rescuematic.co.uk) (IoT microservices on AWS EC2 with MQTTS TLS), and bare-metal Proxmox hypervisors.
 
-📍 **Location**: London, United Kingdom | Open to senior technology leadership, Head of Platform Engineering, Director of Engineering, and Chief Architect appointments.`,
+Amit is based in London (British Citizen) and is open to conversations regarding **Head of Platform Engineering**, **Enterprise Architect**, **Director of Engineering**, and **Technology Principal** appointments.
+
+Would you like to explore his crisis turnaround experience, his pre-sales RFP defenses, or his 11-year journey before Genpact?`,
     followUps: [
       "Tell me about his pre-sales & RFP experience",
-      "What cross-industry experience does Amit have?",
+      "Explain the private banking onboarding turnaround",
       "Why hire Amit as Head of Platform Engineering?",
       "Tell me about his experience prior to Genpact"
     ]
   },
 
-  // 1b. CROSS-INDUSTRY MATRIX & ENTERPRISE PORTFOLIO (SANITIZED & NDA-COMPLIANT)
+  // 1b. CROSS-INDUSTRY MATRIX & ENTERPRISE PORTFOLIO
   {
     id: 'industry-matrix',
     keywords: ['industry', 'industries', 'sector', 'sectors', 'vertical', 'verticals', 'domains', 'cross-industry', 'portfolio', 'nda', 'sanitized'],
-    title: 'Enterprise Portfolio by Industry Sector (Sanitized & NDA-Protected)',
+    title: 'Enterprise Portfolio by Industry Sector',
     summary: 'Executive track record mapped by industry vertical: Automotive Retail SaaS, Private Banking, Captive Finance, FMCG, Life Sciences, and Systems Infrastructure.',
-    content: `### Cross-Industry Architecture & Domain Portfolio
-To respect strict enterprise non-disclosure agreements (NDAs) while demonstrating verified delivery metrics, Amit's portfolio is structured by **Industry Sector**, **Architectural Scope**, and **Business Impact**:
+    content: `Amit has delivered mission-critical architectures across several highly regulated and high-throughput industry sectors:
 
-| Industry Sector | Enterprise Role | Scale & Architectural Highlights | Key Outcomes & Delivery Metrics |
-| :--- | :--- | :--- | :--- |
-| **Automotive Retail Technology & SaaS** | Enterprise Platform Architect | Metadata-driven dealership provisioning engine; automated rollback pipelines | **65% reduction** in dealership onboarding lead time; zero-downtime cutovers across **10,000+ car dealerships**. |
-| **Private Banking & Wealth Management** | Solutions Architect & Turnaround Lead | Intermediary digital onboarding portal; micro-frontends; asynchronous KYC/document validation | Rescued distressed programme from **RED to GREEN in 6 months**; onboarding cycle slashed from **36 days to 10 days**; fincrime escalations reduced **76% → 1%**; CSAT **4.9/5**. |
-| **Automotive Captive Finance & Consumer Credit** | Platform Architect & Regulatory Tech Lead | High-throughput event ingestion; immutable audit calculation engine; automated restitution | **100% FCA regulatory compliance** delivered to statutory deadline; processed **1.03M+ finance contracts** with zero discrepancy. |
-| **Fast-Moving Consumer Goods (FMCG) & Supply Chain** | Enterprise Integration Architect | Decoupled front-end orchestration layer bridging cloud CRM with SAP S/4HANA ERP; automated dispute resolution | Launched live Jan 2026; order dispute resolution cycle time cut by **50%**; eliminated manual swivel-chair operations. |
-| **Life Sciences, AgTech & Healthcare Systems** | Enterprise Solutions Architect | Regulated commercial CRM; GxP-aligned audit trails; high-volume async processing pipelines | Successfully secured multi-million-pound digital transformation pursuits; deployed compliant field systems across international markets. |
-| **Commercial Credit & Alternative Lending** | Platform Architect & IT Systems Lead | End-to-end commercial loan origination; risk scoring algorithms; legacy on-prem relational DB migration | Commercial loan underwriting turnaround cut from **14 days to <48 hours**; established modern cloud compliance posture. |
-| **Enterprise Internet Infrastructure & Systems** | Linux Systems & Network Administrator | Production Linux server fleets; authoritative BIND DNS clusters; Postfix/Exim mail routers | Maintained **99.9% fleet uptime**; authored sysadmin Bash/Perl automations reducing manual maintenance overhead by **40%**. |
+• **Private Banking & Wealth Management**: Rescued a distressed commercial onboarding program for a major UK private bank from RED to GREEN in 6 months, cutting account opening cycle times from 36 days to 10 days and reducing fincrime escalations from 76% to under 1% (CSAT 4.9/5).
+• **Automotive Captive Finance**: Architected an FCA regulatory redress calculation engine reconciling 1.03M+ vehicle financing agreements with zero discrepancy ahead of statutory deadlines.
+• **Automotive Retail Technology & SaaS**: Engineered a metadata-driven provisioning engine for a Tier-1 automotive software provider, slashing dealership onboarding lead times across 10,000+ car dealerships by 65%.
+• **FMCG & Supply Chain**: Led the integration architecture for CORA (live Jan 2026) at a Fortune 500 food and consumer goods enterprise, cutting order dispute cycles by 50% while keeping SAP S/4HANA as the decoupled System of Record via MuleSoft.
+• **Life Sciences & Clean Energy**: Led pre-sales architecture defenses and technical discovery workshops for multi-million-pound bids, including a 24-hour CI/CD deployment rescue for a global wind energy platform.
+• **Core Internet Infrastructure & Systems**: Administered production Linux fleets, authoritative BIND DNS clusters, and Postfix/Exim mail routers with 99.9% uptime at Directi.
 
-*Note: Enterprise client identities are referenced via approved industry aliases to uphold client confidentiality.*`,
+*Note: In accordance with professional non-disclosure agreements, client engagements are referenced using industry sector descriptions.*
+
+Which sector would you like to dive deeper into?`,
     followUps: [
-      "Tell me about his pre-sales & RFP experience",
       "Tell me about his banking & wealth management experience",
-      "Tell me about his automotive domain work",
-      "Explain the FMCG / SAP S/4HANA integration"
+      "What automotive work has he done?",
+      "Explain the FMCG / SAP S/4HANA integration",
+      "Tell me about his pre-sales & RFP experience"
     ]
   },
 
@@ -89,23 +88,14 @@ To respect strict enterprise non-disclosure agreements (NDAs) while demonstratin
     ],
     title: 'Enterprise Pre-Sales Architecture, RFP Defenses & Commercial Pursuits',
     summary: 'Technical discovery, multi-million enterprise RFP defenses, vendor platform evaluations, and winning competitive client bids.',
-    content: `### Pre-Sales Architecture, RFP Strategy & Commercial Pursuits
-Amit brings extensive hands-on experience leading pre-sales architecture, technical discovery, and RFP solutions across multi-million-pound enterprise bids:
+    content: `Amit brings extensive hands-on experience leading pre-sales technical discovery, solution architecture, and high-stakes RFP defenses:
 
-### 1. Enterprise Pre-Sales Blueprints & RFPs (Genpact & Infomatrix)
-• **Technical Strategy & Discovery**: Partnered with enterprise client partners and commercial leads to formulate win themes, translate business challenges into technical roadmaps, and define target-state architecture blueprints for global RFPs.
-• **Effort Estimation & Delivery Models**: Calculated granular effort estimations, squad sizing, license models, and delivery governance frameworks across multi-region transformation bids.
+• **Winning Enterprise RFPs**: At both Genpact and Infomatrix, Amit partnered closely with commercial directors and client partners to translate complex business challenges into target-state architectural blueprints, compute delivery squad sizing, and author winning multi-million-pound proposals.
+• **CTO-Level Pursuit Defenses**: He has led live technical architecture defense workshops before prospective client CTOs and technology boards across Life Sciences (global order-to-cash), Clean Energy & Utilities (solar technology platform), and Scientific Publishing.
+• **Platform & Vendor Evaluations**: Evaluated prospective enterprise software platforms, analyzing API extensibility, security, multi-tenancy, and total cost of ownership (such as Titan DXP for a Tier-1 automotive SaaS provider).
+• **Rapid Proof-of-Concepts (PoCs)**: He frequently engineers working PoCs—such as decoupled ERP integration patterns and agentic AI workflows—to demonstrate feasibility and give client leadership complete confidence before contracts are signed.
 
-### 2. High-Stakes Architecture Defense Workshops
-• **Life Sciences & Healthcare**: Led technical architecture defense workshops for global digital transformation pursuits (e.g. order-to-cash global blueprints).
-• **Clean Energy & Sustainability**: Architected solution blueprints for major clean energy RFPs (e.g. solar technology platform review).
-• **Publishing & Information Services**: Spearheaded delivery-quality turnaround architectures for major international scientific publishers.
-
-### 3. Digital Platform & Vendor Technical Evaluations
-• **Platform Capability Evaluation**: Spearheaded the architectural evaluation of prospective digital experience platforms for a Tier-1 Automotive Retail SaaS provider, analyzing API extensibility, security posture, multitenancy, and total cost of ownership (TCO).
-
-### 4. Rapid Proof-of-Concept (PoC) Engineering
-• Proven ability to rapidly prototype complex integrations (e.g. SAP S/4HANA decoupled SoR patterns and Model Context Protocol agentic front-ends) to demonstrate technical feasibility and win client confidence.`,
+Would you like to hear about a specific bid defense or discuss how he approaches delivery sizing?`,
     followUps: [
       "Explain the private banking onboarding turnaround",
       "What automotive work has he done?",
@@ -113,29 +103,27 @@ Amit brings extensive hands-on experience leading pre-sales architecture, techni
     ]
   },
 
-  // 1d. BANKING & WEALTH MANAGEMENT DEEP DIVE
+  // 1d. BANKING & WEALTH MANAGEMENT
   {
     id: 'banking-fintech',
-    keywords: ['banking', 'private banking', 'fintech', 'wealth management', 'private bank', 'fincrime', 'aml', 'kyc', 'signatory mandate'],
+    keywords: ['banking', 'private banking', 'fintech', 'wealth management', 'private bank', 'fincrime', 'aml', 'kyc', 'signatory mandate', 'cater allen', 'santander', 'milky way'],
     title: 'Financial Services, Private Banking & Wealth Management Experience',
     summary: 'Turnaround of major UK private bank onboarding portal (36 to 10 days, fincrime 76% to 1%), Milky Way 2.0 blueprint, and commercial lending underwriting.',
-    content: `### Financial Services, Private Banking & FinTech Architecture
-Amit brings extensive technical architecture experience across regulated banking, wealth management, and commercial lending:
+    content: `Amit has significant experience across regulated banking, wealth management, and commercial lending.
 
-### 1. Major UK Private Bank & Wealth Management Turnaround
-• **Turnaround Leadership**: Stepped into a distressed multi-million-pound onboarding transformation in RED status, aligning business, financial crime risk, and technical teams to achieve GREEN status in 6 months.
-• **Onboarding Lead Time Slashed (36 → 10 Days)**: Re-architected intermediary onboarding journeys with micro-frontends and Salesforce OmniStudio, cutting commercial account opening lead time by **72%**.
-• **Compliance & Financial Crime Optimization**: Overhauled validation and ingestion rules, reducing false-positive compliance escalations from **76% to under 1%**.
-• **Client CSAT 4.9/5**: Intermediary broker satisfaction reached an unprecedented 4.9/5.
-• **Milky Way 2.0 Signatory Mandate Blueprint**: Engineered the target-state architectural blueprint for complex corporate and trust account opening with multi-party digital signing.
+His most notable delivery was leading the crisis turnaround of a mission-critical digital onboarding program for a **Major UK Private Banking & Wealth Management Institution**:
 
-### 2. Specialist Commercial Credit & Alternative Lending (Chandra Credit Ltd.)
-• **Loan Underwriting Modernization**: Architected an end-to-end cloud loan origination and risk-scoring platform.
-• **Turnaround from 14 Days to <48 Hours**: Slashed commercial credit underwriting approval cycles by 85% with automated credit decision algorithms.
-• **Legacy Migration with Field-Level Encryption**: Migrated on-prem credit databases into cloud repositories with strict field-level encryption for financial records.`,
+• **The Red-to-Green Recovery**: Stepped into a distressed multi-million-pound commercial onboarding program that was in RED status with significant stakeholder friction. Over 6 months, he aligned technical, operations, and financial crime risk teams, bringing the program to GREEN status.
+• **72% Faster Account Opening**: Re-architected intermediary broker journeys using micro-frontends and Salesforce OmniStudio, slashing commercial account opening times from 36 days down to just 10 days.
+• **Compliance & Fincrime Precision**: Overhauled data validation rules, reducing false-positive compliance escalations from 76% to under 1%, which drove broker CSAT to a record 4.9/5.
+• **Milky Way 2.0 Blueprint**: Authored the target-state architectural blueprint for complex corporate and trust account opening with multi-party digital signing.
+
+Earlier in his career, he also architected the cloud credit origination platform for Chandra Credit, modernizing risk-scoring workflows and cutting loan approval times from 14 days to under 48 hours.
+
+Would you like to explore his regulatory redress work in automotive finance, or his pre-sales architecture experience?`,
     followUps: [
       "Tell me about his pre-sales & RFP experience",
-      "Tell me about his automotive industry experience",
+      "What automotive work has he done?",
       "Tell me about his experience prior to Genpact"
     ]
   },
@@ -143,23 +131,21 @@ Amit brings extensive technical architecture experience across regulated banking
   // 1e. AUTOMOTIVE DOMAIN DEEP DIVE
   {
     id: 'automotive-domain',
-    keywords: ['automotive', 'automotive industry', 'dealership', 'dealer', 'car retail', 'automotive retail', 'captive finance', 'dms'],
+    keywords: ['automotive', 'automotive industry', 'dealership', 'dealer', 'car retail', 'automotive retail', 'captive finance', 'dms', 'cdk', 'mbfs', 'fca redress'],
     title: 'Automotive Industry Expertise — Retail SaaS & Captive Finance',
     summary: 'Dealership SaaS provisioning across 10,000+ rooftops and 1.03M+ agreement FCA redress platform.',
-    content: `### Automotive Industry Architecture Track Record
-Amit's automotive experience spans both **retail dealership technology SaaS** and **automotive captive finance & consumer credit**:
+    content: `Amit's automotive experience spans two very distinct, high-impact areas: **dealership technology SaaS** and **captive automotive finance**:
 
-### 1. Tier-1 Automotive Retail Technology & SaaS Provider
-• **Scope**: Dealership software deployment across **10,000+ automotive rooftops** in North America.
-• **Platform Capability Model**: Championed reusable provisioning components over one-off dealer scripts, eliminating configuration drift.
-• **65% Lead Time Reduction**: Cut dealership software installation lead time from days to under 3 hours with automated rollback safeguards.
-• **Platform Evaluation**: Led architectural assessment of prospective digital experience platforms for Phase 3 integration.
+1. **Automotive Retail Technology & SaaS (10,000+ Dealerships):**
+   • For a Tier-1 automotive software provider, he engineered a reusable platform provisioning engine that replaced one-off dealer scripts, cutting dealership software installation lead times by **65%** with automated rollback safeguards.
+   • He also led the architectural evaluation of prospective digital experience platforms (Titan DXP) for Phase 3 integration.
 
-### 2. Premier Automotive Captive Finance & Consumer Credit Provider
-• **Scope**: High-profile FCA regulatory redress platform reconciling **1.03 Million+ vehicle financing agreements**.
-• **Statutory Compliance**: Delivered 100% compliant calculation engine ahead of statutory deadlines with zero calculation discrepancies.
-• **Passwordless Customer Verification**: Engineered 3-attribute tokenized identity verification (Agreement No, Postcode, Surname) without intrusive CAPTCHA barriers.
-• **Identity Federation**: Mapped single Business Partner IDs (BPID) across multiple Person Accounts and vehicle agreements.`,
+2. **Automotive Captive Finance & Regulatory Redress (1.03M Agreements):**
+   • For a premier global automotive captive finance provider, he architected an FCA regulatory redress calculation engine delivered ahead of statutory enforcement cutoffs.
+   • Reconciled **1.03 million+ vehicle financing agreements** with zero calculation discrepancies.
+   • Engineered a custom passwordless 3-attribute tokenized identity verification system (Agreement Number, Postcode, Surname) without intrusive CAPTCHA barriers, validated by a 41-scenario automated UAT suite.
+
+Are you interested in hearing more about the dealership provisioning engine or the regulatory redress platform?`,
     followUps: [
       "Tell me about his pre-sales & RFP experience",
       "Tell me about his banking & wealth management experience",
@@ -167,88 +153,52 @@ Amit's automotive experience spans both **retail dealership technology SaaS** an
     ]
   },
 
-  // 1f. FMCG & SUPPLY CHAIN DEEP DIVE
+  // 1f. FMCG & SUPPLY CHAIN
   {
     id: 'fmcg-supply-chain',
-    keywords: ['fmcg', 'fmcs', 'fmc', 'supply chain', 'consumer goods', 'sap s/4hana', 'order assist', 'food and beverage', 'order-to-cash'],
+    keywords: ['fmcg', 'fmcs', 'fmc', 'supply chain', 'consumer goods', 'sap s/4hana', 'sap', 'order assist', 'food and beverage', 'order-to-cash', 'danone', 'cora'],
     title: 'FMCG, Supply Chain & Decoupled ERP Architecture',
     summary: 'Global Fortune 500 consumer goods order assist (CORA), live Jan 2026, cutting dispute resolution time by 50% without corrupting SAP SoR.',
-    content: `### FMCG, Supply Chain & Enterprise ERP Architecture
-**Enterprise NDA Alias**: *Global Fortune 500 Consumer Goods & Food Conglomerate*  
-**Programme**: CORA (Customer Order Resolution Assist)  
-**Status**: Live in production (January 2026)
+    content: `Yes, Amit has extensive FMCG and enterprise supply chain experience! Most recently, he served as Enterprise Integration Architect for a major digital transformation program (CORA) for a **Global Fortune 500 Consumer Goods & Food Conglomerate**, which went live in production in January 2026.
 
-### Key Architectural Contributions:
-1. **Decoupled Architecture with Strict SAP S/4HANA System of Record (SoR)**:
-   • Designed an event-driven architecture where **SAP S/4HANA ERP** remains the immutable single source of truth for pricing, billing, and inventory.
-   • Used Salesforce Service Cloud purely as the engagement and case-management tier, synchronizing updates via **MuleSoft** without duplicating transactional logic in CRM.
+Here are the key problems he solved:
+• **Decoupled Architecture with SAP S/4HANA**: The primary architectural challenge was ensuring SAP S/4HANA remained the immutable System of Record (SoR) for pricing, billing, and deductions. Rather than replicating complex ERP logic inside the CRM, he designed an event-driven integration layer via MuleSoft so Salesforce acted purely as the engagement and case-resolution tier.
+• **50% Faster Dispute Resolution**: By automating reconciliation for shipping variances, pricing disputes, and deductions, the team cut average dispute cycle times in half across North American customer operations.
+• **Model Context Protocol (MCP) Exploration**: He also led a proof-of-concept exploring how agentic AI interfaces using MCP could safely query orders and initiate dispute resolutions through secure APIs.
 
-2. **50% Reduction in Order Dispute Cycle Time**:
-   • Streamlined order exception handling across North American customer operations, cutting average dispute resolution times in half.
-   • Automated reconciliation of shipping variances, pricing deductions, and carrier transit milestones.
-
-3. **Model Context Protocol (MCP) Front-End Exploration**:
-   • Architected a proof-of-concept utilizing **Model Context Protocol (MCP)** to explore intelligent agentic interfaces for reading and updating orders through secure APIs, demonstrating potential to decouple service teams from expensive seat licensing.`,
+Would you like to explore how this compares to his work in automotive retail or private banking?`,
     followUps: [
-      "What cross-industry experience does Amit have?",
-      "Tell me about his pre-sales & RFP experience",
-      "What is his experience with Genpact?"
+      "Tell me about his automotive retail experience",
+      "Explain the private banking onboarding turnaround",
+      "Tell me about his pre-sales & RFP experience"
     ]
   },
 
-  // 2. OVERALL JOURNEY PRIOR TO GENPACT (OVERVIEW 2007 - 2018)
+  // 2. CAREER PRIOR TO GENPACT (2007 – 2018 OVERVIEW)
   {
     id: 'prior-to-genpact',
     keywords: [
       'prior genpact', 'prior to genpact', 'before genpact', 'pre-genpact', 'before 2018',
-      'early career', 'earlier career', 'previous roles', 'past roles', 'start career'
+      'early career', 'earlier career', 'previous roles', 'past roles', 'start career',
+      'what did he do before genpact', 'career before genpact'
     ],
     title: 'Comprehensive Career Journey Prior to Genpact (2007 – 2018)',
     summary: '11 years across Chandra Credit, Infomatrix, Cirrologix, HCL Technologies, Directi, and Spectrum Infogain.',
-    content: `### Amit Bhardwaj — Career Journey Prior to Genpact (2007 – 2018)
-Before joining Genpact in 2018, Amit built an **11-year progressive engineering career** across financial credit systems, IT consulting, enterprise CRM delivery, and foundational Linux/networking infrastructure:
+    content: `Before joining Genpact in 2018, Amit built an **11-year progressive engineering career** that started right at the physical hardware and Linux kernel layers before moving up the stack into commercial credit, consulting, and enterprise cloud architecture.
 
-1. **Chandra Credit Ltd. (2017 – 2018) | Salesforce Architect & IT Systems Lead**
-   • **Underwriting & Credit Modernization**: Architected and deployed an end-to-end Salesforce platform modernizing commercial loan origination, credit risk scoring, and underwriting workflows.
-   • **Legacy Data Migration**: Led the extraction, transformation, normalization, and migration of legacy on-premises relational databases into Salesforce, enforcing field-level encryption and strict audit tracking.
-   • **Regulatory Governance**: Engineered compliance validation rules and KYC document pipelines aligned with financial lending regulations.
-   • **DevOps & Standards**: Established initial source-driven repository practices, sandbox management protocols, and regression test suites.
+Here is how his journey unfolded:
+• **Commercial Lending & FinTech (Chandra Credit, 2017–2018)**: As Salesforce Architect & IT Systems Lead, he designed an end-to-end cloud loan origination platform that accelerated commercial underwriting from 14 days down to under 48 hours, migrating legacy on-prem databases with field-level encryption.
+• **Enterprise Consulting & Pre-Sales (Infomatrix & Cirrologix, 2014–2017)**: Led technical pre-sales and architecture for enterprise RFPs, designed real-time REST/SOAP API bridges connecting CRM with core ERP systems, and mentored an engineering team of 10+.
+• **Enterprise Core Engineering (HCL Technologies, 2013–2014)**: Engineered high-volume asynchronous Apex pipelines, scheduled batch jobs, and enterprise integrations for global life sciences and financial services clients.
+• **Linux Systems Administration & Networking (Directi & Spectrum, 2007–2010)**: Maintained 99.9% uptime across production Linux fleets, administered authoritative BIND DNS clusters, managed Postfix/Exim mail routers with anti-spam security, wrote custom Bash/Perl automation scripts cutting sysadmin overhead by 40%, and performed component-level hardware repair and switch routing.
 
-2. **Infomatrix Inc. (2015 – 2017) | Salesforce Architect**
-   • **Enterprise Architecture & Pre-Sales**: Led technical solution design, pre-sales architectural blueprints, and effort estimations for enterprise client RFPs.
-   • **ERP & Financial Integrations**: Architected real-time REST and SOAP API-led integration bridges connecting Salesforce CRM with enterprise ERP, billing, and accounting systems.
-   • **Engineering Leadership & Mentorship**: Led, mentored, and conducted code reviews for a team of 10+ developers and consultants; enforced Apex design patterns, governor limit best practices, and trigger frameworks.
-   • **Security & Data Modeling**: Designed complex role hierarchies, sharing sets, custom object relationships, and granular profile permissions.
+This hardware-to-cloud journey is what gives Amit a true first-principles edge—he doesn't just configure clouds, he understands what's happening at the network packet, kernel buffer, and database query levels.
 
-3. **Cirrologix Pvt Ltd (2014 – 2015) | Salesforce Consultant**
-   • **Custom Solution Architecture**: Engineered custom Apex triggers, Visualforce pages, batch processors, and automated workflow solutions for commercial enterprise clients.
-   • **Business Process Translation**: Conducted technical discovery workshops with business stakeholders, converting complex operational requirements into scalable technical specifications.
-   • **Deployment & Release Management**: Standardized deployment tracking across multi-tiered sandbox environments, eliminating metadata dependency deadlocks and optimizing unit test code coverage (>85%).
-
-4. **HCL Technologies (2013 – 2014) | Salesforce Consultant / Technical Engineer**
-   • **Enterprise Core Engineering**: Developed high-volume asynchronous Apex classes, scheduled batch jobs, and queueable interfaces for global accounts across Life Sciences and Financial Services.
-   • **Third-Party Integrations**: Built and maintained secure REST/SOAP web service integrations exchanging transactional customer data with external legacy systems.
-   • **Production Support & Cutover**: Participated in major client go-lives, deployment dry-runs, data migrations, and production hypercare.
-
-5. **Directi (2009 – 2010) | Linux System Administrator**
-   • **Infrastructure Hardening & 99.9% Uptime**: Built, secured, and maintained production Linux server fleets (CentOS, RedHat, Debian) and network gateways hosting mission-critical web applications.
-   • **Core Internet Protocols**:
-     - **DNS**: Managed master/slave BIND DNS servers, authoritative forward/reverse lookup zones, and TTL tuning.
-     - **Mail Infrastructure**: Administered Postfix and Exim mail routers with SPF, DKIM, anti-relay enforcement, and spam filtering.
-     - **Web Servers**: Configured Apache HTTP virtual hosts, SSL/TLS certificate chains, and load balancing.
-   • **Systems Automation**: Authored Bash and Perl automation scripts for automated log auditing, disk threshold alerts, and automated daemon recovery, reducing manual sysadmin workload by 40%.
-
-6. **Spectrum Infogain Services (2007 – 2009) | System Engineer**
-   • **Physical Hardware Diagnostics**: Diagnosed, disassembled, and repaired enterprise workstations, motherboards, RAM modules, and power supplies.
-   • **Operating Systems & Storage**: Installed and patched Linux and Windows Server environments, configured filesystem partitioning (Ext3, NTFS), and configured hardware RAID arrays (RAID 0, 1, 5).
-   • **Networking Layer**: Terminated Ethernet cabling, configured managed switches, established VLANs, resolved IP conflicts, and routed local corporate subnets.
-
-💡 **Why Amit's Prior Experience Matters to Engineering Leaders**:
-Amit did not learn platform architecture in an abstract vacuum. His career began at the physical hardware, network packet, and Linux kernel layers before mastering enterprise software development and CRM architecture. This rare first-principles foundation enables him to diagnose deep performance bottlenecks, design resilient decoupled architectures, and lead full-stack platform engineering teams with authentic technical authority.`,
+Would you like to zoom into a specific chapter, such as his work at Directi or Chandra Credit?`,
     followUps: [
-      "Tell me about his pre-sales & RFP experience",
       "Tell me about his work at Directi",
-      "Tell me about Chandra Credit",
+      "What did Amit do at Chandra Credit?",
+      "Tell me about his pre-sales & RFP experience",
       "What did Amit do at Corporate Genpact?"
     ]
   },
@@ -256,31 +206,20 @@ Amit did not learn platform architecture in an abstract vacuum. His career began
   // 2b. DIRECTI
   {
     id: 'directi',
-    keywords: ['directi', 'linux admin', 'sysadmin', 'system administrator', 'postfix', 'exim', 'bind dns', 'apache', 'building servers'],
+    keywords: ['directi', 'linux admin', 'sysadmin', 'system administrator', 'postfix', 'exim', 'bind dns', 'apache', 'building servers', 'dns cluster'],
     title: 'Directi — Linux Systems Administration & Server Provisioning (2009–2010)',
     summary: 'Production Linux server fleets, authoritative BIND DNS, Postfix/Exim mail routing, and 99.9% uptime.',
-    content: `### Directi — Linux Systems Administrator (2009 – 2010)
-At Directi, Amit was responsible for administering and hardening mission-critical Internet infrastructure hosting high-volume domain registries, DNS clusters, and web services:
+    content: `At Directi (2009–2010), Amit worked as a **Linux System Administrator** responsible for keeping the production server fleets and core internet infrastructure running with **99.9% uptime** for one of India's premier web hosting and domain registry providers.
 
-### Core Responsibilities & Achievements:
-1. **Server Provisioning & Fleet Hardening**:
-   • Built, patched, and hardened production Linux fleets running **CentOS, RedHat, and Debian**.
-   • Implemented granular iptables firewall rules, TCP wrappers, and SSH key-based authentication across all server endpoints.
-   • Monitored system health, CPU/RAM saturation, and I/O wait states across distributed server clusters.
+Here is what he was responsible for day-to-day:
+• **DNS & Core Internet Infrastructure**: Administered authoritative master/slave **BIND DNS** clusters handling millions of domain lookup queries with zero downtime, tuning TTLs and authoritative forward/reverse lookup zones.
+• **Mail Transfer Agents**: Managed high-throughput **Postfix** and **Exim** mail transfer agents (MTAs), implementing SPF, DKIM signing, SMTP authentication, and spam filtering to eliminate open relays and maintain high delivery reputation.
+• **Server Fleet Hardening**: Built, patched, and secured CentOS, RedHat, and Debian servers, setting up iptables firewall rules and SSH key-based access.
+• **Systems Automation**: Authored custom **Bash** and **Perl** scripts for automated log auditing, disk threshold alerts, and daemon self-healing, reducing routine sysadmin overhead by **40%**.
 
-2. **DNS & Authoritative Name Services**:
-   • Administered master/slave **BIND DNS** clusters managing millions of public forward and reverse lookup queries with zero downtime.
+This early systems work explains why Amit approaches modern cloud platforms and Kubernetes from first principles—he knows what's happening at the operating system and network layers.
 
-3. **High-Throughput Mail Infrastructure**:
-   • Administered enterprise **Postfix** and **Exim** mail transfer agents (MTAs).
-   • Implemented SPF records, DKIM signing, SMTP authentication, and spam filtering to ensure deliverability and eliminate open relays.
-
-4. **Web Infrastructure & Virtual Hosts**:
-   • Configured and tuned Apache HTTP servers, multi-tenant virtual host routing, and SSL/TLS certificate chains.
-
-5. **Sysadmin Scripting & Automation**:
-   • Wrote custom **Bash** and **Perl** scripts for automated log auditing, disk threshold alerting, and daemon self-healing, reducing manual maintenance overhead by **40%**.
-   • Maintained **99.9% uptime** across production fleets.`,
+Would you like to know how he moved from Linux into cloud platforms, or hear about another phase of his career?`,
     followUps: [
       "Tell me about Spectrum Infogain",
       "Tell me about his experience prior to Genpact",
@@ -291,26 +230,19 @@ At Directi, Amit was responsible for administering and hardening mission-critica
   // 2c. SPECTRUM INFOGAIN
   {
     id: 'spectrum',
-    keywords: ['spectrum', 'spectrum infogain', 'hardware diagnostics', 'motherboard', 'raid array', 'raid', 'cabling'],
+    keywords: ['spectrum', 'spectrum infogain', 'hardware diagnostics', 'motherboard', 'raid array', 'raid', 'cabling', 'hardware'],
     title: 'Spectrum Infogain Services — Physical Hardware Engineering (2007–2009)',
     summary: 'Hardware diagnostics, motherboard repair, RAID 0/1/5 configuration, and corporate network cabling.',
-    content: `### Spectrum Infogain Services — System Engineer (2007 – 2009)
-Amit's career began directly at the physical hardware, operating system, and local networking layers:
+    content: `At Spectrum Infogain Services (2007–2009), Amit started his career directly at the physical hardware, operating system, and local networking layers as a **System Engineer**.
 
-### Core Responsibilities:
-1. **Component-Level Hardware Diagnostics & Assembly**:
-   • Disassembled, diagnosed, repaired, and assembled enterprise desktop workstations and server towers.
-   • Tested motherboards, microprocessors, RAM modules, power supplies, and peripheral controller cards.
+This was hands-on, foundational systems work:
+• **Component-Level Diagnostics**: Disassembled, diagnosed, repaired, and assembled enterprise workstations, motherboards, RAM modules, power supplies, and controller cards.
+• **Storage & RAID Architectures**: Configured hardware and software **RAID arrays (RAID 0, 1, 5)** to guarantee data redundancy, partitioned Ext3 and NTFS filesystems, and executed multi-tier backup regimes.
+• **Networking & Infrastructure**: Terminated Cat5/Cat6 Ethernet cabling, patched server racks, configured managed switches, established corporate VLANs, and resolved local IP routing conflicts.
 
-2. **Storage Architecture & RAID Configurations**:
-   • Configured hardware and software **RAID arrays (RAID 0, 1, 5)** to guarantee data redundancy and fault tolerance.
-   • Partitioned and formatted filesystems (Ext3, NTFS) and executed multi-tier data backup regimes.
+Starting at the physical layer gave Amit a tangible, mechanical understanding of computing that still shapes how he evaluates architecture, network hops, and memory latency today.
 
-3. **Operating System Provisioning**:
-   • Performed bare-metal installations, kernel patching, and driver configurations across Linux and Windows Server environments.
-
-4. **Network Cabling & Managed Switch Infrastructure**:
-   • Terminated Cat5/Cat6 Ethernet cables, patched networking racks, configured managed switches, established corporate VLANs, and resolved local IP routing conflicts.`,
+Would you like to see how this evolved into his Linux sysadmin work at Directi?`,
     followUps: [
       "Tell me about his work at Directi",
       "Tell me about Chandra Credit",
@@ -321,24 +253,17 @@ Amit's career began directly at the physical hardware, operating system, and loc
   // 2d. CHANDRA CREDIT LTD
   {
     id: 'chandra',
-    keywords: ['chandra', 'chandra credit', 'underwriting', 'loan origination', 'credit risk', 'kyc'],
+    keywords: ['chandra', 'chandra credit', 'underwriting', 'loan origination', 'credit risk', 'kyc', 'commercial lending', 'credit ltd'],
     title: 'Chandra Credit Ltd. — Salesforce Architect & IT Systems Lead (2017–2018)',
     summary: 'Commercial loan origination, credit risk scoring, legacy DB migration with field-level encryption, approval time cut 14d to <48h.',
-    content: `### Chandra Credit Ltd. — Salesforce Architect & IT Systems Lead (2017 – 2018)
-Amit modernized the technology and credit underwriting operations of a specialist commercial lending firm:
+    content: `At Chandra Credit (2017–2018), Amit served as **Salesforce Architect & IT Systems Lead**, leading the digital modernization of a specialist commercial lending firm:
 
-### Core Architectural Contributions:
-1. **Commercial Loan Origination Platform**:
-   • Architected an end-to-end cloud platform modernizing commercial loan applications, collateral evaluation, and borrower compliance tracking.
+• **Underwriting Modernization**: Architected an end-to-end cloud loan origination platform that automated credit risk scoring and accelerated loan approval turnaround times from **14 days down to under 48 hours**.
+• **Secure Legacy Data Migration**: Migrated legacy on-premise relational databases into cloud repositories, implementing strict field-level encryption and audit trails for sensitive borrower financial records.
+• **Regulatory Governance**: Built compliance validation rules and KYC document verification pipelines aligned with non-banking financial lending guidelines.
+• **Engineering Standards**: Established initial source-driven version control, sandbox staging environments, and regression test suites.
 
-2. **Automated Risk Scoring & Credit Rules**:
-   • Designed dynamic credit risk scoring algorithms that accelerated underwriting approvals from **14 days to under 48 hours**.
-
-3. **Legacy Database Migration**:
-   • Extracted, normalized, and migrated legacy on-premises databases into cloud repositories with strict field-level encryption for financial records.
-
-4. **Regulatory Governance & KYC**:
-   • Engineered validation rules and KYC document pipelines aligned with non-banking financial company (NBFC) lending guidelines.`,
+This role bridged his deep technical skills with regulated financial operations. Would you like to hear about his enterprise banking work at Genpact or his consulting roles at Infomatrix?`,
     followUps: [
       "Tell me about Infomatrix",
       "Tell me about his experience prior to Genpact",
@@ -352,21 +277,14 @@ Amit modernized the technology and credit underwriting operations of a specialis
     keywords: ['infomatrix', 'erp integration', 'pre-sales architecture', 'mentorship'],
     title: 'Infomatrix Inc. — Salesforce Architect (2015–2017)',
     summary: 'Pre-sales architectural blueprints, ERP integrations via REST/SOAP, governor limit best practices, team lead of 10+ engineers.',
-    content: `### Infomatrix Inc. — Salesforce Architect (2015 – 2017)
-Amit served as lead technical architect guiding solution design and engineering teams:
+    content: `At Infomatrix Inc. (2015–2017), Amit served as a **Salesforce Architect** leading technical solution design, pre-sales architecture, and delivery engineering:
 
-### Core Contributions:
-1. **Pre-Sales Solution Architecture**:
-   • Led technical discovery, solution architecture, and effort estimation for enterprise client RFPs and digital transformation bids.
+• **Pre-Sales Solution Architecture**: Partnered with commercial leads to conduct technical discovery workshops, formulate architectural blueprints, and size effort estimations for enterprise client RFPs and digital transformation bids.
+• **ERP & Accounting System Integrations**: Architected real-time REST and SOAP API-led bridges connecting Salesforce with enterprise ERP, billing, and accounting platforms.
+• **Team Leadership & Mentorship**: Mentored and led a delivery squad of 10+ developers and consultants, enforcing Apex design patterns, trigger frameworks, and governor limit best practices.
+• **Data & Security Modeling**: Designed complex role hierarchies, sharing sets, custom object relationships, and granular profile security architectures.
 
-2. **ERP & Accounting System Integrations**:
-   • Architected real-time REST and SOAP API-led bridges connecting Salesforce with enterprise ERP and billing platforms.
-
-3. **Team Leadership & Mentorship**:
-   • Mentored a delivery squad of 10+ developers and consultants, enforcing Apex design patterns, trigger frameworks, and governor limit best practices.
-
-4. **Security & Data Modeling**:
-   • Designed complex role hierarchies, sharing sets, custom object relationships, and granular profile security architectures.`,
+Are you interested in his consulting work, his pre-sales pursuit experience, or his enterprise governance at Genpact?`,
     followUps: [
       "Tell me about Cirrologix",
       "Tell me about his experience prior to Genpact",
@@ -374,35 +292,20 @@ Amit served as lead technical architect guiding solution design and engineering 
     ]
   },
 
-  // 2f. CIRROLOGIX
+  // 2f. CIRROLOGIX & HCL
   {
     id: 'cirrologix',
-    keywords: ['cirrologix'],
-    title: 'Cirrologix Pvt Ltd — Salesforce Consultant (2014–2015)',
-    summary: 'Custom Apex/Visualforce solutions, multi-tiered sandbox release management, and unit test coverage (>85%).',
-    content: `### Cirrologix Pvt Ltd — Salesforce Consultant (2014 – 2015)
-• **Custom Solution Architecture**: Engineered custom Apex triggers, Visualforce pages, batch processors, and automated workflow solutions for commercial enterprise clients.
-• **Technical Discovery**: Translated complex business operational requirements into scalable technical specifications.
-• **Release Management**: Standardized deployment tracking across multi-tiered sandbox environments, eliminating metadata dependency deadlocks and optimizing unit test code coverage (>85%).`,
-    followUps: [
-      "Tell me about HCL Technologies",
-      "Tell me about Infomatrix",
-      "Tell me about his experience prior to Genpact"
-    ]
-  },
-
-  // 2g. HCL TECHNOLOGIES
-  {
-    id: 'hcl',
-    keywords: ['hcl', 'hcl technologies', 'life sciences'],
-    title: 'HCL Technologies — Salesforce Consultant / Technical Engineer (2013–2014)',
+    keywords: ['cirrologix', 'hcl', 'hcl technologies', 'life sciences'],
+    title: 'Cirrologix & HCL Technologies — Core Engineering & Consulting (2013–2015)',
     summary: 'Enterprise engineering role: high-volume asynchronous Apex, Life Sciences & Financial Services integrations, major cutovers.',
-    content: `### HCL Technologies — Salesforce Consultant / Technical Engineer (2013 – 2014)
-• **Enterprise Asynchronous Engineering**: Developed high-volume asynchronous Apex classes, scheduled batch jobs, and queueable interfaces for global accounts across Life Sciences and Financial Services.
-• **Third-Party Integrations**: Built and maintained secure REST/SOAP web service integrations exchanging transactional customer data with external legacy systems.
-• **Production Support & Cutover**: Participated in major client go-lives, deployment dry-runs, data migrations, and production hypercare.`,
+    content: `Between 2013 and 2015, Amit worked as an enterprise developer and technical consultant across HCL Technologies and Cirrologix:
+
+• **HCL Technologies (2013–2014)**: Technical Engineer developing high-volume asynchronous Apex classes, scheduled batch jobs, and queueable interfaces for global accounts across Life Sciences and Financial Services. Maintained secure REST/SOAP web service integrations exchanging transactional customer data.
+• **Cirrologix (2014–2015)**: Salesforce Consultant designing custom Visualforce and Apex applications, conducting technical discovery workshops, and standardizing multi-tiered sandbox release management to eliminate metadata deadlocks and maintain >85% test coverage.
+
+This phase solidified his deep programmatic mastery of multitenant runtimes and integration patterns. Would you like to hear about his transition into architecture leadership?`,
     followUps: [
-      "Tell me about Directi",
+      "Tell me about Infomatrix",
       "Tell me about his experience prior to Genpact",
       "What did Amit do at Corporate Genpact?"
     ]
@@ -414,26 +317,20 @@ Amit served as lead technical architect guiding solution design and engineering 
     keywords: [
       'head of platform', 'platform engineering', 'cloud platform',
       'platform thinking', 'reusable', 'idp', 'internal developer platform', 'devex',
-      'developer experience', 'golden paths', 'why hire'
+      'developer experience', 'golden paths', 'why hire', 'why appoint', 'leadership fit'
     ],
     title: 'Head of Platform Engineering & Cloud Leadership Fit',
     summary: 'Platform thinking, reusable capabilities, internal developer platform tooling, and large-scale delivery leadership.',
-    content: `Amit is uniquely equipped for **Head of Platform Engineering** and **Cloud Platform Leadership** roles:
+    content: `Amit is uniquely equipped for **Head of Platform Engineering**, **Director of Engineering**, or **Enterprise Architect** appointments because he combines four rare strengths:
 
-### 1. Platform Thinking & Reusable Capabilities
-• At a **Tier-1 Automotive Retail SaaS Provider**, Amit transformed digital onboarding by championing a **reusable platform capability model** over one-off custom feature development.
-• Slashed dealership onboarding lead times across 10,000+ car dealerships by **65%** with automated rollback safeguards.
+1. **True Platform Mindset**: He avoids one-off bespoke scripting in favor of reusable platform capabilities. At a Tier-1 automotive software provider, this cut dealership software onboarding lead times by **65%** across 10,000+ rooftops.
+2. **First-Principles Systems Depth**: Because he started as a Linux sysadmin and hardware engineer, he understands memory management, TCP/IP sockets, and database indexing. He can troubleshoot low-level production issues that high-level architects often miss.
+3. **Internal Developer Platform (IDP) Builder**: He conceived and built [sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk), an IDP for Salesforce engineering teams featuring automated metadata dependency graphs, visual diffing, and CI/CD automation. He champions developer velocity and golden paths.
+4. **Governance & Scale**: Over ~8 years at Genpact, he has served on Enterprise Architecture and InfoSec boards governing 100+ initiatives, while mentoring 15+ tech leads and guiding delivery organizations of up to **~80 engineers**.
 
-### 2. Internal Developer Platform (IDP) & DevEx Tooling
-• Engineered [sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk), a production self-service developer platform featuring automated manifest generation across 120+ metadata types, visual diffing, background CLI update daemons, and embedded **Model Context Protocol (MCP)** AI agents.
-• Reduced deployment friction and replaced legacy change sets with automated source-driven GitHub Actions and Copado CI/CD release pipelines.
+He speaks comfortably to the board and C-suite while maintaining authentic technical credibility with engineers in the trenches.
 
-### 3. Enterprise Cloud & Production SRE Depth
-• Built and operates [Rescuematic](https://rescuematic.co.uk) on **AWS EC2 (Amazon Linux 2023)** with Redis caching, FastAPI microservices, MQTTS telemetry (port 8883 with mutual TLS and 180s keepalive), and Cloudflare Pages edge CDN.
-• Architects bare-metal private cloud infrastructure (Dell Precision 5520, Proxmox VE 9.2, Linux 7.0 kernel) with Prometheus, Loki, and Grafana telemetry.
-
-### 4. Large-Scale Engineering Leadership
-• Governed technical delivery for **100+ projects** and guided distributed engineering teams of **~80 resources** across onshore, nearshore, and offshore squads.`,
+Would you like to discuss his leadership style or review his production systems like Rescuematic?`,
     followUps: [
       "Tell me about his pre-sales & RFP experience",
       "Explore the sfdx-toolkit platform",
@@ -447,23 +344,18 @@ Amit served as lead technical architect guiding solution design and engineering 
     id: 'genpact',
     keywords: [
       'genpact', 'corporate genpact', 'senior manager', 'ea', 'infosec',
-      'governance', 'architecture review board', 'portfolio', '80 resources', 'team size'
+      'governance', 'architecture review board', 'portfolio', '80 resources', 'team size', 'eab'
     ],
     title: 'Corporate Genpact — Enterprise Architecture Governance & Leadership',
     summary: 'Senior Manager for ~8 years, governing 100+ projects and leading ~80 engineering resources across global delivery.',
-    content: `### Genpact — Senior Manager & Solutions Architect (2018 – Present, ~8 Years)
-Amit operates as both an organizational delivery leader and the senior technical authority across client engagements and internal corporate platform towers:
+    content: `Amit has spent approximately 8 years as **Senior Manager & Solutions Architect** at Genpact in London, operating as both a delivery leader and a senior technical authority:
 
-### 1. Enterprise Architecture Board (EAB) & InfoSec Governance
-• Directs the architectural review of complex enterprise programs, evaluating multi-cloud integration patterns, security boundaries, and data residency standards across **100+ business initiatives**.
-• Standardized Architectural Decision Records (ADRs) to eliminate technical debt across multi-squad teams.
+• **Enterprise Architecture Board (EAB) & InfoSec**: Serves on corporate governance boards evaluating multi-cloud integration patterns, security boundaries, and data residency across **100+ business initiatives**.
+• **Delivery Scale (~80 Resources)**: Leads, mentors, and directs cross-functional delivery organizations of up to **~80 engineers** (Technical Architects, Tech Leads, Developers, QA, and DevOps).
+• **Mentorship**: Mentors 15+ tech leads and established Architectural Decision Records (ADRs) to eliminate technical debt across multi-squad engagements.
+• **Crisis Turnarounds**: Frequently brought into distressed enterprise client engagements to untangle architectural impasses, align stakeholders, and restore delivery trust.
 
-### 2. Delivery Leadership & Team Scale (~80 Resources)
-• Leads, mentors, and directs cross-functional delivery organizations of up to **~80 engineering resources** (Technical Architects, Tech Leads, Senior Developers, QA Leads, and DevOps Engineers).
-• Mentors 15+ Tech Leads; chairs technical onboarding and candidate technical assessments.
-
-### 3. Pre-Sales Strategy & High-Stakes RFP Pursuits
-• Formulated technical blueprints and delivery models for major competitive bids in Life Sciences, Clean Energy, and Financial Services.`,
+Would you like to hear about a specific crisis recovery or his pre-sales pursuit experience?`,
     followUps: [
       "Tell me about his pre-sales & RFP experience",
       "Explain the private banking onboarding turnaround",
@@ -476,34 +368,21 @@ Amit operates as both an organizational delivery leader and the senior technical
     id: 'certifications',
     keywords: [
       'certification', 'certifications', 'certified', 'credentials',
-      'cta', 'system architect', 'application architect', 'pd2', 'copado', 'education', 'degree'
+      'cta', 'system architect', 'application architect', 'pd2', 'copado', 'education', 'degree',
+      'btech', 'b.tech', 'university', 'rtu'
     ],
     title: 'Formal Education, Certifications & Credentials',
     summary: 'B.Tech in IT, Salesforce Application Architect, System Architect, PD1/PD2, Copado Certified.',
-    content: `### Formal Education & Verified Credentials
+    content: `Amit holds a formal **Bachelor of Technology (B.Tech) in Information Technology** from **Rajasthan Technical University (RTU), India (2003–2007)**—a rigorous 4-year engineering degree covering computer hardware, operating system design, data structures, and computer networking.
 
-### 1. Formal Degree:
-• **Bachelor of Technology (B.Tech) in Information Technology**  
-  *Rajasthan Technical University (RTU), India* (2003 – 2007)  
-  Rigorous four-year engineering program covering computer hardware, operating system design, data structures, and computer networking.
-
-### 2. Salesforce Architecture & Design Credentials:
+His verified professional credentials include:
 • **Salesforce Certified Application Architect**
 • **Salesforce Certified System Architect**
-• **Salesforce Certified Data Architecture & Management Designer**
-• **Salesforce Certified Integration Architecture Designer**
-• **Salesforce Certified Development Lifecycle & Deployment Designer**
-• **Salesforce Certified Identity & Access Management Designer**
-• **Salesforce Certified Sharing & Visibility Designer**
+• **Salesforce Certified Platform Developer I & II (PD1 & PD2)**
+• **Designers**: Data Architecture & Management, Integration Architecture, Development Lifecycle & Deployment, Identity & Access Management, and Sharing & Visibility
+• **DevOps**: Copado Certified Fundamentals I & II
 
-### 3. Salesforce Developer & Consultant Credentials:
-• **Salesforce Certified Platform Developer II (PD2)**
-• **Salesforce Certified Platform Developer I (PD1)**
-• **Salesforce Certified Platform App Builder**
-• **Salesforce Certified Administrator**
-
-### 4. DevOps & Tooling Certifications:
-• **Copado Certified Fundamentals I & II**`,
+Would you like to know about his awards or his platform leadership experience?`,
     followUps: [
       "What awards has Amit received?",
       "Why hire Amit as Head of Platform Engineering?",
@@ -519,16 +398,13 @@ Amit operates as both an organizational delivery leader and the senior technical
     ],
     title: 'Executive Awards, Commendations & Major RFP Wins',
     summary: 'Executive leadership awards, client commendations, and multi-million enterprise RFP wins.',
-    content: `### Executive Awards & Industry Recognitions
+    content: `Amit has received multiple formal recognitions throughout his career:
 
-1. **Executive Crisis Recovery Commendation**:
-   • Formally commended by executive leadership for decisive technical intervention, crisis management, and deployment stabilization during a critical production release escalation for a global conglomerate.
+• **Executive Crisis Recovery Commendation**: Formally commended by executive leadership for decisive technical intervention, crisis management, and deployment stabilization during a critical production release escalation for a global conglomerate.
+• **Major Banking Commendation**: Commended by technology leadership at a major UK private bank for rescuing their onboarding transformation from Red to Green, unblocking the customer data model, and cutting release cycle times by **75%**.
+• **Genpact Cheers Recognition (Multiple)**: Recognized repeatedly for outstanding engineering delivery assurance, high-stakes cutovers, and cross-team architectural mentorship.
 
-2. **Major Banking Client Commendation**:
-   • Formally commended by technology leadership at a major UK private bank for turning around their digital onboarding program from "Red" to "Green", unblocking the customer data model, and engineering automated CI/CD pipelines that reduced release cycle times by **75%**.
-
-3. **Genpact Cheers Recognition (Multiple)**:
-   • Recognized repeatedly for outstanding engineering delivery assurance, high-stakes cutovers, and cross-team architectural mentorship.`,
+Would you like to explore the banking turnaround in more detail or learn about his pre-sales experience?`,
     followUps: [
       "Explain the private banking onboarding turnaround",
       "Tell me about his pre-sales & RFP experience",
@@ -545,24 +421,14 @@ Amit operates as both an organizational delivery leader and the senior technical
     ],
     title: 'Applied Systems Engineering & Production Platforms',
     summary: 'sfdx-toolkit (IDP), Rescuematic (AWS/MQTTS IoT), VisionVox (Gemini Live), and bare-metal Proxmox hypervisor cluster.',
-    content: `### Applied Systems Engineering & Production Platforms
+    content: `Amit actively designs, builds, and runs production systems to stay at the cutting edge:
 
-### 1. [sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk) — Internal Developer Platform (IDP)
-• **Architecture**: Full-stack TypeScript/React IDP for Salesforce engineering teams.
-• **Features**: Live metadata dependency analysis, side-by-side AST/XML diffing, automated package manifest builder, and Model Context Protocol (MCP) agent integrations.
+• **[sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk)**: A production Internal Developer Platform (IDP) built with TypeScript/React for Salesforce engineering teams. It features real-time metadata dependency visualization, side-by-side XML diffing, and embedded Model Context Protocol (MCP) AI agents.
+• **[Rescuematic](https://rescuematic.co.uk)**: An IoT fleet management SaaS running on AWS EC2 (Amazon Linux 2023) behind Cloudflare Pages edge. It includes a custom async Python FastAPI backend, Redis cache, and a high-concurrency MQTTS broker (port 8883) with mutual TLS and 180s keepalive state machines.
+• **[VisionVox](https://visionvox.amitbhardwaj.co.uk)**: A low-latency multimodal voice and vision assistant built on the Gemini Multimodal Live API over WebSockets, providing real-time spatial analysis and OCR.
+• **Bare-Metal Proxmox SRE Stack**: Operates a private Dell Precision server running Proxmox VE 9.2 (Linux 7.0 kernel) with ZRAM memory compression, Intel QuickSync iGPU acceleration, and Prometheus/Grafana/Loki observability.
 
-### 2. [Rescuematic](https://rescuematic.co.uk) — Production IoT Microservices Platform
-• **Architecture**: IoT fleet management SaaS deployed on **AWS EC2 (Amazon Linux 2023)** behind Cloudflare Pages edge.
-• **Core Microservices**: Custom Python FastAPI async core, Redis caching, and high-concurrency MQTTS broker (port 8883) with mutual TLS and 180s keepalive state machine.
-
-### 3. [VisionVox](https://visionvox.amitbhardwaj.co.uk) — Real-Time Multimodal AI Assistant
-• **Architecture**: Low-latency voice/vision accessibility assistant built on the Gemini Multimodal Live API over WebSockets, performing spatial quadrant scans and real-time OCR.
-
-### 4. Smart Email Brain & Ingestion Engine
-• **Architecture**: Zero-touch autonomous event ingestion pipeline using Cloudflare Email Routing webhooks, n8n, and local quantized SLMs (Qwen 2.5 3B on LXC 115).
-
-### 5. Bare-Metal Enterprise Hypervisor & Telemetry Stack
-• **Hardware & OS**: Dell Precision 5520 server running **Proxmox VE 9.2 (Linux 7.0 kernel)** with ZRAM memory compression, Intel QuickSync iGPU acceleration, and unified Prometheus, Grafana, and Loki observability.`,
+Would you like to explore any of these platforms in depth?`,
     followUps: [
       "Explore the sfdx-toolkit platform",
       "Why hire Amit as Head of Platform Engineering?",
@@ -574,18 +440,21 @@ Amit operates as both an organizational delivery leader and the senior technical
   {
     id: 'contact',
     keywords: [
-      'contact', 'email', 'phone', 'call', 'reach', 'linkedin', 'github', 'hire', 'interview', 'london', 'location'
+      'contact', 'email', 'phone', 'call', 'reach', 'linkedin', 'github', 'hire', 'interview',
+      'london', 'location', 'visa', 'relocate', 'citizen', 'open to work', 'availability'
     ],
     title: 'Contact Details, Availability & Recruiter Info',
     summary: 'London UK, British Citizen, open to Head of Platform Engineering and Enterprise Architect leadership roles.',
-    content: `### Contact Amit Bhardwaj
+    content: `Amit is based in London, UK (British Citizen, full right to work with no visa sponsorship required).
+
+He is currently open to conversations regarding senior technology appointments, including **Head of Platform Engineering**, **Enterprise Architect**, **Director of Engineering**, or **Principal Solution Architect**.
+
 • **Email**: [amit@amitbhardwaj.co.uk](mailto:amit@amitbhardwaj.co.uk)  
-• **LinkedIn**: [linkedin.com/in/amitbhardwaj-crm/](https://www.linkedin.com/in/amitbhardwaj-crm/)  
-• **Personal Website**: [amitbhardwaj.co.uk](https://amitbhardwaj.co.uk)  
-• **GitHub**: [github.com/sfdcai](https://github.com/sfdcai)  
-• **Location**: London, United Kingdom (Full UK right to work / British citizen)  
-• **Target Roles**: Head of Platform Engineering, Head of Cloud Platform, Enterprise Architect, Director of Engineering, Technology Principal.  
-• **Availability**: Open to executive interviews, leadership appointments, and strategic advisory.`,
+• **LinkedIn**: [linkedin.com/in/amitbhardwaj-crm](https://www.linkedin.com/in/amitbhardwaj-crm/)  
+• **Code & Platforms**: [github.com/sfdcai](https://github.com/sfdcai)  
+• **Location**: London, United Kingdom (British Citizen)  
+
+Would you like me to share more details about his leadership scope or specific projects?`,
     followUps: [
       "Tell me about his pre-sales & RFP experience",
       "Why hire Amit as Head of Platform Engineering?",
@@ -602,14 +471,43 @@ const DEFAULT_SUGGESTIONS = [
 ]
 
 // ─────────────────────────────────────────────────────────────────────────────
-// CLIENT-SIDE LOCAL FALLBACK ENGINE (Used if edge API is offline/dev)
-// Enhanced with fuzzy keyword routing, typo tolerance, and strict NDA aliases
+// CONVERSATIONAL INTENT ROUTER (NATURAL & CONTEXTUAL)
 // ─────────────────────────────────────────────────────────────────────────────
 
 function findBestResponse(rawQuery: string): { text: string; chips?: string[] } {
   const query = rawQuery.toLowerCase().trim()
 
-  // Guardrail: Irrelevant off-topic inquiries
+  // 1. Natural Greetings
+  const greetings = ['hi', 'hello', 'hey', 'good morning', 'good afternoon', 'good evening', 'greetings', 'who are you', 'what can you do']
+  if (greetings.some(g => query === g || query.startsWith(g + ' ') || query.endsWith(' ' + g))) {
+    return {
+      text: `Hello! I'm Amit Bhardwaj's **Digital Twin**. I'm here to give you an authentic, detailed look into his 18+ years across enterprise platform architecture, hands-on systems engineering, and team leadership.
+
+What brings you here today? I can walk you through:
+• His **crisis turnaround** at a major UK private bank (36 → 10 days, fincrime 76% → 1%)
+• His **pre-sales architecture and multi-million-pound RFP defenses**
+• His **11-year foundational journey before Genpact** (from Linux fleets at Directi to fintech underwriting at Chandra Credit)
+• His work in **automotive retail SaaS**, **FMCG with SAP S/4HANA**, or **production cloud platforms** ([sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk), [Rescuematic](https://rescuematic.co.uk))
+
+Feel free to ask about any specific project, domain, or technology!`,
+      chips: DEFAULT_SUGGESTIONS
+    }
+  }
+
+  // 2. Polite acknowledgments & casual chatter
+  const casualThanks = ['thanks', 'thank you', 'thx', 'appreciate it', 'great', 'awesome', 'cool', 'nice', 'perfect', 'sounds good', 'ok', 'okay', 'good to know']
+  if (casualThanks.some(t => query === t || query === t + '!')) {
+    return {
+      text: `You're very welcome! If there's any other aspect of Amit's architecture background, platform leadership philosophy, or specific project outcomes you'd like to dive into, just let me know.`,
+      chips: [
+        "Tell me about his pre-sales & RFP experience",
+        "Explain the private banking onboarding turnaround",
+        "How can I contact Amit?"
+      ]
+    }
+  }
+
+  // 3. Guardrail: Irrelevant off-topic inquiries
   const offTopicTriggers = [
     'recipe', 'cook', 'pasta', 'bake a cake', 'crypto to buy', 'bitcoin price',
     'joke about dogs', 'who is the president', 'translate to french', 'homework',
@@ -630,18 +528,30 @@ Would you like to explore:
     }
   }
 
-  // 1. PRE-SALES & RFP PURSUITS
+  // 4. Contact, Location, & Availability
+  if (
+    query.includes('contact') || query.includes('email') || query.includes('phone') ||
+    query.includes('reach') || query.includes('linkedin') || query.includes('hire') ||
+    query.includes('interview') || query.includes('location') || query.includes('where is he') ||
+    query.includes('london') || query.includes('visa') || query.includes('relocate') ||
+    query.includes('citizen') || query.includes('open to work') || query.includes('availability')
+  ) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'contact')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  // 5. Pre-Sales, RFPs & Pursuits
   if (
     query.includes('pre-sales') || query.includes('presales') || query.includes('pre sales') ||
     query.includes('rfp') || query.includes('bid') || query.includes('proposal') ||
-    query.includes('pursuit') || query.includes('pitch')
+    query.includes('pursuit') || query.includes('pitch') || query.includes('sales engineering')
   ) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'presales')!
     return { text: entry.content, chips: entry.followUps }
   }
 
-  // 2. SPECIFIC COMPANY TARGETING FIRST
-  if (query.includes('directi')) {
+  // 6. Specific Companies FIRST (Avoid broad prior-to-genpact triggering when a specific firm is asked)
+  if (query.includes('directi') || query.includes('bind dns') || query.includes('postfix') || query.includes('exim')) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'directi')!
     return { text: entry.content, chips: entry.followUps }
   }
@@ -651,7 +561,7 @@ Would you like to explore:
     return { text: entry.content, chips: entry.followUps }
   }
 
-  if (query.includes('chandra')) {
+  if (query.includes('chandra') || query.includes('credit ltd') || query.includes('loan origination') || query.includes('underwriting')) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'chandra')!
     return { text: entry.content, chips: entry.followUps }
   }
@@ -661,154 +571,127 @@ Would you like to explore:
     return { text: entry.content, chips: entry.followUps }
   }
 
-  if (query.includes('cirrologix')) {
+  if (query.includes('cirrologix') || query.includes('hcl')) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'cirrologix')!
     return { text: entry.content, chips: entry.followUps }
   }
 
-  if (query.includes('hcl')) {
-    const entry = DOSSIER_ENTRIES.find(e => e.id === 'hcl')!
-    return { text: entry.content, chips: entry.followUps }
-  }
-
-  // 3. OVERALL PRIOR-TO-GENPACT JOURNEY
+  // 7. Overall Prior-to-Genpact Journey (2007–2018)
   const isPriorToGenpact = (
     (query.includes('prior') || query.includes('before') || query.includes('pre-') || query.includes('early') || query.includes('start') || query.includes('background') || query.includes('history')) &&
     query.includes('genpact')
   ) || query.includes('before genpact') || query.includes('prior genpact') || query.includes('prior to genpact') ||
-     query.includes('before 2018') || query.includes('early career') || query.includes('earlier career')
+     query.includes('before 2018') || query.includes('early career') || query.includes('earlier career') || query.includes('past roles')
 
   if (isPriorToGenpact) {
     const priorEntry = DOSSIER_ENTRIES.find(e => e.id === 'prior-to-genpact')!
-    return {
-      text: priorEntry.content,
-      chips: priorEntry.followUps
-    }
+    return { text: priorEntry.content, chips: priorEntry.followUps }
   }
 
-  // 4. INDUSTRY & DOMAIN TARGETING (WITH TYPO TOLERANCE)
-  if (
-    query.includes('fmcg') || query.includes('fmcs') || query.includes('fmc') ||
-    query.includes('supply chain') || query.includes('consumer goods') || query.includes('food and beverage')
-  ) {
-    const entry = DOSSIER_ENTRIES.find(e => e.id === 'fmcg-supply-chain')!
-    return { text: entry.content, chips: entry.followUps }
-  }
-
+  // 8. Banking, Wealth Management & Red-to-Green Turnaround
   if (
     query.includes('bank') || query.includes('fintech') || query.includes('wealth') ||
-    query.includes('private bank') || query.includes('fincrime')
+    query.includes('private bank') || query.includes('fincrime') || query.includes('cater allen') ||
+    query.includes('santander') || query.includes('milky way') || query.includes('turnaround')
   ) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'banking-fintech')!
     return { text: entry.content, chips: entry.followUps }
   }
 
+  // 9. Automotive (Retail SaaS & Captive Finance)
   if (
-    query.includes('automotive') || query.includes('dealership') ||
-    (query.includes('car ') && !query.includes('career')) || query.includes('cars ')
+    query.includes('automotive') || query.includes('dealership') || query.includes('dealer') ||
+    query.includes('cdk') || query.includes('mbfs') || query.includes('captive finance') ||
+    query.includes('fca redress') || (query.includes('car ') && !query.includes('career')) || query.includes('cars ')
   ) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'automotive-domain')!
     return { text: entry.content, chips: entry.followUps }
   }
 
+  // 10. FMCG & Supply Chain (with Typo Tolerance: fmcs, fmc)
   if (
-    query.includes('industry') || query.includes('industries') || query.includes('sector') ||
-    query.includes('sectors') || query.includes('vertical') || query.includes('verticals') ||
-    query.includes('cross-industry') || query.includes('portfolio') || query.includes('nda') ||
-    query.includes('sanitized') || query.includes('domains')
+    query.includes('fmcg') || query.includes('fmcs') || query.includes('fmc') ||
+    query.includes('supply chain') || query.includes('consumer goods') || query.includes('food and beverage') ||
+    query.includes('danone') || query.includes('cora') || query.includes('sap s/4hana') || query.includes('sap')
   ) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'fmcg-supply-chain')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  // 11. Head of Platform Engineering / DevEx / IDP
+  if (
+    query.includes('head of platform') || query.includes('platform engineering') || query.includes('platform lead') ||
+    query.includes('why hire') || query.includes('why appoint') || query.includes('devex') ||
+    query.includes('internal developer platform') || query.includes('idp')
+  ) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'platform-leadership')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  // 12. Corporate Genpact & Enterprise Governance
+  if (query.includes('genpact') || query.includes('senior manager') || query.includes('governance') || query.includes('eab') || query.includes('infosec') || query.includes('80')) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'genpact')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  // 13. Education & Certifications
+  if (query.includes('certif') || query.includes('degree') || query.includes('education') || query.includes('study') || query.includes('btech') || query.includes('rtu') || query.includes('architect credential')) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'certifications')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  // 14. Awards & Commendations
+  if (query.includes('award') || query.includes('awards') || query.includes('recognition') || query.includes('commendation') || query.includes('cheers')) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'awards')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  // 15. Side Projects & Live Code
+  if (query.includes('project') || query.includes('side project') || query.includes('sfdx-toolkit') || query.includes('rescuematic') || query.includes('visionvox') || query.includes('homelab') || query.includes('proxmox')) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'projects')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  // 16. Cross-Industry Portfolio Matrix
+  if (query.includes('industry') || query.includes('industries') || query.includes('sector') || query.includes('sectors') || query.includes('vertical') || query.includes('verticals') || query.includes('cross-industry') || query.includes('portfolio') || query.includes('nda')) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'industry-matrix')!
     return { text: entry.content, chips: entry.followUps }
   }
 
-  // 5. Score each dossier entry based on keyword hits and exact phrase matching
+  // 17. Fuzzy Keyword Scoring Fallback
   let bestEntry: KnowledgeEntry | null = null
   let maxScore = 0
-
   const tokens = query.split(/\s+/).filter(t => t.length > 2)
 
   for (const entry of DOSSIER_ENTRIES) {
     let score = 0
-
-    // Exact keyword or phrase match (high weight)
     for (const kw of entry.keywords) {
-      if (query === kw) {
-        score += 25
-      } else if (query.includes(kw)) {
-        score += kw.includes(' ') ? 15 : 8
-      }
+      if (query === kw) score += 25
+      else if (query.includes(kw)) score += kw.includes(' ') ? 15 : 8
     }
-
-    // Token overlap
     for (const token of tokens) {
       if (entry.title.toLowerCase().includes(token)) score += 5
       if (entry.summary.toLowerCase().includes(token)) score += 3
       if (entry.content.toLowerCase().includes(token)) score += 1
     }
-
     if (score > maxScore) {
       maxScore = score
       bestEntry = entry
     }
   }
 
-  // If we found a confident match (score threshold >= 5)
   if (bestEntry && maxScore >= 5) {
-    return {
-      text: bestEntry.content,
-      chips: bestEntry.followUps
-    }
+    return { text: bestEntry.content, chips: bestEntry.followUps }
   }
 
-  // Cross-cutting topic checks if score was low
-  if (query.includes('lead') || query.includes('team') || query.includes('manage') || query.includes('size')) {
-    return {
-      text: `### Engineering Leadership & Delivery Governance:
-Amit has spent over 8 years as **Senior Manager** at Genpact, leading architecture and delivery teams of up to **~80 resources** across global delivery centers:
-
-• **Delivery Assurance**: Directed multi-squad engineering execution across Agile (Scrum/Kanban), Waterfall, and Hybrid enterprise milestones.
-• **Architecture Governance**: Active member of Corporate Enterprise Architecture (EA) and InfoSec boards, governing standards across **100+ initiatives**.
-• **Crisis Turnaround**: Proven ability to deploy into distressed, high-friction client accounts to resolve technical impasses and restore delivery trust.
-• **Mentorship**: Mentored 15+ tech leads and instituted Architectural Decision Records (ADRs) to guarantee consistency across teams.`,
-      chips: [
-        "Tell me about his pre-sales & RFP experience",
-        "Explain the private banking onboarding turnaround",
-        "Tell me about his experience prior to Genpact"
-      ]
-    }
-  }
-
-  if (query.includes('certif') || query.includes('degree') || query.includes('education') || query.includes('study')) {
-    const certEntry = DOSSIER_ENTRIES.find(e => e.id === 'certifications')!
-    return {
-      text: certEntry.content,
-      chips: certEntry.followUps
-    }
-  }
-
-  // Default Fallback: Rich Executive Overview with actionable navigation (100% NDA-Clean)
+  // Default Warm Conversational Summary
+  const defaultEntry = DOSSIER_ENTRIES.find(e => e.id === 'profile')!
   return {
-    text: `### Amit Bhardwaj — Digital Twin Assistant
-I have direct, full access to **Amit's verified career history and architecture track record**.
-
-Here are key areas I can answer in complete detail for recruiters and engineering leaders:
-• **[Pre-Sales Architecture & RFPs](#)**: Technical discovery, solution design, effort estimations, and winning multi-million transformation bids.
-• **[Experience Prior to Genpact (2007–2018)](#)**: 11-year foundation across Chandra Credit, Infomatrix, Cirrologix, HCL, Directi (Linux SysAdmin), and Spectrum Infogain (Systems Engineering).
-• **[Automotive Retail Technology & SaaS](#)**: Reusable platform capability model cutting dealership software onboarding across 10,000+ car dealerships by 65%.
-• **[Private Banking & Wealth Management](#)**: Mission-critical digital onboarding turnaround from "Red" to "Green" in 6 months, reducing cycle time from 36 to 10 days (CSAT 4.9/5).
-• **[Automotive Captive Finance & Regulatory Redress](#)**: Reconciled 1.03M+ finance contracts with zero discrepancy under statutory FCA deadlines.
-• **[FMCG & Supply Chain (SAP ERP Decoupling)](#)**: Live Jan 2026; cut dispute resolution cycle time by 50% while keeping SAP S/4HANA as immutable SoR.
-• **[Corporate Genpact Governance](#)**: Senior Manager for ~8 years, governing 100+ initiatives and leading ~80 engineering resources.
-• **[Production Cloud & IDP Platforms](#)**: [sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk) (IDP), [Rescuematic](https://rescuematic.co.uk) (AWS EC2 / MQTTS), and [VisionVox](https://visionvox.amitbhardwaj.co.uk).
-
-What specific project, leadership scenario, or technical topic would you like to explore?`,
+    text: defaultEntry.content,
     chips: DEFAULT_SUGGESTIONS
   }
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// CHATBOT MODAL & INTERACTION COMPONENT
-// ─────────────────────────────────────────────────────────────────────────────
 
 export default function AmitAiChatbot() {
   const [isOpen, setIsOpen] = useState(false)
@@ -816,11 +699,11 @@ export default function AmitAiChatbot() {
     {
       id: 'init-1',
       sender: 'bot',
-      text: `👋 **Welcome! I am Amit Bhardwaj's Digital Twin AI.**
+      text: `👋 **Hi, I'm Amit Bhardwaj's Digital Twin.**
 
-I am powered by an **AI reasoning engine** grounded in Amit's **verified 18+ year career history** — covering his **Platform Engineering leadership, Enterprise Architecture governance (~80 engineers, 100+ projects at Genpact), pre-sales RFP pursuits, his foundational 11-year journey prior to Genpact, and production cloud systems**.
+I can walk you through Amit's 18+ years of technical experience—from his leadership in platform engineering and enterprise governance (~80 engineers at Genpact) to his deep 11-year foundation before Genpact and production platforms like [sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk) and [Rescuematic](https://rescuematic.co.uk).
 
-How can I assist your review or recruitment evaluation today?`,
+What would you like to explore first?`,
       timestamp: 'Just now',
       chips: DEFAULT_SUGGESTIONS
     }
