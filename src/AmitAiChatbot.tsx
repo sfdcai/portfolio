@@ -29,17 +29,17 @@ const DOSSIER_ENTRIES: KnowledgeEntry[] = [
   // 1. EXECUTIVE PROFILE & POSITIONING
   {
     id: 'profile',
-    keywords: ['about', 'who is', 'overview', 'summary', 'profile', 'bio', 'background', 'amit', 'tell me about him', 'promoted', 'promotion'],
+    keywords: ['about', 'who is', 'overview', 'summary', 'profile', 'bio', 'background', 'amit', 'tell me about him'],
     title: 'Executive Biography & Professional Positioning',
-    summary: 'Enterprise Platform & Engineering Leader with 18+ years of experience, recently promoted in August 2026 at Genpact UK.',
-    content: `Amit Bhardwaj is an **Enterprise Platform Architect and Systems Engineering Leader** based in London with over 18 years of progressive technical experience, including 8+ years at **Genpact** where he was recently **promoted in August 2026 to Senior Salesforce Architect / Principal Solutions Architect (Band 4)**.
+    summary: 'Enterprise Platform & Engineering Leader with 18+ years of experience, Senior Salesforce Architect & Principal Solutions Architect at Genpact UK.',
+    content: `Amit Bhardwaj is an **Enterprise Platform Architect and Systems Engineering Leader** based in London with over 18 years of progressive technical experience, including 8+ years at **Genpact** as **Senior Salesforce Architect / Principal Solutions Architect**.
 
-Reporting directly to **Lalit Tyagi**, Vice President (Global Salesforce Delivery Leader), Amit oversees the Salesforce technical architecture process, enterprise design standards, and delivery assurance across the **UK and Europe**.
+In this capacity, Amit oversees the Salesforce technical architecture process, enterprise design standards, and delivery assurance across the **UK and Europe**.
 
 What truly sets Amit apart is his rare **"metal-to-cloud" foundation**: he began his career at the physical hardware and Linux systems level before mastering enterprise cloud platforms, large-scale systems integration (Salesforce, SAP S/4HANA, AWS), and technology governance across global delivery organizations of up to **~80 engineers**.
 
 ### Key Highlights of His Career:
-• **August 2026 Promotion & European Mandate**: Elevated to oversee solution architecture across UK & Europe, directing flagship initiatives including FCA regulatory redress, private banking onboarding, and consumer goods order resolution.
+• **UK & European Enterprise Mandate**: Oversees solution architecture across UK & Europe, directing flagship initiatives including FCA regulatory redress, private banking onboarding, and consumer goods order resolution.
 • **Strategic Governance & Scale**: Chairs Architecture Review Boards (EAB) and InfoSec design reviews, governing 100+ business initiatives across multi-disciplinary engineering squads.
 • **High-Stakes Crisis Turnarounds**: Proven track record stepping into distressed enterprise programs in RED status and steering them to GREEN (such as turning around commercial onboarding at a major UK private bank in 6 months).
 • **Decoupled Architecture & Integrations**: Decouples complex multi-cloud ecosystems bridging Salesforce, SAP S/4HANA ERP, MuleSoft, and AWS while strictly protecting the System-of-Record (SoR).
@@ -348,13 +348,12 @@ Would you like to discuss his leadership style or review his production systems 
     keywords: [
       'genpact', 'corporate genpact', 'senior manager', 'ea', 'infosec',
       'governance', 'architecture review board', 'portfolio', '80 resources', 'team size', 'eab',
-      'promoted', 'promotion', 'lalit tyagi', 'band 4'
+      'principal architect', 'lead architect'
     ],
-    title: 'Corporate Genpact — Enterprise Architecture Governance, Leadership & August 2026 Promotion',
-    summary: 'Senior Manager for 8+ years, promoted in August 2026 to Senior Salesforce Architect / Principal Solutions Architect overseeing UK & Europe.',
-    content: `Amit has spent 8+ years at Genpact in London, where he was formally **promoted in August 2026 to Senior Salesforce Architect / Principal Solutions Architect (Band 4)**:
+    title: 'Corporate Genpact — Enterprise Architecture Governance & Platform Leadership',
+    summary: 'Senior Salesforce Architect & Principal Solutions Architect at Genpact overseeing UK & Europe.',
+    content: `Amit has spent 8+ years at Genpact in London as **Senior Salesforce Architect & Principal Solutions Architect**, operating as both an organizational delivery leader and senior technical authority:
 
-• **Reporting to Executive Leadership**: Reports directly to **Lalit Tyagi**, Vice President (Global Salesforce Delivery Leader).
 • **UK & European Leadership Mandate**: Oversees the Salesforce technical architecture process, enterprise design standards, and delivery assurance for Genpact across the **United Kingdom and Europe**.
 • **Enterprise Architecture Board (EAB) & InfoSec**: Serves on corporate governance boards evaluating multi-cloud integration patterns, security boundaries, and data residency across **100+ business initiatives**.
 • **Delivery Scale (~80 Resources)**: Leads, mentors, and directs cross-functional delivery organizations of up to **~80 engineers** (Technical Architects, Tech Leads, Developers, QA, and DevOps).
@@ -687,8 +686,8 @@ Would you like to explore any of his enterprise case studies or system designs?`
     return { text: entry.content, chips: entry.followUps }
   }
 
-  // 13. Corporate Genpact, Enterprise Governance & August 2026 Promotion
-  if (query.includes('genpact') || query.includes('promot') || query.includes('band 4') || query.includes('lalit tyagi') || query.includes('senior manager') || query.includes('governance') || query.includes('eab') || query.includes('infosec') || query.includes('80')) {
+  // 13. Corporate Genpact & Enterprise Governance
+  if (query.includes('genpact') || query.includes('senior manager') || query.includes('governance') || query.includes('eab') || query.includes('infosec') || query.includes('80')) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'genpact')!
     return { text: entry.content, chips: entry.followUps }
   }

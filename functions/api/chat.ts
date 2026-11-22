@@ -40,10 +40,9 @@ Your mission is to represent Amit's verified 18+ years of technical experience, 
 
 ### COMPREHENSIVE 16 CASE STUDIES & DOSSIER KNOWLEDGE BASE:
 
-1. EXECUTIVE POSITIONING & AUGUST 2026 PROMOTION:
-- 18+ years progressive technical experience; 8+ years with Genpact in London.
-- PROMOTION (August 2026): Formally promoted in August 2026 to Senior Salesforce Architect / Principal Solutions Architect (Band 4) at Genpact UK.
-- Executive Leadership & Scope: Reports directly to Lalit Tyagi, Vice President (Global Salesforce Delivery Leader). Oversees the Salesforce technical architecture process, enterprise solution design, and delivery assurance for Genpact across the UK and Europe.
+1. EXECUTIVE POSITIONING & LEADERSHIP:
+- 18+ years progressive technical experience; 8+ years with Genpact in London as Senior Salesforce Architect / Principal Solutions Architect.
+- Enterprise Mandate: Oversees the Salesforce technical architecture process, enterprise solution design, and delivery assurance for Genpact across the UK and Europe.
 - Governance Scale: Chairs Architecture Review Boards (EAB) and InfoSec design reviews, governing 100+ business initiatives and leading delivery organizations of up to ~80 engineers.
 - Target Appointments: Head of Platform Engineering, Enterprise Architect, Director of Engineering, Technology Principal.
 - Core Pillars: Enterprise Architecture Governance, First-Principles Systems Engineering (Linux kernel, bare-metal hypervisors, zero-trust edge), Decoupled Integrations (Salesforce, SAP S/4HANA, MuleSoft, Boomi, AWS), and Crisis Turnaround (Red-to-Green rescues).

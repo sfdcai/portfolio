@@ -227,11 +227,11 @@ experience:
   items:
     - company: Genpact
       logo: ""
-      role: Senior Salesforce Architect / Principal Solutions Architect (Promoted Aug 2026)
+      role: Senior Salesforce Architect / Principal Solutions Architect
       period: 2018 - Present
       location: London, United Kingdom · Hybrid
       desc: |
-          Promoted in August 2026 at Genpact UK (Band 4), reporting directly to Lalit Tyagi, Vice President (Global Salesforce Delivery Leader). Oversee the Salesforce technical architecture process, enterprise solution design, and delivery assurance across the UK and Europe. Direct technology strategy, chair weekly Architecture Review Boards (EAB) & InfoSec reviews across 100+ business initiatives, and lead multi-disciplinary engineering delivery organizations (~80 resources). Specialized in turning distressed multi-million-pound client programs from Red to Green.
+          Serve as organizational delivery leader and principal technical authority across UK and European enterprise engagements. Oversee the Salesforce technical architecture process, enterprise solution design, and delivery assurance. Direct technology strategy, chair weekly Architecture Review Boards (EAB) & InfoSec reviews across 100+ business initiatives, and lead multi-disciplinary engineering delivery organizations (~80 resources). Specialized in turning distressed multi-million-pound client programs from Red to Green.
       highlights:
         - Rescued distressed UK private banking onboarding program from RED to GREEN in 6 months; slashed cycle time from 36 to 10 days, reduced fincrime escalations from 76% to 1%, and achieved CSAT 4.9/5
         - Delivered 100% FCA statutory compliance on regulatory redress platform reconciling over 1.03M vehicle finance agreements with zero discrepancy and passwordless IDV

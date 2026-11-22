@@ -4,7 +4,7 @@ altSlug: about
 seo:
   title: About Amit Bhardwaj | Senior Salesforce Architect & Enterprise Platform Leader
   description: |
-      Professional background and verified career history of Amit Bhardwaj — Senior Salesforce Architect, Principal Solutions Architect, and Systems Engineering Leader with 18+ years of experience, promoted in August 2026 at Genpact UK, based in London, UK.
+      Professional background and verified career history of Amit Bhardwaj — Senior Salesforce Architect, Principal Solutions Architect, and Systems Engineering Leader with 18+ years of experience at Genpact, based in London, UK.
 heading: Amit Bhardwaj
 manifesto: |
     Systems should not just work—they must scale, self-heal, and integrate seamlessly from first principles.
@@ -13,7 +13,7 @@ location: "London, United Kingdom"
 lastUpdated: November 2026
 bio:
   - |
-      I am an Enterprise Platform Architect and Systems Engineering Leader with over 18 years of progressive technical experience, including 8+ years at Genpact in London where I was formally promoted in August 2026 to Senior Salesforce Architect / Principal Solutions Architect (Band 4). Reporting directly to Lalit Tyagi, Vice President (Global Salesforce Delivery Leader), I oversee the Salesforce technical architecture process, enterprise solution design, and delivery assurance across the United Kingdom and Europe. My engineering career began in 2007 at the physical hardware, network packet, and operating system layers — diagnosing server motherboards, configuring hardware RAID arrays, and provisioning bare-metal Linux infrastructure.
+      I am an Enterprise Platform Architect and Systems Engineering Leader with over 18 years of progressive technical experience, including 8+ years as a Senior Salesforce Architect and Principal Solutions Architect at Genpact in London. In this capacity, I oversee the Salesforce technical architecture process, enterprise solution design, and delivery assurance across the United Kingdom and Europe. My engineering career began in 2007 at the physical hardware, network packet, and operating system layers — diagnosing server motherboards, configuring hardware RAID arrays, and provisioning bare-metal Linux infrastructure.
   - |
       At Directi, I hardened production Linux server fleets (CentOS, RedHat, Debian), administered authoritative BIND DNS clusters, configured high-volume Postfix and Exim mail routing engines with SPF/DKIM, and developed Bash and Perl automation suites that cut routine administrative overhead by 40% while maintaining 99.9% infrastructure uptime. This deep, first-principles systems foundation informs every cloud, distributed system, and enterprise architecture decision I make today.
   - |
@@ -27,9 +27,9 @@ roles: []
 timelineHeading: Career Journey
 timeline:
   - period: "2018–Present"
-    role: Senior Salesforce Architect / Principal Solutions Architect (Promoted Aug 2026)
+    role: Senior Salesforce Architect / Principal Solutions Architect
     company: Genpact
-    desc: Promoted in August 2026 (Band 4) reporting to VP Lalit Tyagi; oversee Salesforce technical architecture across UK & Europe. Direct enterprise architecture governance across 100+ portfolio initiatives, lead ~80 engineering delivery resources, chair EAB/InfoSec boards, and lead Red-to-Green program rescues across Banking, Automotive, and FMCG.
+    desc: Oversee Salesforce technical architecture, enterprise design standards, and delivery assurance across UK & Europe. Direct enterprise architecture governance across 100+ portfolio initiatives, lead ~80 engineering delivery resources, chair EAB/InfoSec boards, and lead Red-to-Green program rescues across Banking, Automotive, and FMCG.
   - period: "2017–2018"
     role: Salesforce Architect & IT Systems Lead
     company: Chandra Credit Ltd.
@@ -120,7 +120,7 @@ faqHeading: Frequently Asked Questions
 faq:
   - q: "Who is Amit Bhardwaj?"
     a: |
-        Amit Bhardwaj is a Senior Salesforce Architect, Principal Solutions Architect, and Enterprise Platform Leader with over 18 years of progressive technical experience, including 8+ years at Genpact in London where he was formally promoted in August 2026 to Band 4, reporting directly to VP Lalit Tyagi and overseeing the Salesforce technical architecture process across the UK and Europe. Starting from bare-metal computer hardware diagnostics and Linux systems administration, he progressed into enterprise software architecture, multi-cloud platforms, zero-trust security, distributed systems, and agentic AI runtimes. He has governed technology roadmaps across 100+ business initiatives and led engineering delivery organizations of ~80 resources.
+        Amit Bhardwaj is a Senior Salesforce Architect, Principal Solutions Architect, and Enterprise Platform Leader with over 18 years of progressive technical experience, including 8+ years at Genpact in London where he oversees the Salesforce technical architecture process, enterprise solution design, and delivery assurance across the UK and Europe. Starting from bare-metal computer hardware diagnostics and Linux systems administration, he progressed into enterprise software architecture, multi-cloud platforms, zero-trust security, distributed systems, and agentic AI runtimes. He has governed technology roadmaps across 100+ business initiatives and led engineering delivery organizations of ~80 resources.
   - q: "What are Amit's marquee enterprise accomplishments?"
     a: |
         Amit's track record includes turning around a distressed, multi-million-pound onboarding program for a major UK private bank from RED to GREEN in 6 months (reducing onboarding lead time from 36 to 10 days, cutting fincrime review escalations from 76% to 1%, and achieving a 4.9/5 CSAT), delivering 100% FCA compliance on a regulatory redress platform reconciling over 1.03 million vehicle financing contracts with zero calculation discrepancies, launching the Fortune 500 Food Conglomerate CORA order assist platform live in Jan 2026 (cutting dispute resolution cycle time by 50%), and designing a reusable dealership provisioning engine accelerating retail deployments across 10,000+ car dealerships by 65%.
