@@ -10,6 +10,15 @@ const SYSTEM_PROMPT = `You are the official Digital Twin AI of Amit Bhardwaj, an
 
 Your mission is to represent Amit's verified 18+ years of technical experience, leadership capabilities, platform engineering depth, and architecture governance to recruiters, engineering leaders, CTOs, and clients.
 
+### STRICT SCOPE & TOPIC GUARDRAILS (CRITICAL & NON-NEGOTIABLE):
+1. **EXCLUSIVE PROFESSIONAL SCOPE — AMIT BHARDWAJ ONLY**:
+   - You MUST ONLY answer questions directly pertaining to Amit Bhardwaj: his professional career, architecture experience, leadership, skills, homelab, side projects, engineering philosophies, education, and credentials.
+   - You are NOT a general-purpose AI assistant, homework solver, math calculator, or generic code generation utility.
+2. **STRICT REFUSAL OF UNRELATED REQUESTS / ARBITRARY CODE GENERATION**:
+   - If the user asks you to write arbitrary code (e.g. "write code to sort numbers in Python", "implement quicksort", "write a python script to parse CSV", "create a todo app in React", "write a bubble sort"), or asks general knowledge/unrelated questions ("who was the president in 1800", "write me a poem", "tell me a joke", "solve this equation"):
+     **YOU MUST POLITELY AND FIRMLY DECLINE. DO NOT WRITE THE CODE.**
+   - Politely explain that as Amit's Digital Twin, you focus exclusively on his architectural career, platform engineering, and enterprise systems. Offer to discuss how Amit approaches software architecture, systems engineering, CI/CD pipelines, or his actual production platforms instead.
+
 ### TONE & BEHAVIORAL GUIDELINES:
 1. Speak authoritatively, naturally, and warmly in first-person as Amit's Digital Twin.
 2. Be conversational, articulate, and direct. Avoid bureaucratic resume dumps or robotic bullet tables. Tell the story behind the architectural trade-offs and business impact.
@@ -117,6 +126,41 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
         status: 400,
         headers: { 'Content-Type': 'application/json' },
       })
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Scope Guardrail: Block arbitrary code generation or off-topic queries
+    // ─────────────────────────────────────────────────────────────────────────
+    const lowerQuery = query.toLowerCase()
+    const genericCodeKeywords = [
+      'write a code', 'write code', 'write a program', 'write a script', 'write python code',
+      'sort the numbers', 'sorting numbers', 'sort numbers', 'bubble sort', 'quick sort', 'merge sort',
+      'write me a function', 'write a function', 'write a class', 'write an algorithm',
+      'solve this math', 'solve this equation', 'write a poem', 'tell a joke', 'cook a recipe',
+      'bake a cake', 'who is the president', 'capital of france'
+    ]
+    const mentionsAmitOrWork =
+      lowerQuery.includes('amit') || lowerQuery.includes('homelab') ||
+      lowerQuery.includes('rescuematic') || lowerQuery.includes('sfdx') ||
+      lowerQuery.includes('toolkit') || lowerQuery.includes('how does he') ||
+      lowerQuery.includes('does he') || lowerQuery.includes('his experience') ||
+      lowerQuery.includes('how did he') || lowerQuery.includes('how do you') ||
+      lowerQuery.includes('your background') || lowerQuery.includes('your experience')
+
+    if (genericCodeKeywords.some(k => lowerQuery.includes(k)) && !mentionsAmitOrWork) {
+      return new Response(
+        JSON.stringify({
+          text: `As Amit Bhardwaj's **Digital Twin**, my sole purpose is to discuss Amit's verified **18+ years of enterprise platform architecture, systems engineering leadership, and client case studies**.\n\nI don't write general-purpose utility code, solve programming exercises, or act as an arbitrary code generator.\n\nHowever, if you're interested in how Amit applies Python and automation in production, I'd be glad to discuss:\n• How he engineers **decoupled architectures** between Salesforce and SAP S/4HANA via MuleSoft\n• His production **Python pipelines** (such as his automated homelab documentation synchronizer and zero-quota cloud uploaders)\n• His work designing **event-driven IoT architectures** on AWS EC2 ([Rescuematic](https://rescuematic.co.uk))\n• His **Internal Developer Platform** ([sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk))\n\nWould you like to explore any of his enterprise case studies or system designs?`,
+          model: 'scope-guardrail',
+        }),
+        {
+          status: 200,
+          headers: {
+            'Content-Type': 'application/json',
+            'Access-Control-Allow-Origin': '*',
+          },
+        }
+      )
     }
 
     const conversationHistory = Array.isArray(body.history) ? body.history : []

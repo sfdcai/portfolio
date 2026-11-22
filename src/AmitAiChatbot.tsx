@@ -507,23 +507,36 @@ Feel free to ask about any specific project, domain, or technology!`,
     }
   }
 
-  // 3. Guardrail: Irrelevant off-topic inquiries
+  // 3. Guardrail: Irrelevant off-topic inquiries & Arbitrary Code Generation
   const offTopicTriggers = [
     'recipe', 'cook', 'pasta', 'bake a cake', 'crypto to buy', 'bitcoin price',
     'joke about dogs', 'who is the president', 'translate to french', 'homework',
-    'solve this math', 'capital of france'
+    'solve this math', 'capital of france', 'write a code', 'write code', 'write a program',
+    'write a script', 'write python code', 'sort the numbers', 'sorting numbers', 'sort numbers',
+    'bubble sort', 'quick sort', 'merge sort', 'write me a function', 'write a function',
+    'write a class', 'write an algorithm'
   ]
-  if (offTopicTriggers.some(t => query.includes(t))) {
-    return {
-      text: `I am Amit Bhardwaj's **Digital Twin AI**, specialized in answering inquiries regarding Amit's **18+ years in Enterprise Platform Architecture, Platform Engineering, Cloud Infrastructure, and Technical Leadership**.
+  const mentionsAmitOrWork =
+    query.includes('amit') || query.includes('homelab') ||
+    query.includes('rescuematic') || query.includes('sfdx') ||
+    query.includes('toolkit') || query.includes('how does he') ||
+    query.includes('does he') || query.includes('his experience') ||
+    query.includes('how did he') || query.includes('how do you') ||
+    query.includes('your background') || query.includes('your experience')
 
-Would you like to explore:
-• His **pre-sales architecture & multi-million RFP defense experience**
-• His deep **11-year career prior to Genpact** (Chandra Credit, Infomatrix, Cirrologix, HCL, Directi, Spectrum)
-• His platform engineering leadership in **Automotive Retail Technology & SaaS** (10,000+ dealerships)
-• His crisis recovery at a **Major UK Private Bank** (Red-to-Green turnaround in 6 months)
-• His enterprise governance at **Corporate Genpact** (~80 engineers, 100+ projects)
-• His production cloud systems (**sfdx-toolkit**, **Rescuematic**, **VisionVox**)?`,
+  if (offTopicTriggers.some(t => query.includes(t)) && !mentionsAmitOrWork) {
+    return {
+      text: `As Amit Bhardwaj's **Digital Twin**, my sole purpose is to discuss Amit's verified **18+ years of enterprise platform architecture, systems engineering leadership, and client case studies**.
+
+I don't generate general-purpose programming snippets, write utility scripts, or solve arbitrary coding exercises.
+
+However, if you're interested in how Amit approaches real-world engineering and automation in production, I'd be glad to discuss:
+• How he engineers **decoupled architectures** between Salesforce and SAP S/4HANA via MuleSoft
+• His production **Python pipelines** (such as his automated homelab synchronizer and zero-quota cloud uploaders)
+• His work designing **event-driven IoT architectures** on AWS EC2 ([Rescuematic](https://rescuematic.co.uk))
+• His **Internal Developer Platform** ([sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk))
+
+Would you like to explore any of his enterprise case studies or system designs?`,
       chips: DEFAULT_SUGGESTIONS
     }
   }
