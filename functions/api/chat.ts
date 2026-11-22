@@ -80,7 +80,7 @@ export const onRequestGet: PagesFunction<Env> = async () => {
       service: 'Amit Bhardwaj Digital Twin AI Edge Runtime',
       version: '2.0.0',
       active_models: [
-        'Cloudflare Workers AI (@cf/meta/llama-3.1-8b-instruct)',
+        'Cloudflare Workers AI (@cf/meta/llama-3.3-70b-instruct-fp8-fast)',
         'Google Gemini (gemini-1.5-flash)',
         'Groq Cloud (llama-3.3-70b-versatile)'
       ]
@@ -131,17 +131,22 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       { role: 'user', content: query },
     ]
 
+    let lastAiError: string | null = null
+
     // ─────────────────────────────────────────────────────────────────────────
     // Priority 1: Cloudflare Pages Native Workers AI Binding (context.env.AI)
     // ─────────────────────────────────────────────────────────────────────────
     if (context.env.AI) {
       try {
-        const aiResponse = await context.env.AI.run('@cf/meta/llama-3.1-8b-instruct', {
+        const aiResponse = await context.env.AI.run('@cf/meta/llama-3.3-70b-instruct-fp8-fast', {
           messages,
           temperature: 0.4,
           max_tokens: 800,
         })
-        const reply = aiResponse.response || ''
+        const reply =
+          aiResponse?.response ||
+          aiResponse?.choices?.[0]?.message?.content ||
+          ''
         if (reply) {
           return new Response(
             JSON.stringify({
@@ -157,7 +162,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
             }
           )
         }
-      } catch (aiErr) {
+      } catch (aiErr: any) {
+        lastAiError = aiErr?.message || String(aiErr)
         console.warn('Native Cloudflare AI binding failed, attempting fallbacks:', aiErr)
       }
     }
@@ -272,7 +278,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     if (apiToken) {
       const cfResponse = await fetch(
-        `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/@cf/meta/llama-3.1-8b-instruct`,
+        `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/@cf/meta/llama-3.3-70b-instruct-fp8-fast`,
         {
           method: 'POST',
           headers: {
@@ -312,12 +318,14 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     return new Response(
       JSON.stringify({
-        error: 'No active AI engine binding or API key configured in Cloudflare Pages environment.',
-        help: 'Add AI binding in Pages Settings -> Functions, or set GEMINI_API_KEY / GROQ_API_KEY in Pages environment variables.'
+        error: 'No active AI engine binding or API key configured.',
+        hasAiBinding: !!context.env.AI,
+        lastAiError,
+        help: 'Ensure [ai] binding is configured or set GEMINI_API_KEY / CF_API_TOKEN.'
       }),
       {
         status: 503,
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' },
       }
     )
   } catch (err: any) {
