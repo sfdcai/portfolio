@@ -6,6 +6,7 @@ import { translations, seo, type Lang } from './i18n'
 import { useHomeSeo } from './articles/use-article-seo'
 import { getTechIcon } from './tech-icons'
 import SystemsArchitecture from './SystemsArchitecture'
+import LiveArchitectureFlow from './LiveArchitectureFlow'
 import AmitAiChatbot from './AmitAiChatbot'
 
 
@@ -1699,6 +1700,9 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Live Working Architecture & Data-Flow Visualizer */}
+      <LiveArchitectureFlow />
 
       {/* Interactive Systems Architecture & SRE Lab */}
       <SystemsArchitecture />

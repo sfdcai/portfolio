@@ -202,6 +202,15 @@ const data = {
         caseStudyLabel: 'Try Live App',
       },
       {
+        title: 'Beacon — Production AI Knowledge Assistant',
+        badge: 'Live · Model Context Protocol (MCP)',
+        badgeBuilding: '',
+        desc: 'Production AI Knowledge Assistant connecting large enterprise document libraries to Claude via Model Context Protocol (FastMCP) and local ChromaDB RAG. Processes 180+ project documents with sub-second query latency and zero data leaving the client environment.',
+        tech: ['FastMCP', 'Claude', 'ChromaDB', 'Local RAG', 'Python'],
+        caseStudyUrl: 'https://toolkit.amitbhardwaj.co.uk',
+        caseStudyLabel: 'View AI Architecture',
+      },
+      {
         title: 'Rescuematic — Rotimatic Fleet SRE & Cloud Continuity',
         badge: 'Live · IoT Robotics & SRE',
         badgeBuilding: '',

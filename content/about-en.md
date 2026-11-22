@@ -83,23 +83,35 @@ certifications:
     items:
       - Certified Application Architect
       - Certified System Architect
+      - Certified Sharing & Visibility Architect
       - Certified Data Architecture & Management Designer
       - Certified Integration Architecture Designer
       - Certified Development Lifecycle & Deployment Designer
       - Certified Identity & Access Management Designer
-      - Certified Sharing & Visibility Designer
-  - org: Salesforce Certified Development & Consulting
+  - org: Salesforce Certified AI, Development & Administration
     items:
       - Certified Platform Developer II (PD2)
       - Certified Platform Developer I (PD1)
       - Certified Platform App Builder
-      - Certified Administrator
-  - org: DevOps & Platform Engineering
+      - Certified Administrator (SCA)
+      - Salesforce AI Associate & Data Cloud Consultant
+  - org: AI Runtimes, DevOps & Systems
     items:
+      - Certificate of Completion: Claude Code 101
+      - Certificate of Completion: Introduction to Claude Cowork
+      - Microsoft Certified Professional (MCP)
+      - Copado Certified Consultant (DevOps & Release Management)
       - Copado Certified Fundamentals I & II
+awardsHeading: Honors & Corporate Awards
+awards:
+  - Diamond Award (2018) — Highest individual corporate excellence recognition at Genpact
+  - INCISIVE Award (2020/21) — Intellectual Agility & cross-disciplinary architecture problem-solving
+  - Excellence Award (2020/21) — Evolution of marketing operating infrastructure & InfoSec governance
+  - Gold Awards (2019, 2021, 2022, 2023) & Silver Award (2021) — Multi-year delivery & leadership excellence
 educationHeading: Formal Education
 education:
-  - Bachelor of Technology (B.Tech) in Information Technology — Rajasthan Technical University (RTU), India (2003–2007)
+  - Bachelor of Engineering (B.E.) in Information Technology — University of Rajasthan, India (2003–2007)
+  - Senior Secondary Examination (Class XII) — Central Board of Secondary Education (CBSE) | Physics, Chemistry, Mathematics & Computer Science (2002–2003)
 pressHeading: Press & Features
 press: []
 communityHeading: Technical Articles & Architecture Blueprints
@@ -126,7 +138,11 @@ faq:
         Amit's track record includes turning around a distressed, multi-million-pound onboarding program for a major UK private bank from RED to GREEN in 6 months (reducing onboarding lead time from 36 to 10 days, cutting fincrime review escalations from 76% to 1%, and achieving a 4.9/5 CSAT), delivering 100% FCA compliance on a regulatory redress platform reconciling over 1.03 million vehicle financing contracts with zero calculation discrepancies, launching the Fortune 500 Food Conglomerate CORA order assist platform live in Jan 2026 (cutting dispute resolution cycle time by 50%), and designing a reusable dealership provisioning engine accelerating retail deployments across 10,000+ car dealerships by 65%.
   - q: "What does Amit build in applied systems engineering?"
     a: |
-        Amit is a hands-on builder who maintains production platforms from first principles. He built sfdx-toolkit (an Internal Developer Platform for Salesforce metadata analysis), Rescuematic (a 24/7 cloud continuity and fleet SRE platform on AWS EC2 & Cloudflare edge rescuing orphaned Rotimatic robotic flatbread appliances worldwide), VisionVox (a real-time multimodal accessibility engine on the Gemini Live API), and Smart Email Brain (an autonomous event ingestion pipeline using local Qwen SLMs and n8n). He operates a high-performance bare-metal Proxmox hypervisor server running Linux 7.0 kernel, ZRAM memory compression, and unified Prometheus, Grafana, and Loki observability.
+        Amit is a hands-on builder who maintains production platforms from first principles. He built sfdx-toolkit (an Internal Developer Platform for Salesforce metadata analysis), Rescuematic (a 24/7 cloud continuity and fleet SRE platform on AWS EC2 & Cloudflare edge rescuing orphaned Rotimatic robotic flatbread appliances worldwide), Beacon (a production AI Knowledge Assistant connecting large document libraries to Claude via FastMCP and local ChromaDB RAG with sub-second latency and zero cloud data egress), VisionVox (a real-time multimodal accessibility engine on the Gemini Live API), and Smart Email Brain (an autonomous event ingestion pipeline using local Qwen SLMs and n8n). He operates a high-performance bare-metal Proxmox hypervisor server running Linux 7.0 kernel, ZRAM memory compression, and unified Prometheus, Grafana, and Loki observability.
+  - q: "What is Amit's AI architecture focus?"
+    a: |
+        Most architects know Salesforce OR AI. Amit bridges both. After 16+ years architecting enterprise Salesforce solutions across 100+ implementations in BFSI, automotive, and manufacturing, he designs intelligent architectures using Agentforce, Data Cloud, and RAG-based systems. He builds autonomous agents with Human-in-the-Loop governance, prompt engineering, and self-hosted private AI infrastructure (Proxmox, local SLMs) for air-gapped enterprise compliance.
 connectHeading: Let's Connect
-email: ""
+email: "helloamitbhardwaj@gmail.com"
+linkedin: "https://www.linkedin.com/in/salesforce-technical-architect"
 ---

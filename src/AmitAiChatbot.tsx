@@ -374,20 +374,27 @@ Would you like to hear about a specific crisis recovery or his pre-sales pursuit
     keywords: [
       'certification', 'certifications', 'certified', 'credentials',
       'cta', 'system architect', 'application architect', 'pd2', 'copado', 'education', 'degree',
-      'btech', 'b.tech', 'university', 'rtu'
+      'btech', 'b.tech', 'university', 'rtu', 'claude code', 'mcp'
     ],
     title: 'Formal Education, Certifications & Credentials',
-    summary: 'B.Tech in IT, Salesforce Application Architect, System Architect, PD1/PD2, Copado Certified.',
-    content: `Amit holds a formal **Bachelor of Technology (B.Tech) in Information Technology** from **Rajasthan Technical University (RTU), India (2003–2007)**—a rigorous 4-year engineering degree covering computer hardware, operating system design, data structures, and computer networking.
+    summary: 'B.E. in IT, Salesforce Application & System Architect, Claude Code 101, MCP, Copado Certified.',
+    content: `Amit holds a formal **Bachelor of Engineering (B.E.) in Information Technology** from **University of Rajasthan, India (2003–2007)**—a rigorous 4-year engineering curriculum covering computer hardware, operating system kernels, data structures, and telecommunications networking, preceded by CBSE Class XII in Physics, Chemistry, Maths & Computer Science.
 
-His verified professional credentials include:
+His verified professional certifications and credentials include:
 • **Salesforce Certified Application Architect**
 • **Salesforce Certified System Architect**
+• **Salesforce Certified Sharing & Visibility Architect**
+• **Salesforce Certified Data Architect**
 • **Salesforce Certified Platform Developer I & II (PD1 & PD2)**
-• **Designers**: Data Architecture & Management, Integration Architecture, Development Lifecycle & Deployment, Identity & Access Management, and Sharing & Visibility
-• **DevOps**: Copado Certified Fundamentals I & II
+• **Salesforce Certified Administrator (SCA)** & Platform App Builder
+• **Salesforce AI Associate & Data Cloud Consultant**
+• **Copado Certified Consultant (DevOps & Release Management)** & Fundamentals I & II
+• **Certificate of Completion: Claude Code 101**
+• **Certificate of Completion: Introduction to Claude Cowork**
+• **Microsoft Certified Professional (MCP)**
+• **TOGAF 9.1 Enterprise Architecture Practitioner**
 
-Would you like to know about his awards or his platform leadership experience?`,
+Would you like to know about his honors & awards or his enterprise platform leadership experience?`,
     followUps: [
       "What awards has Amit received?",
       "Why hire Amit as Head of Platform Engineering?",
@@ -399,15 +406,18 @@ Would you like to know about his awards or his platform leadership experience?`,
   {
     id: 'awards',
     keywords: [
-      'award', 'awards', 'recognition', 'commendation', 'cheers', 'client recognition', 'vp award'
+      'award', 'awards', 'recognition', 'commendation', 'cheers', 'client recognition', 'diamond award', 'incisive', 'excellence award'
     ],
-    title: 'Executive Awards, Commendations & Major RFP Wins',
-    summary: 'Executive leadership awards, client commendations, and multi-million enterprise RFP wins.',
-    content: `Amit has received multiple formal recognitions throughout his career:
+    title: 'Executive Honors, Corporate Awards & Client Commendations',
+    summary: 'Diamond Award, INCISIVE Award, Excellence Award, Client commendations, and multi-million enterprise RFP wins.',
+    content: `Amit has received multiple marquee honors and formal recognitions throughout his career:
 
+• **Diamond Award (2018)**: The highest annual individual corporate excellence recognition at Genpact, awarded for exceptional architectural delivery.
+• **INCISIVE Award — Intellectual Agility (2020/21)**: Awarded for intellectual agility and cross-disciplinary architecture problem-solving across complex client engagements.
+• **Excellence Award — Evolution of Marketing Operating Infrastructure (2020/21)**: Commended for architecture ownership, InfoSec reviews, and multi-platform marketing integrations across global corporate systems.
+• **Gold Awards (2019, 2021, 2022, 2023) & Silver Award (2021)**: Multiple annual delivery, innovation, and leadership excellence recognitions.
 • **Executive Crisis Recovery Commendation**: Formally commended by executive leadership for decisive technical intervention, crisis management, and deployment stabilization during a critical production release escalation for a global conglomerate.
-• **Major Banking Commendation**: Commended by technology leadership at a major UK private bank for rescuing their onboarding transformation from Red to Green, unblocking the customer data model, and cutting release cycle times by **75%**.
-• **Genpact Cheers Recognition (Multiple)**: Recognized repeatedly for outstanding engineering delivery assurance, high-stakes cutovers, and cross-team architectural mentorship.
+• **Major Banking Commendation**: Commended by technology leadership at a major UK private bank for rescuing their onboarding transformation from Red to Green, unblocking the customer data model, and cutting release cycle times by **75%** (CSAT 4.9/5).
 
 Would you like to explore the banking turnaround in more detail or learn about his pre-sales experience?`,
     followUps: [
@@ -451,13 +461,14 @@ Would you like to know more about the MQTTS reverse-engineering or his other pro
   {
     id: 'projects',
     keywords: [
-      'project', 'projects', 'side project', 'experiments', 'visionvox',
+      'project', 'projects', 'side project', 'experiments', 'beacon', 'mcp', 'fastmcp', 'visionvox',
       'sfdx-toolkit', 'homelab', 'proxmox', 'linux kernel', 'smart email brain'
     ],
-    title: 'Applied Systems Engineering & Production Platforms',
-    summary: 'sfdx-toolkit (IDP), Rescuematic (Rotimatic Cloud Continuity), VisionVox (Gemini Live), and bare-metal Proxmox hypervisor cluster.',
+    title: 'Applied Systems Engineering, AI Agents & Production Platforms',
+    summary: 'Beacon (FastMCP RAG), sfdx-toolkit (IDP), Rescuematic (Rotimatic Cloud Continuity), VisionVox (Gemini Live), and bare-metal Proxmox hypervisor cluster.',
     content: `Amit actively designs, builds, and runs production systems to stay at the cutting edge:
 
+• **Beacon — Production AI Knowledge Assistant**: Connects large enterprise document libraries (180+ technical specs, PRDs, ADRs) to Claude via the Model Context Protocol (FastMCP + ChromaDB local RAG). Enables engineering teams to query complex project knowledge in natural language with sub-second query latency and zero cloud data egress.
 • **[Rescuematic](https://rescuematic.co.uk)**: A 24/7 cloud continuity, diagnostic telemetry, and fleet SRE platform on AWS EC2 & Cloudflare Pages edge that rescues orphaned Rotimatic flatbread robots worldwide following the manufacturer's liquidation.
 • **[sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk)**: A production Internal Developer Platform (IDP) built with TypeScript/React for Salesforce engineering teams. It features real-time metadata dependency visualization, side-by-side XML diffing, and embedded Model Context Protocol (MCP) AI agents.
 • **[VisionVox](https://visionvox.amitbhardwaj.co.uk)**: A low-latency multimodal voice and vision assistant built on the Gemini Multimodal Live API over WebSockets, providing real-time spatial analysis and OCR.
@@ -465,9 +476,9 @@ Would you like to know more about the MQTTS reverse-engineering or his other pro
 
 Would you like to explore any of these platforms in depth?`,
     followUps: [
+      "Tell me about Beacon AI Knowledge Assistant",
       "What is Rescuematic and why did Amit build it?",
-      "Explore the sfdx-toolkit platform",
-      "Why hire Amit as Head of Platform Engineering?"
+      "Explore the sfdx-toolkit platform"
     ]
   },
 
@@ -484,10 +495,13 @@ Would you like to explore any of these platforms in depth?`,
 
 He is currently open to conversations regarding senior technology appointments, including **Head of Platform Engineering**, **Enterprise Architect**, **Director of Engineering**, or **Principal Solution Architect**.
 
-• **Email**: [amit@amitbhardwaj.co.uk](mailto:amit@amitbhardwaj.co.uk)  
-• **LinkedIn**: [linkedin.com/in/amitbhardwaj-crm](https://www.linkedin.com/in/amitbhardwaj-crm/)  
-• **Code & Platforms**: [github.com/sfdcai](https://github.com/sfdcai)  
-• **Location**: London, United Kingdom (British Citizen)  
+• **Email**: [helloamitbhardwaj@gmail.com](mailto:helloamitbhardwaj@gmail.com) | [amit@amitbhardwaj.co.uk](mailto:amit@amitbhardwaj.co.uk)  
+• **LinkedIn**: [linkedin.com/in/salesforce-technical-architect](https://www.linkedin.com/in/salesforce-technical-architect)  
+• **Portfolio**: [amitbhardwaj.co.uk](https://amitbhardwaj.co.uk)  
+• **Company**: [genpact.com](https://genpact.com)  
+• **Top Skills**: Enterprise Architecture · Salesforce Financial Services · Salesforce Architecture  
+• **Languages**: English (Full Professional) · Hindi (Native or Bilingual)  
+• **Location**: London, United Kingdom  
 
 Would you like me to share more details about his leadership scope or specific projects?`,
     followUps: [
