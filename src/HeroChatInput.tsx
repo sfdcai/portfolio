@@ -2,11 +2,11 @@ import { useState, useCallback } from 'react'
 import { Bot, Send, Sparkles, ArrowRight } from 'lucide-react'
 
 const SUGGESTED_QUESTIONS = [
+  { label: '🚀 Independent Ventures vs Genpact', query: 'What is the difference between your enterprise work at Genpact and independent ventures like Rescuematic?' },
   { label: '⚡ Private Banking Turnaround', query: 'How did you turn around the UK private banking onboarding in 6 months?' },
   { label: '💎 Diamond Award & Honors', query: 'What corporate awards and honors have you won at Genpact?' },
   { label: '🏛️ SAP S/4HANA Decoupling', query: 'Explain how you decoupled Salesforce from SAP S/4HANA without transaction locks.' },
-  { label: '🛠️ Bare-Metal Homelab', query: 'Why do you maintain a bare-metal Linux hypervisor and what runs on it?' },
-  { label: '💼 Head of Platform Value', query: 'Why hire Amit as Head of Platform Engineering or Principal Architect?' }
+  { label: '🛠️ Bare-Metal Homelab', query: 'Why do you maintain a bare-metal Linux hypervisor and what runs on it?' }
 ]
 
 export default function HeroChatInput() {

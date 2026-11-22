@@ -482,6 +482,45 @@ Would you like to explore any of these platforms in depth?`,
     ]
   },
 
+  // 11c. INDEPENDENT VENTURES VS GENPACT ENTERPRISE (DUAL-THREAT ARCHITECT)
+  {
+    id: 'independent-vs-genpact',
+    keywords: [
+      'difference', 'genpact project', 'rescuematic genpact', 'independent', 'ventures',
+      'related to genpact', 'client or personal', 'side project', 'dual threat', 'why build rescuematic'
+    ],
+    title: 'Independent Engineering Ventures vs Genpact Enterprise Mandate',
+    summary: 'Clear distinction between Amit\'s corporate consulting leadership at Genpact (~80 engineers) and his independent engineering ventures (Rescuematic, sfdx-toolkit, Homelab).',
+    content: `### Two Complementary Profiles: Enterprise Leader & Hands-On Builder
+
+Amit operates as a **dual-threat technical leader**—bridging strategic enterprise governance with first-principles systems engineering:
+
+---
+
+### 1. Corporate Enterprise Mandate (Genpact · 8+ Years)
+During his 8+ years at Genpact as **Principal / Senior Solutions Architect**, Amit directed large-scale client programs for global Fortune 500 and FTSE 100 enterprises under strict NDAs:
+• **Enterprise Governance (EAB)**: Chaired Enterprise Architecture Boards and InfoSec reviews governing ~80 engineers across cross-functional squads.
+• **Crisis Turnarounds**: Rescued distressed programs in RED status (e.g. cutting commercial onboarding from 36 days to 10 days for a Tier-1 UK Private Bank in 6 months).
+• **RegTech & Core Decoupling**: Reconciled 1.03M contracts for a major automotive captive under FCA DISP, and decoupled Salesforce from SAP S/4HANA ERP for a global FMCG brand using the Transactional Outbox pattern.
+
+---
+
+### 2. Independent Engineering Ventures & Open Source (Built & Operated by Amit)
+**Rescuematic, sfdx-toolkit, VisionVox, and his bare-metal homelab are Amit\'s independent platforms**, created outside of Genpact consulting engagements:
+• **[Rescuematic](https://rescuematic.co.uk)**: Conceived and built independently to rescue over 100,000 orphaned Rotimatic kitchen robots worldwide after the original manufacturer liquidated. Features reverse-engineered MQTTS (port 8883) brokers on AWS EC2, Cloudflare Pages edge, and ADR-002 Zero-Spoofing telemetry. Not affiliated with Genpact or Zimplistic.
+• **[sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk)**: Open-source developer productivity suite and AST parsing engine for Salesforce DX metadata synchronization.
+• **Bare-Metal Proxmox SRE Lab**: 24/7 dedicated hypervisor cluster running Linux 7.0 kernel, Prometheus/Loki observability, and OpenWrt 2.5GbE mesh routing.
+• **Beacon AI & VisionVox**: Model Context Protocol (FastMCP) RAG assistant and Gemini Live multimodal real-time voice/vision accessibility tools.
+
+**Why this matters to employers & clients:**
+Amit is not an "ivory-tower" architect who only produces diagrams. His independent systems prove that he writes production code, understands bare-metal kernel and network mechanics, and operates 24/7 high-availability infrastructure.`,
+    followUps: [
+      "What is Rescuematic and why did Amit build it?",
+      "Explain the private banking onboarding turnaround",
+      "Why hire Amit as Head of Platform Engineering?"
+    ]
+  },
+
   // 12. CONTACT & RECRUITER INFO
   {
     id: 'contact',

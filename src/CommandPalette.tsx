@@ -156,7 +156,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
     {
       id: 'case-banking',
       title: 'Private Banking Onboarding Turnaround',
-      subtitle: 'Commercial onboarding lead times reduced from 36d to 10d (RED to GREEN in 6mo)',
+      subtitle: '[Enterprise Client · Genpact] Commercial onboarding reduced from 36d to 10d (RED to GREEN in 6mo)',
       category: 'Case Studies',
       icon: Briefcase,
       action: () => {
@@ -168,7 +168,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
     {
       id: 'case-fca',
       title: 'FCA Statutory Regulatory Redress Engine',
-      subtitle: '1.03M vehicle contracts reconciled with 0 discrepancies & passwordless tokenized IDV',
+      subtitle: '[Enterprise Client · Genpact] 1.03M vehicle contracts reconciled with 0 discrepancies & tokenized IDV',
       category: 'Case Studies',
       icon: ShieldCheck,
       action: () => {
@@ -180,7 +180,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
     {
       id: 'case-sap-decoupling',
       title: 'Global FMCG Order Assist & SAP S/4HANA Decoupling',
-      subtitle: 'Transactional outbox pattern and asynchronous order orchestration protecting Core SoR',
+      subtitle: '[Enterprise Client · Genpact] Transactional outbox pattern & async order orchestration protecting Core SoR',
       category: 'Case Studies',
       icon: Layers,
       action: () => {
@@ -192,7 +192,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
     {
       id: 'case-rescuematic',
       title: 'Rescuematic IoT Robotics & Fleet SRE',
-      subtitle: '24/7 AWS EC2 & Cloudflare edge platform rescuing 100k+ Rotimatic machines',
+      subtitle: '[Independent Venture] 24/7 AWS EC2 & Cloudflare edge platform rescuing 100k+ Rotimatic machines',
       category: 'Case Studies',
       icon: Activity,
       action: () => {
@@ -204,7 +204,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
     {
       id: 'case-homelab',
       title: 'Bare-Metal Proxmox SRE Stack & Network Lab',
-      subtitle: 'Dell Precision 5520, Linux 7.0 kernel, ZRAM, and Prometheus/Loki observability',
+      subtitle: '[Independent Lab] Dell Precision 5520, Linux 7.0 kernel, ZRAM, and Prometheus/Loki observability',
       category: 'Case Studies',
       icon: Database,
       action: () => {
@@ -218,7 +218,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
     {
       id: 'tool-sfdx',
       title: 'sfdx-toolkit (Internal Developer Platform)',
-      subtitle: 'Full-stack React/TypeScript IDP for Salesforce metadata diffing and AST parsing',
+      subtitle: '[Independent Open Source] Full-stack React/TypeScript IDP for Salesforce metadata diffing & AST parsing',
       category: 'Tools & Labs',
       icon: Terminal,
       action: () => {
@@ -230,7 +230,7 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
     {
       id: 'tool-visionvox',
       title: 'VisionVox AI Companion',
-      subtitle: 'Real-time multimodal Gemini Live API assistant for the visually impaired',
+      subtitle: '[Independent AI] Real-time multimodal Gemini Live API assistant for the visually impaired',
       category: 'Tools & Labs',
       icon: Bot,
       action: () => {
@@ -241,6 +241,15 @@ export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps)
     },
 
     // Contextual Ask Amit AI Queries
+    {
+      id: 'ask-independent-vs-genpact',
+      title: 'Ask AI: What is the difference between Genpact work and independent ventures like Rescuematic?',
+      subtitle: 'Understand the dual profile: Enterprise consulting leader (~80 engineers) vs hands-on builder',
+      category: 'Ask Amit AI',
+      icon: Bot,
+      action: () => triggerChat('What is the difference between your enterprise work at Genpact and independent ventures like Rescuematic?'),
+      keywords: ['independent', 'ventures', 'genpact', 'rescuematic', 'difference', 'dual']
+    },
     {
       id: 'ask-turnaround',
       title: 'Ask AI: How did Amit turn around the private banking onboarding?',
