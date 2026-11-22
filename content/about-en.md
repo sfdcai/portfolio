@@ -2,34 +2,34 @@
 slug: about
 altSlug: about
 seo:
-  title: About Amit Bhardwaj | Enterprise Platform Architect & Engineering Leader
+  title: About Amit Bhardwaj | Senior Salesforce Architect & Enterprise Platform Leader
   description: |
-      Professional background and verified career history of Amit Bhardwaj — Enterprise Platform Architect, Systems Engineering Leader, and Solutions Architect with 18+ years of experience, including 8 years as Senior Manager at Genpact, based in London, UK.
+      Professional background and verified career history of Amit Bhardwaj — Senior Salesforce Architect, Principal Solutions Architect, and Systems Engineering Leader with 18+ years of experience, promoted in August 2026 at Genpact UK, based in London, UK.
 heading: Amit Bhardwaj
 manifesto: |
     Systems should not just work—they must scale, self-heal, and integrate seamlessly from first principles.
-subtitle: Enterprise Platform Architect • Head of Platform Engineering • Systems Engineering Leader
+subtitle: Senior Salesforce Architect • Principal Solutions Architect • Enterprise Platform Leader
 location: "London, United Kingdom"
 lastUpdated: November 2026
 bio:
   - |
-      I am an Enterprise Platform Architect and Systems Engineering Leader with over 18 years of progressive hands-on technical leadership, including approximately eight years as a Senior Manager & Solutions Architect at Genpact in London. My engineering career began in 2007 at the physical hardware, network packet, and operating system layers — diagnosing server motherboards, configuring hardware RAID arrays, and provisioning bare-metal Linux infrastructure.
+      I am an Enterprise Platform Architect and Systems Engineering Leader with over 18 years of progressive technical experience, including 8+ years at Genpact in London where I was formally promoted in August 2026 to Senior Salesforce Architect / Principal Solutions Architect (Band 4). Reporting directly to Lalit Tyagi, Vice President (Global Salesforce Delivery Leader), I oversee the Salesforce technical architecture process, enterprise solution design, and delivery assurance across the United Kingdom and Europe. My engineering career began in 2007 at the physical hardware, network packet, and operating system layers — diagnosing server motherboards, configuring hardware RAID arrays, and provisioning bare-metal Linux infrastructure.
   - |
       At Directi, I hardened production Linux server fleets (CentOS, RedHat, Debian), administered authoritative BIND DNS clusters, configured high-volume Postfix and Exim mail routing engines with SPF/DKIM, and developed Bash and Perl automation suites that cut routine administrative overhead by 40% while maintaining 99.9% infrastructure uptime. This deep, first-principles systems foundation informs every cloud, distributed system, and enterprise architecture decision I make today.
   - |
       Over eight years at Genpact, I have directed enterprise technology governance across 100+ business initiatives, chaired weekly Architecture Review Boards (EAB) and InfoSec design reviews, and led multi-disciplinary engineering delivery organizations (~80 resources). I have established a proven track record turning distressed, multi-million-pound client programs from Red to Green — such as rescuing a major UK private bank's commercial onboarding portal (slashing cycle time from 36 to 10 days, cutting fincrime review escalations from 76% to under 1%, and elevating CSAT to 4.9/5).
   - |
-      Across industry verticals, I architected the regulatory calculation and case orchestration platform reconciling over 1.03 million vehicle financing contracts under strict FCA statutory deadlines with zero discrepancy, engineered decoupled SAP S/4HANA ERP integrations for a Fortune 500 food conglomerate (Danone CORA, cutting dispute resolution by 50%), and designed a metadata-driven dealership provisioning platform accelerating retail deployments across 10,000+ automotive rooftops by 65%.
+      Across industry verticals, I architected the regulatory calculation and case orchestration platform reconciling over 1.03 million vehicle financing contracts under strict FCA statutory deadlines with zero discrepancy, engineered decoupled SAP S/4HANA ERP integrations for a Fortune 500 food conglomerate (CORA Order Assist live in Jan 2026, cutting dispute resolution by 50%), and designed a metadata-driven dealership provisioning platform accelerating retail deployments across 10,000+ automotive rooftops by 65%.
   - |
-      Beyond corporate enterprise delivery, I build and maintain production software platforms from the ground up: including sfdx-toolkit (a full-stack Internal Developer Platform), Rescuematic (a production IoT appliance microservices platform on AWS EC2 with MQTTS TLS and Cloudflare Pages), VisionVox (a real-time multimodal accessibility engine on the Gemini Live API), and an enterprise-grade bare-metal Proxmox hypervisor cluster running Prometheus, Grafana, and Loki observability.
+      Beyond corporate enterprise delivery, I build and maintain production software platforms from the ground up: including sfdx-toolkit (a full-stack Internal Developer Platform), Rescuematic (a 24/7 cloud continuity, diagnostic telemetry, and fleet SRE platform on AWS EC2 & Cloudflare edge rescuing orphaned Rotimatic robotic flatbread appliances worldwide following manufacturer liquidation), VisionVox (a real-time multimodal accessibility engine on the Gemini Live API), and an enterprise-grade bare-metal Proxmox hypervisor cluster running Prometheus, Grafana, and Loki observability.
 seeking: ""
 roles: []
 timelineHeading: Career Journey
 timeline:
   - period: "2018–Present"
-    role: Senior Manager & Solutions Architect
+    role: Senior Salesforce Architect / Principal Solutions Architect (Promoted Aug 2026)
     company: Genpact
-    desc: Enterprise architecture governance across 100+ portfolio initiatives, leading ~80 engineering delivery resources, chairing EAB/InfoSec boards, and leading Red-to-Green program rescues across Banking, Automotive, and FMCG.
+    desc: Promoted in August 2026 (Band 4) reporting to VP Lalit Tyagi; oversee Salesforce technical architecture across UK & Europe. Direct enterprise architecture governance across 100+ portfolio initiatives, lead ~80 engineering delivery resources, chair EAB/InfoSec boards, and lead Red-to-Green program rescues across Banking, Automotive, and FMCG.
   - period: "2017–2018"
     role: Salesforce Architect & IT Systems Lead
     company: Chandra Credit Ltd.
@@ -59,8 +59,8 @@ projects:
   - name: sfdx-toolkit (Internal Developer Platform)
     desc: Full-stack TypeScript/React IDP for Salesforce metadata dependency visualization, permission diffing, and automated deployments.
     href: https://toolkit.amitbhardwaj.co.uk
-  - name: Rescuematic IoT Cloud Platform
-    desc: Production IoT microservices platform running FastAPI, Redis, MQTTS (port 8883), AWS EC2, and Cloudflare Pages edge.
+  - name: Rescuematic — Rotimatic Fleet SRE & Cloud Continuity
+    desc: 24/7 cloud continuity, diagnostic telemetry, and fleet SRE platform on AWS EC2 rescuing 100,000+ orphaned Rotimatic robotic flatbread appliances worldwide.
     href: https://rescuematic.co.uk
   - name: Major UK Private Bank Onboarding Turnaround
     desc: Distressed onboarding program turned Red to Green in 6 months; cycle time cut from 36 to 10 days; fincrime dropped 76% to 1%; CSAT 4.9/5.
@@ -120,13 +120,13 @@ faqHeading: Frequently Asked Questions
 faq:
   - q: "Who is Amit Bhardwaj?"
     a: |
-        Amit Bhardwaj is an Enterprise Platform Architect and Systems Engineering Leader with over 18 years of experience, including 8 years as Senior Manager & Solutions Architect at Genpact in London. Starting from bare-metal computer hardware diagnostics and Linux systems administration, he progressed into enterprise software architecture, multi-cloud platforms, zero-trust security, distributed systems, and agentic AI runtimes. He has governed technology roadmaps across 100+ business initiatives and led engineering delivery organizations of ~80 resources.
+        Amit Bhardwaj is a Senior Salesforce Architect, Principal Solutions Architect, and Enterprise Platform Leader with over 18 years of progressive technical experience, including 8+ years at Genpact in London where he was formally promoted in August 2026 to Band 4, reporting directly to VP Lalit Tyagi and overseeing the Salesforce technical architecture process across the UK and Europe. Starting from bare-metal computer hardware diagnostics and Linux systems administration, he progressed into enterprise software architecture, multi-cloud platforms, zero-trust security, distributed systems, and agentic AI runtimes. He has governed technology roadmaps across 100+ business initiatives and led engineering delivery organizations of ~80 resources.
   - q: "What are Amit's marquee enterprise accomplishments?"
     a: |
-        Amit's track record includes turning around a distressed, multi-million-pound onboarding program for a major UK private bank from RED to GREEN in 6 months (reducing onboarding lead time from 36 to 10 days, cutting fincrime review escalations from 76% to 1%, and achieving a 4.9/5 CSAT), delivering 100% FCA compliance on a regulatory redress platform reconciling over 1.03 million vehicle financing contracts with zero calculation discrepancies, launching the Danone CORA order assist platform live in Jan 2026 (cutting dispute resolution cycle time by 50%), and designing a reusable dealership provisioning engine accelerating retail deployments across 10,000+ car dealerships by 65%.
+        Amit's track record includes turning around a distressed, multi-million-pound onboarding program for a major UK private bank from RED to GREEN in 6 months (reducing onboarding lead time from 36 to 10 days, cutting fincrime review escalations from 76% to 1%, and achieving a 4.9/5 CSAT), delivering 100% FCA compliance on a regulatory redress platform reconciling over 1.03 million vehicle financing contracts with zero calculation discrepancies, launching the Fortune 500 Food Conglomerate CORA order assist platform live in Jan 2026 (cutting dispute resolution cycle time by 50%), and designing a reusable dealership provisioning engine accelerating retail deployments across 10,000+ car dealerships by 65%.
   - q: "What does Amit build in applied systems engineering?"
     a: |
-        Amit is a hands-on builder who maintains production platforms from first principles. He built sfdx-toolkit (an Internal Developer Platform for Salesforce metadata analysis), Rescuematic (a production IoT appliance microservices SaaS with MQTTS TLS and FastAPI on AWS EC2), VisionVox (a real-time multimodal accessibility engine on the Gemini Live API), and Smart Email Brain (an autonomous event ingestion pipeline using local Qwen SLMs and n8n). He operates a high-performance bare-metal Proxmox hypervisor server running Linux 7.0 kernel, ZRAM memory compression, and unified Prometheus, Grafana, and Loki observability.
+        Amit is a hands-on builder who maintains production platforms from first principles. He built sfdx-toolkit (an Internal Developer Platform for Salesforce metadata analysis), Rescuematic (a 24/7 cloud continuity and fleet SRE platform on AWS EC2 & Cloudflare edge rescuing orphaned Rotimatic robotic flatbread appliances worldwide), VisionVox (a real-time multimodal accessibility engine on the Gemini Live API), and Smart Email Brain (an autonomous event ingestion pipeline using local Qwen SLMs and n8n). He operates a high-performance bare-metal Proxmox hypervisor server running Linux 7.0 kernel, ZRAM memory compression, and unified Prometheus, Grafana, and Loki observability.
 connectHeading: Let's Connect
 email: ""
 ---
