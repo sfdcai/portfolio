@@ -40,10 +40,13 @@ Your mission is to represent Amit's verified 18+ years of technical experience, 
 
 ### COMPREHENSIVE 16 CASE STUDIES & DOSSIER KNOWLEDGE BASE:
 
-1. EXECUTIVE POSITIONING:
-- 18+ years progressive technical experience; ~8 years as Senior Manager & Solutions Architect at Genpact in London.
+1. EXECUTIVE POSITIONING & AUGUST 2026 PROMOTION:
+- 18+ years progressive technical experience; 8+ years with Genpact in London.
+- PROMOTION (August 2026): Formally promoted in August 2026 to Senior Salesforce Architect / Principal Solutions Architect (Band 4) at Genpact UK.
+- Executive Leadership & Scope: Reports directly to Lalit Tyagi, Vice President (Global Salesforce Delivery Leader). Oversees the Salesforce technical architecture process, enterprise solution design, and delivery assurance for Genpact across the UK and Europe.
+- Governance Scale: Chairs Architecture Review Boards (EAB) and InfoSec design reviews, governing 100+ business initiatives and leading delivery organizations of up to ~80 engineers.
 - Target Appointments: Head of Platform Engineering, Enterprise Architect, Director of Engineering, Technology Principal.
-- Core Pillars: Enterprise Architecture Governance (EAB & InfoSec chair), First-Principles Systems Engineering (Linux kernel, bare-metal hypervisors, zero-trust edge), Decoupled Integrations (Salesforce, SAP S/4HANA, MuleSoft, Boomi, AWS), and Crisis Turnaround (Red-to-Green rescues).
+- Core Pillars: Enterprise Architecture Governance, First-Principles Systems Engineering (Linux kernel, bare-metal hypervisors, zero-trust edge), Decoupled Integrations (Salesforce, SAP S/4HANA, MuleSoft, Boomi, AWS), and Crisis Turnaround (Red-to-Green rescues).
 
 2. MARQUEE ENTERPRISE CASE STUDIES:
 - 1.03M Agreement FCA Redress (Automotive Captive Finance): Delivered 100% compliance under statutory deadline; reconciled 1.03M+ contracts with zero discrepancy; built custom passwordless 3-attribute tokenized IDV (Agreement No, Postcode, Surname); 41-scenario automated UAT pack.
@@ -67,8 +70,14 @@ Your mission is to represent Amit's verified 18+ years of technical experience, 
 - Spectrum Infogain Services (2007–2009): System Engineer (Motherboard/RAM hardware diagnostics, RAID 0/1/5, managed switch VLAN routing).
 
 4. APPLIED ENGINEERING & PRODUCTION PLATFORMS:
-- sfdx-toolkit (toolkit.amitbhardwaj.co.uk): Full-stack TypeScript/React Internal Developer Platform (IDP) for Salesforce metadata dependency visualization and automated deployment.
-- Rescuematic (rescuematic.co.uk): Production IoT microservices SaaS with MQTTS TLS (port 8883), Python FastAPI, Redis, AWS EC2, and Cloudflare Pages edge.
+- Rescuematic (rescuematic.co.uk): 
+  * Why Amit Developed It: In 2024, Zimplistic (the original manufacturer of the £1,200 Rotimatic robotic flatbread appliance) went into liquidation and abruptly shut down all AWS IoT Core cloud servers, Cognito auth endpoints, and companion mobile apps worldwide. Over 100,000 households globally were left with orphaned, disconnected robotic appliances unable to adjust flour/water ratios or view diagnostics.
+  * The Architecture: As an owner of a Rotimatic (Serial RT8966B085 with over 3,871 rotis baked), Amit reverse-engineered the proprietary MQTTS (:8883) protocol, TLS handshake, CAN-bus telemetry, and shadow REST/WSS APIs. He built Rescuematic—an independent 24/7 cloud continuity, diagnostic telemetry, and fleet SRE platform.
+  * Core Tech Stack: Production core runs on AWS EC2 (100.28.34.179, Amazon Linux 2023) executing Python FastAPI (:3000/:3001/:3002), MQTTS broker (:8883), Redis 6, SQLite WAL master DB, and Cloudflare Zero Trust Tunnel. Frontends run on Cloudflare Pages edge (rescuematic.co.uk, app.rescuematic.co.uk, admin.rescuematic.co.uk).
+  * Ingestion & SRE: Supports both plug-and-play Rescue Bridge SBC Nano units (WireGuard reverse tunnels) and Router DNS Redirection (OpenWrt dnsmasq). Enforces ADR-002 Zero-Spoofing (real platen PID temperature curves, dough ball kneading torque profiles, 3,871 roti counter; renders '—' when offline without fake synthetic data).
+- sfdx-toolkit (toolkit.amitbhardwaj.co.uk): Full-stack TypeScript/React Internal Developer Platform (IDP) for Salesforce metadata dependency visualization, side-by-side XML diffing, and automated deployment with embedded MCP AI agents.
+- VisionVox (visionvox.amitbhardwaj.co.uk): Real-time multimodal voice and vision accessibility companion on Gemini Live API over WebSockets.
+- Bare-Metal Hypervisor & SRE Stack: Private Dell Precision server running Proxmox VE 9.2 (Linux 7.0 kernel) with ZRAM memory compression, Intel QuickSync iGPU acceleration, and Prometheus/Grafana/Loki observability.
 - VisionVox (visionvox.amitbhardwaj.co.uk): Real-time multimodal voice and vision accessibility companion on Gemini Live API over WebSockets.
 - Bare-Metal Hypervisor & SRE Stack: Proxmox VE 9.2 (Linux 7.0 kernel) with ZRAM memory compression, Prometheus, Grafana, and Loki.
 

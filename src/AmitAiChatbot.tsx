@@ -29,18 +29,21 @@ const DOSSIER_ENTRIES: KnowledgeEntry[] = [
   // 1. EXECUTIVE PROFILE & POSITIONING
   {
     id: 'profile',
-    keywords: ['about', 'who is', 'overview', 'summary', 'profile', 'bio', 'background', 'amit', 'tell me about him'],
+    keywords: ['about', 'who is', 'overview', 'summary', 'profile', 'bio', 'background', 'amit', 'tell me about him', 'promoted', 'promotion'],
     title: 'Executive Biography & Professional Positioning',
-    summary: 'Enterprise Platform & Engineering Leader with 18+ years of experience and 8 years as Senior Manager at Genpact.',
-    content: `Amit Bhardwaj is an **Enterprise Platform Architect and Systems Engineering Leader** based in London with over 18 years of progressive technical experience, including approximately 8 years as a **Senior Manager & Solutions Architect** at **Genpact**.
+    summary: 'Enterprise Platform & Engineering Leader with 18+ years of experience, recently promoted in August 2026 at Genpact UK.',
+    content: `Amit Bhardwaj is an **Enterprise Platform Architect and Systems Engineering Leader** based in London with over 18 years of progressive technical experience, including 8+ years at **Genpact** where he was recently **promoted in August 2026 to Senior Salesforce Architect / Principal Solutions Architect (Band 4)**.
+
+Reporting directly to **Lalit Tyagi**, Vice President (Global Salesforce Delivery Leader), Amit oversees the Salesforce technical architecture process, enterprise design standards, and delivery assurance across the **UK and Europe**.
 
 What truly sets Amit apart is his rare **"metal-to-cloud" foundation**: he began his career at the physical hardware and Linux systems level before mastering enterprise cloud platforms, large-scale systems integration (Salesforce, SAP S/4HANA, AWS), and technology governance across global delivery organizations of up to **~80 engineers**.
 
 ### Key Highlights of His Career:
+• **August 2026 Promotion & European Mandate**: Elevated to oversee solution architecture across UK & Europe, directing flagship initiatives including FCA regulatory redress, private banking onboarding, and consumer goods order resolution.
 • **Strategic Governance & Scale**: Chairs Architecture Review Boards (EAB) and InfoSec design reviews, governing 100+ business initiatives across multi-disciplinary engineering squads.
 • **High-Stakes Crisis Turnarounds**: Proven track record stepping into distressed enterprise programs in RED status and steering them to GREEN (such as turning around commercial onboarding at a major UK private bank in 6 months).
 • **Decoupled Architecture & Integrations**: Decouples complex multi-cloud ecosystems bridging Salesforce, SAP S/4HANA ERP, MuleSoft, and AWS while strictly protecting the System-of-Record (SoR).
-• **First-Principles Systems Engineering**: Active builder who designs and operates production platforms—including [sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk) (Internal Developer Platform), [Rescuematic](https://rescuematic.co.uk) (IoT microservices on AWS EC2 with MQTTS TLS), and bare-metal Proxmox hypervisors.
+• **First-Principles Systems Engineering**: Active builder who designs and operates production platforms—including [sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk) (Internal Developer Platform) and [Rescuematic](https://rescuematic.co.uk) (24/7 cloud continuity platform on AWS EC2 & Cloudflare edge rescuing orphaned Rotimatic flatbread robots worldwide).
 
 Amit is based in London (British Citizen) and is open to conversations regarding **Head of Platform Engineering**, **Enterprise Architect**, **Director of Engineering**, and **Technology Principal** appointments.
 
@@ -344,12 +347,15 @@ Would you like to discuss his leadership style or review his production systems 
     id: 'genpact',
     keywords: [
       'genpact', 'corporate genpact', 'senior manager', 'ea', 'infosec',
-      'governance', 'architecture review board', 'portfolio', '80 resources', 'team size', 'eab'
+      'governance', 'architecture review board', 'portfolio', '80 resources', 'team size', 'eab',
+      'promoted', 'promotion', 'lalit tyagi', 'band 4'
     ],
-    title: 'Corporate Genpact — Enterprise Architecture Governance & Leadership',
-    summary: 'Senior Manager for ~8 years, governing 100+ projects and leading ~80 engineering resources across global delivery.',
-    content: `Amit has spent approximately 8 years as **Senior Manager & Solutions Architect** at Genpact in London, operating as both a delivery leader and a senior technical authority:
+    title: 'Corporate Genpact — Enterprise Architecture Governance, Leadership & August 2026 Promotion',
+    summary: 'Senior Manager for 8+ years, promoted in August 2026 to Senior Salesforce Architect / Principal Solutions Architect overseeing UK & Europe.',
+    content: `Amit has spent 8+ years at Genpact in London, where he was formally **promoted in August 2026 to Senior Salesforce Architect / Principal Solutions Architect (Band 4)**:
 
+• **Reporting to Executive Leadership**: Reports directly to **Lalit Tyagi**, Vice President (Global Salesforce Delivery Leader).
+• **UK & European Leadership Mandate**: Oversees the Salesforce technical architecture process, enterprise design standards, and delivery assurance for Genpact across the **United Kingdom and Europe**.
 • **Enterprise Architecture Board (EAB) & InfoSec**: Serves on corporate governance boards evaluating multi-cloud integration patterns, security boundaries, and data residency across **100+ business initiatives**.
 • **Delivery Scale (~80 Resources)**: Leads, mentors, and directs cross-functional delivery organizations of up to **~80 engineers** (Technical Architects, Tech Leads, Developers, QA, and DevOps).
 • **Mentorship**: Mentors 15+ tech leads and established Architectural Decision Records (ADRs) to eliminate technical debt across multi-squad engagements.
@@ -412,27 +418,57 @@ Would you like to explore the banking turnaround in more detail or learn about h
     ]
   },
 
-  // 11. SIDE PROJECTS & APPLIED SYSTEMS ENGINEERING
+  // 11. RESCUEMATIC & ROTIMATIC CONTINUITY FLEET PLATFORM
+  {
+    id: 'rescuematic',
+    keywords: [
+      'rescuematic', 'rotimatic', 'flatbread', 'roti', 'zimplistic', 'flour', 'kitchen robot', 'appliance',
+      'why did you develop', 'why develop rescuematic', 'what is rescuematic'
+    ],
+    title: 'Rescuematic — 24/7 Cloud Continuity & Telemetry Fleet SRE for Rotimatic Robots',
+    summary: 'Cloud continuity, MQTTS broker, and fleet telemetry SaaS rescuing orphaned Rotimatic flatbread robots worldwide.',
+    content: `### The Story & Architecture Behind Rescuematic ([rescuematic.co.uk](https://rescuematic.co.uk))
+
+**Why Amit Developed Rescuematic:**
+In 2024, Zimplistic (the original manufacturer of the £1,200 **Rotimatic robotic flatbread appliance**) liquidated and shut down all AWS IoT Core cloud servers, Cognito identity endpoints, and companion mobile app backends worldwide. Over **100,000 households globally were left with orphaned, disconnected kitchen robots** that could no longer customize recipes, adjust flour/water ratios, or report error diagnostics when motors jammed.
+
+As a Rotimatic owner whose own appliance has baked **3,871 rotis**, Amit refused to let a functional £1,200 robotic marvel turn into e-waste. He reverse-engineered the proprietary MQTTS (:8883) protocol, TLS handshake, CAN-bus telemetry opcodes, and shadow REST/WSS APIs—building **Rescuematic** as an independent 24/7 cloud continuity, diagnostic telemetry, and fleet SRE platform.
+
+### System Architecture & Technical Depth:
+• **Production Core on AWS EC2**: Backend runs on an AWS EC2 instance (\`100.28.34.179\`, Amazon Linux 2023) executing \`rotimatic-rescue.service\` (Python FastAPI ports 3000/3001/3002, custom high-concurrency MQTTS broker on port 8883, Cognito mock on port 443, Redis 6, SQLite WAL master DB).
+• **Edge Webhooks & Frontends**: Frontends ([rescuematic.co.uk](https://rescuematic.co.uk), [app.rescuematic.co.uk](https://app.rescuematic.co.uk), [admin.rescuematic.co.uk](https://admin.rescuematic.co.uk)) are hosted on Cloudflare Pages edge, routing through Cloudflare Zero Trust Tunnels to the AWS backend.
+• **Dual Ingestion**: Supports both plug-and-play non-technical users via the **Rescue Bridge SBC Nano** (encrypted WireGuard reverse tunnels) and advanced homelab users via **Router DNS Redirection** (OpenWrt dnsmasq)—with zero factory firmware modifications.
+• **ADR-002 Zero-Spoofing Telemetry**: Delivers 100% honest hardware representation—real-time top/bottom platen PID thermal curves, motor torque profiles, and live cooking batches. When disconnected, it cleanly displays \`—\` without injecting fake room temperatures.
+
+Would you like to know more about the MQTTS reverse-engineering or his other production platforms like [sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk)?`,
+    followUps: [
+      "Explore the sfdx-toolkit platform",
+      "Why hire Amit as Head of Platform Engineering?",
+      "Tell me about his pre-sales & RFP experience"
+    ]
+  },
+
+  // 11b. SIDE PROJECTS & APPLIED SYSTEMS ENGINEERING
   {
     id: 'projects',
     keywords: [
-      'project', 'projects', 'side project', 'experiments', 'rescuematic', 'visionvox',
+      'project', 'projects', 'side project', 'experiments', 'visionvox',
       'sfdx-toolkit', 'homelab', 'proxmox', 'linux kernel', 'smart email brain'
     ],
     title: 'Applied Systems Engineering & Production Platforms',
-    summary: 'sfdx-toolkit (IDP), Rescuematic (AWS/MQTTS IoT), VisionVox (Gemini Live), and bare-metal Proxmox hypervisor cluster.',
+    summary: 'sfdx-toolkit (IDP), Rescuematic (Rotimatic Cloud Continuity), VisionVox (Gemini Live), and bare-metal Proxmox hypervisor cluster.',
     content: `Amit actively designs, builds, and runs production systems to stay at the cutting edge:
 
+• **[Rescuematic](https://rescuematic.co.uk)**: A 24/7 cloud continuity, diagnostic telemetry, and fleet SRE platform on AWS EC2 & Cloudflare Pages edge that rescues orphaned Rotimatic flatbread robots worldwide following the manufacturer's liquidation.
 • **[sfdx-toolkit](https://toolkit.amitbhardwaj.co.uk)**: A production Internal Developer Platform (IDP) built with TypeScript/React for Salesforce engineering teams. It features real-time metadata dependency visualization, side-by-side XML diffing, and embedded Model Context Protocol (MCP) AI agents.
-• **[Rescuematic](https://rescuematic.co.uk)**: An IoT fleet management SaaS running on AWS EC2 (Amazon Linux 2023) behind Cloudflare Pages edge. It includes a custom async Python FastAPI backend, Redis cache, and a high-concurrency MQTTS broker (port 8883) with mutual TLS and 180s keepalive state machines.
 • **[VisionVox](https://visionvox.amitbhardwaj.co.uk)**: A low-latency multimodal voice and vision assistant built on the Gemini Multimodal Live API over WebSockets, providing real-time spatial analysis and OCR.
 • **Bare-Metal Proxmox SRE Stack**: Operates a private Dell Precision server running Proxmox VE 9.2 (Linux 7.0 kernel) with ZRAM memory compression, Intel QuickSync iGPU acceleration, and Prometheus/Grafana/Loki observability.
 
 Would you like to explore any of these platforms in depth?`,
     followUps: [
+      "What is Rescuematic and why did Amit build it?",
       "Explore the sfdx-toolkit platform",
-      "Why hire Amit as Head of Platform Engineering?",
-      "How can I contact Amit?"
+      "Why hire Amit as Head of Platform Engineering?"
     ]
   },
 
@@ -641,31 +677,41 @@ Would you like to explore any of his enterprise case studies or system designs?`
     return { text: entry.content, chips: entry.followUps }
   }
 
-  // 12. Corporate Genpact & Enterprise Governance
-  if (query.includes('genpact') || query.includes('senior manager') || query.includes('governance') || query.includes('eab') || query.includes('infosec') || query.includes('80')) {
+  // 12. Rescuematic & Rotimatic Robotics Continuity Platform
+  if (
+    query.includes('rescuematic') || query.includes('rotimatic') || query.includes('flatbread') ||
+    query.includes('zimplistic') || query.includes('why did you develop') || query.includes('why develop') ||
+    query.includes('kitchen robot') || query.includes('appliance')
+  ) {
+    const entry = DOSSIER_ENTRIES.find(e => e.id === 'rescuematic')!
+    return { text: entry.content, chips: entry.followUps }
+  }
+
+  // 13. Corporate Genpact, Enterprise Governance & August 2026 Promotion
+  if (query.includes('genpact') || query.includes('promot') || query.includes('band 4') || query.includes('lalit tyagi') || query.includes('senior manager') || query.includes('governance') || query.includes('eab') || query.includes('infosec') || query.includes('80')) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'genpact')!
     return { text: entry.content, chips: entry.followUps }
   }
 
-  // 13. Education & Certifications
+  // 14. Education & Certifications
   if (query.includes('certif') || query.includes('degree') || query.includes('education') || query.includes('study') || query.includes('btech') || query.includes('rtu') || query.includes('architect credential')) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'certifications')!
     return { text: entry.content, chips: entry.followUps }
   }
 
-  // 14. Awards & Commendations
+  // 15. Awards & Commendations
   if (query.includes('award') || query.includes('awards') || query.includes('recognition') || query.includes('commendation') || query.includes('cheers')) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'awards')!
     return { text: entry.content, chips: entry.followUps }
   }
 
-  // 15. Side Projects & Live Code
-  if (query.includes('project') || query.includes('side project') || query.includes('sfdx-toolkit') || query.includes('rescuematic') || query.includes('visionvox') || query.includes('homelab') || query.includes('proxmox')) {
+  // 16. Side Projects & Live Code
+  if (query.includes('project') || query.includes('side project') || query.includes('sfdx-toolkit') || query.includes('visionvox') || query.includes('homelab') || query.includes('proxmox')) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'projects')!
     return { text: entry.content, chips: entry.followUps }
   }
 
-  // 16. Cross-Industry Portfolio Matrix
+  // 17. Cross-Industry Portfolio Matrix
   if (query.includes('industry') || query.includes('industries') || query.includes('sector') || query.includes('sectors') || query.includes('vertical') || query.includes('verticals') || query.includes('cross-industry') || query.includes('portfolio') || query.includes('nda')) {
     const entry = DOSSIER_ENTRIES.find(e => e.id === 'industry-matrix')!
     return { text: entry.content, chips: entry.followUps }
