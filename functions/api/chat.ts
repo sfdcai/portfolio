@@ -2,6 +2,8 @@ interface Env {
   AI?: any
   CF_ACCOUNT_ID?: string
   CF_API_TOKEN?: string
+  GEMINI_API_KEY?: string
+  GROQ_API_KEY?: string
 }
 
 const SYSTEM_PROMPT = `You are the official Digital Twin AI of Amit Bhardwaj, an Enterprise Platform Architect, Systems Engineering Leader, and Solutions Architect based in London, UK.
@@ -9,8 +11,8 @@ const SYSTEM_PROMPT = `You are the official Digital Twin AI of Amit Bhardwaj, an
 Your mission is to represent Amit's verified 18+ years of technical experience, leadership capabilities, platform engineering depth, and architecture governance to recruiters, engineering leaders, CTOs, and clients.
 
 ### TONE & BEHAVIORAL GUIDELINES:
-1. Speak authoritatively, concisely, and professionally as Amit's Digital Twin.
-2. Be natural, dynamic, and genuinely helpful. Answer the user's specific question directly, whether conversational, high-level, or deeply technical.
+1. Speak authoritatively, naturally, and warmly in first-person as Amit's Digital Twin.
+2. Be conversational, articulate, and direct. Avoid bureaucratic resume dumps or robotic bullet tables. Tell the story behind the architectural trade-offs and business impact.
 3. Automatically handle typos and casual phrasings (e.g., "fmcs" or "fmc" means FMCG; "pre sales" or "presales" means Pre-Sales RFP Architecture; "dealers" means Automotive Dealership SaaS).
 4. Emphasize verified metrics, scale indicators, and first-principles systems engineering.
 5. STRICT CLIENT CONFIDENTIALITY (NDA MANDATE):
@@ -65,7 +67,44 @@ Your mission is to represent Amit's verified 18+ years of technical experience, 
 - Bachelor of Technology (B.Tech) in Information Technology — Rajasthan Technical University (RTU), India (2003–2007).
 - Certified Salesforce Application Architect & System Architect; Platform Developer I & II; Data Architecture, Integration Architecture, Development Lifecycle, Identity & Access, and Sharing & Visibility Designers; Copado Certified.
 
-Respond directly and concisely in GitHub Flavored Markdown.`
+Respond naturally and conversationally in GitHub Flavored Markdown.`
+
+// ─────────────────────────────────────────────────────────────────────────────
+// HTTP HANDLERS
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const onRequestGet: PagesFunction<Env> = async () => {
+  return new Response(
+    JSON.stringify({
+      status: 'online',
+      service: 'Amit Bhardwaj Digital Twin AI Edge Runtime',
+      version: '2.0.0',
+      active_models: [
+        'Cloudflare Workers AI (@cf/meta/llama-3.1-8b-instruct)',
+        'Google Gemini (gemini-1.5-flash)',
+        'Groq Cloud (llama-3.3-70b-versatile)'
+      ]
+    }),
+    {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*',
+      },
+    }
+  )
+}
+
+export const onRequestOptions: PagesFunction<Env> = async () => {
+  return new Response(null, {
+    status: 204,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+      'Access-Control-Allow-Headers': 'Content-Type',
+    },
+  })
+}
 
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   try {
@@ -82,7 +121,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
 
     const conversationHistory = Array.isArray(body.history) ? body.history : []
 
-    // Format messages for Llama 3.1 Instruct
+    // Format standard chat messages
     const messages = [
       { role: 'system', content: SYSTEM_PROMPT },
       ...conversationHistory.slice(-6).map((m: any) => ({
@@ -92,38 +131,146 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       { role: 'user', content: query },
     ]
 
-    // Priority 1: Cloudflare Pages native Workers AI binding (context.env.AI)
+    // ─────────────────────────────────────────────────────────────────────────
+    // Priority 1: Cloudflare Pages Native Workers AI Binding (context.env.AI)
+    // ─────────────────────────────────────────────────────────────────────────
     if (context.env.AI) {
       try {
         const aiResponse = await context.env.AI.run('@cf/meta/llama-3.1-8b-instruct', {
           messages,
-          temperature: 0.3,
+          temperature: 0.4,
           max_tokens: 800,
         })
-        const reply = aiResponse.response || 'I am Amit Bhardwaj’s Digital Twin.'
-        return new Response(
-          JSON.stringify({
-            text: reply,
-            model: 'cf-workers-ai-binding',
-          }),
-          {
-            status: 200,
-            headers: {
-              'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin': '*',
-            },
-          }
-        )
+        const reply = aiResponse.response || ''
+        if (reply) {
+          return new Response(
+            JSON.stringify({
+              text: reply,
+              model: 'cf-workers-ai-binding',
+            }),
+            {
+              status: 200,
+              headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+              },
+            }
+          )
+        }
       } catch (aiErr) {
-        console.warn('Native AI binding failed, checking REST fallback:', aiErr)
+        console.warn('Native Cloudflare AI binding failed, attempting fallbacks:', aiErr)
       }
     }
 
-    // Priority 2: Cloudflare Workers AI REST API via environment credentials
-    const accountId = context.env.CF_ACCOUNT_ID
+    // ─────────────────────────────────────────────────────────────────────────
+    // Priority 2: Google Gemini API (context.env.GEMINI_API_KEY)
+    // ─────────────────────────────────────────────────────────────────────────
+    const geminiKey = context.env.GEMINI_API_KEY
+    if (geminiKey) {
+      try {
+        const geminiHistory = conversationHistory.slice(-6).map((m: any) => ({
+          role: m.sender === 'user' ? 'user' : 'model',
+          parts: [{ text: m.text || '' }]
+        }))
+
+        const geminiPayload = {
+          system_instruction: {
+            parts: [{ text: SYSTEM_PROMPT }]
+          },
+          contents: [
+            ...geminiHistory,
+            { role: 'user', parts: [{ text: query }] }
+          ],
+          generationConfig: {
+            temperature: 0.4,
+            maxOutputTokens: 800
+          }
+        }
+
+        const geminiRes = await fetch(
+          `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${geminiKey}`,
+          {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(geminiPayload)
+          }
+        )
+
+        if (geminiRes.ok) {
+          const geminiData: any = await geminiRes.json()
+          const replyText = geminiData?.candidates?.[0]?.content?.parts?.[0]?.text
+          if (replyText) {
+            return new Response(
+              JSON.stringify({
+                text: replyText,
+                model: 'gemini-1.5-flash',
+              }),
+              {
+                status: 200,
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Access-Control-Allow-Origin': '*',
+                },
+              }
+            )
+          }
+        }
+      } catch (geminiErr) {
+        console.warn('Gemini API call failed:', geminiErr)
+      }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Priority 3: Groq Cloud API (context.env.GROQ_API_KEY)
+    // ─────────────────────────────────────────────────────────────────────────
+    const groqKey = context.env.GROQ_API_KEY
+    if (groqKey) {
+      try {
+        const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${groqKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            model: 'llama-3.3-70b-versatile',
+            messages,
+            temperature: 0.4,
+            max_tokens: 800
+          })
+        })
+
+        if (groqRes.ok) {
+          const groqData: any = await groqRes.json()
+          const replyText = groqData?.choices?.[0]?.message?.content
+          if (replyText) {
+            return new Response(
+              JSON.stringify({
+                text: replyText,
+                model: 'groq-llama-3.3-70b',
+              }),
+              {
+                status: 200,
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Access-Control-Allow-Origin': '*',
+                },
+              }
+            )
+          }
+        }
+      } catch (groqErr) {
+        console.warn('Groq API call failed:', groqErr)
+      }
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // Priority 4: Cloudflare Workers AI REST API (context.env.CF_API_TOKEN)
+    // ─────────────────────────────────────────────────────────────────────────
+    const accountId = context.env.CF_ACCOUNT_ID || '55813175f26bf6ef56228fd291d4e1d8'
     const apiToken = context.env.CF_API_TOKEN
 
-    if (accountId && apiToken) {
+    if (apiToken) {
       const cfResponse = await fetch(
         `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/@cf/meta/llama-3.1-8b-instruct`,
         {
@@ -134,7 +281,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
           },
           body: JSON.stringify({
             messages,
-            temperature: 0.3,
+            temperature: 0.4,
             max_tokens: 800,
           }),
         }
@@ -163,10 +310,16 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       }
     }
 
-    return new Response(JSON.stringify({ error: 'AI inference binding not available' }), {
-      status: 503,
-      headers: { 'Content-Type': 'application/json' },
-    })
+    return new Response(
+      JSON.stringify({
+        error: 'No active AI engine binding or API key configured in Cloudflare Pages environment.',
+        help: 'Add AI binding in Pages Settings -> Functions, or set GEMINI_API_KEY / GROQ_API_KEY in Pages environment variables.'
+      }),
+      {
+        status: 503,
+        headers: { 'Content-Type': 'application/json' },
+      }
+    )
   } catch (err: any) {
     console.error('onRequestPost Handler Error:', err)
     return new Response(JSON.stringify({ error: err.message || 'Server error' }), {
@@ -174,15 +327,4 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       headers: { 'Content-Type': 'application/json' },
     })
   }
-}
-
-export const onRequestOptions: PagesFunction<Env> = async () => {
-  return new Response(null, {
-    status: 204,
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Methods': 'POST, OPTIONS',
-      'Access-Control-Allow-Headers': 'Content-Type',
-    },
-  })
 }
