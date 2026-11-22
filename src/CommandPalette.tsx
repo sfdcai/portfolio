@@ -8,8 +8,6 @@ import {
   Moon,
   Bot,
   ShieldCheck,
-  UserCheck,
-  Cpu,
   Sparkles,
   ArrowRight,
   Terminal,
@@ -20,13 +18,12 @@ import {
   Briefcase,
   Award
 } from 'lucide-react'
-import type { PersonaType } from './PersonaSwitcher'
 
 interface CommandItem {
   id: string
   title: string
   subtitle?: string
-  category: 'Actions' | 'Personas' | 'Case Studies' | 'Ask Amit AI' | 'Tools & Labs'
+  category: 'Actions' | 'Case Studies' | 'Ask Amit AI' | 'Tools & Labs'
   icon: typeof Search
   action: () => void
   keywords?: string[]
@@ -35,10 +32,9 @@ interface CommandItem {
 interface CommandPaletteProps {
   isOpen: boolean
   onClose: () => void
-  onSelectPersona?: (p: PersonaType) => void
 }
 
-export default function CommandPalette({ isOpen, onClose, onSelectPersona }: CommandPaletteProps) {
+export default function CommandPalette({ isOpen, onClose }: CommandPaletteProps) {
   const [query, setQuery] = useState('')
   const [selectedIndex, setSelectedIndex] = useState(0)
   const inputRef = useRef<HTMLInputElement>(null)
@@ -154,68 +150,6 @@ export default function CommandPalette({ isOpen, onClose, onSelectPersona }: Com
       icon: isDarkMode ? Sun : Moon,
       action: toggleTheme,
       keywords: ['dark', 'light', 'mode', 'theme', 'color']
-    },
-
-    // Persona Views
-    {
-      id: 'persona-cto',
-      title: 'Curate for VP / CTO / Head of Eng',
-      subtitle: 'Focus on governance (EAB), crisis turnarounds, and 80-engineer squads',
-      category: 'Personas',
-      icon: ShieldCheck,
-      action: () => {
-        onSelectPersona?.('cto')
-        onClose()
-        if (typeof document !== 'undefined') {
-          const el = document.getElementById('projects')
-          el?.scrollIntoView({ behavior: 'smooth' })
-        }
-      },
-      keywords: ['executive', 'leadership', 'governance', 'turnaround', 'eab']
-    },
-    {
-      id: 'persona-recruiter',
-      title: 'Curate for Enterprise Recruiter',
-      subtitle: 'Focus on Genpact Principal tenure, UK/Europe mandate, and right to work',
-      category: 'Personas',
-      icon: UserCheck,
-      action: () => {
-        onSelectPersona?.('recruiter')
-        onClose()
-        if (typeof document !== 'undefined') {
-          const el = document.getElementById('experience')
-          el?.scrollIntoView({ behavior: 'smooth' })
-        }
-      },
-      keywords: ['hiring', 'recruitment', 'experience', 'tenure', 'contract']
-    },
-    {
-      id: 'persona-architect',
-      title: 'Curate for Principal Architect / Builder',
-      subtitle: 'Focus on metal-to-cloud, zero-spoofing IoT, and MQTTS brokers',
-      category: 'Personas',
-      icon: Cpu,
-      action: () => {
-        onSelectPersona?.('architect')
-        onClose()
-        if (typeof document !== 'undefined') {
-          const el = document.getElementById('projects')
-          el?.scrollIntoView({ behavior: 'smooth' })
-        }
-      },
-      keywords: ['systems', 'hardware', 'sre', 'devops', 'kernel', 'proxmox']
-    },
-    {
-      id: 'persona-all',
-      title: 'View All Highlights',
-      subtitle: 'Reset persona filtering to full portfolio',
-      category: 'Personas',
-      icon: Sparkles,
-      action: () => {
-        onSelectPersona?.('all')
-        onClose()
-      },
-      keywords: ['reset', 'everything', 'clear']
     },
 
     // Case Studies & Deep Dives
@@ -343,7 +277,7 @@ export default function CommandPalette({ isOpen, onClose, onSelectPersona }: Com
       action: () => triggerChat('Tell me about his experience prior to Genpact'),
       keywords: ['background', 'history', 'hardware', 'foundation']
     }
-  ], [navigate, onClose, onSelectPersona, toggleTheme, triggerChat])
+  ], [navigate, onClose, toggleTheme, triggerChat])
 
   // Filter items based on query
   const filteredItems = useMemo(() => {

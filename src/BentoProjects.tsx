@@ -9,13 +9,8 @@ import {
   Award
 } from 'lucide-react'
 import SpotlightCard from './SpotlightCard'
-import type { PersonaType } from './PersonaSwitcher'
 
-interface BentoProjectsProps {
-  activePersona: PersonaType
-}
-
-export default function BentoProjects({ activePersona }: BentoProjectsProps) {
+export default function BentoProjects() {
   // Simulated IoT Ping State for Rescuematic
   const [pingActive, setPingActive] = useState(false)
   const [pingAck, setPingAck] = useState<string | null>(null)
@@ -34,19 +29,6 @@ export default function BentoProjects({ activePersona }: BentoProjectsProps) {
       setPingAck('✓ SUBACK received: [Sub, SysSub, FwuS] · 22ms latency')
       setPingActive(false)
     }, 600)
-  }
-
-  // Persona highlight checks
-  const isCtoHighlight = (id: string) => activePersona === 'cto' && ['rescuematic', 'banking', 'fca'].includes(id)
-  const isRecruiterHighlight = (id: string) => activePersona === 'recruiter' && ['sfdx', 'banking', 'beacon'].includes(id)
-  const isArchitectHighlight = (id: string) => activePersona === 'architect' && ['rescuematic', 'sfdx', 'homelab', 'visionvox'].includes(id)
-
-  const isHighlighted = (id: string) => isCtoHighlight(id) || isRecruiterHighlight(id) || isArchitectHighlight(id)
-  const getHighlightLabel = (id: string) => {
-    if (isCtoHighlight(id)) return 'Recommended for CTO'
-    if (isRecruiterHighlight(id)) return 'Key for Recruiter'
-    if (isArchitectHighlight(id)) return 'Architect Focus'
-    return undefined
   }
 
   return (
@@ -81,11 +63,7 @@ export default function BentoProjects({ activePersona }: BentoProjectsProps) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {/* 1. Flagship Card: Rescuematic IoT Robotics Fleet & Cloud Continuity (Wide: 2 cols) */}
-          <SpotlightCard
-            className="md:col-span-2 p-6 sm:p-8"
-            isHighlighted={isHighlighted('rescuematic')}
-            highlightLabel={getHighlightLabel('rescuematic')}
-          >
+          <SpotlightCard className="md:col-span-2 p-6 sm:p-8">
             <div className="flex flex-col h-full justify-between">
               <div>
                 <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
@@ -185,8 +163,6 @@ export default function BentoProjects({ activePersona }: BentoProjectsProps) {
           {/* 2. sfdx-toolkit (Internal Developer Platform) */}
           <SpotlightCard
             className="p-6 flex flex-col justify-between"
-            isHighlighted={isHighlighted('sfdx')}
-            highlightLabel={getHighlightLabel('sfdx')}
           >
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -266,8 +242,6 @@ export default function BentoProjects({ activePersona }: BentoProjectsProps) {
           {/* 3. Major UK Private Bank Onboarding Turnaround */}
           <SpotlightCard
             className="p-6 flex flex-col justify-between"
-            isHighlighted={isHighlighted('banking')}
-            highlightLabel={getHighlightLabel('banking')}
           >
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -333,8 +307,6 @@ export default function BentoProjects({ activePersona }: BentoProjectsProps) {
           {/* 4. FCA Regulatory Redress Calculation Engine */}
           <SpotlightCard
             className="p-6 flex flex-col justify-between"
-            isHighlighted={isHighlighted('fca')}
-            highlightLabel={getHighlightLabel('fca')}
           >
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -397,8 +369,6 @@ export default function BentoProjects({ activePersona }: BentoProjectsProps) {
           {/* 5. Bare-Metal Hypervisor & SRE Stack (Homelab) */}
           <SpotlightCard
             className="p-6 flex flex-col justify-between"
-            isHighlighted={isHighlighted('homelab')}
-            highlightLabel={getHighlightLabel('homelab')}
           >
             <div>
               <div className="flex items-center justify-between mb-4">
@@ -461,8 +431,6 @@ export default function BentoProjects({ activePersona }: BentoProjectsProps) {
           {/* 6. Beacon — Production AI Knowledge Assistant (Wide on lg: 2 cols) */}
           <SpotlightCard
             className="md:col-span-2 p-6 flex flex-col justify-between"
-            isHighlighted={isHighlighted('beacon')}
-            highlightLabel={getHighlightLabel('beacon')}
           >
             <div>
               <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
@@ -526,8 +494,6 @@ export default function BentoProjects({ activePersona }: BentoProjectsProps) {
           {/* 7. VisionVox AI Companion */}
           <SpotlightCard
             className="p-6 flex flex-col justify-between"
-            isHighlighted={isHighlighted('visionvox')}
-            highlightLabel={getHighlightLabel('visionvox')}
           >
             <div>
               <div className="flex items-center justify-between mb-4">

@@ -8,7 +8,7 @@ import { getTechIcon } from './tech-icons'
 import SystemsArchitecture from './SystemsArchitecture'
 import LiveArchitectureFlow from './LiveArchitectureFlow'
 import AmitAiChatbot from './AmitAiChatbot'
-import PersonaSwitcher, { type PersonaType } from './PersonaSwitcher'
+import HeroChatInput from './HeroChatInput'
 import BentoProjects from './BentoProjects'
 
 
@@ -1444,7 +1444,6 @@ function App() {
   const hydrated = useHydrated()
   useHeroStyles()
   const { displayText: roleText, roleIndex } = useTypewriterRotation(t.greetingRoles)
-  const [activePersona, setActivePersona] = useState<PersonaType>('all')
 
 
   // SEO: Dynamic meta tags based on language
@@ -1541,9 +1540,9 @@ function App() {
         </div>
       </header>
 
-      {/* Persona Switcher - Curated viewing experience for CTOs, Recruiters & Architects */}
-      <div className="relative z-20 max-w-5xl mx-auto px-6 -mt-4 mb-2">
-        <PersonaSwitcher activePersona={activePersona} onSelectPersona={setActivePersona} />
+      {/* Interactive AI Digital Twin Hero Chat Input - Direct typing for visitors */}
+      <div className="relative z-20 max-w-5xl mx-auto px-6 -mt-4 mb-4">
+        <HeroChatInput />
       </div>
 
       {/* Summary - Con storytelling integrado */}
@@ -1587,23 +1586,20 @@ function App() {
           <div className="space-y-16">
             {t.experience.items.map((job: any, idx: number) => {
               const isGenpact = typeof job.company === 'string' && job.company.toLowerCase().includes('genpact')
-              const isPersonaHighlight = isGenpact && (activePersona === 'cto' || activePersona === 'recruiter')
               return (
               <AnimatedSection key={idx} delay={0.1 * idx}>
                 <div className={`border-l-2 pl-6 ml-4 relative transition-all duration-300 ${
-                  isPersonaHighlight
+                  isGenpact
                     ? 'border-primary ring-1 ring-primary/30 p-5 rounded-2xl bg-card/80 shadow-xl shadow-primary/10'
                     : 'border-primary/30'
                 }`}>
                   <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-primary border-4 border-background" />
 
-                  {isPersonaHighlight && (
+                  {isGenpact && (
                     <div className="mb-3">
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-primary/20 text-primary border border-primary/40 backdrop-blur-md">
                         <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping" />
-                        {activePersona === 'cto'
-                          ? '⭐ Key Governance & Large Squad Leadership Tenure for CTOs (~80 engineers)'
-                          : '⭐ Core Leadership Mandate & UK/Europe Architecture Tenure'}
+                        Enterprise Platform Architecture & Global Squad Leadership (~80 engineers)
                       </span>
                     </div>
                   )}
@@ -1654,7 +1650,7 @@ function App() {
       </section>
 
       {/* Production Platforms & Architecture Bento */}
-      <BentoProjects activePersona={activePersona} />
+      <BentoProjects />
 
       {/* Live Working Architecture & Data-Flow Visualizer */}
       <LiveArchitectureFlow />
